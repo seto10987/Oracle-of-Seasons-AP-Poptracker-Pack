@@ -1,0 +1,1691 @@
+﻿[
+	{
+		"name": "Holodrum",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"color": "#00ff08",
+		"visibility_rules": ["normal"],
+		"children": [
+			{
+				"name": "Maku Tree",
+				"access_rules": ["sword1"],
+				"sections": [
+					{
+					"name": "Maku Tree"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 407,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Mayor's House",
+				"sections": [
+					{
+						"name": "Mayor's Gift"
+					},
+					{
+						"name": "Mayor's House Secret Room",
+						"access_rules": ["bombs"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 367,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Vasu",
+				"sections": [
+					{
+					"name": "Vasu's Gift"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 367,
+					"y": 614
+					}
+				]
+			},
+			{
+				"name": "Horon Heart Piece",
+				"sections": [
+					{
+					"name": "Horon Heart Piece",
+					"access_rules": ["satchel, emberseeds", "$shoot_seeds, emberseeds"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 375,
+					"y": 564
+					}
+				]
+			},
+			{
+				"name": "Mushroom Chest",
+				"access_rules": ["$destroy_mushroom"],
+				"sections": [
+					{
+					"name": "Horon Village SW Chest"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 237,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Dr. Left's House",
+				"sections": [
+					{
+						"name": "Dr. Left Reward",
+						"access_rules": ["satchel, emberseeds"]
+					},
+					{
+						"name": "Horon Village SE Chest",
+						"access_rules": ["bombs"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 407,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Horon Shop",
+				"sections": [
+					{
+						"name": "Shop, 20 Rupees"
+					},
+					{
+						"name": "Shop, 30 Rupees"
+					},
+					{
+						"name": "Shop, 150 Rupees"
+					},
+					{
+					"name": "Member's Shop 1",
+					"access_rules": ["$member_shop"]
+					},
+					{
+					"name": "Member's Shop 2",
+					"access_rules": ["$member_shop"]
+					},
+					{
+					"name": "Member's Shop 3",
+					"access_rules": ["$member_shop"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 281,
+					"y": 620
+					}
+				]
+			},
+			{
+				"name": "Clock Shop",
+				"access_rules": ["woodenbird"],
+				"sections": [
+					{
+					"name": "Tick Tock Trade"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 315,
+					"y": 575
+					}
+				]
+			},
+			{
+				"name": "Hero's Cave",
+				"sections": [
+					{
+					"name": "D0 Key Chest"
+					},
+					{
+					"name": "D0 Hidden 2d Section",
+					"access_rules": ["$kill_keese"]
+					},
+					{
+					"name": "D0 Sword Chest",
+					"access_rules": ["d0sk:1"]
+					},
+					{
+					"name": "D0 Rupee Chest",
+					"access_rules": ["$destroy_bush_flute"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 194,
+					"y": 578
+					}
+				]
+			},
+			{
+				"name": "The Black Beast",
+				"access_rules": ["$shoot_seeds, mysteryseeds, $kill_moldorm, emberseeds",
+					"$shoot_seeds, mysteryseeds, emberseeds, [$kill_moldorm], $kill_moldorm_hard"],
+				"sections": [
+					{
+					"name": "Black Beast's Chest"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 194,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Golden Darknut",
+				"chest_unopened_img":"images/items/golden_darknut.png",
+				"chest_opened_img":"images/items/golden_darknut_defeated.png",
+				"access_rules": ["coast_spring, $kill_darknut",
+					"polishedbell, $village_to_suburbs, $destroy_bush, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_village, spring, $kill_darknut",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_village, spring, $kill_darknut",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_village, spring, $kill_darknut",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_village, spring, $kill_darknut",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_village, spring, $kill_darknut",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_village, spring, $kill_darknut",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_village, spring, $kill_darknut",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $temple_to_hns, spring, $kill_darknut",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_mountain, spring, $kill_darknut",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_village, spring, $kill_darknut"],
+				"sections": [
+					{
+					"name": "Golden Darknut",
+					"hosted_item": "golden_darknut"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 234,
+					"y": 578
+					}
+				]
+			},
+			{
+				"name": "Western Coast",
+				"access_rules": ["polishedbell, $village_to_suburbs, $destroy_bush, $temple_to_hns",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_village",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_village",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_village",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_village"],
+				"sections": [
+					{
+					"name": "Western Coast, Beach Chest"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 138,
+					"y": 610
+					}
+				]
+			},
+			{
+				"name": "Western Coast House",
+				"access_rules": ["polishedbell, $village_to_suburbs, $destroy_bush, $temple_to_hns",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_village",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_village",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_village",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_village",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $temple_to_hns",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_mountain",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_village"],
+				"sections": [
+					{
+					"name": "Western Coast, in House"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 100,
+					"y": 568
+					}
+				]
+			},
+			{
+				"name": "Graveyard",
+				"access_rules": ["polishedbell, $village_to_suburbs, $destroy_bush, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_village, $max_jump:3, bracelet, fall",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $sunken_city, $natzu_to_suburbs, $portal_village, $max_jump:3, bracelet, fall",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_village, $max_jump:3, bracelet, fall",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_village, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_swamp, $temple_to_beach, $destroy_bush, $portal_village, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_mountain, $temple_to_hns, $destroy_bush, $portal_village, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_village, $temple_to_hns, $destroy_bush, $portal_village, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $temple_to_hns, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_mountain, $max_jump:3, bracelet, fall",
+					"polishedbell, $portal_remains, $remains_to_temple, $destroy_bush, $portal_village, $max_jump:3, bracelet, fall"],
+				"sections": [
+					{
+					"name": "Graveyard Heart Piece"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 50,
+					"y": 568
+					}
+				]
+			},
+			{
+				"name": "Cat in Tree",
+				"access_rules": ["fish"],
+				"sections": [
+					{
+					"name": "Old Man Trade"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 320,
+					"y": 500
+					}
+				]
+			},
+			{
+				"name": "Eyeglass Lake",
+				"access_rules": ["$max_jump:3",
+					"north_fall, $max_jump:1",
+					"$north_stump, fall, $max_jump:1"],
+				"sections": [
+					{
+					"name": "Eyeglass Lake, Across Bridge"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 366,
+					"y": 492
+					}
+				]
+			},
+			{
+				"name": "Malon's House",
+				"access_rules": ["$destroy_bush_flute, cuccodex"],
+				"sections": [
+					{
+					"name": "Malon Trade"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 360,
+					"y": 352
+					}
+				]
+			},
+			{
+				"name": "Golden Beasts Reward",
+				"access_rules": ["$north_stump, flippers, north_summer",
+					"$north_stump, flippers, summer",
+					"$north_stump, $dimitri, north_summer",
+					"$north_stump, $dimitri, summer"],
+				"sections": [
+					{
+					"name": "Dry Eyeglass Lake, West Cave",
+					"access_rules": ["$has|beasts|1, golden1", "$has|beasts|2, golden1", "$has|beasts|3, golden1", "$has|beasts|4, golden1",
+						"$has|beasts|2, golden2", "$has|beasts|3, golden2", "$has|beasts|4, golden2",
+						"$has|beasts|3, golden3", "$has|beasts|4, golden3",
+						"$has|beasts|4, golden4"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 304,
+					"y": 438
+					}
+				]
+			},
+			{
+				"name": "West Eyeglass Lake",
+				"sections": [
+					{
+					"name": "Dry Eyeglass Lake, West Cave",
+					"access_rules": ["$north_stump, bombs, flippers, north_summer, $max_jump:1",
+					"$north_stump, bombs, flippers, north_summer, $moosh",
+						"$north_stump, bombs, flippers, summer, $max_jump:1",
+					"$north_stump, bombs, flippers, summer, $moosh",
+						"$north_stump, $ricky, flippers, north_summer",
+					"$north_stump, $ricky, flippers, summer",
+					"$d5_stump, bombs, summer, flippers",
+						"$d5_stump, $ricky, summer, flippers",
+					"$enter_d5, bombs, north_summer, bracelet, $max_jump:1, flippers",
+						"$enter_d5, $ricky, north_summer, bracelet, $max_jump:1, flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 324,
+					"y": 448
+					}
+				]
+			},
+			{
+				"name": "East Eyeglass Lake",
+				"access_rules": ["$d5_stump, $wet_lake, summer, bracelet",
+					"$d5_stump, $wet_lake, north_summer, $enter_d5, bracelet"],
+				"sections": [
+					{
+					"name": "Dry Eyeglass Lake, East Cave"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 449,
+					"y": 448
+					}
+				]
+			},
+			{
+				"name": "Windmill",
+				"access_rules": ["$village_to_suburbs",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs",
+					"$sunken_city, $natzu_to_suburbs",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs",
+					"$portal_swamp, $temple_to_beach, $destroy_bush",
+					"$portal_mountain, $temple_to_hns, $destroy_bush",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $destroy_bush",
+					"$portal_village, $temple_to_hns, $destroy_bush",
+					"$portal_remains, $remains_to_temple, $destroy_bush"],
+				"sections": [
+					{
+						"name": "Guru-Guru Trade",
+						"access_rules": ["enginegrease"]
+					},
+					{
+						"name": "Windmill Heart Piece",
+						"access_rules": ["winter"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 460,
+					"y": 584
+					}
+				]
+			},
+			{
+				"name": "Spring Cave",
+				"access_rules": ["$village_to_suburbs",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs",
+					"$sunken_city, $natzu_to_suburbs",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs",
+					"$portal_swamp, $temple_to_beach, $destroy_bush",
+					"$portal_mountain, $temple_to_hns, $destroy_bush",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $destroy_bush",
+					"$portal_village, $temple_to_hns, $destroy_bush",
+					"$portal_remains, $remains_to_temple, $destroy_bush"],
+				"sections": [
+					{
+					"name": "Eastern Suburbs Spring Cave",
+					"access_rules": ["spring, bracelet, $max_jump:3",
+					"spring, bracelet, $max_jump:2, [$max_jump:3]",
+						"spring, bracelet, $max_jump:1, bombs, [$max_jump:3]",
+					"spring, bracelet, magnet",
+						"suburbs_spring, bracelet, $max_jump:3",
+					"suburbs_spring, bracelet, $max_jump:2, [$max_jump:3]",
+						"suburbs_spring, bracelet, $max_jump:1, bombs, [$max_jump:3]",
+					"suburbs_spring, bracelet, magnet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 534,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Top of D2",
+				"access_rules": ["$village_to_suburbs, $suburbs_to_fountain, $fountain_to_D2",
+					"$sunken_city, $natzu_to_suburbs, $fountain_to_D2",
+					"$scent_tree_hard, $natzu_to_moblin_hard, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_D2",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_D2"],
+				"sections": [
+					{
+					"name": "Chest on Top of D2",
+					"access_rules": ["$ricky, bracelet",
+						"wow_summer, bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 610,
+					"y": 355
+					}
+				]
+			},
+			{
+				"name": "Mushroom Cave Outside D2",
+				"access_rules": ["$village_to_suburbs, $suburbs_to_fountain, $fountain_to_D2",
+					"$sunken_city, $natzu_to_suburbs, $fountain_to_D2",
+					"$scent_tree_hard, $natzu_to_moblin_hard, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_D2",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_D2"],
+				"sections": [
+					{
+					"name": "Cave Outside D2",
+					"access_rules": ["wow_fall, $destroy_mushroom, magnet",
+						"wow_fall, $destroy_mushroom, $max_jump:3",
+						"wow_fall, $destroy_mushroom, [$max_jump:3], $max_jump:2, bombs",
+						"fall, $ricky, $destroy_mushroom, magnet",
+						"fall, wow_summer, $destroy_mushroom, magnet",
+						"fall, $ricky, $destroy_mushroom, $max_jump:3",
+						"fall, wow_summer, $destroy_mushroom, $max_jump:3"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 631,
+					"y": 364
+					}
+				]
+			},
+			{
+				"name": "Golden Moblin",
+				"chest_opened_img": "images/items/golden_moblin.png",
+				"chest_unopened_img": "images/items/golden_moblin_defeated.png",
+				"access_rules": ["$village_to_suburbs, $suburbs_to_fountain, $fountain_to_D2",
+					"$sunken_city, $natzu_to_suburbs, $fountain_to_D2",
+					"$scent_tree_hard, $natzu_to_moblin_hard, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_D2",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_D2"],
+				"sections": [
+					{
+					"name": "Golden Moblin",
+					"access_rules": ["wow_fall, $kill_normal",
+						"fall, $ricky, $kill_normal",
+						"fall, wow_summer, $kill_normal",
+						"fall, defaultseasonson, $kill_normal"],
+						"hosted_item": "golden_moblin"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 578,
+					"y": 372
+					}
+				]
+			},
+			{
+				"name": "Moblin Road",
+				"access_rules": ["$village_to_suburbs, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $natzu_to_suburbs, $fountain_to_WoW",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_village, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $sunken_to_wow, flippers"],
+				"sections": [
+					{
+					"name": "Woods of Winter, 1st Cave",
+					"access_rules": ["bombs, $destroy_bush, wow_spring",
+						"bombs, $destroy_bush, [wow_spring], $sunken_city, $sunken_to_wow, flippers",
+						"bombs, $destroy_bush, wow_summer",
+						"bombs, $destroy_bush, defaultseasonson",
+						"bombs, $destroy_bush, [wow_summer], $sunken_city, $sunken_to_wow, flippers",
+						"bombs, $destroy_bush, [defaultseasonson], $sunken_city, $sunken_to_wow, flippers",
+						"bombs, $destroy_bush, wow_fall",
+						"bombs, $destroy_bush, [wow_fall], $sunken_city, $sunken_to_wow, flippers",
+						"bombs, $destroy_bush, spring",
+						"bombs, $destroy_bush, [spring], $sunken_city, $sunken_to_wow, flippers",
+						"bombs, $destroy_bush, summer",
+						"bombs, $destroy_bush, [summer], $sunken_city, $sunken_to_wow, flippers",
+						"bombs, $destroy_bush, fall",
+						"bombs, $destroy_bush, [fall], $sunken_city, $sunken_to_wow, flippers",
+						"$ricky, $destroy_bush, wow_spring",
+						"$ricky, $destroy_bush, [wow_spring], $sunken_city, $sunken_to_wow, flippers",
+						"$ricky, $destroy_bush, wow_summer",
+						"$ricky, $destroy_bush, [wow_summer], $sunken_city, $sunken_to_wow, flippers",
+						"$ricky, $destroy_bush, defaultseasonson",
+						"$ricky, $destroy_bush, [defaultseasonson], $sunken_city, $sunken_to_wow, flippers",
+						"$ricky, $destroy_bush, wow_fall",
+						"$ricky, $destroy_bush, spring",
+						"$ricky, $destroy_bush, [spring], $sunken_city, $sunken_to_wow, flippers",
+						"$ricky, $destroy_bush, summer",
+						"$ricky, $destroy_bush, [summer], $sunken_city, $sunken_to_wow, flippers",
+						"$ricky, $destroy_bush, fall",
+						"$ricky, $destroy_bush, [fall], $sunken_city, $sunken_to_wow, flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 578,
+					"y": 322
+					}
+				]
+			},
+			{
+				"name": "Woods of Winter Heart Piece",
+				"access_rules": ["$village_to_suburbs, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $natzu_to_suburbs, $fountain_to_WoW",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_village, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $sunken_to_wow, flippers"],
+				"sections": [
+					{
+					"name": "Woods of Winter Heart Piece",
+					"access_rules": ["bracelet",
+					"$max_jump:1",
+					"flippers",
+					"$dimitri",
+					"wow_winter",
+					"winter"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 673,
+					"y": 462
+					}
+				]
+			},
+			{
+				"name": "Waterfall Cave",
+				"access_rules": ["$village_to_suburbs, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $natzu_to_suburbs, $fountain_to_WoW",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_village, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $sunken_to_wow, flippers"],
+				"sections": [
+					{
+					"name": "Woods of Winter, 2nd Cave",
+					"access_rules": ["$max_jump:3",
+						"$max_jump:2, bombs, [$max_jump:3]",
+						"flippers",
+						"$sunken_city, $sunken_to_wow, flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 621,
+					"y": 300
+					}
+				]
+			},
+			{
+				"name": "Holly's House",
+				"access_rules": ["$village_to_suburbs, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $natzu_to_suburbs, $fountain_to_WoW",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_village, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+					"$sunken_city, $sunken_to_wow, flippers"],
+				"sections": [
+					{
+					"name": "Holly's House",
+					"access_rules": ["wow_winter",
+						"winter"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 663,
+					"y": 322
+					}
+				]
+			},
+			{
+				"name": "Blaino's Gym",
+				"access_rules": ["$scent_tree"],
+				"sections": [
+					{
+					"name": "Blaino Prize"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 366,
+					"y": 322
+					}
+				]
+			},
+			{
+				"name": "Cave Behind Mushrooms",
+				"access_rules": ["$scent_tree"],
+				"sections": [
+					{
+					"name": "Cave North of D1",
+					"access_rules": ["flippers, $destroy_mushroom, plain_fall",
+					"flippers, $dimitri, plain_fall",
+						"flippers, $destroy_mushroom, $plain_stump, fall",
+					"flippers, $dimitri, $plain_stump, fall"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 323,
+					"y": 364
+					}
+				]
+			},
+			{
+				"name": "Old Man in Treehouse",
+				"access_rules": ["flippers",
+					"$dimitri"],
+				"sections": [
+					{
+					"name": "Old Man in Treehouse",
+					"access_rules": ["$has|essences|1, oldman1", "$has|essences|2, oldman1", "$has|essences|3, oldman1", "$has|essences|4, oldman1", "$has|essences|5, oldman1", "$has|essences|6, oldman1", "$has|essences|7, oldman1", "$has|essences|8, oldman1",
+						"$has|essences|2, oldman2", "$has|essences|3, oldman2", "$has|essences|4, oldman2", "$has|essences|5, oldman2", "$has|essences|6, oldman2", "$has|essences|7, oldman2", "$has|essences|8, oldman2",
+						"$has|essences|3, oldman3", "$has|essences|4, oldman3", "$has|essences|5, oldman3", "$has|essences|6, oldman3", "$has|essences|7, oldman3", "$has|essences|8, oldman3",
+						"$has|essences|4, oldman4", "$has|essences|5, oldman4", "$has|essences|6, oldman4", "$has|essences|7, oldman4", "$has|essences|8, oldman4",
+						"$has|essences|5, oldman5", "$has|essences|6, oldman5", "$has|essences|7, oldman5", "$has|essences|8, oldman5",
+						"$has|essences|6, oldman6", "$has|essences|7, oldman6", "$has|essences|8, oldman6",
+						"$has|essences|7, oldman7", "$has|essences|8, oldman7",
+						"$has|essences|8, oldman8"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 237,
+					"y": 492
+					}
+				]
+			},
+			{
+				"name": "Flooded Cave",
+				"access_rules": ["$scent_tree"],
+				"sections": [
+					{
+					"name": "Cave South of Mrs. Ruul",
+					"access_rules": ["flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 140,
+					"y": 482
+					}
+				]
+			},
+			{
+				"name": "Mrs. Ruul's House",
+				"access_rules": ["$scent_tree, ghastlydoll"],
+				"sections": [
+					{
+					"name": "Mrs. Ruul Trade"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 140,
+					"y": 445
+					}
+				]
+			},
+			{
+				"name": "Floodgate Keeper",
+				"sections": [
+					{
+					"name": "Floodgate Keeper's House",
+					"access_rules": ["$pegasus_tree, $hit_lever"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 109,
+					"y": 279
+					}
+				]
+			},
+			{
+				"name": "Spool Swamp Digging Spot",
+				"sections": [
+					{
+					"name": "Spool Swamp Digging Spot",
+					"access_rules": ["$pegasus_tree, summer, shovel, d3key",
+						"$swamp_stump, swamp_summer, shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 119,
+					"y": 349
+					}
+				]
+			},
+			{
+				"name": "Spool Swamp Heart Piece",
+				"sections": [
+					{
+					"name": "Spool Swamp Heart Piece",
+					"access_rules": ["$swamp_stump, flippers, spring, d3key",
+					"$swamp_stump, flippers, swamp_spring, d3key",
+					"flippers, $destroy_bush_flute, swamp_spring, $max_jump:4",
+					"flippers, bracelet, swamp_spring, $portal_rosa, $max_jump:4",
+					"flippers, bracelet, swamp_spring, $portal_lake, $max_jump:4",
+					"flippers, bracelet, swamp_spring, $portal_mountain, $max_jump:4",
+					"flippers, bracelet, swamp_spring, $portal_village, $max_jump:4",
+					"flippers, bracelet, swamp_spring, $portal_remains, $max_jump:4"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 74,
+					"y": 489
+					}
+				]
+			},
+			{
+				"name": "Winter Cave",
+				"sections": [
+					{
+					"name": "Spool Swamp Cave",
+					"access_rules": ["$south_swamp, swamp_winter, shovel, bombs",
+					"$south_swamp, swamp_winter, $any_flute, bombs",
+						"$south_swamp, swamp_winter, $ricky",
+					"$south_swamp, $swamp_stump, winter, shovel, bombs",
+						"$south_swamp, $swamp_stump, winter, $any_flute, bombs",
+					"$south_swamp, $swamp_stump, winter, $ricky"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 109,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Golden Octorok",
+				"chest_opened_img":"images/items/golden_octorock.png",
+				"chest_unopened_img":"images/items/golden_octorock_defeated.png",
+				"sections": [
+					{
+					"name": "Golden Octorok",
+					"access_rules": ["$south_swamp, swamp_summer, $kill_normal",
+						"$south_swamp, $swamp_stump, summer, $kill_normal"],
+					"hosted_item": "golden_octorok"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 21,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Underwater Item Below Natzu Bridge",
+				"sections": [
+					{
+					"name": "Underwater Item Below Natzu Bridge",
+					"access_rules": ["$scent_tree, flippers",
+					"$sunken_city, natzu_dimitri, $max_jump:4"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 272,
+					"y": 262
+					}
+				]
+			},
+			{
+				"name": "North Natzu",
+				"sections": [
+					{
+					"name": "Natzu Region, Across Water",
+					"access_rules": ["$scent_tree, flippers",
+					"$scent_tree, $dimitri",
+					"$sunken_city, natzu_dimitri, $max_jump:4"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 417,
+					"y": 175
+					}
+				]
+			},
+			{
+				"name": "Moblin Keep",
+				"sections": [
+					{
+					"name": "Moblin Keep",
+					"access_rules": ["$scent_tree, $natzu_to_moblin, bracelet",
+					"$sunken_city, $sunken_to_moblin, bracelet",
+						"$mount_cucco, flippers, $cucco_to_sunken, $sunken_to_moblin, bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 493,
+					"y": 237
+					}
+				]
+			},
+			{
+				"name": "Ingo's House",
+				"access_rules": ["$sunken_city",
+					"$scent_tree, $cross_natzu, $cross_water",
+					"$scent_tree, $cross_natzu, sunken_winter",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $cross_water",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, sunken_winter",
+					"$mount_cucco, flippers, $cucco_to_sunken"],
+				"sections": [
+					{
+					"name": "Ingo Trade",
+					"access_rules": ["goronvase"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 570,
+					"y": 187
+					}
+				]
+			},
+			{
+				"name": "Maple's House",
+				"access_rules": ["$sunken_city",
+					"$scent_tree, $cross_natzu, $cross_water",
+					"$scent_tree, $cross_natzu, sunken_winter",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $cross_water",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, sunken_winter",
+					"$mount_cucco, flippers, $cucco_to_sunken"],
+				"sections": [
+					{
+					"name": "Syrup Trade",
+					"access_rules": ["winter, mushroom"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 620,
+					"y": 237
+					}
+				]
+			},
+			{
+				"name": "Waterfall Challenge",
+				"access_rules": ["$sunken_city",
+					"$scent_tree, $cross_natzu, $cross_water",
+					"$scent_tree, $cross_natzu, sunken_winter",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $cross_water",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, sunken_winter",
+					"$mount_cucco, flippers, $cucco_to_sunken"],
+				"sections": [
+					{
+					"name": "Master Diver's Challenge",
+					"access_rules": ["sword1, $max_jump:1, $waterfalls",
+					"sword1, flippers, $waterfalls"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 611,
+					"y": 110
+					}
+				]
+			},
+			{
+				"name": "Waterfall",
+				"access_rules": ["$sunken_city",
+					"$scent_tree, $cross_natzu, $cross_water",
+					"$scent_tree, $cross_natzu, sunken_winter",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $cross_water",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, sunken_winter",
+					"$mount_cucco, flippers, $cucco_to_sunken"],
+				"sections": [
+					{
+					"name": "Master Diver's Reward",
+					"access_rules": ["$dimitri, plaque, $waterfalls",
+					"$max_jump:1, plaque, $waterfalls",
+						"flippers, plaque, $waterfalls",
+					"sunken_winter, plaque, $waterfalls"]
+					},
+					{
+					"name": "Chest in Master Diver's Cave",
+					"access_rules": ["$max_jump:1, $waterfalls",
+					"flippers, $waterfalls",
+					"sunken_winter, $waterfalls",
+					"$dimitri, $waterfalls"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 626,
+					"y": 110
+					}
+				]
+			},
+			{
+				"name": "Sunken City Cliffs",
+				"access_rules": ["$sunken_city",
+					"$scent_tree, $cross_natzu, $cross_water",
+					"$scent_tree, $cross_natzu, sunken_winter",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $cross_water",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, sunken_winter",
+					"$mount_cucco, flippers, $cucco_to_sunken"],
+				"sections": [
+					{
+					"name": "Sunken City, Summer Cave",
+					"access_rules": ["$destroy_bush, flippers, sunken_summer",
+					"$destroy_bush, flippers, summer",
+					"$destroy_bush, flippers, defaultseasonson"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 652,
+					"y": 185
+					}
+				]
+			},
+			{
+				"name": "Mt. Cucco Peak",
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_hns, $max_jump:1",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$south_swamp, flippers, bracelet, $temple_to_hns, $max_jump:1",
+					"$south_swamp, $dimitri, bracelet, $temple_to_hns, $max_jump:1",
+					"$sunken_city, summer, flippers",
+					"$sunken_city, sunken_summer, flippers",
+					"$sunken_city, defaultseasonson, flippers",
+					"$portal_mountain, $max_jump:1",
+					"$portal_village, $max_jump:1",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $temple_to_hns, $max_jump:1",
+					"$portal_remains, $remains_to_temple, $temple_to_hns, $max_jump:1",
+					"$mount_cucco"],
+				"sections": [
+					{
+					"name": "Spring Banana Tree",
+					"access_rules": ["spring, bracelet",
+					"sunken_spring, bracelet",
+					"spring, bracelet, $max_jump:1, sword1",
+						"spring, bracelet, $max_jump:1, foolsore, $destroy_flower",
+					"spring, bracelet, $max_jump:1, foolsore, [$destroy_flower], satchel, galeseeds",
+						"spring, bracelet, $max_jump:1, foolsore, [$destroy_flower], treewarp",
+					"spring, bracelet, $max_jump:1, foolsore, banana",
+						"spring, bracelet, $max_jump:1, foolsore, [banana], satchel, galeseeds",
+					"spring, bracelet, $max_jump:1, foolsore, [banana], treewarp",
+						"sunken_spring, bracelet, $max_jump:1, sword1",
+					"sunken_spring, bracelet, $max_jump:1, foolsore, $destroy_flower",								
+						"sunken_spring, bracelet, $max_jump:1, foolsore, [$destroy_flower], satchel, galeseeds",
+					"sunken_spring, bracelet, $max_jump:1, foolsore, [$destroy_flower], treewarp",								
+						"sunken_spring, bracelet, $max_jump:1, foolsore, banana",
+					"sunken_spring, bracelet, $max_jump:1, foolsore, [banana], satchel, galeseeds",								
+						"sunken_spring, bracelet, $max_jump:1, foolsore, [banana], treewarp"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 672,
+					"y": 15
+					}
+				]
+			},
+			{
+				"name": "Mt. Cucco Cave",
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_hns, $max_jump:1",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$south_swamp, flippers, bracelet, $temple_to_hns, $max_jump:1",
+					"$south_swamp, $dimitri, bracelet, $temple_to_hns, $max_jump:1",
+					"$sunken_city, summer, flippers",
+					"$sunken_city, sunken_summer, flippers",
+					"$sunken_city, defaultseasonson, flippers",
+					"$portal_mountain, $max_jump:1",
+					"$portal_village, $max_jump:1",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $temple_to_hns, $max_jump:1",
+					"$portal_remains, $remains_to_temple, $temple_to_hns, $max_jump:1",
+					"$mount_cucco"],
+				"sections": [
+					{
+					"name": "Mt. Cucco, Platform Cave",
+					"access_rules": ["spring, bracelet, $destroy_flower",
+						"[spring], bracelet, satchel, galeseeds",
+						"[spring], bracelet, treewarp",
+						"sunken_spring, bracelet, $destroy_flower",								
+						"[sunken_spring], bracelet, satchel, galeseeds",
+						"[sunken_spring], bracelet, treewarp"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 672,
+					"y": 68
+					}
+				]
+			},
+			{
+				"name": "Talon's Cave",
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_hns, $max_jump:1",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$south_swamp, flippers, bracelet, $temple_to_hns, $max_jump:1",
+					"$south_swamp, $dimitri, bracelet, $temple_to_hns, $max_jump:1",
+					"$sunken_city, summer, flippers",
+					"$sunken_city, sunken_summer, flippers",
+					"$sunken_city, defaultseasonson, flippers",
+					"$portal_mountain, $max_jump:1",
+					"$portal_village, $max_jump:1",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $temple_to_hns, $max_jump:1",
+					"$portal_remains, $remains_to_temple, $temple_to_hns, $max_jump:1",
+					"$mount_cucco"],
+				"sections": [
+					{
+					"name": "Talon Trade",
+					"access_rules": ["$talon_cave, megaphone"]
+					},
+					{
+					"name": "Mt. Cucco, Talon's Cave",
+					"access_rules": ["$talon_cave, megaphone"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 503,
+					"y": 58
+					}
+				]
+			},
+			{
+				"name": "Diving Spot Outside D4",
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_hns, $max_jump:1",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$south_swamp, flippers, bracelet, $temple_to_hns, $max_jump:1",
+					"$south_swamp, $dimitri, bracelet, $temple_to_hns, $max_jump:1",
+					"$sunken_city, summer, flippers",
+					"$sunken_city, sunken_summer, flippers",
+					"$sunken_city, defaultseasonson, flippers",
+					"$portal_mountain, $max_jump:1",
+					"$portal_village, $max_jump:1",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $temple_to_hns, $max_jump:1",
+					"$portal_remains, $remains_to_temple, $temple_to_hns, $max_jump:1",
+					"$mount_cucco"],
+				"sections": [
+					{
+					"name": "Diving Spot Outside D4",
+					"access_rules": ["$talon_cave, flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 598,
+					"y": 50
+					}
+				]
+			},
+			{
+				"name": "Mt. Cucco Heart Piece",
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_hns, $max_jump:1",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_hns, $max_jump:1",
+					"$south_swamp, flippers, bracelet, $temple_to_hns, $max_jump:1",
+					"$south_swamp, $dimitri, bracelet, $temple_to_hns, $max_jump:1",
+					"$sunken_city, summer, flippers",
+					"$sunken_city, sunken_summer, flippers",
+					"$sunken_city, defaultseasonson, flippers",
+					"$portal_mountain, $max_jump:1",
+					"$portal_village, $max_jump:1",
+					"$portal_lake, $furnace_to_beach, $temple_to_beach, $temple_to_hns, $max_jump:1",
+					"$portal_remains, $remains_to_temple, $temple_to_hns, $max_jump:1",
+					"$mount_cucco"],
+				"sections": [
+					{
+					"name": "Mt. Cucco Heart Piece",
+					"access_rules": ["$talon_cave"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 575,
+					"y": 98
+					}
+				]
+			},
+			{
+				"name": "East Goron Mountain",
+				"sections": [
+					{
+					"name": "Goron Mountain, Across Pits",
+					"access_rules": ["$mount_cucco, banana",
+					"$mount_cucco, $max_jump:4"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 449,
+					"y": 68
+					}
+				]
+			},
+			{
+				"name": "Goron's Gift",
+				"access_rules": ["bracelet"],
+				"sections": [
+					{
+					"name": "Goron's Gift",
+					"access_rules": ["$goron_mountain, bombs, bracelet",
+						"$goron_mountain, bombs, shovel",
+						"$goron_mountain, bombs, banana"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 396,
+					"y": 58
+					}
+				]
+			},
+			{
+				"name": "Goron Caves",
+				"sections": [
+					{
+					"name": "Chest in Goron Mountain",
+					"access_rules": ["$goron_mountain, bombs, $max_jump:3"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 361,
+					"y": 88
+					}
+				]
+			},
+			{
+				"name": "Biggoron Trade",
+				"sections": [
+					{
+					"name": "Biggoron Trade",
+					"access_rules": ["$goron_mountain, bombs, $max_jump:1, lavasoup"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 364,
+					"y": 38
+					}
+				]
+			},
+			{
+				"name": "Golden Lynel",
+				"chest_unopened_img": "images/items/golden_lynel.png",
+				"chest_opened_img": "images/items/golden_lynel_defeated.png",
+				"access_rules": ["$tarm_ruins"],
+				"sections": [
+					{
+					"name": "Lost Woods",
+					"access_rules": ["summer, winter, $kill_lynel"],
+					"hosted_item": "golden_lynel"
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 148,
+					"y": 192
+					}
+				]
+			},
+			{
+				"name": "Lost Woods",
+				"access_rules": ["$tarm_ruins"],
+				"sections": [
+					{
+					"name": "Lost Woods",
+					"access_rules": ["spring, summer, fall, winter"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 22,
+					"y": 192
+					}
+				]
+			},
+			{
+				"name": "Tree Behind Mushrooms",
+				"access_rules": ["$tarm_ruins"],
+				"sections": [
+					{
+					"name": "Tarm Ruins, Under Tree",
+					"access_rules": ["$tarm_tree, $use_seeds, emberseeds"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 15,
+					"y": 85
+					}
+				]
+			},
+			{
+				"name": "Samasa Desert Pit",
+				"access_rules": ["$suburbs, $temple_to_hns",
+					"$suburbs, $portal_mountain",
+					"$suburbs, $portal_village",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $temple_to_hns",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_mountain",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_village",
+					"$sunken_city, $natzu_to_suburbs, $temple_to_hns",
+					"$sunken_city, $natzu_to_suburbs, $portal_mountain",
+					"$sunken_city, $natzu_to_suburbs, $portal_village",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_village",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_village",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $temple_to_hns",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $portal_mountain",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $portal_village",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $portal_village",
+					"$portal_village, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"$portal_village, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"$portal_village, $temple_to_hns, $destroy_bush, $portal_village",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $temple_to_hns",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $portal_mountain",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $portal_village"],
+				"sections": [
+					{
+					"name": "Samasa Desert Pit",
+					"access_rules": ["bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 528,
+					"y": 573
+					}
+				]
+			},
+			{
+				"name": "Samasa Desert",
+				"access_rules": ["$suburbs, $temple_to_hns",
+					"$suburbs, $portal_mountain",
+					"$suburbs, $portal_village",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $temple_to_hns",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_mountain",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $portal_village",
+					"$sunken_city, $natzu_to_suburbs, $temple_to_hns",
+					"$sunken_city, $natzu_to_suburbs, $portal_mountain",
+					"$sunken_city, $natzu_to_suburbs, $portal_village",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $portal_village",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $temple_to_hns",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_mountain",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $portal_village",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $temple_to_hns",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $portal_mountain",
+					"$portal_swamp, $temple_to_beach, $destroy_bush, $portal_village",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"$portal_mountain, $temple_to_hns, $destroy_bush, $portal_village",
+					"$portal_village, $temple_to_hns, $destroy_bush, $temple_to_hns",
+					"$portal_village, $temple_to_hns, $destroy_bush, $portal_mountain",
+					"$portal_village, $temple_to_hns, $destroy_bush, $portal_village",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $temple_to_hns",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $portal_mountain",
+					"$portal_remains, $remains_to_temple, $destroy_bush, $portal_village"],
+				"sections": [
+					{
+					"name": "Samasa Desert Chest",
+					"access_rules": ["flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 663,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Temple Remains Heart Piece",
+				"sections": [
+					{
+					"name": "Temple Remains Heart Piece",
+					"access_rules": ["$enter_remains, winter, $max_jump:4, bombs",
+						"$enter_remains, winter, fall, $max_jump:1, bombs"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 280,
+					"y": 42
+					}
+				]
+			},
+			{
+				"name": "Onox",
+				"chest_unopened_img": "images/items/onox.png",
+				"chest_opened_img": "images/items/onox_defeated.png",
+				"sections": [
+					{
+					"name": "Onox",
+					"access_rules": ["$has|essences|1, onox1", "$has|essences|2, onox1", "$has|essences|3, onox1", "$has|essences|4, onox1", "$has|essences|5, onox1", "$has|essences|6, onox1", "$has|essences|7, onox1", "$has|essences|8, onox1",
+					"$has|essences|2, onox2", "$has|essences|3, onox2", "$has|essences|4, onox2", "$has|essences|5, onox2", "$has|essences|6, onox2", "$has|essences|7, onox2", "$has|essences|8, onox2",
+					"$has|essences|3, onox3", "$has|essences|4, onox3", "$has|essences|5, onox3", "$has|essences|6, onox3", "$has|essences|7, onox3", "$has|essences|8, onox3",
+					"$has|essences|4, onox4", "$has|essences|5, onox4", "$has|essences|6, onox4", "$has|essences|7, onox4", "$has|essences|8, onox4",
+					"$has|essences|5, onox5", "$has|essences|6, onox5", "$has|essences|7, onox5", "$has|essences|8, onox5",
+					"$has|essences|6, onox6", "$has|essences|7, onox6", "$has|essences|8, onox6",
+					"$has|essences|7, onox7", "$has|essences|8, onox7",
+					"$has|essences|8, onox8"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 150,
+					"y": 15
+					}
+				]
+			},
+			{
+				"name": "Horon Village Tree",
+				"sections": [
+				  	{
+						"name": "Seeds",
+						"access_rules": ["$harvest_seeds",
+							"$use_seeds, $dimitri"],
+						"hosted_item": "tree_village"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 364,
+						"y": 654
+				  	}
+				]
+			},
+			{
+				"name": "Holodrum Plain tree",
+				"access_rules": ["$scent_tree",
+						"$village_to_suburbs, $suburbs_to_fountain, $fountain_to_WoW",
+						"$sunken_city, $natzu_to_suburbs, $fountain_to_WoW",
+						"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+						"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_WoW",
+						"$portal_swamp, $temple_to_beach, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+						"$portal_mountain, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+						"$portal_village, $temple_to_hns, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+						"$portal_remains, $remains_to_temple, $destroy_bush, $suburbs_to_fountain, $fountain_to_WoW",
+						"$sunken_city, $sunken_to_wow, flippers"],
+				"sections": [
+				  	{
+						"name": "Seeds",
+						"access_rules": ["$harvest_seeds",
+							"$use_seeds, $dimitri"],
+						"hosted_item": "tree_plain"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 323,
+						"y": 279
+				  	}
+				]
+			},		
+			{
+				"name": "Woods of Winter Tree",
+				"access_rules": ["$scent_tree, $cross_natzu, $natzu_to_suburbs",
+					"$sunken_city, $natzu_to_suburbs",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $natzu_to_suburbs",
+					"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs",
+					"$portal_swamp, $temple_to_beach, $destroy_bush",
+					"$portal_mountain, $temple_to_hns, $destroy_bush",
+					"$portal_village, $temple_to_hns, $destroy_bush",
+					"$portal_remains, $remains_to_temple, $destroy_bush"],
+				"sections": [
+				  	{
+						"name": "Seeds",
+						"access_rules": ["$suburbs_to_fountain, $fountain_to_D2, $harvest_seeds",
+							"$sunken_city, $natzu_to_suburbs, $fountain_to_D2, $harvest_seeds",
+							"$scent_tree_hard, $natzu_to_moblin_hard, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_D2, $harvest_seeds",
+							"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_D2, $harvest_seeds",
+							"$suburbs_to_fountain, $fountain_to_D2, $use_seeds, $dimitri",
+							"$sunken_city, $natzu_to_suburbs, $fountain_to_D2, $use_seeds, $dimitri",
+							"$scent_tree_hard, $natzu_to_moblin_hard, $moblin_keep_to_sunken, $natzu_to_suburbs, $fountain_to_D2, $use_seeds, $dimitri",
+							"$mount_cucco, flippers, $cucco_to_sunken, $natzu_to_suburbs, $fountain_to_D2, $use_seeds, $dimitri"],
+						"hosted_item": "tree_wow"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 621,
+						"y": 407
+					}
+				]
+			},
+			{
+				"name": "Spool Swamp tree",
+				"access_rules": ["$pegasus_tree"],
+				"sections": [
+					{
+						"name": "Seeds",
+						"access_rules": ["$harvest_seeds",
+							"$use_seeds, $dimitri"],
+							"hosted_item": "tree_swamp"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 107,
+						"y": 322
+					}
+				]
+			},
+			{
+				"name": "Sunken City tree",
+				"access_rules": ["$sunken_city",
+					"$scent_tree, $cross_natzu, $cross_waster",
+					"$scent_tree, $cross_natzu, sunken_winter",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, $cross_water",
+					"$scent_tree, $natzu_to_moblin, $moblin_keep_to_sunken, sunken_winter",
+					"$mount_cucco, flippers, $cucco_to_sunken"],
+				"sections": [
+				  {
+						"name": "Seeds",
+						"access_rules": ["$harvest_seeds",
+							"$use_seeds, $dimitri"],
+						"hosted_item": "tree_sunken"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 661,
+						"y": 235
+				  	}
+				]
+			},
+			{
+				"name": "Tarm Ruins tree",
+				"access_rules": ["$tarm_ruins, $destroy_mushroom, winter, spring, summer, fall"],
+				"sections": [
+				  	{
+					"name": "Seeds",
+					"access_rules": ["$harvest_seeds"],
+					"hosted_item": "tree_tarm"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 22,
+						"y": 57
+				  	}
+				]
+			}
+		]
+	}
+]

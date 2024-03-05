@@ -1,0 +1,240 @@
+﻿[
+	{
+		"name": "Gnarled Root Dungeon",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"access_rules": ["$enter_d1, shuffledungeonoff",
+			"$enter_d1, shuffledungeonon, d1_d1",
+			"$enter_d2, shuffledungeonon, d2_d1",
+			"$enter_d3, shuffledungeonon, d3_d1",
+			"$enter_d4, shuffledungeonon, d4_d1",
+			"$enter_d5, shuffledungeonon, d5_d1",
+			"$enter_d6, shuffledungeonon, d6_d1",
+			"$enter_d7, shuffledungeonon, d7_d1",
+			"$enter_d8, shuffledungeonon, d8_d1"],
+		"children": [	
+			{
+				"name": "D1 Stalfos Drop",
+				"sections": 
+                [
+					{
+                        "name": "D1 Stalfos Drop",
+                        	"access_rules": ["$kill_stalfos","bracelet",
+								"$kill_stalfos_hard, [$kill_stalfos]",
+								"$kill_stalfos_hard, [bracelet]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 617,
+						"y": 452
+					}
+				]
+			},
+			{
+				"name": "D1 Stalfos Chest",
+				"sections": 
+                [
+					{
+                        "name": "D1 Stalfos Chest",
+                        	"access_rules": ["d1sk:1, $kill_stalfos",
+								"d1sk:1, bracelet",
+								"d1sk:1, $kill_stalfos_hard, [$kill_stalfos]",
+								"d1sk:1, $kill_stalfos_hard, [bracelet]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 342,
+						"y": 452
+					}
+				]
+			},
+			{
+				"name": "D1 Goriya Chest",
+				"sections": 
+                [
+					{
+                        "name": "D1 Goriya Chest",
+                        "access_rules": ["d1sk:1, $kill_stalfos, $use_seeds, emberseeds",
+							"d1sk:1, bracelet, $use_seeds, emberseeds",
+							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos], $use_seeds, emberseeds",
+							"d1sk:1, $kill_stalfos_hard, [bracelet], $use_seeds, emberseeds",
+							"d1sk:1, $kill_stalfos, $use_seeds, mysteryseeds, [emberseeds]",
+							"d1sk:1, bracelet, $use_seeds, mysteryseeds, [emberseeds]",
+							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos], $use_seeds, mysteryseeds, [emberseeds]",
+							"d1sk:1, $kill_stalfos_hard, [bracelet], $use_seeds, mysteryseeds, [emberseeds]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 205,
+						"y": 351
+					}
+				]
+			},
+			{
+				"name": "D1 Block-Pushing Room",
+				"sections": 
+                [
+					{
+                        "name": "D1 Block-Pushing Room",
+                        "access_rules": ["d1sk:1, $kill_stalfos, $kill_normal",
+							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos], $kill_hard, [$kill_normal]",
+							"d1sk:1, bracelet, [$kill_stalfos], [$kill_normal]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 13,
+						"y": 214
+					}
+				]
+			},
+			{
+				"name": "D1 Lever Room",
+				"sections": 
+                [
+					{
+                        "name": "D1 Lever Room",
+                        "access_rules": ["d1sk:1, $kill_stalfos, $use_seeds, emberseeds",
+							"d1sk:1, bracelet, $use_seeds, emberseeds",
+							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos]",
+							"d1sk:1, $kill_stalfos_hard, [bracelet]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 379,
+						"y": 233
+					}
+				]
+			},
+			{
+				"name": "D1 Railway Chest",
+				"sections": 
+                [
+					{
+                        "name": "D1 Railway Chest",
+                        "access_rules": ["d1sk:1, $kill_stalfos, $hit_lever",
+							"d1sk:1, $kill_stalfos_hard, $hit_lever, [$kill_stalfos]",
+							"d1sk:1, bracelet, [$kill_stalfos]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 479,
+						"y": 260
+					}
+				]
+			},
+			{
+				"name": "D1 Button Chest",
+				"sections": 
+                [
+					{
+                        "name": "D1 Button Chest",
+                        "access_rules": ["d1sk:1, $kill_stalfos, $hit_lever",
+							"d1sk:1, $kill_stalfos_hard, $hit_lever, [$kill_stalfos]",
+							"d1sk:1, bracelet, [$kill_stalfos]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 662,
+						"y": 224
+					}
+				]
+			},
+			{
+				"name": "D1 Basement",
+				"sections": 
+                [
+					{
+                        "name": "D1 Basement",
+                        "access_rules": ["d1sk:2, [$kill_stalfos], $hit_lever, [$kill_goriyabros], bombs",
+							"d1sk:2, [$kill_stalfos], bracelet, [$kill_goriyabros], bombs"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 342,
+						"y": 50
+					},
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 59,
+						"y": 672
+					}
+				]
+			},
+			{
+				"name": "D1 Floormaster Room",
+				"sections": 
+                [
+					{
+                        "name": "D1 Floormaster Room",
+                        "access_rules": ["$use_seeds, emberseeds",
+							"$use_seeds, mysteryseeds, [emberseeds]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 580,
+						"y": 324
+					}
+				]
+			},
+			{
+				"name": "D1 Boss",
+				"sections": 
+                [
+					{
+                        "name": "D1 Boss",
+                        "access_rules": ["d1bk, $use_seeds, emberseeds, $kill_aquamentus",
+							"d1bk, $use_seeds, emberseeds, [$kill_aquamentus], $kill_aquamentus_hard",
+							"d1bk, $use_seeds, mysteryseeds, [emberseeds], $kill_aquamentus",
+							"d1bk, $use_seeds, mysteryseeds, [emberseeds], [$kill_aquamentus], $kill_aquamentus_hard"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 750,
+						"y": 252
+					}
+				]
+			},
+			{
+				"name": "Fertile Soil",
+				"sections": 
+                [
+					{
+                        "name": "Fertile Soil",
+                        "access_rules": ["d1bk, $use_seeds, emberseeds, $kill_aquamentus",
+							"d1bk, $use_seeds, emberseeds, [$kill_aquamentus], $kill_aquamentus_hard",
+							"d1bk, $use_seeds, mysteryseeds, [emberseeds], $kill_aquamentus",
+							"d1bk, $use_seeds, mysteryseeds, [emberseeds], [$kill_aquamentus], $kill_aquamentus_hard"],
+				"hosted_item": "d1"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 891,
+						"y": 252
+					}
+				]
+			}
+		]
+	}
+]

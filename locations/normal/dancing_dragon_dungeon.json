@@ -1,0 +1,261 @@
+﻿[
+	{
+		"name": "Dancing Dragon Dungeon",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"access_rules": ["$enter_d4, shuffledungeonoff",
+			"$enter_d1, shuffledungeonon, d1_d4",
+			"$enter_d2, shuffledungeonon, d2_d4",
+			"$enter_d3, shuffledungeonon, d3_d4",
+			"$enter_d4, shuffledungeonon, d4_d4",
+			"$enter_d5, shuffledungeonon, d5_d4",
+			"$enter_d6, shuffledungeonon, d6_d4",
+			"$enter_d7, shuffledungeonon, d7_d4",
+			"$enter_d8, shuffledungeonon, d8_d4"],
+		"children": [	
+			{
+				"name": "D4 North of Entrance",
+				"sections": 
+                [
+					{
+                        "name": "D4 North of Entrance",
+						"access_rules": ["flippers",
+							"$max_jump:4"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 410,
+						"y": 560
+					}
+				]
+			},
+			{
+				"name": "D4 Pot Puzzle",
+				"sections": 
+                [
+					{
+                        "name": "D4 Pot Puzzle",
+						"access_rules": ["flippers, bombs, bracelet",
+							"$max_jump:4, bombs, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 400,
+						"y": 411
+					}
+				]
+			},
+			{
+				"name": "D4 Maze Chest",
+				"sections": 
+                [
+					{
+                        "name": "D4 Maze Chest",
+						"access_rules": ["flippers, $hit_lever",
+							"$max_jump:4, $hit_lever"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 854,
+						"y": 528
+					}
+				]
+			},
+			{
+				"name": "D4 Dark Room",
+				"sections": 
+                [
+					{
+                        "name": "D4 Dark Room",
+						"access_rules": ["flippers, $hit_lever, $max_jump:1",
+							"$max_jump:4, $hit_lever"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 1525,
+						"y": 529
+					}
+				]
+			},
+			{
+				"name": "D4 Water Ring Room",
+				"sections": 
+                [
+					{
+                        "name": "D4 Water Ring Room",
+						"access_rules": ["d4sk:1, flippers, $max_jump:1, bombs",
+							"d4sk:1, $max_jump:4, bombs"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 719,
+						"y": 645
+					}
+				]
+			},
+			{
+				"name": "D4 Pool",
+				"sections": 
+                [
+					{
+                        "name": "D4 Pool",
+						"access_rules": ["d4sk:1, flippers, $max_jump:1, $hit_lever, $kill_normal",
+							"d4sk:1, flippers, $max_jump:1, $hit_lever, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 389,
+						"y": 294
+					}
+				]
+			},
+			{
+				"name": "D4 Terrace",
+				"sections": 
+                [
+					{
+                        "name": "D4 Terrace",
+						"access_rules": ["d4sk:2, flippers, $max_jump:1, $hit_lever, $kill_shroudedstalfos",
+							"d4sk:2, flippers, $max_jump:1, $hit_lever, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 992,
+						"y": 265
+					}
+				]
+			},
+			{
+				"name": "D4 Torch Chest",
+				"sections": 
+                [
+					{
+                        "name": "D4 Torch Chest",
+						"access_rules": ["d4sk:2, flippers, $max_jump:1, $kill_shroudedstalfos, $shoot_seeds, emberseeds",
+							"d4sk:2, flippers, $max_jump:1, $kill_shroudedstalfos, $shoot_seeds, mysteryseeds, [emberseeds]",
+							"d4sk:2, flippers, $max_jump:1, bracelet, $shoot_seeds, emberseeds",
+							"d4sk:2, flippers, $max_jump:1, bracelet, $shoot_seeds, mysteryseeds, [emberseeds]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 1184,
+						"y": 340
+					}
+				]
+			},
+			{
+				"name": "D4 Cracked Floor Room",
+				"sections": 
+                [
+					{
+                        "name": "D4 Cracked Floor Room",
+						"access_rules": ["d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima",
+							"d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima",
+							"d4sk:5, flippers, $max_jump:1, bracelet, $kill_agunima",
+							"d4sk:3, [d4sk:5], flippers, $max_jump:1, bracelet, $kill_agunima"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 1099,
+						"y": 847
+					}
+				]
+			},
+			{
+				"name": "D4 Dive Spot",
+				"sections": 
+                [
+					{
+                        "name": "D4 Dive Spot",
+						"access_rules": ["d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima, $hit_far_lever",
+							"d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima, $hit_far_lever",
+							"d4sk:5, flippers, $max_jump:1, bracelet, $kill_agunima, $hit_far_lever",
+							"d4sk:3, [d4sk:5], flippers, $max_jump:1, bracelet, $kill_agunima, $hit_far_lever"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 1376,
+						"y": 529
+					}
+				]
+			},
+			{
+				"name": "D4 Boss",
+				"sections": 
+                [
+					{
+                        "name": "D4 Boss",
+						"access_rules": ["d4bk, d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:1, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:2, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:2, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:2, bombs, $hit_lever, bracelet, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:2, bombs, $hit_lever, bracelet, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $kill_gohma"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 400,
+						"y": 58
+					}
+				]
+			},
+			{
+				"name": "Soothing Rain",
+				"sections": 
+                [
+					{
+                        "name": "Soothing Rain",
+						"access_rules": ["d4bk, d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:1, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, mysteryseeds, [emberseeds], $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:2, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $max_jump:2, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:2, bombs, $hit_lever, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $max_jump:2, $kill_gohma",
+							"d4bk, d4sk:5, flippers, $max_jump:2, bombs, $hit_lever, bracelet, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $max_jump:2, $kill_gohma",
+							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:2, bombs, $hit_lever, bracelet, $kill_agunima, $hit_far_lever, $kill_wizzrobe_cart, $max_jump:2, $kill_gohma"],
+						"hosted_item": "d4"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon",
+						"x": 559,
+						"y": 39
+					}
+				]
+			}
+		]
+	}
+]

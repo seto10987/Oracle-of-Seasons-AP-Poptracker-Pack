@@ -1,0 +1,198 @@
+﻿{
+"type": "dock",
+        "dropshadow": true,
+		"background": "#333",
+        "content": [
+        {
+            "type": "dock",
+            "dock": "left",
+            "v_alignment": "stretch",
+            "margin": "0,0,3,0",
+            "content": [
+            	{
+					"type": "group",
+					"header": "Key Items/Essences",
+					"dock": "top",
+					"content": {
+					"type": "array",
+					"orientation": "horizontal",
+					"content": [
+							{
+							"type": "array",
+							"orientation": "vertical",
+							"content": [
+											{
+												"type": "itemgrid",
+												"item_size": 32,
+												"item_margin": "10,0,5,10",
+												"rows": [
+													["sword1", "shield", "cuccodex","fish"],
+													["bombs", "feather", "lonlonegg", "megaphone"],
+													["slingshot1", "strength", "ghastlydoll", "mushroom"],
+													["boomerang1", "glove", "ironpot", "woodenbird"],
+													["shovel", "bestweapon", "lavasoup", "enginegrease"]  ,
+													["flute_generic", "flippers", "goronvase", "phonograph"]            
+							  					]
+											},
+											{
+													"type": "array",
+													"orientation": "horizontal",
+													"margin": "10,0,0,0",
+													"content": [
+														{
+														"type": "item",
+														"item": "satchel",
+														"item_size": 48
+														},
+														{
+														"type": "itemgrid",
+														"item_size": 23,
+														"margin": "1,-1,0,0",
+														"item_margin": "0, 0, 0, -10",
+														"h_alignment": "center",
+														"rows": [
+															["emberseeds", "mysteryseeds"],
+															["scentseeds"],
+															["pegasusseeds", "galeseeds"]
+								  						]
+													}
+							  					]
+											},
+											{
+												"type": "array",
+												"orientation": "horizontal",
+												"margin": "10,13,0,0",
+												"content": [
+													{
+														"type": "item",
+														"item": "rod",
+														"item_size": 48
+													},
+													{
+														"type": "itemgrid",
+														"item_size": 16,
+														"margin": "0, -5, 0, 0",
+														"item_margin": "6, 11, 0, -5",
+														"h_alignment": "center",
+														"rows": [
+															["summer", "fall"],
+															["spring", "winter"]
+								  						]
+													}
+							  					]
+											}    
+						  				]
+									},
+									{
+										"type": "itemgrid",
+										"item_size": 32,
+										"v_alignment": "center",
+										"item_margin": "0, 10, 0, 10",
+										"rows": [
+											["ring_fist"], 
+											["ring_expert"],
+											["ring_energy"], 
+											["ring_swimmer"]
+												]
+									},
+									{
+										"type": "array",
+										"orientation": "vertical",
+										"content": [
+										{
+											"type": "itemgrid",
+											"item_size": 32,
+											"rows": [
+												["starore", "plaque", "flippers", "banana", "polishedbell"]
+											]
+										},
+										{
+											"type": "itemgrid",
+											"item_size": 32,
+											"rows": [      
+												["ribbon", "memberscard", "blueore", "redore", "hardore"]
+											]
+							 			},
+										{
+											"type": "array",
+											"orientation": "horizontal",
+											"h_alignment": "center",
+											"margin": "4,0,0,0",
+											"content": [
+											{
+												"type": "item",
+												"item": "gnarledkey",
+												"item_size": 46
+											},
+											
+											{
+												"type": "item",
+												"item": "floodkey",
+												"item_size": 46
+											},
+											
+											{
+												"type": "item",
+												"item": "dragonkey",
+												"item_size": 46
+											},								  
+								  			{
+										"type": "itemgrid",
+										"item_size": 18,
+										"margin": "1,0,0,0",
+										"item_margin": "0,0,0,0",
+										"rows": [
+									  				["roundjewel"],
+									  				["squarejewel"]
+												]
+								  			},								  
+								  			{
+												"type": "itemgrid",
+												"item_size": 18,
+												"margin": "1,0,0,0",
+												"item_margin": "0,0,0,0",
+												"rows": [
+									  				["pyramidjewel"],
+									  				["xjewel"]
+												]
+								  			} 
+										]
+							  		},
+									{
+							  			"type": "itemgrid",
+							  			"h_alignment": "center",
+										"item_margin": "6,10,6,6",
+							  			"margin": "0,3,0,0",
+							  			"item_size": 40,
+							  			"rows": [
+											["d1", "d2"],
+											["d8","","","d3"],
+											["d7","","","d4"],
+											["d6","d5"]
+							  			]
+									}
+						  		]
+							}
+						]
+                	}
+              	},
+			  	{
+                	"type": "group",
+                	"header": "Area seasons",
+                	"content": {
+                  	"type": "itemgrid",
+				  	"h_alignment": "left",
+						"item_size": 60,
+						"item_margin": "10,0,10,0",
+						"rows": [
+					  		["north_label", "north_winter", "swamp_label", "swamp_fall, natzu_label", "natzu_ricky"],
+					  		["suburbs_label", "suburbs_fall", "sunken_label", "sunken_summer"],
+							["wow_label", "wow_summer", "coast_label", "season_coast"],
+					  		["plain_label", "plain_spring", "temple_label", "temple_winter"]
+						]
+                	}
+              	}      
+            ]
+        }
+    ]
+}

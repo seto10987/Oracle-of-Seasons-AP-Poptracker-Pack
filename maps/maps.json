@@ -1,0 +1,62 @@
+﻿[
+  {
+    "name": "holodrum",
+    "location_size": 18,
+    "location_border_thickness": 2,
+    "img": "images/maps/map_holodrum.png"
+  },
+  {
+    "name": "subrosia",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/map_subrosia.png"
+  },
+  {
+    "name": "gnarled_root_dungeon",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/Gnarled_root_dungeon.png"
+  },
+  {
+    "name": "snakes_remains",
+    "location_size": 21,
+    "location_border_thickness": 1,
+    "img": "images/maps/Snakes_remains.png"
+  },
+  {
+    "name": "poison_moths_lair",
+    "location_size": 25,
+    "location_border_thickness": 1,
+    "img": "images/maps/Poison_moths_lair.png"
+  },
+  {
+    "name": "dancing_dragon_dungeon",
+    "location_size": 21,
+    "location_border_thickness": 1,
+    "img": "images/maps/Dancing_dragon_dungeon.png"
+  },
+  {
+    "name": "unicorns_cave",
+    "location_size": 30,
+    "location_border_thickness": 1,
+    "img": "images/maps/Unicorns_cave.png"
+  },
+  {
+    "name": "ancient_ruins",
+    "location_size": 23,
+    "location_border_thickness": 1,
+    "img": "images/maps/Ancient_ruins.png"
+  },
+  {
+    "name": "explorers_crypt",
+    "location_size": 21,
+    "location_border_thickness": 1,
+    "img": "images/maps/Explorers_crypt.png"
+  },
+  {
+    "name": "sword_and_shield_maze",
+    "location_size": 26,
+    "location_border_thickness": 1,
+    "img": "images/maps/Sword_and_shield_dungeon.png"
+  }
+]

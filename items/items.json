@@ -1,0 +1,669 @@
+[
+  {
+    "name": "Sword",
+    "type": "progressive",
+    "stages": [
+      {
+      "img": "images/items/sword1.png",
+      "codes": "sword1, herosword, sword"
+      },
+      {
+      "img": "images/items/sword2.png",
+      "codes": "sword2, noblesword, sword"
+      },
+      {
+      "img": "images/items/sword3.png",
+      "codes": "sword3, mastersword, sword"
+      }
+    ]
+  },
+  {
+      "name": "Biggoron Sword",
+      "type": "toggle",
+      "img": "images/items/bigsword.png",
+      "codes": "biggoron_sword"
+  },
+  {
+    "name": "Shield",
+    "type": "progressive",
+    "stages": [
+      {
+        "img": "images/items/shield1.png",
+        "codes": "shield1, shield"
+      },
+      {
+        "img": "images/items/shield2.png",
+        "codes": "shield2, ironshield, shield"
+      },
+      {
+        "img": "images/items/shield3.png",
+        "codes": "shield3, mirrorshield, shield"
+      }
+    ]
+  },
+  {
+    "name": "Bracelet",
+    "type": "toggle",
+    "img": "images/items/strength.png",
+    "codes": "bracelet, strength"
+  },
+  {
+    "name": "Roc's items",
+    "type": "progressive",
+    "stages": [
+      {
+      "img": "images/items/feather1.png",
+      "codes": "feather1, feather, rocfeather"
+      },
+      {
+      "img": "images/items/cape.png",
+      "codes": "feather2, cape, roccape"
+      }
+    ]
+  },
+  {
+    "name": "Slingshot",
+    "type": "progressive",
+    "stages": [
+      {
+      "img": "images/items/slingshot1.png",
+      "codes": "slingshot1, seedslingshot"
+      },
+      {
+      "img": "images/items/slingshot2.png",
+      "codes": "slingshot2, hss, hyperslingshot"
+      }
+    ]
+  },
+  {
+    "name": "Magnet Glove",
+    "type": "toggle",
+    "img": "images/items/glove0.png",
+    "codes": "magnet, glove"
+  },
+  {
+    "name": "Boomerang",
+    "type": "progressive",
+    "stages": [
+      {
+      "img": "images/items/rang1.png",
+      "codes": "boomerang1, boomerang"
+      },
+      {
+      "img": "images/items/rang2.png",
+      "codes": "boomerang2, magicboomerang"
+      }
+    ]
+  },
+  {
+    "name": "Shovel",
+    "type": "toggle",
+    "img": "images/items/shovel.png",
+    "codes": "shovel"
+  },
+  {
+    "name": "Flute",
+    "type": "toggle",
+    "allow_disabled": false,
+    "stages": [
+      {
+      "img": "images/items/flute1.png",
+      "codes": "flute",
+      "img_mods": "@disabled",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/items/flute2.png",
+      "codes": "moosh, mooshflute",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/items/flute3.png",
+      "codes": "ricky, rickyflute",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/items/flute4.png",
+      "codes": "dimitri, dimitriflute",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Normal flute",
+    "type": "toggle",
+    "img": "images/items/flute1.png",
+    "codes": "flute_generic"
+  },
+  {
+    "name": "Fool's Ore",
+    "type": "toggle",
+    "img": "images/items/foolsore.png",
+    "codes": "ore, foolsore, bestweapon"
+  },
+  {
+    "name": "Seed Satchel",
+    "type": "toggle",
+    "img": "images/items/satchel.png",
+    "codes": "satchel, seedsatchel"
+  },
+  {
+    "name": "Season's Rod",
+    "type": "static",
+    "img": "images/items/rod.png",
+    "codes": "rod, seasonsrod"
+  },
+  {
+    "name": "Season's Rod",
+    "type": "toggle",
+    "img": "images/items/rod.png",
+    "codes": "season"
+  },
+  {
+    "name": "Bombs",
+    "type": "toggle",
+    "img": "images/items/bomb.png",
+    "codes": "bombs"
+  },
+  {
+    "name": "Gnarled Key",
+    "type": "toggle",
+    "img": "images/items/keygnarled.png",
+    "codes": "d1key, gnarledkey"
+  },
+  {
+    "name": "Ricky's Glove",
+    "type": "toggle",
+    "img": "images/items/rickygloves.png",
+    "codes": "rickygloves"
+  },
+  {
+    "name": "Star Ore",
+    "type": "toggle",
+    "img": "images/items/starore.png",
+    "codes": "star, starore"
+  },
+  {
+    "name": "Ribbon",
+    "type": "toggle",
+    "img": "images/items/ribbon.png",
+    "codes": "ribbon"
+  },
+  {
+    "name": "Floodgate Key",
+    "type": "toggle",
+    "img": "images/items/keyflood.png",
+    "codes": "d3key, floodkey"
+  },
+  {
+    "name": "Flippers",
+    "type": "toggle",
+    "img": "images/items/flippers.png",
+    "codes": "flippers"
+  },
+  {
+    "name": "Master's Plaque",
+    "type": "toggle",
+    "img": "images/items/plaque.png",
+    "codes": "plaque, masterplaque"
+  },
+  {
+    "name": "Banana",
+    "type": "toggle",
+    "img": "images/items/banana.png",
+    "codes": "banana"
+  },
+  {
+    "name": "Dragon Key",
+    "type": "toggle",
+    "img": "images/items/keydragon.png",
+    "codes": "d4key, dragonkey"
+  },
+  {
+    "name": "Bomb Flower",
+    "type": "toggle",
+    "img": "images/items/bombflower.png",
+    "codes": "bombflower"
+  },
+  {
+    "name": "Rusty Bell",
+    "type": "toggle",
+    "img": "images/items/bell1.png",
+    "codes": "rustybell"
+  },
+  {
+    "name": "Polished Bell",
+    "type": "toggle",    
+    "img": "images/items/bell2.png",
+    "codes": "polishedbell"
+  },
+  {
+    "name": "Member's Card",
+    "type": "toggle",
+    "img": "images/items/membercard.png",
+    "codes": "card, memberscard"
+  },
+  {
+    "name": "Hard Ore",
+    "type": "toggle",
+    "img": "images/items/orehard.png",
+    "codes": "hardore"
+  },
+  {
+    "name": "Blue Ore",
+    "type": "toggle",
+    "img": "images/items/oreblue.png",
+    "codes": "blueore"
+  },
+  {
+    "name": "Red Ore",
+    "type": "toggle",
+    "img": "images/items/orered.png",
+    "codes": "redore"
+  },
+  {
+    "name": "Ember Seeds",
+    "type": "toggle",
+    "img": "images/items/seedember.png",
+    "codes": "emberseeds"
+  },
+  {
+    "name": "Mystery Seeds",
+    "type": "toggle",
+    "img": "images/items/seedmystery.png",
+    "codes": "mysteryseeds"
+  },
+  {
+    "name": "Scent Seeds",
+    "type": "toggle",
+    "img": "images/items/seedscent.png",
+    "codes": "scentseeds"
+  },
+  {
+    "name": "Pegasus Seeds",
+    "type": "toggle",
+    "img": "images/items/seedpegasus.png",
+    "codes": "pegasusseeds"
+  },
+  {
+    "name": "Gale Seeds",
+    "type": "toggle",
+    "img": "images/items/seedgale.png",
+    "codes": "galeseeds"
+  },
+  {
+    "name": "All Jewels",
+    "type": "toggle",
+    "img": "images/items/jewels.png",
+    "codes": "jewels"
+  },
+  {
+    "name": "Round Jewel",
+    "type": "toggle",
+    "img": "images/items/jewelround.png",
+    "codes": "roundjewel"
+  },
+  {
+    "name": "Pyramid Jewel",
+    "type": "toggle",
+    "img": "images/items/jeweltriangle.png",
+    "codes": "pyramidjewel"
+  },
+  {
+    "name": "Square Jewel",
+    "type": "toggle",
+    "img": "images/items/jewelsquare.png",
+    "codes": "squarejewel"
+  },
+  {
+    "name": "X Jewel",
+    "type": "toggle",
+    "img": "images/items/jewelx.png",
+    "codes": "xjewel"
+  },
+  {
+  "name": "Summer season",
+  "type": "progressive",
+  "img": "images/items/seasonsummer1.png",
+	"codes": "summer"
+  },
+  {
+  "name": "Fall season",
+  "type": "progressive",
+	"img": "images/items/seasonfall1.png",
+		"codes": "fall"
+  },
+  {
+  "name": "Spring season",
+  "type": "toggle",
+	"img": "images/items/seasonspring1.png",
+	"codes": "spring"
+  },
+  {
+  "name": "Winter season",
+  "type": "progressive",
+  "img": "images/items/seasonwinter1.png",
+		"codes": "winter"
+  },
+  {
+    "name": "Cuccodex",
+    "type": "toggle",
+    "img": "images/items/cuccodex.png",
+    "codes": "cuccodex"
+  },
+  {
+    "name": "Lon Lon Egg",
+    "type": "toggle",
+    "img": "images/items/lonlonegg.png",
+    "codes": "lonlonegg"
+  },
+  {
+    "name": "Ghastly Doll",
+    "type": "toggle",
+    "img": "images/items/ghastlydoll.png",
+    "codes": "ghastlydoll"
+  },
+  {
+    "name": "Iron Pot",
+    "type": "toggle",
+    "img": "images/items/ironpot.png",
+    "codes": "ironpot"
+  },
+  {
+    "name": "Lava Soup",
+    "type": "toggle",
+    "img": "images/items/lavasoup.png",
+    "codes": "lavasoup"
+  },
+  {
+    "name": "Goron Vase",
+    "type": "toggle",
+    "img": "images/items/goronvase.png",
+    "codes": "goronvase"
+  },
+  {
+    "name": "Fish",
+    "type": "toggle",
+    "img": "images/items/fish.png",
+    "codes": "fish"
+  },
+  {
+    "name": "Megaphone",
+    "type": "toggle",
+    "img": "images/items/megaphone.png",
+    "codes": "megaphone"
+  },
+  {
+    "name": "Mushroom",
+    "type": "toggle",
+    "img": "images/items/mushroom.png",
+    "codes": "mushroom"
+  },
+  {
+    "name": "Wooden Bird",
+    "type": "toggle",
+    "img": "images/items/woodenbird.png",
+    "codes": "woodenbird"
+  },
+  {
+    "name": "Engine Grease",
+    "type": "toggle",
+    "img": "images/items/enginegrease.png",
+    "codes": "enginegrease"
+  },
+  {
+    "name": "Phonograph",
+    "type": "toggle",
+    "img": "images/items/phonograph.png",
+    "codes": "phonograph"
+  },
+  {
+    "name": "Golden Octorok",
+    "type": "toggle",
+    "img": "images/items/golden_octorok.png",
+    "codes": "golden_octorok, beasts"
+  },
+  {
+    "name": "Golden Darknut",
+    "type": "toggle",
+    "img": "images/items/golden_darknut.png",
+    "codes": "golden_darknut, beasts"
+  },
+  {
+    "name": "Golden Moblin",
+    "type": "toggle",
+    "img": "images/items/golden_moblin.png",
+    "codes": "golden_moblin, beasts"
+  },
+  {
+    "name": "Golden Lynel",
+    "type": "toggle",
+    "img": "images/items/golden_lynel.png",
+    "codes": "golden_lynel, beasts"
+  },
+  {
+    "name": "D0 Small Key",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d0sk",
+    "max_quantity": 1
+  },
+  {
+    "name": "Gnarled Root Dungeon",
+    "type": "toggle",
+    "img": "images/items/D1.png",
+    "codes": "d1, gnarledroot, essences"
+  },
+  {
+    "name": "D1 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d1bk"
+  },
+  {
+    "name": "D1 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d1sk",
+    "max_quantity": 2
+  },
+  {
+    "name": "Snake's Remains",
+    "type": "toggle",
+    "img": "images/items/D2.png",
+    "codes": "d2, snakeremains, essences"
+  },
+  {
+    "name": "D2 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d2bk"
+  },
+  {
+    "name": "D2 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d2sk",
+    "max_quantity": 3
+  },
+  {
+    "name": "Poison Moth's Lair",
+    "type": "toggle",
+    "img": "images/items/D3.png",
+    "codes": "d3, poisonmoth, essences"
+  },
+  {
+    "name": "D3 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d3bk"
+  },
+  {
+    "name": "D3 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d3sk",
+    "max_quantity": 2
+  },
+  {
+    "name": "Dancing Dragon Dungeon",
+    "type": "toggle",
+    "img": "images/items/D4.png",
+    "codes": "d4, dancingdragon, essences"
+  },
+  {
+    "name": "D4 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d4bk"
+  },
+  {
+    "name": "D4 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d4sk",
+    "max_quantity": 5
+  },
+  {
+    "name": "Unicorn's Cave",
+    "type": "toggle",
+    "img": "images/items/D5.png",
+    "codes": "d5, unicorncave, essences"
+  },
+  {
+    "name": "D5 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d5bk"
+  },
+  {
+    "name": "D5 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d5sk",
+    "max_quantity": 5
+  },
+  {
+    "name": "Ancient Ruins",
+    "type": "toggle",
+    "img": "images/items/D6.png",
+    "codes": "d6, ancientruins, essences"
+  },
+  {
+    "name": "D6 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d6bk"
+  },
+  {
+    "name": "D6 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d6sk",
+    "max_quantity": 3
+  },
+  {
+    "name": "Explorer's Crypt",
+    "type": "toggle",
+    "img": "images/items/D7.png",
+    "codes": "d7, explorercrypt, essences"
+  },
+  {
+    "name": "D7 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d7bk"
+  },
+  {
+    "name": "D7 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d7sk",
+    "max_quantity": 5
+  },
+  {
+    "name": "Sword & Shield Maze",
+    "type": "toggle",
+    "img": "images/items/D8.png",
+    "codes": "d8, swordandshield, essences"
+  },
+  {
+    "name": "D8 Boss Key",
+    "type": "toggle",
+    "img": "images/items/keyboss.png",
+    "codes": "d8bk"
+  },
+  {
+    "name": "D8 Small Keys",
+    "type": "consumable",
+    "img": "images/items/key.png",
+    "codes": "d8sk",
+    "max_quantity": 7
+  },
+  {
+    "name": "Fist Ring",
+    "type": "toggle",
+    "img": "images/items/ring_fist.png",
+    "codes": "ring_fist"
+  },
+  {
+    "name": "Expert's Ring",
+    "type": "toggle",
+    "img": "images/items/ring_expert.png",
+    "codes": "ring_expert"
+  },
+  {
+    "name": "Energy Ring",
+    "type": "toggle",
+    "img": "images/items/ring_energy.png",
+    "codes": "ring_energy"
+  },
+  {
+    "name": "Toss Ring",
+    "type": "toggle",
+    "img": "images/items/ring_toss.png",
+    "codes": "ring_toss"
+  },
+  {
+    "name": "Swimmer's Ring",
+    "type": "toggle",
+    "img": "images/items/ring_swimmer.png",
+    "codes": "ring_swimmer"
+  },
+  {
+    "name": "Horon Village tree",
+    "type": "toggle",
+    "img": "images/items/tree_ember.png",
+    "codes": "tree_village"
+  },
+  {
+    "name": "Woods of Winter tree",
+    "type": "toggle",
+    "img": "images/items/tree_mystery.png",
+    "codes": "tree_wow"
+  },
+  {
+    "name": "Holodrum Plain tree",
+    "type": "toggle",
+    "img": "images/items/tree_scent.png",
+    "codes": "tree_plain"
+  },
+  {
+    "name": "Spool Swamp tree",
+    "type": "toggle",
+    "img": "images/items/tree_pegasus.png",
+    "codes": "tree_swamp"
+  },
+  {
+    "name": "Sunken City tree",
+    "type": "toggle",
+    "img": "images/items/tree_gale.png",
+    "codes": "tree_sunken"
+  },
+  {
+    "name": "Tarm Ruins tree",
+    "type": "toggle",
+    "img": "images/items/tree_gale.png",
+    "codes": "tree_tarm"
+  }
+]
