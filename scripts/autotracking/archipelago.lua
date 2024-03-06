@@ -10,6 +10,7 @@ function onClear(slot_data)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
         print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
     end
+    print("test")
     SLOT_DATA = slot_data
     CUR_INDEX = -1
     -- reset locations
@@ -51,37 +52,34 @@ function onClear(slot_data)
         end
     end
 end
-if SLOT_DATA == nil then
-    return
-end
 
-PLAYER_ID = Archipelago.PlayerNumber or -1
-TEAM_NUMBER = Archipelago.TeamNumber or 0
+-- PLAYER_ID = Archipelago.PlayerNumber or -1
+-- TEAM_NUMBER = Archipelago.TeamNumber or 0
 
-if slot_data["RequiredEssences"] then
-    Tracker:FindObjectForCode("onox_essences").CurrentStage = tonumber(slot_data["RequiredEssences"])
-end
-if slot_data["TreehouseOldManRequirement"] then
-    Tracker:FindObjectForCode("oldmanessences").CurrentStage = tonumber(slot_data["TreehouseOldManRequirement"])
-end
-if slot_data["GoldenBeastsRequirement"] then
-    Tracker:FindObjectForCode("goldenbeastsrequired").CurrentStage = tonumber(slot_data["GoldenBeastsRequirement"])
-end
-if slot_data["LogicDifficulty"] then
-    Tracker:FindObjectForCode("logiclevel").CurrentStage = tonumber(slot_data["LogicDifficulty"])
-end
-if slot_data["DungeonShuffle"] then
-    Tracker:FindObjectForCode("dungeonshuffle").CurrentStage = tonumber(slot_data["DungeonShuffle"])
-end
-if slot_data["DefaultSeasons"] then
-    Tracker:FindObjectForCode("defaultseasons").CurrentStage = tonumber(slot_data["DefaultSeasons"])
-end
-if slot_data["WarpToStart"] then
-    Tracker:FindObjectForCode("treewarp").CurrentStage = tonumber(slot_data["WarpToStart"])
-end
-if slot_data["PortalShuffle"] then
-    Tracker:FindObjectForCode("portalshuffle").CurrentStage = tonumber(slot_data["PortalShuffle"])
-end
+-- if slot_data["RequiredEssences"] then
+--     Tracker:FindObjectForCode("onox_essences").CurrentStage = tonumber(slot_data["RequiredEssences"])
+-- end
+-- if slot_data["TreehouseOldManRequirement"] then
+--     Tracker:FindObjectForCode("oldmanessences").CurrentStage = tonumber(slot_data["TreehouseOldManRequirement"])
+-- end
+-- if slot_data["GoldenBeastsRequirement"] then
+--     Tracker:FindObjectForCode("goldenbeastsrequired").CurrentStage = tonumber(slot_data["GoldenBeastsRequirement"])
+-- end
+-- if slot_data["LogicDifficulty"] then
+--     Tracker:FindObjectForCode("logiclevel").CurrentStage = tonumber(slot_data["LogicDifficulty"])
+-- end
+-- if slot_data["DungeonShuffle"] then
+--     Tracker:FindObjectForCode("dungeonshuffle").CurrentStage = tonumber(slot_data["DungeonShuffle"])
+-- end
+-- if slot_data["DefaultSeasons"] then
+--     Tracker:FindObjectForCode("defaultseasons").CurrentStage = tonumber(slot_data["DefaultSeasons"])
+-- end
+-- if slot_data["WarpToStart"] then
+--     Tracker:FindObjectForCode("treewarp").CurrentStage = tonumber(slot_data["WarpToStart"])
+-- end
+-- if slot_data["PortalShuffle"] then
+--     Tracker:FindObjectForCode("portalshuffle").CurrentStage = tonumber(slot_data["PortalShuffle"])
+-- end
 -- called when an item gets collected
 function onItem(index, item_id, item_name, player_number)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
