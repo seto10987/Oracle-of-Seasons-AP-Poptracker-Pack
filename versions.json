@@ -1,9 +1,9 @@
 {
 	"versions": [
 		{
-			"package_version": "1.0.2.0",
-			"download_url": "https://github.com/seto10987/Oracle-of-Seasons-AP-Poptracker-Pack/archive/refs/tags/v1.0.2.zip",
-			"sha256": "a805132d87689cab005ea8656fcea03c6067caabf7e7dc204c8b607ebc8848bf",
+			"package_version": "1.1.0.0",
+			"download_url": "https://github.com/seto10987/Oracle-of-Seasons-AP-Poptracker-Pack/archive/refs/tags/v.1.1.0.zip",
+			"sha256": "872c50bfc9a869856dd82300ec1d4e9d844ee3b684ac958720d87211259e3707",
 			"changelog": ["fixed some derps"]
 		},
 		{
