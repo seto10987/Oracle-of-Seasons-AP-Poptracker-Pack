@@ -168,11 +168,13 @@
                 "item_size": "100",
                 "item_margin": "1,2",
                 "rows": [
-                    ["onox_essences_label", "onox_essences", "old_man_essences_label", "oldmanessences"],
-                    ["golden_beasts_label", "goldenbeastsrequired", "logic_label", "normal"],
+                    ["goal_label", "goal", "natzu_label", "natzu_animal"],
+                    ["logic_label", "normal", "onox_essences_label", "onox_essences"],
+                    ["old_man_essences_label", "oldmanessences", "golden_beasts_label", "goldenbeastsrequired"],
+                    ["horon_village_season_label", "horon_village_season_shuffle", "advance_shop_label", "advance_shop"],
                     ["default_seasons_label", "defaultseasonsoff", "dungeon_shuffle_label", "shuffledungeonoff"],
                     ["treewarp_label", "notreewarp", "portal_shuffle_label", "portalshuffleoff"],
-                    ["", "natzu_label", "natzu_ricky", ""]
+                    ["shuffle_old_men_label", "shuffle_old_men", "lost_woods_item_sequence_label", "lost_woods_item_sequence"]
                 ]
             }
         ]

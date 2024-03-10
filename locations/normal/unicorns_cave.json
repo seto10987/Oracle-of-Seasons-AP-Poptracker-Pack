@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d5"],
 		"children": [	
 			{
-				"name": "D5 Cart Chest",
+				"name": "Unicorn's Cave: Right Cart Chest",
 				"sections": 
                 [
 					{
-                        "name": "D5 Cart Chest",
+                        "name": "Unicorn's Cave: Right Cart Chest",
 						"access_rules": ["$hit_lever, $max_jump:2",
 							"$hit_lever, $max_jump:1, bombs, [$max_jump:2]",
 							"$hit_lever, flippers"]
@@ -33,11 +33,11 @@
 				]
 			},
 			{
-				"name": "D5 Gibdo-Zol Chest",
+				"name": "Unicorn's Cave: Gibdo Room Chest",
 				"sections": 
                 [
 					{
-                        "name": "D5 Gibdo-Zol Chest",
+                        "name": "Unicorn's Cave: Gibdo Room Chest",
 						"access_rules": ["$kill_normal, $kill_gibdo, $max_jump:2",
 							"$kill_normal, $kill_gibdo, $max_jump:1, bombs, [$max_jump:2]",
 							"$kill_normal, $kill_gibdo, flippers, $max_jump:1",
@@ -54,11 +54,11 @@
 				]
 			},
 			{
-				"name": "D5 Magnet Ball Chest",
+				"name": "Unicorn's Cave: Magnet Gloves Chest",
 				"sections": 
                 [
 					{
-                        "name": "D5 Magnet Ball Chest",
+                        "name": "Unicorn's Cave: Magnet Gloves Chest",
 						"access_rules": ["d5sk:5, $hit_lever, $max_jump:4",
 							"d5sk:1, [d5sk:5], $hit_lever, $max_jump:4",
 							"d5sk:5, $hit_lever, $max_jump:3, [$max_jump:4]",
@@ -82,11 +82,11 @@
 				]
 			},
 			{
-				"name": "D5 Left Chest",
+				"name": "Unicorn's Cave: Chest Left from Entrance",
 				"sections": 
                 [
 					{
-                        "name": "D5 Left Chest",
+                        "name": "Unicorn's Cave: Chest Left from Entrance",
 						"access_rules": ["$max_jump:3",
 							"magnet"]
                     }
@@ -100,11 +100,11 @@
 				]
 			},
 			{
-				"name": "D5 Spiral Chest",
+				"name": "Unicorn's Cave: Quicksand Spiral Chest",
 				"sections": 
                 [
 					{
-                        "name": "D5 Spiral Chest",
+                        "name": "Unicorn's Cave: Quicksand Spiral Chest",
 						"access_rules": ["$kill_moldorm, $kill_ironmask"]
                     }
                 ],
@@ -117,11 +117,11 @@
 				]
 			},
 			{
-				"name": "D5 Terrace Chest",
+				"name": "Unicorn's Cave: Terrace Chest",
 				"sections": 
                 [
 					{
-                        "name": "D5 Terrace Chest",
+                        "name": "Unicorn's Cave: Terrace Chest",
 						"access_rules": ["magnet",
 							"$max_jump:2, bombs",
 							"$max_jump:1, bombs, [$max_jump:2]",
@@ -137,11 +137,11 @@
 				]
 			},
 			{
-				"name": "D5 Armos Chest",
+				"name": "Unicorn's Cave: Armos Puzzle Room Chest",
 				"sections": 
                 [
 					{
-                        "name": "D5 Armos Chest",
+                        "name": "Unicorn's Cave: Armos Puzzle Room Chest",
 						"access_rules": ["magnet, $kill_moldorm, $kill_ironmask",
 							"$max_jump:2, bombs, $kill_moldorm, $kill_ironmask",
 							"$max_jump:1, bombs, [$max_jump:2], $kill_moldorm, $kill_ironmask",
@@ -157,11 +157,11 @@
 				]
 			},
 			{
-				"name": "D5 Spinner Chest",
+				"name": "Unicorn's Cave: Magnet Spinner Chest",
 				"sections": 
                 [
 					{
-                        "name": "D5 Spinner Chest",
+                        "name": "Unicorn's Cave: Magnet Spinner Chest",
 						"access_rules": ["$max_jump:4",
 							"$max_jump:2, magnet",
 							"$max_jump:1, bombs, [$max_jump:2], magnet",
@@ -177,11 +177,11 @@
 				]
 			},
 			{
-				"name": "D5 Stalfos Room",
+				"name": "Unicorn's Cave: Chest in Right Half of Minecart Bay Room",
 				"sections": 
                 [
 					{
-                        "name": "D5 Stalfos Room",
+                        "name": "Unicorn's Cave: Chest in Right Half of Minecart Bay Room",
 						"access_rules": ["$max_jump:3",
 							"$max_jump:2, magnet",
 							"$max_jump:1, bombs, [$max_jump:2], magnet",
@@ -197,11 +197,11 @@
 				]
 			},
 			{
-				"name": "D5 Basement",
+				"name": "Unicorn's Cave: Treadmills Basement Item",
 				"sections": 
                 [
 					{
-                        "name": "D5 Basement",
+                        "name": "Unicorn's Cave: Treadmills Basement Item",
 						"access_rules": ["d5sk:5, $hit_lever, $max_jump:2, magnet, $kill_syger, $kill_darknut, $kill_magunesu",
 							"d5sk:3, [d5sk:5], $hit_lever, $max_jump:2, magnet, $kill_syger, $kill_darknut, $kill_magunesu",
 							"d5sk:5, $hit_lever, flippers, magnet, $kill_syger, $kill_darknut, $kill_magunesu",
@@ -222,11 +222,11 @@
 				]
 			},
 			{
-				"name": "D5 Boss",
+				"name": "Unicorn's Cave: Boss Reward",
 				"sections": 
                 [
 					{
-                        "name": "D5 Boss",
+                        "name": "Unicorn's Cave: Boss Reward",
 						"access_rules": ["d5bk, d5sk:5, $max_jump:2, magnet, $kill_syger",
 							"d5bk, d5sk:2, [d5sk:5], $max_jump:2, magnet, $kill_syger",
 							"d5bk, d5sk:5, $max_jump:1, flippers, magnet, $kill_syger",

@@ -77,9 +77,39 @@
     "codes": "golden_beasts_label"
   },
   {
+    "name": "Goal Label",
+    "type": "static",
+    "img": "images/labels/goal_label.png",
+    "codes": "goal_label"
+  },
+  {
+    "name": "Horon Village Season Label",
+    "type": "static",
+    "img": "images/labels/horon_village_season_label.png",
+    "codes": "horon_village_season_label"
+  },
+  {
+    "name": "Advance Shop Label",
+    "type": "static",
+    "img": "images/labels/advance_shop_label.png",
+    "codes": "advance_shop_label"
+  },
+  {
+    "name": "Shuffle Old Men Label",
+    "type": "static",
+    "img": "images/labels/shuffle_old_men_label.png",
+    "codes": "shuffle_old_men_label"
+  },
+  {
+    "name": "Lost Woods Item Sequence Label",
+    "type": "static",
+    "img": "images/labels/lost_woods_item_sequence_label.png",
+    "codes": "lost_woods_item_sequence_label"
+  },
+  {
     "name": "Natzu label",
     "type": "static",
-    "img": "images/labels/natzu_label.png",
+    "img": "images/labels/natzu_animal_label.png",
     "codes": "natzu_label"
   },
   {

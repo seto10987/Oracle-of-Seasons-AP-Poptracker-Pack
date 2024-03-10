@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d4"],
 		"children": [	
 			{
-				"name": "D4 North of Entrance",
+				"name": "Dancing Dragon Dungeon (2F): Chest North of Entrance",
 				"sections": 
                 [
 					{
-                        "name": "D4 North of Entrance",
+                        "name": "Dancing Dragon Dungeon (2F): Chest North of Entrance",
 						"access_rules": ["flippers",
 							"$max_jump:4"]
                     }
@@ -32,11 +32,11 @@
 				]
 			},
 			{
-				"name": "D4 Pot Puzzle",
+				"name": "Dancing Dragon Dungeon (2F): Pots on Buttons Puzzle Drop",
 				"sections": 
                 [
 					{
-                        "name": "D4 Pot Puzzle",
+                        "name": "Dancing Dragon Dungeon (2F): Pots on Buttons Puzzle Drop",
 						"access_rules": ["flippers, bombs, bracelet",
 							"$max_jump:4, bombs, bracelet"]
                     }
@@ -50,11 +50,11 @@
 				]
 			},
 			{
-				"name": "D4 Maze Chest",
+				"name": "Dancing Dragon Dungeon (1F): Chest in Southwest Quadrant of Beamos Room",
 				"sections": 
                 [
 					{
-                        "name": "D4 Maze Chest",
+                        "name": "Dancing Dragon Dungeon (1F): Chest in Southwest Quadrant of Beamos Room",
 						"access_rules": ["flippers, $hit_lever",
 							"$max_jump:4, $hit_lever"]
                     }
@@ -68,11 +68,11 @@
 				]
 			},
 			{
-				"name": "D4 Dark Room",
+				"name": "Dancing Dragon Dungeon (1F): Dark Room Chest",
 				"sections": 
                 [
 					{
-                        "name": "D4 Dark Room",
+                        "name": "Dancing Dragon Dungeon (1F): Dark Room Chest",
 						"access_rules": ["flippers, $hit_lever, $max_jump:1",
 							"$max_jump:4, $hit_lever"]
                     }
@@ -86,11 +86,11 @@
 				]
 			},
 			{
-				"name": "D4 Water Ring Room",
+				"name": "Dancing Dragon Dungeon (2F): Chest in Water Donut Room",
 				"sections": 
                 [
 					{
-                        "name": "D4 Water Ring Room",
+                        "name": "Dancing Dragon Dungeon (2F): Chest in Water Donut Room",
 						"access_rules": ["d4sk:1, flippers, $max_jump:1, bombs",
 							"d4sk:1, $max_jump:4, bombs"]
                     }
@@ -104,11 +104,11 @@
 				]
 			},
 			{
-				"name": "D4 Pool",
+				"name": "Dancing Dragon Dungeon (1F): Eye Diving Spot Item",
 				"sections": 
                 [
 					{
-                        "name": "D4 Pool",
+                        "name": "Dancing Dragon Dungeon (1F): Eye Diving Spot Item",
 						"access_rules": ["d4sk:1, flippers, $max_jump:1, $hit_lever, $kill_normal",
 							"d4sk:1, flippers, $max_jump:1, $hit_lever, bracelet"]
                     }
@@ -122,11 +122,11 @@
 				]
 			},
 			{
-				"name": "D4 Terrace",
+				"name": "Dancing Dragon Dungeon (1F): Chest on Small Terrace",
 				"sections": 
                 [
 					{
-                        "name": "D4 Terrace",
+                        "name": "Dancing Dragon Dungeon (1F): Chest on Small Terrace",
 						"access_rules": ["d4sk:2, flippers, $max_jump:1, $hit_lever, $kill_shroudedstalfos",
 							"d4sk:2, flippers, $max_jump:1, $hit_lever, bracelet"]
                     }
@@ -140,11 +140,11 @@
 				]
 			},
 			{
-				"name": "D4 Torch Chest",
+				"name": "Dancing Dragon Dungeon (1F): Chest Revealed by Minecart Torches",
 				"sections": 
                 [
 					{
-                        "name": "D4 Torch Chest",
+                        "name": "Dancing Dragon Dungeon (1F): Chest Revealed by Minecart Torches",
 						"access_rules": ["d4sk:2, flippers, $max_jump:1, $kill_shroudedstalfos, $shoot_seeds, emberseeds",
 							"d4sk:2, flippers, $max_jump:1, $kill_shroudedstalfos, $shoot_seeds, mysteryseeds, [emberseeds]",
 							"d4sk:2, flippers, $max_jump:1, bracelet, $shoot_seeds, emberseeds",
@@ -160,11 +160,11 @@
 				]
 			},
 			{
-				"name": "D4 Cracked Floor Room",
+				"name": "Dancing Dragon Dungeon (1F): Crumbling Room Chest",
 				"sections": 
                 [
 					{
-                        "name": "D4 Cracked Floor Room",
+                        "name": "Dancing Dragon Dungeon (1F): Crumbling Room Chest",
 						"access_rules": ["d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima",
 							"d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima",
 							"d4sk:5, flippers, $max_jump:1, bracelet, $kill_agunima",
@@ -180,11 +180,11 @@
 				]
 			},
 			{
-				"name": "D4 Dive Spot",
+				"name": "Dancing Dragon Dungeon (2F): Pool Drop",
 				"sections": 
                 [
 					{
-                        "name": "D4 Dive Spot",
+                        "name": "Dancing Dragon Dungeon (2F): Pool Drop",
 						"access_rules": ["d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima, $hit_far_lever",
 							"d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima, $hit_far_lever",
 							"d4sk:5, flippers, $max_jump:1, bracelet, $kill_agunima, $hit_far_lever",
@@ -200,11 +200,11 @@
 				]
 			},
 			{
-				"name": "D4 Boss",
+				"name": "Dancing Dragon Dungeon (B1F): Boss Reward",
 				"sections": 
                 [
 					{
-                        "name": "D4 Boss",
+                        "name": "Dancing Dragon Dungeon (B1F): Boss Reward",
 						"access_rules": ["d4bk, d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
 							"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
 							"d4bk, d4sk:5, flippers, $max_jump:1, bombs, $hit_lever, bracelet, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",

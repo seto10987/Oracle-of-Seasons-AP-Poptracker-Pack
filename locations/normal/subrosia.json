@@ -16,7 +16,7 @@
 					"$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Temple of Seasons"
+					"name": "Subrosia: Temple of Seasons"
 					}
 				],
 				"map_locations": [
@@ -38,7 +38,7 @@
 					"$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Tower of Summer",
+					"name": "Subrosia: Tower of Summer",
 					"access_rules": ["$beach, ribbon, bracelet"]
 					}
 				],
@@ -52,23 +52,21 @@
 			},
 			{
 				"name": "Temple of Seasons-Autumn",
-				"access_rules": ["$use_seeds, emberseeds, $destroy_bush",
-					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain",
-					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush",
-					"$south_swamp, flippers, bracelet, $temple_to_beach","$south_swamp, $dimitri, bracelet, $temple_to_beach",
-					"$portal_mountain, $hns_to_beach, $temple_to_beach","$portal_village, $hns_to_beach, $temple_to_beach",
-					"$portal_mountain, $temple_to_hns","$portal_village, $temple_to_hns",
-					"$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $beach_to_furnace",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $beach_to_furnace",
+					"$south_swamp, flippers, bracelet, $temple_to_beach, $beach_to_furnace",
+					"$south_swamp, $dimitri, bracelet, $temple_to_beach, $beach_to_furnace",
+					"$portal_mountain, $hns_to_beach, $temple_to_beach, $beach_to_furnace",
+					"$portal_village, $hns_to_beach, $temple_to_beach, $beach_to_furnace",
+					"$portal_mountain, $temple_to_hns, $beach_to_furnace",
+					"$portal_village, $temple_to_hns, $beach_to_furnace",
+					"$portal_lake, $max_jump:1, $furnace_to_beach",
+					"$portal_remains, $remains_to_temple, $beach_to_furnace"],
 				"sections": [
 					{
-					"name": "Tower of Autumn",
-					"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace, bracelet, $max_jump:1",
-						"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_beach, $beach_to_furnace, bracelet, $max_jump:1",
-						"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_beach, $beach_to_furnace, bracelet, $max_jump:1",
-						"$beach, $beach_to_furnace, bracelet, $max_jump:1","$portal_mountain, $hns_to_beach, $beach_to_furnace, bracelet, $max_jump:1",
-						"$portal_village, $hns_to_beach, $beach_to_furnace, bracelet, $max_jump:1","$portal_mountain, $temple_to_hns, $beach_to_furnace, bracelet, $max_jump:1",
-						"$portal_village, $temple_to_hns, $beach_to_furnace, bracelet, $max_jump:1","$portal_lake, $max_jump:1, bracelet",
-						"$portal_remains, $remains_to_temple, $beach_to_furnace, bracelet, $max_jump:1"]
+					"name": "Subrosia: Tower of Autumn",
+					"access_rules": ["bracelet, bombflower, $max_jump:1"]
 					}
 				],
 				"map_locations": [
@@ -90,7 +88,7 @@
 					"$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Tower of Winter",
+					"name": "Subrosia: Tower of Winter",
 					"access_rules": ["$hit_far_switch","$max_jump:1"]
 					}
 				],
@@ -115,7 +113,7 @@
 					"$portal_remains, $remains_to_temple, $temple_to_hns"],
 				"sections": [
 					{
-					"name": "Tower of Spring",
+					"name": "Subrosia: Tower of Spring",
 					"access_rules": ["$max_jump:1"]
 					}
 				],
@@ -138,11 +136,11 @@
 					"$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-						"name": "Subrosian Smithy Ore",
+						"name": "Subrosia: Smithy Hard Ore Reforge",
 						"access_rules": ["hardore"]
 					},
 					{
-						"name": "Polished Bell",
+						"name": "Subrosia: Smithy Rusty Bell Reforge",
 						"access_rules": ["rustybell"],
 						"hosted_item": "polishedbell"
 					}
@@ -164,7 +162,7 @@
 					"$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Subrosian Dance Hall"
+					"name": "Subrosia: Dance Hall Reward"
 					}
 				],
 				"map_locations": [
@@ -184,7 +182,7 @@
 					"$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Subrosia, Open Cave",
+					"name": "Subrosia: Northwest Open Cave",
 					"access_rules": ["$temple_to_bridge"]
 					}
 				],
@@ -204,7 +202,7 @@
 					"$portal_village, $temple_to_hns","$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Subrosia Seaside",
+					"name": "Subrosia: Seaside Digging Spot",
 					"access_rules": ["shovel"]
 					}
 				],
@@ -239,15 +237,23 @@
 					"$portal_village, $temple_to_hns","$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Subrosia Market, 1st Item",
+					"name": "Subrosia: Market #1",
 					"access_rules": ["starore"]
 					},
 					{
-					"name": "Subrosia Market, 2nd Item",
+					"name": "Subrosia: Market #2",
 					"access_rules": ["emberseeds, $ore_chunks","emberseeds, $temple_to_beach"]
 					},
 					{
-					"name": "Subrosia Market, 5th Item",
+					"name": "Subrosia: Market #3",
+					"access_rules": [""]
+					},
+					{
+					"name": "Subrosia: Market #4",
+					"access_rules": [""]
+					},
+					{
+					"name": "Subrosia: Market #5",
 					"access_rules": ["$ore_chunks","$temple_to_beach"]
 					}
 				],
@@ -267,15 +273,15 @@
 					"$portal_village, $temple_to_hns","$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Subrosian Chef Trade",
+					"name": "Subrosia: Subrosian Chef Trade",
 					"access_rules": ["$max_jump:1, ironpot"]
 					}
 				],
 				"map_locations": [
 					{
 					"map": "subrosia",
-					"x": 617,
-					"y": 330
+					"x": 360,
+					"y": 315
 					}
 				]
 			},
@@ -287,7 +293,7 @@
 					"$portal_village, $temple_to_hns","$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Subrosia, Locked Cave",
+					"name": "Subrosia: Northwest Locked Cave",
 					"access_rules": ["$max_jump:1, ribbon"]
 					}
 				],
@@ -307,7 +313,7 @@
 					"$portal_village, $temple_to_hns","$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
 				"sections": [
 					{
-					"name": "Subrosia Village Chest",
+					"name": "Subrosia: Chest Above Magnet Cave",
 					"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace, cape",
 						"$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace, magnet",
 						"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_beach, $beach_to_furnace, cape",
@@ -333,20 +339,20 @@
 			},
 			{
 				"name": "Great Furnace",
-				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach","$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_beach",
-					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_beach","$portal_swamp",
-					"$portal_mountain, $hns_to_beach","$portal_village, $hns_to_beach","$portal_mountain, $temple_to_hns",
-					"$portal_village, $temple_to_hns","$portal_lake, $max_jump:1, $furnace_to_beach","$portal_remains, $remains_to_temple"],
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_beach, $beach_to_furnace",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_beach, $beach_to_furnace",
+					"$portal_swamp",
+					"$portal_mountain, $hns_to_beach, $beach_to_furnace",
+					"$portal_village, $hns_to_beach, $beach_to_furnace",
+					"$portal_mountain, $temple_to_hns, $beach_to_furnace",
+					"$portal_village, $temple_to_hns, $beach_to_furnace",
+					"$portal_lake, $max_jump:1, $furnace_to_beach, $beach_to_furnace",
+					"$portal_remains, $remains_to_temple, $beach_to_furnace"],
 				"sections": [
 					{
-					"name": "Great Furnace",
-					"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore",
-						"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_beach, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore",
-						"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_beach, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore",
-						"$south_swamp, flippers, bracelet, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore","$south_swamp, $dimitri, bracelet, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore",
-						"$portal_mountain, $hns_to_beach, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore","$portal_village, $hns_to_beach, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore",
-						"$portal_mountain, $temple_to_hns, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore","$portal_village, $temple_to_hns, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore",
-						"$portal_lake, $max_jump:1, $max_jump:1, bracelet, blueore, redore","$portal_remains, $remains_to_temple, $beach_to_furnace, $max_jump:1, bracelet, blueore, redore"]
+					"name": "Subrosia: Item Smelted in Great Furnace",
+					"access_rules": ["$max_jump:1, bracelet, blueore, redore"]
 					}
 				],
 				"map_locations": [
@@ -354,6 +360,59 @@
 					"map": "subrosia",
 					"x": 1529,
 					"y": 617
+					}
+				]
+			},
+			{
+				"name": "Bomb Flower",
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_beach, $beach_to_furnace",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_beach, $beach_to_furnace",
+					"$portal_swamp",
+					"$portal_mountain, $hns_to_beach, $beach_to_furnace",
+					"$portal_village, $hns_to_beach, $beach_to_furnace",
+					"$portal_mountain, $temple_to_hns, $beach_to_furnace",
+					"$portal_village, $temple_to_hns, $beach_to_furnace",
+					"$portal_lake, $max_jump:1, $furnace_to_beach, $beach_to_furnace",
+					"$portal_remains, $remains_to_temple, $beach_to_furnace"],
+				"sections": [
+					{
+					"name": "Subrosia: Buried Bomb Flower",
+					"access_rules": ["$max_jump:1"],
+					"hosted_item":"bombflower"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1569,
+					"y": 812
+					}
+				]
+			},
+			{
+				"name": "Sign-Loving Guy",
+				"access_rules": ["$village_to_suburbs, $destroy_bush, $temple_to_beach, $beach_to_furnace",
+					"$scent_tree, $cross_natzu, $natzu_to_suburbs, $suburbs_to_fountain, $temple_to_beach, $beach_to_furnace",
+					"$mount_cucco, $cucco_to_sunken, $natzu_to_suburbs, $suburbs_to_fountain, $destroy_bush, $temple_to_beach, $beach_to_furnace",
+					"$portal_swamp",
+					"$portal_mountain, $hns_to_beach, $beach_to_furnace",
+					"$portal_village, $hns_to_beach, $beach_to_furnace",
+					"$portal_mountain, $temple_to_hns, $beach_to_furnace",
+					"$portal_village, $temple_to_hns, $beach_to_furnace",
+					"$portal_lake, $max_jump:1, $furnace_to_beach, $beach_to_furnace",
+					"$portal_remains, $remains_to_temple, $beach_to_furnace"],
+				"sections": [
+					{
+					"name": "Subrosia: Sign-Loving Guy Reward",
+					"access_rules": ["$destroy_signs"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1674,
+					"y": 672
 					}
 				]
 			},
@@ -370,7 +429,7 @@
 					"$portal_remains, $remains_to_temple, $temple_to_hns"],
 				"sections": [
 					{
-					"name": "Subrosian House"
+					"name": "Subrosia: Item in House Above Strange Brothers Portal"
 					}
 				],
 				"map_locations": [
@@ -394,7 +453,7 @@
 					"$portal_remains, $remains_to_temple, $temple_to_hns"],
 				"sections": [
 					{
-					"name": "Subrosian 2d Cave",
+					"name": "Subrosia: Item in Basement to Tower of Spring",
 					"access_rules": ["$max_jump:1"]
 					}
 				],
@@ -416,7 +475,7 @@
 					"$portal_lake, $furnace_to_beach, $temple_to_beach, $temple_to_hns","$portal_remains, $remains_to_temple, $temple_to_hns"],
 				"sections": [
 					{
-					"name": "Subrosian Wilds Digging Spot",
+					"name": "Subrosia: Wilds Digging Spot",
 					"access_rules": ["$max_jump:3, shovel","magnet, shovel"]
 					}
 				],
@@ -438,7 +497,7 @@
 					"$portal_lake, $furnace_to_beach, $temple_to_beach, $temple_to_hns","$portal_remains, $remains_to_temple, $temple_to_hns"],
 				"sections": [
 					{
-					"name": "Subrosian Wilds Chest",
+					"name": "Subrosia: Wilds Chest",
 					"access_rules": ["$max_jump:3","magnet"]
 					}
 				],

@@ -36,7 +36,7 @@
 					"$enter_d8, shuffledungeonon, d8_d1"],
 				"sections": [	
 					{
-						"name": "D1 Stalfos Drop",
+						"name": "Gnarled Root Dungeon: Drop in Right Stalfos Room",
 						"access_rules": ["$d1clear",
 						"$kill_stalfos",
 						"bracelet",
@@ -44,7 +44,7 @@
 						"$kill_stalfos_hard, [bracelet]"]
 					},
 					{
-						"name": "D1 Stalfos Chest",
+						"name": "Gnarled Root Dungeon: Chest in Left Stalfos Room",
 						"access_rules": ["$d1clear",
 							"d1sk:1, $kill_stalfos",
 							"d1sk:1, bracelet",
@@ -52,7 +52,7 @@
 							"d1sk:1, $kill_stalfos_hard, [bracelet]"]
 					},
 					{
-						"name": "D1 Goriya Chest",
+						"name": "Gnarled Root Dungeon: Chest in Goriya Room",
 						"access_rules": ["$d1clear",
 							"d1sk:1, $kill_stalfos, $use_seeds, emberseeds",
 							"d1sk:1, bracelet, $use_seeds, emberseeds",
@@ -64,14 +64,14 @@
 							"d1sk:1, $kill_stalfos_hard, [bracelet], $use_seeds, mysteryseeds, [emberseeds]"]
 					},
 					{
-						"name": "D1 Block-Pushing Room",
+						"name": "Gnarled Root Dungeon: Chest in Block-pushing Room",
 						"access_rules": ["$d1clear",
 							"d1sk:1, $kill_stalfos, $kill_normal",
 							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos], $kill_hard, [$kill_normal]",
 							"d1sk:1, bracelet, [$kill_stalfos], [$kill_normal]"]
 					},
 					{
-						"name": "D1 Lever Room",
+						"name": "Gnarled Root Dungeon: Chest Near Railway Lever",
 						"access_rules": ["$d1clear",
 							"d1sk:1, $kill_stalfos, $use_seeds, emberseeds",
 							"d1sk:1, bracelet, $use_seeds, emberseeds",
@@ -79,34 +79,34 @@
 							"d1sk:1, $kill_stalfos_hard, [bracelet]"]
 					},
 					{
-						"name": "D1 Railway Chest",
+						"name": "Gnarled Root Dungeon: Chest Near Railway",
 						"access_rules": ["$d1clear",
 							"d1sk:1, $kill_stalfos, $hit_lever",
 							"d1sk:1, $kill_stalfos_hard, $hit_lever, [$kill_stalfos]",
 							"d1sk:1, bracelet, [$kill_stalfos]"]
 					},
 					{
-						"name": "D1 Button Chest",
+						"name": "Gnarled Root Dungeon: Hidden Chest Revealed by Button",
 						"access_rules": ["$d1clear",
 							"d1sk:1, $kill_stalfos, $hit_lever",
 							"d1sk:1, $kill_stalfos_hard, $hit_lever, [$kill_stalfos]",
 							"d1sk:1, bracelet, [$kill_stalfos]"]
 					},
 					{
-						"name": "D1 Basement",
+						"name": "Gnarled Root Dungeon: Item in Basement",
 						"access_rules": ["$d1clear",
 							"d1sk:2, [$kill_stalfos], $hit_lever, [$kill_goriyabros], bombs",
 							"d1sk:2, [$kill_stalfos], bracelet, [$kill_goriyabros], bombs"]
 					},
 					{
-						"name": "D1 Floormaster Room",
+						"name": "Gnarled Root Dungeon: Chest in Floormaster Room",
 						"access_rules": ["$d1clear",
 							"$use_seeds, emberseeds",
 							"$use_seeds, mysteryseeds, [emberseeds]"]
 					},
 					
 					{
-						"name": "D1 Boss",
+						"name": "Gnarled Root Dungeon: Boss Reward",
 						"access_rules": ["$d1clear",
 							"d1bk, $use_seeds, emberseeds, $kill_aquamentus",
 							"d1bk, $use_seeds, emberseeds, [$kill_aquamentus], $kill_aquamentus_hard",
@@ -161,23 +161,23 @@
 					"$enter_d8, shuffledungeonon, d8_d2"],
 				"sections": [
 					{
-					"name": "D2 Left From Entrance"
+					"name": "Snake's Remains: Chest Left from Entrance"
 					},
 					{
-					"name": "D2 Rope Drop",
+					"name": "Snake's Remains: Drop in Left Rope Room",
 					"access_rules": ["$d2clear",
 						"$d2_A, $kill_normal",
 						"$d2_B, $kill_normal, bracelet"]
 					},
 					{
-					"name": "D2 Rope Chest",
+					"name": "Snake's Remains: Chest in Right Rope Room",
 					"access_rules": ["$d2clear",
 						"$d2_A, $kill_normal, $use_seeds, emberseeds",
 						"$d2_A, $kill_normal, $use_seeds, mysteryseeds, [emberseeds]",
 						"$d2_B, $kill_normal, bracelet"]
 					},
 					{
-					"name": "D2 Pot Chest",
+					"name": "Snake's Remains: Chest Behind Pots in Hardhat Room",
 					"access_rules": ["$d2clear",
 						"d2sk:3, $d2_A, $kill_normal, $use_seeds, emberseeds, $destroy_pot",
 						"d2sk:1, [d2sk:3], $d2_A, $kill_normal, $use_seeds, emberseeds, $destroy_pot",
@@ -187,7 +187,7 @@
 						"d2sk:1, [d2sk:3], $d2_B, bracelet, $destroy_pot"]
 					},
 					{
-					"name": "D2 Moblin Chest",
+					"name": "Snake's Remains: Chest in Distant Moblins Room",
 					"access_rules": ["$d2clear",
 						"d2sk:3, $d2_A, $kill_rope, $use_seeds, emberseeds, $kill_hardhat_pit, $kill_moblin_pit",
 						"d2sk:1, [d2sk:3], $d2_A, $kill_rope, $use_seeds, emberseeds, $kill_hardhat_pit, $kill_moblin_pit",
@@ -201,35 +201,35 @@
 						"d2sk:1, [d2sk:3], $d2_B, bracelet, $destroy_pot, [$kill_hardhat_pit], [$kill_moblin_pit]"]
 					},
 					{
-					"name": "D2 Blade Chest",
+					"name": "Snake's Remains: Chest in Moving Blades Room",
 					"access_rules": ["$d2clear",
 						"$d2_A, $use_seeds, emberseeds, $kill_normal",
 						"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal",
 						"$d2_B, bracelet"]
 					},
 					{
-					"name": "D2 Spiral Chest",
+					"name": "Snake's Remains: Chest in Bomb Spiral Maze Room",
 					"access_rules": ["$d2clear",
 						"$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 						"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
 						"$d2_B, bracelet, bombs"]
 					},
 					{
-					"name": "D2 Roller Chest",
+					"name": "Snake's Remains: Chest in Rollers Section",
 					"access_rules": ["$d2clear",
 						"$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 						"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
 						"$[d2sk:1], d2sk:2, $d2_B, bracelet, bombs"]
 					},
 					{
-					"name": "D2 Terrace Chest",
+					"name": "Snake's Remains: Chest on Terrace",
 					"access_rules": ["$d2clear",
 						"d2sk:2, [d2sk:3], $d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 						"d2sk:2, [d2sk:3], $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
 						"$d2_B, bracelet, bombs"]
 					},
 					{
-					"name": "D2 Boss",
+					"name": "Snake's Remains: Boss Reward",
 					"access_rules": ["$d2clear",
 						"d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 						"d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
@@ -283,28 +283,28 @@
 					"$enter_d8, shuffledungeonon, d8_d3"],
 				"sections": [
 					{
-					"name": "D3 Roller Chest",
+					"name": "Poison Moth's Lair (B1F): Chest in Roller Room",
 					"access_rules": ["$d3clear",
 						"$kill_beetle, bracelet",
 						"bracelet, shovel",
 						"bracelet, shield1"]
 					},
 					{
-					"name": "D3 Moldorm Chest",
+					"name": "Poison Moth's Lair (1F): Chest in Moldorm Room",
 					"access_rules": ["$d3clear",
 						"$kill_beetle, $kill_moldorm",
 						"bracelet, shovel, $kill_moldorm",
 						"bracelet, shield1, $kill_moldorm"]
 					},
 					{
-					"name": "D3 Bombed Wall Chest",
+					"name": "Poison Moth's Lair (1F): Chest in Room Behind Hidden Cracked Wall",
 					"access_rules": ["$d3clear",
 						"$kill_beetle, bombs",
 						"bracelet, shovel, bombs",
 						"bracelet, shield1, bombs"]
 					},
 					{
-					"name": "D3 Mimic Chest",
+					"name": "Poison Moth's Lair (1F): Chest in Mimics Room",
 					"access_rules": ["$d3clear",
 						"d3sk:2, $kill_beetle, $kill_mimic",
 						"d3sk:1, [d3sk:2], $kill_beetle, $kill_mimic",
@@ -314,7 +314,7 @@
 						"d3sk:1, [d3sk:2], shield1, bracelet, $kill_mimic"]
 					},
 					{
-					"name": "D3 Water Room",
+					"name": "Poison Moth's Lair (B1F): Chest in Watery Room",
 					"access_rules": ["$d3clear",
 						"$kill_beetle, bracelet",
 						"shovel, bracelet",
@@ -322,28 +322,28 @@
 						"$kill_beetle, $max_jump:1"]
 					},
 					{
-					"name": "D3 Zol Chest",
+					"name": "Poison Moth's Lair (1F): Chest Above East Trampoline",
 					"access_rules": ["$d3clear",
 						"$kill_beetle, $max_jump:1",
 						"bracelet, shovel, $max_jump:1",
 						"bracelet, shield1, $max_jump:1"]
 					},
 					{
-					"name": "D3 Trampoline Chest",
+					"name": "Poison Moth's Lair (1F): Chest Above West Trampoline & Owl",
 					"access_rules": ["$d3clear",
 						"$kill_beetle, $max_jump:1",
 						"bracelet, shovel, $max_jump:1",
 						"bracelet, shield1, $max_jump:1"]
 					},
 					{
-					"name": "D3 Quicksand Terrace",
+					"name": "Poison Moth's Lair (B1F): Chest on Quicksand Terrace",
 					"access_rules": ["$d3clear",
 						"$kill_beetle, $max_jump:1",
 						"bracelet, shovel, $max_jump:1",
 						"bracelet, shield1, $max_jump:1"]
 					},
 					{
-					"name": "D3 Giant Blade Room",
+					"name": "Poison Moth's Lair (B1F): Chest in Moving Blade Room",
 					"access_rules": ["$d3clear",
 						"d3sk:2, $kill_beetle, $kill_omuai, $max_jump:1",
 						"d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1",
@@ -353,7 +353,7 @@
 						"d3sk:1, [d3sk:2], shield1, $kill_omuai, $max_jump:1"]
 					},
 					{
-					"name": "D3 Boss",
+					"name": "Poison Moth's Lair (1F): Boss Reward",
 					"access_rules": ["$d3clear",
 						"d3bk, d3sk:2, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
 						"d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
@@ -412,49 +412,49 @@
 					"$enter_d8, shuffledungeonon, d8_d4"],
 				"sections": [
 					{
-					"name": "D4 North of Entrance",
+					"name": "Dancing Dragon Dungeon (2F): Chest North of Entrance",
 					"access_rules": ["$d4clear",
 						"flippers",
 						"$max_jump:4"]
 					},
 					{
-					"name": "D4 Pot Puzzle",
+					"name": "Dancing Dragon Dungeon (2F): Pots on Buttons Puzzle Drop",
 					"access_rules": ["$d4clear",
 						"flippers, bombs, bracelet",
 						"$max_jump:4, bombs, bracelet"]
 					},
 					{
-					"name": "D4 Maze Chest",
+					"name": "Dancing Dragon Dungeon (1F): Chest in Southwest Quadrant of Beamos Room",
 					"access_rules": ["$d4clear",
 						"flippers, $hit_lever",
 						"$max_jump:4, $hit_lever"]
 					},
 					{
-					"name": "D4 Dark Room",
+					"name": "Dancing Dragon Dungeon (1F): Dark Room Chest",
 					"access_rules": ["$d4clear",
 						"flippers, $hit_lever, $max_jump:1",
 						"$max_jump:4, $hit_lever"]
 					},
 					{
-					"name": "D4 Water Ring Room",
+					"name": "Dancing Dragon Dungeon (2F): Chest in Water Donut Room",
 					"access_rules": ["$d4clear",
 						"d4sk:1, flippers, $max_jump:1, bombs",
 						"d4sk:1, $max_jump:4, bombs"]
 					},
 					{
-					"name": "D4 Pool",
+					"name": "Dancing Dragon Dungeon (1F): Eye Diving Spot Item",
 					"access_rules": ["$d4clear",
 						"d4sk:1, flippers, $max_jump:1, $hit_lever, $kill_normal",
 						"d4sk:1, flippers, $max_jump:1, $hit_lever, bracelet"]
 					},
 					{
-					"name": "D4 Terrace",
+					"name": "Dancing Dragon Dungeon (1F): Chest on Small Terrace",
 					"access_rules": ["$d4clear",
 						"d4sk:2, flippers, $max_jump:1, $hit_lever, $kill_shroudedstalfos",
 						"d4sk:2, flippers, $max_jump:1, $hit_lever, bracelet"]
 					},
 					{
-					"name": "D4 Torch Chest",
+					"name": "Dancing Dragon Dungeon (1F): Chest Revealed by Minecart Torches",
 					"access_rules": ["$d4clear",
 						"d4sk:2, flippers, $max_jump:1, $kill_shroudedstalfos, $shoot_seeds, emberseeds",
 						"d4sk:2, flippers, $max_jump:1, $kill_shroudedstalfos, $shoot_seeds, mysteryseeds, [emberseeds]",
@@ -462,7 +462,7 @@
 						"d4sk:2, flippers, $max_jump:1, bracelet, $shoot_seeds, mysteryseeds, [emberseeds]"]
 					},
 					{
-					"name": "D4 Cracked Floor Room",
+					"name": "Dancing Dragon Dungeon (1F): Crumbling Room Chest",
 					"access_rules": ["$d4clear",
 						"d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima",
 						"d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima",
@@ -470,7 +470,7 @@
 						"d4sk:3, [d4sk:5], flippers, $max_jump:1, bracelet, $kill_agunima"]
 					},
 					{
-					"name": "D4 Dive Spot",
+					"name": "Dancing Dragon Dungeon (2F): Pool Drop",
 					"access_rules": ["$d4clear",
 						"d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima, $hit_far_lever",
 						"d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_agunima, $hit_far_lever",
@@ -478,7 +478,7 @@
 						"d4sk:3, [d4sk:5], flippers, $max_jump:1, bracelet, $kill_agunima, $hit_far_lever"]
 					},
 					{
-					"name": "D4 Boss",
+					"name": "Dancing Dragon Dungeon (B1F): Boss Reward",
 					"access_rules": ["$d4clear",
 						"d4bk, d4sk:5, flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
 						"d4bk, d4sk:3, [d4sk:5], flippers, $max_jump:1, $kill_shroudedstalfos, $kill_normal, $kill_agunima, $shoot_seeds, emberseeds, $kill_wizzrobe_cart, $kill_gohma",
@@ -549,14 +549,14 @@
 					"$enter_d8, shuffledungeonon, d8_d5"],
 				"sections": [
 					{
-					"name": "D5 Cart Chest",
+					"name": "Unicorn's Cave: Right Cart Chest",
 					"access_rules": ["$d5clear",
 						"$hit_lever, $max_jump:2",
 						"$hit_lever, $max_jump:1, bombs, [$max_jump:2]",
 						"$hit_lever, flippers"]
 					},
 					{
-					"name": "D5 Gibdo-Zol Chest",
+					"name": "Unicorn's Cave: Gibdo Room Chest",
 					"access_rules": ["$d5clear",
 						"$kill_normal, $kill_gibdo, $max_jump:2",
 						"$kill_normal, $kill_gibdo, $max_jump:1, bombs, [$max_jump:2]",
@@ -565,7 +565,7 @@
 						"$kill_normal, $kill_gibdo, magnet, bombs, $max_jump:1"]
 					},
 					{
-					"name": "D5 Magnet Ball Chest",
+					"name": "Unicorn's Cave: Magnet Gloves Chest",
 					"access_rules": ["$d5clear",
 						"d5sk:5, $hit_lever, $max_jump:4",
 						"d5sk:1, [d5sk:5], $hit_lever, $max_jump:4",
@@ -581,18 +581,18 @@
 						"d5sk:1, [d5sk:5], magnet, bombs, $max_jump:1, flippers"]
 					},
 					{
-					"name": "D5 Left Chest",
+					"name": "Unicorn's Cave: Chest Left from Entrance",
 					"access_rules": ["$d5clear",
 						"$max_jump:3",
 						"magnet"]
 					},
 					{
-					"name": "D5 Spiral Chest",
+					"name": "Unicorn's Cave: Quicksand Spiral Chest",
 					"access_rules": ["$d5clear",
 						"$kill_moldorm, $kill_ironmask"]
 					},
 					{
-					"name": "D5 Terrace Chest",
+					"name": "Unicorn's Cave: Terrace Chest",
 					"access_rules": ["$d5clear",
 						"magnet",
 						"$max_jump:2, bombs",
@@ -600,7 +600,7 @@
 						"flippers, $max_jump:1, bombs"]
 					},
 					{
-					"name": "D5 Armos Chest",
+					"name": "Unicorn's Cave: Armos Puzzle Room Chest",
 					"access_rules": ["$d5clear",
 						"magnet, $kill_moldorm, $kill_ironmask",
 						"$max_jump:2, bombs, $kill_moldorm, $kill_ironmask",
@@ -608,7 +608,7 @@
 						"flippers, $max_jump:1, bombs, $kill_moldorm, $kill_ironmask"]
 					},
 					{
-					"name": "D5 Spinner Chest",
+					"name": "Unicorn's Cave: Magnet Spinner Chest",
 					"access_rules": ["$d5clear",
 						"$max_jump:4",
 						"$max_jump:2, magnet",
@@ -616,7 +616,7 @@
 						"flippers, magnet"]
 					},
 					{
-					"name": "D5 Stalfos Room",
+					"name": "Unicorn's Cave: Chest in Right Half of Minecart Bay Room",
 					"access_rules": ["$d5clear",
 						"$max_jump:3",
 						"$max_jump:2, magnet",
@@ -624,7 +624,7 @@
 						"flippers, magnet"]
 					},
 					{
-					"name": "D5 Basement",
+					"name": "Unicorn's Cave: Treadmills Basement Item",
 					"access_rules": ["$d5clear",
 						"d5sk:5, $hit_lever, $max_jump:2, magnet, $kill_syger, $kill_darknut, $kill_magunesu",
 						"d5sk:3, [d5sk:5], $hit_lever, $max_jump:2, magnet, $kill_syger, $kill_darknut, $kill_magunesu",
@@ -632,7 +632,7 @@
 						"d5sk:3, [d5sk:5], $hit_lever, flippers, magnet, $kill_syger, $kill_darknut, $kill_magunesu"]
 					},
 					{
-					"name": "D5 Boss",
+					"name": "Unicorn's Cave: Boss Reward",
 					"access_rules": ["$d5clear",
 						"d5bk, d5sk:5, $max_jump:2, magnet, $kill_syger",
 						"d5bk, d5sk:2, [d5sk:5], $max_jump:2, magnet, $kill_syger",
@@ -687,40 +687,40 @@
 					"$enter_d8, shuffledungeonon, d8_d6"],
 				"sections": [
 					{
-					"name": "D6 1F East"
+					"name": "Ancient Ruins (1F): Crumbling Ground Room Chest"
 					},
 					{
-					"name": "D6 Magnet Ball Drop",
+					"name": "Ancient Ruins (1F): Magnet Ball Puzzle Drop",
 					"access_rules": ["$d6clear",
 						"$max_jump:3",
 						"$max_jump:1, magnet"]
 					},
 					{
-					"name": "D6 Beamos Room",
+					"name": "Ancient Ruins (1F): Chest in Beamos Room",
 					"access_rules": ["$d6clear",
 						"d6sk:3",
 						"d6sk:1, [d6sk:3]"]
 					},
 					{
-					"name": "D6 2F Gibdo Chest",
+					"name": "Ancient Ruins (2F): Chest in Gibdo Room",
 					"access_rules": ["$d6clear",
 						"d6sk:3",
 						"d6sk:1, [d6sk:3]"]
 					},
 					{
-					"name": "D6 2F Armos Chest",
+					"name": "Ancient Ruins (2F): Chest Between 4 Armos",
 					"access_rules": ["$d6clear",
 						"d6sk:3, bombs",
 						"d6sk:1, [d6sk:3], bombs"]
 					},
 					{
-					"name": "D6 Armos Hall",
+					"name": "Ancient Ruins (3F): Armos Hall Chest",
 					"access_rules": ["$d6clear",
 						"d6sk:3, bombs, $max_jump:1",
 						"d6sk:1, [d6sk:3], bombs, $max_jump:1"]
 					},
 					{
-					"name": "D6 Spinner North",
+					"name": "Ancient Ruins (2F): Chest North of Main Spinner",
 					"access_rules": ["$d6clear",
 						"d6sk:3, $kill_normal, magnet, $destroy_crystal, [$max_jump:1]",
 						"d6sk:2, [d6sk:3], $kill_normal, magnet, $destroy_crystal, [$max_jump:1]",
@@ -728,25 +728,25 @@
 						"d6sk:1, [d6sk:2], bombs, magnet, $destroy_crystal, $max_jump:1"]
 					},
 					{
-					"name": "D6 1F Terrace"
+					"name": "Ancient Ruins (1F): Chest on Terrace Left of Entrance"
 					},
 					{
-					"name": "D6 Crystal Trap Room"
+					"name": "Ancient Ruins (1F): Crystal Maze Room Chest"
 					},
 					{
-					"name": "D6 Escape Room",
+					"name": "Ancient Ruins (2F): Chest After Time Trial",
 					"access_rules": ["$d6clear",
 						"$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds",
 						"$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, mysteryseeds, [emberseeds]"]
 					},
 					{
-					"name": "D6 Vire Chest",
+					"name": "Ancient Ruins (2F): Chest on Red Terrace Before Vire",
 					"access_rules": ["$d6clear",
 						"$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds, $kill_stalfos",
 						"$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, mysteryseeds, [emberseeds], $kill_stalfos"]
 					},
 					{
-					"name": "D6 Boss",
+					"name": "Ancient Ruins (5F): Boss Reward",
 					"access_rules": ["$d6clear",
 						"d6bk, d6sk:3, $destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds, $kill_stalfos, $kill_vire, $kill_hardhat_magnet, $kill_manhandla",
 						"d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds, $kill_stalfos, $kill_vire, $kill_hardhat_magnet, $kill_manhandla",
@@ -801,29 +801,29 @@
 					"$enter_d8, shuffledungeonon, d8_d7"],
 				"sections": [
 					{
-					"name": "D7 Bombed Wall Chest",
+					"name": "Explorer's Crypt (1F): Chest Behind Cracked Wall",
 					"access_rules": ["$d7clear",
 						"bombs"]
 					},
 					{
-					"name": "D7 Wizzrobe Chest",
+					"name": "Explorer's Crypt (1F): Chest in Wizzrobe Room",
 					"access_rules": ["$d7clear",
 						"$kill_normal"]
 					},
 					{
-					"name": "D7 Right of Entrance",
+					"name": "Explorer's Crypt (1F): Chest Right of Entrance",
 					"access_rules": ["$d7clear",
 						"d7sk:1, $kill_normal"]
 					},
 					{
-					"name": "D7 Zol Button",
+					"name": "Explorer's Crypt (B1F): Zol Button Drop",
 					"access_rules": ["$d7clear",
 						"d7sk:1, bracelet, [$shoot_seeds], [emberseeds], $kill_poe, $max_jump:1",
 						"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:1, [emberseeds]",
 						"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:1, [$shoot_seeds], [emberseeds]"]
 					},
 					{
-					"name": "D7 Armos Puzzle",
+					"name": "Explorer's Crypt (B2F): Armos Puzzle Drop",
 					"access_rules": ["$d7clear",
 						"d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:2",
 						"d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, magnet",
@@ -833,14 +833,14 @@
 						"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], magnet, [$shoot_seeds], [emberseeds]"]
 					},
 					{
-					"name": "D7 Magunesu Chest",
+					"name": "Explorer's Crypt (B1F): Chest Connected to Magnet Ball Button",
 					"access_rules": ["$d7clear",
 						"d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:2, $kill_magunesu, magnet",
 						"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:2, $kill_magunesu, magnet, [emberseeds]",
 						"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:2, $kill_magunesu, magnet, [$shoot_seeds], [emberseeds]"]
 					},
 					{
-					"name": "D7 Quicksand Chest",
+					"name": "Explorer's Crypt (1F): Chest Above Trampoline Near 2nd Poe",
 					"access_rules": ["$d7clear",
 						"d7sk:2, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:1",
 						"d7sk:1, [d7sk:2], bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:1",
@@ -850,7 +850,7 @@
 						"d7sk:1, [d7sk:2], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:1, [$shoot_seeds], [emberseeds]"]
 					},
 					{
-					"name": "D7 Spike Chest",
+					"name": "Explorer's Crypt (B1F): Chest in Fast Moving Platform Room",
 					"access_rules": ["$d7clear",
 						"d7sk:3, bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 						"d7sk:2, [d7sk:3], bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
@@ -866,7 +866,7 @@
 						"d7sk:2, [d7sk:3], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $kill_stalfos_pit, magnet"]
 					},
 					{
-					"name": "D7 Maze Chest",
+					"name": "Explorer's Crypt (B2F): Stair Maze Chest",
 					"access_rules": ["$d7clear",
 						"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 						"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
@@ -878,7 +878,7 @@
 						"d7sk:3, [d7sk:4], bracelet, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs"]
 					},
 					{
-					"name": "D7 B2F Drop",
+					"name": "Explorer's Crypt (B2F): Drop in Room North of Stair Maze",
 					"access_rules": ["$d7clear",
 						"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, $max_jump:3, magnet",
 						"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs, magnet",
@@ -894,7 +894,7 @@
 						"d7sk:3, [d7sk:4], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:4, [magnet]"]
 					},
 					{
-					"name": "D7 Stalfos Chest",
+					"name": "Explorer's Crypt (B1F): Chest in Jumping Stalfos Room",
 					"access_rules": ["$d7clear",
 						"d7sk:5, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 						"d7sk:5, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
@@ -904,7 +904,7 @@
 						"d7sk:4, [d7sk:5], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:4, [satchel], [pegasusseeds]"]
 					},
 					{
-					"name": "D7 Boss",
+					"name": "Explorer's Crypt (B1F): Boss Reward",
 					"access_rules": ["$d7clear",
 						"d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 						"d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
@@ -968,7 +968,7 @@
 					"$enter_d8, shuffledungeonon, d8_d8"],
 				"sections": [
 					{
-						"name": "D8 Eye Drop",
+						"name": "Sword & Shield Dungeon (1F): Eye Drop Near Entrance",
 						"access_rules": ["$d8clear",
 							"$destroy_pot, $shoot_seeds",
 							"$destroy_pot, $max_jump:1, emberseeds, $shoot_seeds",
@@ -976,43 +976,43 @@
 							"$destroy_pot, $max_jump:1, mysteryseeds, $shoot_seeds"]
 					},
 					{
-						"name": "D8 Three Eyes Chest",
+						"name": "Sword & Shield Dungeon (1F): Three Eyes Chest",
 						"access_rules": ["$d8clear",
 							"$max_jump:1, emberseeds, slingshot2",
 							"$max_jump:1, mysteryseeds, slingshot2",
 							"$max_jump:1, scentseeds, slingshot2"]
 					},
 					{
-						"name": "D8 Hardhat Drop",
+						"name": "Sword & Shield Dungeon (1F): Drop in Hardhat & Magnet Ball Room",
 						"access_rules": ["$d8clear",
 							"$kill_magunesu, $kill_hardhat_magnet"]
 					},
 					{
-						"name": "D8 Spike Room",
+						"name": "Sword & Shield Dungeon (1F): U-shaped Spiky Freezer Chest",
 						"access_rules": ["$d8clear",
 							"d8sk:1, $kill_magunesu, $max_jump:3",
 							"d8sk:1, $kill_magunesu, $max_jump:2, [$max_jump:3]"]
 					},
 					{
-						"name": "D8 Magnet Ball Room",
+						"name": "Sword & Shield Dungeon (1F): Bottom Chest in Lava Bridge Room",
 						"access_rules": ["$d8clear",
 							"d8sk:2, $kill_magunesu, $max_jump:3",
 							"d8sk:2, $kill_magunesu, $max_jump:2, [$max_jump:3]"]
 					},
 					{
-						"name": "D8 Armos Chest",
+						"name": "Sword & Shield Dungeon (1F): Top Chest in Lava Bridge Room",
 						"access_rules": ["$d8clear",
 							"d8sk:2, $kill_magunesu, $max_jump:3, magnet",
 							"d8sk:2, $kill_magunesu, $max_jump:2, magnet, [$max_jump:3]"]
 					},
 					{
-						"name": "D8 Spinner Chest",
+						"name": "Sword & Shield Dungeon (B1F): Chest Right of Spinner",
 						"access_rules": ["$d8clear",
 							"d8sk:2, $kill_magunesu, $max_jump:3, magnet",
 							"d8sk:2, $kill_magunesu, $max_jump:2, magnet, [$max_jump:3]"]
 					},
 					{
-						"name": "D8 Darknut Chest",
+						"name": "Sword & Shield Dungeon (1F): Chest in Bombable Blocks Room",
 						"access_rules": ["$d8clear",
 							"d8sk:2, $kill_magunesu, $max_jump:3, magnet, bombs, slingshot2",
 							"d8sk:2, $kill_magunesu, $max_jump:3, magnet, bombs, emberseeds, slingshot2",
@@ -1023,35 +1023,35 @@
 							"d8sk:2, $kill_magunesu, $max_jump:2, magnet, bombs, mysteryseeds, slingshot2, [$max_jump:3]"]
 					},
 					{
-						"name": "D8 Pols Voice Chest",
+						"name": "Sword & Shield Dungeon (1F): Chest on Terrace After Pols Voice Room",
 						"access_rules": ["$d8clear",
 							"[d8sk:3], $kill_magunesu, $max_jump:3, magnet, [slingshot2], [emberseeds], [magicboomerang], $kill_keese, $kill_polsvoice_pit",
 							"[d8sk:3], $kill_magunesu, $max_jump:2, [$max_jump:3], [slingshot2], [emberseeds], [magicboomerang], $kill_keese, $kill_polsvoice_pit",
 							"[d8sk:3], $kill_magunesu, $max_jump:4, magnet, [slingshot2], [emberseeds], $kill_keese, $kill_polsvoice_pit"]
 					},
 					{
-						"name": "D8 Ghost Armos Drop",
+						"name": "Sword & Shield Dungeon (1F): Ghost Armos Puzzle Drop",
 						"access_rules": ["$d8clear",
 							"d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, bombs",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, bombs, [slingshot2], [emberseeds]",
 							"d8sk:4, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, bombs"]
 					},
 					{
-						"name": "D8 SE Lava Chest",
+						"name": "Sword & Shield Dungeon (B1F): Southeast Lava Chest",
 						"access_rules": ["$d8clear",
 							"d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, bracelet",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, bracelet, [slingshot2], [emberseeds]",
 							"d8sk:4, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, bracelet"]
 					},
 					{
-						"name": "D8 Spark Chest",
+						"name": "Sword & Shield Dungeon (1F): Chest in Sparks & Pots Room",
 						"access_rules": ["$d8clear",
 							"d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, bracelet",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, bracelet, [slingshot2], [emberseeds]",
 							"d8sk:4, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, bracelet"]
 					},
 					{
-						"name": "D8 SW Lava Chest",
+						"name": "Sword & Shield Dungeon (B1F): Southwest Lava Chest",
 						"access_rules": ["$d8clear",
 							"d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, [slingshot2], [emberseeds]",
@@ -1059,7 +1059,7 @@
 					},
 					
 					{
-						"name": "D8 Boss",
+						"name": "Sword & Shield Dungeon (B1F): Boss Reward",
 						"access_rules": ["$d8clear",
 							"d8bk, d8sk:7, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, magicboomerang, $hit_lever, bracelet, $kill_medusahead",
 							"d8bk, d8sk:7, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, magicboomerang, $hit_lever, bracelet, $kill_medusahead",

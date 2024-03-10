@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d2"],
 		"children": [	
 			{
-				"name": "D2 Left From Entrance",
+				"name": "Snake's Remains: Chest Left from Entrance",
 				"sections": 
                 [
 					{
-                        "name": "D2 Left From Entrance"
+                        "name": "Snake's Remains: Chest Left from Entrance"
                     }
                 ],
 				"map_locations": [
@@ -30,11 +30,11 @@
 				]
 			},
 			{
-				"name": "D2 Rope Drop",
+				"name": "Snake's Remains: Drop in Left Rope Room",
 				"sections": 
                 [
 					{
-                        "name": "D2 Rope Drop",
+                        "name": "Snake's Remains: Drop in Left Rope Room",
 						"access_rules": ["$d2_A, $kill_normal",
 							"$d2_B, $kill_normal, bracelet"]
                     }
@@ -48,11 +48,11 @@
 				]
 			},
 			{
-				"name": "D2 Rope Chest",
+				"name": "Snake's Remains: Chest in Right Rope Room",
 				"sections": 
                 [
 					{
-                        "name": "D2 Rope Chest",
+                        "name": "Snake's Remains: Chest in Right Rope Room",
 						"access_rules": ["$d2_A, $kill_normal, $use_seeds, emberseeds",
 							"$d2_A, $kill_normal, $use_seeds, mysteryseeds, [emberseeds]",
 							"$d2_B, $kill_normal, bracelet"]
@@ -67,11 +67,11 @@
 				]
 			},
 			{
-				"name": "D2 Pot Chest",
+				"name": "Snake's Remains: Chest Behind Pots in Hardhat Room",
 				"sections": 
                 [
 					{
-                        "name": "D2 Pot Chest",
+                        "name": "Snake's Remains: Chest Behind Pots in Hardhat Room",
 						"access_rules": ["d2sk:3, $d2_A, $kill_normal, $use_seeds, emberseeds, $destroy_pot",
 							"d2sk:1, [d2sk:3], $d2_A, $kill_normal, $use_seeds, emberseeds, $destroy_pot",
 							"d2sk:3, $d2_A, $kill_normal, $use_seeds, mysteryseeds, [emberseeds], $destroy_pot",
@@ -89,11 +89,11 @@
 				]
 			},
 			{
-				"name": "D2 Moblin Chest",
+				"name": "Snake's Remains: Chest in Distant Moblins Room",
 				"sections": 
                 [
 					{
-                        "name": "D2 Moblin Chest",
+                        "name": "Snake's Remains: Chest in Distant Moblins Room",
 						"access_rules": ["d2sk:3, $d2_A, $kill_rope, $use_seeds, emberseeds, $kill_hardhat_pit, $kill_moblin_pit",
 							"d2sk:1, [d2sk:3], $d2_A, $kill_rope, $use_seeds, emberseeds, $kill_hardhat_pit, $kill_moblin_pit",
 							"d2sk:3, $d2_A, $kill_rope, $use_seeds, emberseeds, bracelet, [$kill_hardhat_pit], [$kill_moblin_pit]",
@@ -115,11 +115,11 @@
 				]
 			},
 			{
-				"name": "D2 Blade Chest",
+				"name": "Snake's Remains: Chest in Moving Blades Room",
 				"sections": 
                 [
 					{
-                        "name": "D2 Blade Chest",
+                        "name": "Snake's Remains: Chest in Moving Blades Room",
 						"access_rules": ["$d2_A, $use_seeds, emberseeds, $kill_normal",
 							"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal",
 							"$d2_B, bracelet"]
@@ -134,11 +134,11 @@
 				]
 			},
 			{
-				"name": "D2 Spiral Chest",
+				"name": "Snake's Remains: Chest in Bomb Spiral Maze Room",
 				"sections": 
                 [
 					{
-                        "name": "D2 Spiral Chest",
+                        "name": "Snake's Remains: Chest in Bomb Spiral Maze Room",
 						"access_rules": ["$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 							"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
 							"$d2_B, bracelet, bombs"]
@@ -153,11 +153,11 @@
 				]
 			},
 			{
-				"name": "D2 Roller Chest",
+				"name": "Snake's Remains: Chest in Rollers Section",
 				"sections": 
                 [
 					{
-                        "name": "D2 Roller Chest",
+                        "name": "Snake's Remains: Chest in Rollers Section",
 						"access_rules": ["$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 							"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
 							"$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
@@ -174,11 +174,11 @@
 				]
 			},
 			{
-				"name": "D2 Terrace Chest",
+				"name": "Snake's Remains: Chest on Terrace",
 				"sections": 
                 [
 					{
-                        "name": "D2 Terrace Chest",
+                        "name": "Snake's Remains: Chest on Terrace",
 						"access_rules": ["d2sk:2, [d2sk:3], $d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 							"d2sk:2, [d2sk:3], $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
 							"$d2_B, bracelet, bombs"]
@@ -193,11 +193,11 @@
 				]
 			},
 			{
-				"name": "D2 Boss",
+				"name": "Snake's Remains: Boss Reward",
 				"sections": 
                 [
 					{
-                        "name": "D2 Boss",
+                        "name": "Snake's Remains: Boss Reward",
 						"access_rules": ["d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
 							"d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
 							"d2bk, d2sk:1, [d2sk:3], $d2_B, bracelet, bombs"]

@@ -17,6 +17,12 @@ function get_bombs()
 	has("biggoron_sword")
 end
 
+function destroy_signs()
+	return has("bracelet") or
+	has("sword2") or 
+	has("biggoron_sword")
+end
+
 -- Can farm Ore Chunks in Subrosia
 function ore_chunks()
 	return has("shovel") or 
@@ -768,14 +774,14 @@ end
 
 
 function wet_lake()
-	return has("defaultseasonson") or has("north_winter") or has("north_spring") or has("north_fall") or
+	return  has("north_winter") or has("north_spring") or has("north_fall") or
 	has("winter") or has("spring") or has("fall")
 end
 
 function d5_stump_d1()
 	return (north_stump() and
 	(max_jump() >= 1 or ricky() or moosh()) and
-	(has("winter") or has("north_winter") or has("defaultseasonson") or
+	(has("winter") or has("north_winter")  or
 	has("flippers") or (dimitri()) and has("bracelet")))
 end
 
@@ -818,8 +824,7 @@ function coast_to_D7()
 		(has("bombs") and max_jump() >= 1 and has("summer")) or
 		(max_jump() >= 2 and
 		((has("coast_winter") and has("shovel")) or 
-		((has("defaultseasonson") and has("shovel")) or 
-		has("coast_spring") or has("coast_fall"))))
+		has("coast_spring") or has("coast_fall")))
 end
 function coast_to_D7_hard()
 	return has("coast_summer") or
@@ -851,7 +856,7 @@ function fountain_to_D2()
 	return max_jump() >= 1 or
 	has("shovel") or any_flute() or
 	has("spring") or has("summer") or has("fall") or
-	(has("flippers") and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or has ("defaultseasonson")))
+	(has("flippers") and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall")))
 end
 function enter_d2()
 	return (village_to_suburbs() and suburbs_to_fountain() and fountain_to_D2 and open_d2()) or
@@ -862,7 +867,7 @@ function d2_A()
 end
 function d2_B()
 	return has("bracelet") and
-	(has("wow_summer") or has ("defaultseasonson") or ricky())
+	(has("wow_summer") or ricky())
 end
 
 function open_d2()
@@ -985,7 +990,7 @@ function mystery_tree()
 	(has("shovel") or any_flute())) or
 	(has("suburbs_spring") or has("spring")) or
 	(has("suburbs_summer") or has("summer")) or
-	(has("suburbs_fall") or has("fall") or has ("defaultseasonson")))
+	(has("suburbs_fall") or has("fall")))
 end
 function mystery_tree_hard()
 	return (fairy_fountain_hard() or (fairy_fountain_natzu_hard() and has("satchel") and has("galeseeds"))) and
@@ -994,7 +999,7 @@ function mystery_tree_hard()
 	(has("shovel") or any_flute())) or
 	(has("suburbs_spring") or has("spring")) or
 	(has("suburbs_summer") or has("summer")) or
-	(has("suburbs_fall") or has("fall") or has ("defaultseasonson")))
+	(has("suburbs_fall") or has("fall")))
 end
 
 function mystery_tree_natzu()
@@ -1004,7 +1009,7 @@ function mystery_tree_natzu()
 	(has("shovel") or any_flute())) or
 	(has("suburbs_spring") or has("spring")) or
 	(has("suburbs_summer") or has("summer")) or
-	(has("suburbs_fall") or has("fall") or has ("defaultseasonson")))
+	(has("suburbs_fall") or has("fall")))
 end
 function mystery_tree_natzu_hard()
 	return fairy_fountain_natzu_hard() and
@@ -1013,7 +1018,7 @@ function mystery_tree_natzu_hard()
 	(has("shovel") or any_flute())) or
 	(has("suburbs_spring") or has("spring")) or
 	(has("suburbs_summer") or has("summer")) or
-	(has("suburbs_fall") or has("fall") or has ("defaultseasonson")))
+	(has("suburbs_fall") or has("fall")))
 end
 
 function fountain_to_mysterytree()
@@ -1022,14 +1027,14 @@ function fountain_to_mysterytree()
 	(has("shovel") or any_flute())) or
 	(has("suburbs_spring") or has("spring")) or
 	(has("suburbs_summer") or has("summer")) or
-	(has("suburbs_fall") or has("fall") or has ("defaultseasonson"))
+	(has("suburbs_fall") or has("fall"))
 end
 
 function d2_mushrooms()
 	return destroy_mushroom() and
 	(has("wow_fall") or 
 	((d2_B() or (d2_A() and use_seeds() and has("emberseeds") and has("bracelet")) 
-	or ricky() or has("wow_summer") or has ("defaultseasonson")) and has("fall"))) and
+	or ricky() or has("wow_summer")) and has("fall"))) and
 	(max_jump() >= 3 or has("glove"))
 end
 function d2_mushrooms_hard()
@@ -1114,8 +1119,7 @@ function pegasus_tree_hard()
 end
 
 function swamp_stump()
-	return pegasus_tree() and
-	(has("bracelet") or hit_lever()) and
+	return pegasus_tree() and hit_lever() and
 	((has("satchel") and has("pegasusseeds")) or has("flippers") or has("cape") or
 	(has("bombs") and max_jump() >= 2)) and
 	has("bracelet") and has("d3key")
@@ -1129,7 +1133,7 @@ function swamp_stump_hard()
 end
 
 function dry_swamp()
-	return has("swamp_summer") or has("swamp_winter") or has("swamp_fall") or has("defaultseasonson") or
+	return has("swamp_summer") or has("swamp_winter") or has("swamp_fall") or
 	(swamp_stump() and (has("summer") or has("winter") or has("fall")))
 end
 function dry_swamp_hard()
@@ -1325,41 +1329,41 @@ function sunken_mountain()
 	return scent_tree() and
 	(has("flippers") or max_jump() >= 4) and --get to goron cave
 	has("bracelet") and has("shovel") and --get to cucco mountain
-	(has("summer") or has("sunken_summer") or has("defaultseasonson")) and --summer requirement of rando
+	(has("summer") or has("sunken_summer")) and --summer requirement of rando
 	has("flippers")--go through tunnel
 end
 function sunken_mountain_hard()
 	return scent_tree_hard() and
 	(has("flippers") or max_jump() >= 4) and --get to goron cave
 	has("bracelet") and has("shovel") and --get to cucco mountain
-	(has("summer") or has("sunken_summer") or has("defaultseasonson")) and --summer requirement of rando
+	(has("summer") or has("sunken_summer")) and --summer requirement of rando
 	has("flippers")--go through tunnel
 end
 
 function sunken_pirates()
 	return (has("magicboomerang") or max_jump() >= 4) and --get to pirate portal
 	max_jump() >= 1 and--get to hns area
-	(has("summer") or has("sunken_summer") or has("defaultseasonson")) and --summer requirement of rando
+	(has("summer") or has("sunken_summer")) and --summer requirement of rando
 	has("flippers")--go through tunnel
 end
 
 function sunken_rosa()
 	return suburbs() and destroy_bush_flute() and --get to rosa portal
 	max_jump() >= 4 and --get to hns area
-	(has("summer") or has("sunken_summer") or has("defaultseasonson")) and --summer requirement of rando
+	(has("summer") or has("sunken_summer")) and --summer requirement of rando
 	has("flippers")--go through tunnel
 end
 
 function sunken_lake()
 	return north_stump() and max_jump() >= 4 and (has("winter") or has("north_winter")) and --get to lake portal without any flute
-	(has("summer") or has("sunken_summer") or has("defaultseasonson")) and --summer requirement of rando
+	(has("summer") or has("sunken_summer")) and --summer requirement of rando
 	has("flippers") --go through tunnel
 end
 
 function sunken_swamp()
 	return south_swamp() and has("bracelet") and --get to swamp portal
 	max_jump() >= 4 and --get to hns area
-	(has("summer") or has("sunken_summer") or has("defaultseasonson")) and --summer requirement of rando
+	(has("summer") or has("sunken_summer")) and --summer requirement of rando
 	has("flippers") --go through tunnel
 end
 
@@ -1367,12 +1371,12 @@ function sunken_temple()
 	return scent_tree() and max_jump() >= 4 and --get to temple remains
 	--getting to the temple portal
 	((has("fall") and has("winter")) or--general check no matter the season
-	(has("temple_winter") or has("defaultseasonson") and has("shovel")) or --what to do in winter
+	(has("temple_winter") and has("shovel")) or --what to do in winter
 	(has("temple_spring") and destroy_flower() and has("winter")) or --what to do in spring
 	(has("temple_summer") and has("winter")) or --what to do in summer
 	(has("temple_fall") and has("winter"))) and --what to do in autumn
 	
-	(has("summer") or has("sunken_summer") or has("defaultseasonson")) and --summer requirement of rando
+	(has("summer") or has("sunken_summer")) and --summer requirement of rando
 	has("flippers") --go through tunnel
 end
 function sunken_temple_hard()
@@ -1401,13 +1405,13 @@ function waterfalls()
 end
 
 function sunken_to_cucco()
-	return (has("summer") or has("sunken_summer") or has ("defaultseasonson")) and
+	return (has("summer") or has("sunken_summer")) and
 	has("flippers")
 end
 
 function sunken_to_wow()
 	if has("spring") or has("summer") or has("fall") or
-		has("sunken_spring") or has("sunken_summer") or has ("defaultseasonson") or has("sunken_fall") then
+		has("sunken_spring") or has("sunken_summer") or has("sunken_fall") then
 		if ((has("winter") or has("suburbs_winter")) and
 				(has("spring") or has("suburbs_spring"))) or
 			(has("satchel") and has("galeseeds")) then
@@ -1439,7 +1443,7 @@ function mount_cucco_hard()
 end
 
 function cucco_to_sunken()
-	if has("sunken_summer") or has("summer") or has ("defaultseasonson") or
+	if has("sunken_summer") or has("summer") or
 	(has("satchel") and has("galeseeds")) then
 		return true, AccessibilityLevel.Normal
 	elseif has("treewarp") then
@@ -1450,7 +1454,7 @@ function cucco_to_sunken()
 end
 
 function cucco_summer()
-	return sunken_city() and has("flippers") and (has("sunken_summer") or has("summer")or has ("defaultseasonson"))
+	return sunken_city() and has("flippers") and (has("sunken_summer") or has("summer"))
 end
 
 function cucco_goron()
@@ -1573,13 +1577,8 @@ function temple_remains_hard()
 end
 
 function enter_remains()
-	if max_jump() >= 2 then
-		return true, AccessibilityLevel.Normal
-	elseif max_jump() >= 1 and has("bombs") then
-		return true, AccessibilityLevel.SequenceBreak
-	else
-		return false, AccessibilityLevel.None
-	end
+	return (max_jump() >= 3 and scent_tree()) or
+	mount_cucco() and has "bracelet"
 end
 function enter_remains_hard()
 	return max_jump() >= 2 or (max_jump() >= 1 and has("bombs"))
@@ -1713,15 +1712,8 @@ function hns_to_pirates()
 end
 
 function hns_to_beach()
-	if has("bracelet") and max_jump() >= 1 and
-		(max_jump() >= 2 or has("magnet")) then
-		return true, AccessibilityLevel.Normal
-	elseif has("bracelet") and max_jump() >= 1 and
-		(max_jump() >= 2 or has("magnet") or has("bombs")) then
-		return true, AccessibilityLevel.SequenceBreak
-	else
-		return false, AccessibilityLevel.None
-	end
+	return has("bracelet") and max_jump() >= 1 and
+		(max_jump() >= 2 or has("magnet"))
 end
 function hns_to_beach_hard()
 	return has("bracelet") and max_jump() >= 1 and
@@ -1769,7 +1761,7 @@ end
 
 function portal_swamp()
 	return south_swamp() and has("bracelet") and
-	(any_flute() or has("swamp_summer") or has("swamp_fall") or has("defaultseasonson") or
+	(any_flute() or has("swamp_summer") or has("swamp_fall") or
 	(swamp_stump() and (has("summer") or has("fall"))) or
 	(has("shovel") and (has("swamp_winter") or (swamp_stump() and has("winter")))) or
 	(destroy_flower() and (has("swamp_spring") or (swamp_stump() and has("spring")))))
@@ -1784,14 +1776,14 @@ function portal_lake()
 	return north_stump() and
 		((wet_lake() and (max_jump() >= 1 or ricky() or moosh()) and
 		(has("flippers") or (dimitri() and has("bracelet")))) or
-		(max_jump() >= 4 and (has("north_winter") or has("winter") or has ("defaultseasonson"))))
+		(max_jump() >= 4 and (has("north_winter") or has("winter"))))
 end
 function portal_lake_hard()
 	return north_stump() and
 	((wet_lake() and (max_jump() >= 1 or ricky() or moosh()) and
 	(has("flippers") or (dimitri() and has("bracelet")))) or
 	((max_jump() >= 4 or (max_jump() >= 3 and has("bombs"))) and 
-	(has("north_winter") or has("winter") or has("defaultseasonson"))))
+	(has("north_winter") or has("winter"))))
 end
 	
 function portal_village()
@@ -1804,22 +1796,12 @@ function portal_village_hard()
 end
 
 function portal_remains()
-	if destroy_bush() and
+	return destroy_bush() and
 		max_jump() >= 1 and has("winter") and
-		(has("temple_fall") or has("fall")) then
-		return true, AccessibilityLevel.Normal
-	elseif (has("temple_winter") or has("winter") or has("defaultseasonson")) and
-		((has("shovel") and destroy_bush() and max_jump() >= 4) or
-		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and max_jump() >= 4 and has("winter")) or
-		((has("temple_summer") or has("summer")) and destroy_bush() and max_jump() >= 4 and has("winter")) or
-		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))) then
-		return true, AccessibilityLevel.SequenceBreak
-	else
-		return false, AccessibilityLevel.None
-	end	
+		(has("temple_fall") or has("fall")) 
 end
 function portal_remains_hard()
-	return (has("temple_winter") or has("winter") or has("defaultseasonson")) and
+	return (has("temple_winter") or has("winter")) and
 	((has("shovel") and destroy_bush() and max_jump() >= 4) or --what to do in winter
 	((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and max_jump() >= 4 and has("winter")) or --what to do in spring
 	((has("temple_summer") or has("summer")) and destroy_bush() and max_jump() >= 4 and has("winter")) or --what to do in summer
@@ -1827,18 +1809,8 @@ function portal_remains_hard()
 end
 
 function portal_d8()
-	if has("temple_summer") or has("summer") then
-		if max_jump() >= 4 or 
-			(max_jump() >= 2 and has("glove")) then
-			return true, AccessibilityLevel.Normal
-		elseif max_jump() >= 1 and has("bombs") then
-			return true, AccessibilityLevel.SequenceBreak
-		else
-			return false, AccessibilityLevel.None
-		end
-	else
-		return false, AccessibilityLevel.None
-	end
+	return has("temple_summer") or has("summer") and
+		has (max_jump() >= 4 or (max_jump() >= 2 and has("glove")))
 end
 function portal_d8_hard()
 	return (has("temple_summer") or has("summer")) and
@@ -1851,7 +1823,7 @@ end
 
 function moblin_road_chest()
 	return destroy_bush() and (ricky() or has("bombs")) and --open the cave and the chest
-	(has("wow_spring") or has("wow_summr") or has ("defaultseasonson") or has("wow_fall") or --the cave isn't blocked by winter blocks
+	(has("wow_spring") or has("wow_summr") or has("wow_fall") or --the cave isn't blocked by winter blocks
 	has("spring") or has("summer") or has("fall")) --alternatively, the player can change to a season that isn't winter
 end
 --]]

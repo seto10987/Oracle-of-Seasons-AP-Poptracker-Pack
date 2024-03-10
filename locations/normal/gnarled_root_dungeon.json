@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d1"],
 		"children": [	
 			{
-				"name": "D1 Stalfos Drop",
+				"name": "Gnarled Root Dungeon: Drop in Right Stalfos Room",
 				"sections": 
                 [
 					{
-                        "name": "D1 Stalfos Drop",
+                        "name": "Gnarled Root Dungeon: Drop in Right Stalfos Room",
                         	"access_rules": ["$kill_stalfos","bracelet",
 								"$kill_stalfos_hard, [$kill_stalfos]",
 								"$kill_stalfos_hard, [bracelet]"]
@@ -33,11 +33,11 @@
 				]
 			},
 			{
-				"name": "D1 Stalfos Chest",
+				"name": "Gnarled Root Dungeon: Chest in Left Stalfos Room",
 				"sections": 
                 [
 					{
-                        "name": "D1 Stalfos Chest",
+                        "name": "Gnarled Root Dungeon: Chest in Left Stalfos Room",
                         	"access_rules": ["d1sk:1, $kill_stalfos",
 								"d1sk:1, bracelet",
 								"d1sk:1, $kill_stalfos_hard, [$kill_stalfos]",
@@ -53,11 +53,11 @@
 				]
 			},
 			{
-				"name": "D1 Goriya Chest",
+				"name": "Gnarled Root Dungeon: Chest in Goriya Room",
 				"sections": 
                 [
 					{
-                        "name": "D1 Goriya Chest",
+                        "name": "Gnarled Root Dungeon: Chest in Goriya Room",
                         "access_rules": ["d1sk:1, $kill_stalfos, $use_seeds, emberseeds",
 							"d1sk:1, bracelet, $use_seeds, emberseeds",
 							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos], $use_seeds, emberseeds",
@@ -77,11 +77,11 @@
 				]
 			},
 			{
-				"name": "D1 Block-Pushing Room",
+				"name": "Gnarled Root Dungeon: Chest in Block-pushing Room",
 				"sections": 
                 [
 					{
-                        "name": "D1 Block-Pushing Room",
+                        "name": "Gnarled Root Dungeon: Chest in Block-pushing Room",
                         "access_rules": ["d1sk:1, $kill_stalfos, $kill_normal",
 							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos], $kill_hard, [$kill_normal]",
 							"d1sk:1, bracelet, [$kill_stalfos], [$kill_normal]"]
@@ -96,11 +96,11 @@
 				]
 			},
 			{
-				"name": "D1 Lever Room",
+				"name": "Gnarled Root Dungeon: Chest Near Railway Lever",
 				"sections": 
                 [
 					{
-                        "name": "D1 Lever Room",
+                        "name": "Gnarled Root Dungeon: Chest Near Railway Lever",
                         "access_rules": ["d1sk:1, $kill_stalfos, $use_seeds, emberseeds",
 							"d1sk:1, bracelet, $use_seeds, emberseeds",
 							"d1sk:1, $kill_stalfos_hard, [$kill_stalfos]",
@@ -116,11 +116,11 @@
 				]
 			},
 			{
-				"name": "D1 Railway Chest",
+				"name": "Gnarled Root Dungeon: Chest Near Railway",
 				"sections": 
                 [
 					{
-                        "name": "D1 Railway Chest",
+                        "name": "Gnarled Root Dungeon: Chest Near Railway",
                         "access_rules": ["d1sk:1, $kill_stalfos, $hit_lever",
 							"d1sk:1, $kill_stalfos_hard, $hit_lever, [$kill_stalfos]",
 							"d1sk:1, bracelet, [$kill_stalfos]"]
@@ -135,11 +135,11 @@
 				]
 			},
 			{
-				"name": "D1 Button Chest",
+				"name": "Gnarled Root Dungeon: Hidden Chest Revealed by Button",
 				"sections": 
                 [
 					{
-                        "name": "D1 Button Chest",
+                        "name": "Gnarled Root Dungeon: Hidden Chest Revealed by Button",
                         "access_rules": ["d1sk:1, $kill_stalfos, $hit_lever",
 							"d1sk:1, $kill_stalfos_hard, $hit_lever, [$kill_stalfos]",
 							"d1sk:1, bracelet, [$kill_stalfos]"]
@@ -154,11 +154,11 @@
 				]
 			},
 			{
-				"name": "D1 Basement",
+				"name": "Gnarled Root Dungeon: Item in Basement",
 				"sections": 
                 [
 					{
-                        "name": "D1 Basement",
+                        "name": "Gnarled Root Dungeon: Item in Basement",
                         "access_rules": ["d1sk:2, [$kill_stalfos], $hit_lever, [$kill_goriyabros], bombs",
 							"d1sk:2, [$kill_stalfos], bracelet, [$kill_goriyabros], bombs"]
                     }
@@ -177,11 +177,11 @@
 				]
 			},
 			{
-				"name": "D1 Floormaster Room",
+				"name": "Gnarled Root Dungeon: Chest in Floormaster Room",
 				"sections": 
                 [
 					{
-                        "name": "D1 Floormaster Room",
+                        "name": "Gnarled Root Dungeon: Chest in Floormaster Room",
                         "access_rules": ["$use_seeds, emberseeds",
 							"$use_seeds, mysteryseeds, [emberseeds]"]
                     }
@@ -195,11 +195,11 @@
 				]
 			},
 			{
-				"name": "D1 Boss",
+				"name": "Gnarled Root Dungeon: Boss Reward",
 				"sections": 
                 [
 					{
-                        "name": "D1 Boss",
+                        "name": "Gnarled Root Dungeon: Boss Reward",
                         "access_rules": ["d1bk, $use_seeds, emberseeds, $kill_aquamentus",
 							"d1bk, $use_seeds, emberseeds, [$kill_aquamentus], $kill_aquamentus_hard",
 							"d1bk, $use_seeds, mysteryseeds, [emberseeds], $kill_aquamentus",

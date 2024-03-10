@@ -51,35 +51,108 @@ function onClear(slot_data)
             end
         end
     end
+
+    PLAYER_ID = Archipelago.PlayerNumber or -1
+    TEAM_NUMBER = Archipelago.TeamNumber or 0
+
+    if slot_data["required_essences"] then
+        Tracker:FindObjectForCode("onox_essences").CurrentStage = tonumber(slot_data["required_essences"])
+    end
+    if slot_data["treehouse_old_man_requirement"] then
+        Tracker:FindObjectForCode("oldmanessences").CurrentStage = tonumber(slot_data["treehouse_old_man_requirement"])
+    end
+    if slot_data["golden_beasts_requirement"] then
+        Tracker:FindObjectForCode("goldenbeastsrequired").CurrentStage = tonumber(slot_data["golden_beasts_requirement"])
+    end
+    if slot_data["logic_difficulty"] then
+        Tracker:FindObjectForCode("logiclevel").CurrentStage = tonumber(slot_data["logic_difficulty"])
+    end
+    if slot_data["shuffle_dungeons"] then
+        Tracker:FindObjectForCode("dungeonshuffle").CurrentStage = tonumber(slot_data["shuffle_dungeons"])
+    end
+    if slot_data["warp_to_start"] then
+        Tracker:FindObjectForCode("treewarp").CurrentStage = tonumber(slot_data["warp_to_start"])
+    end
+    if slot_data["shuffle_portals"] then
+        Tracker:FindObjectForCode("portalshuffle").CurrentStage = tonumber(slot_data["shuffle_portals"])
+    end
+    if slot_data["goal"] then
+        Tracker:FindObjectForCode("goal").CurrentStage = tonumber(slot_data["goal"])
+    end
+    if slot_data["horon_village_season"] then
+        Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage = tonumber(slot_data["horon_village_season"])
+    end
+    if slot_data["shuffle_old_men"] then
+        Tracker:FindObjectForCode("shuffle_old_men").CurrentStage = tonumber(slot_data["shuffle_old_men"])
+    end
+    if slot_data["lost_woods_item_sequence"] then
+        Tracker:FindObjectForCode("lost_woods_item_sequence").CurrentStage = tonumber(slot_data["lost_woods_item_sequence"])
+    end
+    if slot_data["advance_shop"] then
+        Tracker:FindObjectForCode("advance_shop").CurrentStage = tonumber(slot_data["advance_shop"])
+    end
+
+    if slot_data["animal_companion"] == "Ricky" then
+        Tracker:FindObjectForCode("natzu_animal").CurrentStage = 0
+    elseif slot_data["animal_companion"] == "Dimitri" then
+        Tracker:FindObjectForCode("natzu_animal").CurrentStage = 1
+    elseif slot_data["animal_companion"] == "Moosh" then
+        Tracker:FindObjectForCode("natzu_animal").CurrentStage = 2
+    end
+
+    season_dictionary = {
+        spring = 0,
+        summer = 1,
+        autumn = 2,
+        winter = 3
+      }
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "north horon" then
+        Tracker:FindObjectForCode("season_northhoron").CurrentStage = season_dictionary[season_name]
+        end
+    end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "eastern suburbs" then
+        Tracker:FindObjectForCode("season_eastsuburbs").CurrentStage = season_dictionary[season_name]
+    end
+end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "woods of winter" then
+        Tracker:FindObjectForCode("season_woodsofwinter").CurrentStage = season_dictionary[season_name]
+    end
+end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "holodrum plain" then
+        Tracker:FindObjectForCode("season_holodrumplain").CurrentStage = season_dictionary[season_name]
+    end
+end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "spool swamp" then
+        Tracker:FindObjectForCode("season_spoolswamp").CurrentStage = season_dictionary[season_name]
+    end
+end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "sunken city" then
+        Tracker:FindObjectForCode("season_sunkencity").CurrentStage = season_dictionary[season_name]
+    end
+end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "western coast" then
+        Tracker:FindObjectForCode("season_coast").CurrentStage = season_dictionary[season_name]
+    end
+end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "temple remains" then
+        Tracker:FindObjectForCode("season_templeremains").CurrentStage = season_dictionary[season_name]
+    end
+end
+    for region_name, season_name in pairs(slot_data["default_seasons"]) do
+        if  region_name == "horon village" then
+        Tracker:FindObjectForCode("season_horonvillage").CurrentStage = season_dictionary[season_name]
+    end
+end
 end
 
--- PLAYER_ID = Archipelago.PlayerNumber or -1
--- TEAM_NUMBER = Archipelago.TeamNumber or 0
-
--- if slot_data["RequiredEssences"] then
---     Tracker:FindObjectForCode("onox_essences").CurrentStage = tonumber(slot_data["RequiredEssences"])
--- end
--- if slot_data["TreehouseOldManRequirement"] then
---     Tracker:FindObjectForCode("oldmanessences").CurrentStage = tonumber(slot_data["TreehouseOldManRequirement"])
--- end
--- if slot_data["GoldenBeastsRequirement"] then
---     Tracker:FindObjectForCode("goldenbeastsrequired").CurrentStage = tonumber(slot_data["GoldenBeastsRequirement"])
--- end
--- if slot_data["LogicDifficulty"] then
---     Tracker:FindObjectForCode("logiclevel").CurrentStage = tonumber(slot_data["LogicDifficulty"])
--- end
--- if slot_data["DungeonShuffle"] then
---     Tracker:FindObjectForCode("dungeonshuffle").CurrentStage = tonumber(slot_data["DungeonShuffle"])
--- end
--- if slot_data["DefaultSeasons"] then
---     Tracker:FindObjectForCode("defaultseasons").CurrentStage = tonumber(slot_data["DefaultSeasons"])
--- end
--- if slot_data["WarpToStart"] then
---     Tracker:FindObjectForCode("treewarp").CurrentStage = tonumber(slot_data["WarpToStart"])
--- end
--- if slot_data["PortalShuffle"] then
---     Tracker:FindObjectForCode("portalshuffle").CurrentStage = tonumber(slot_data["PortalShuffle"])
--- end
 -- called when an item gets collected
 function onItem(index, item_id, item_name, player_number)
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then

@@ -1,15 +1,401 @@
 [
   {
-    "name": "Horon Village Season",
+    "name": "Goal",
     "type": "progressive",
     "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "codes": "goal",
+    "stages": [
+      {
+      "img": "images/items/onox.png",
+      "codes": "onox_goal",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/items/onox.png",
+      "codes": "onox_goal",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Logic Level",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 1,
+    "loop": true,
+    "codes": "logiclevel",
+    "stages": [
+      {
+      "img": "images/labels/casual.png",
+      "codes": "normal",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/medium.png",
+      "codes": "normal",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/hard.png",
+      "codes": "normal",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Onox Essences Required",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 8,
+    "codes": "onox_essences",
+        "stages": [
+      {
+      "img": "images/labels/0essence.png",
+      "codes": "onox0",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/1essence.png",
+      "codes": "onox1",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/2essence.png",
+      "codes": "onox2",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/3essence.png",
+      "codes": "onox3",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/4essence.png",
+      "codes": "onox4",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/5essence.png",
+      "codes": "onox5",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/6essence.png",
+      "codes": "onox6",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/7essence.png",
+      "codes": "onox7",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/8essence.png",
+      "codes": "onox8",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Default Seasons",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx":0,
+    "codes": "defaultseasons",
+    "stages": [
+      {
+        "img": "images/labels/vanilla_label.png",
+        "codes": "defaultseasonson",
+        "inherit_codes": false
+      },
+      {
+      "img": "images/labels/shuffled_label.png",
+      "codes": "defaultseasonsoff",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/spring_label.png",
+      "codes": "singularity_spring",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/summer_label.png",
+      "codes": "singularity_summer",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/fall_label.png",
+      "codes": "singularity_fall",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/winter_label.png",
+      "codes": "singularity_winter",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Horon Village Season Shuffle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx":0,
+    "codes": "horon_village_season_shuffle",
+    "stages": [
+      {
+      "img": "images/labels/chaotic_label.png",
+      "codes": "horon_seasons_chaotic",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/normalized_label.png",
+      "codes": "horon_seasons_normalized",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Natzu animal",
+    "type": "progressive",
+    "allow_disabled": false,
+    "codes": "natzu_animal",
 	  "loop": true,
     "stages": [
       {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_horonvillage",
+      "img": "images/items/ricky.png",
+      "codes": "natzu_ricky",
       "inherit_codes": false
       },
+      {
+      "img": "images/items/dimitri.png",
+      "codes": "natzu_dimitri",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/items/moosh.png",
+      "codes": "natzu_moosh",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Dungeon Shuffle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "codes": "dungeonshuffle",
+    "stages": [
+      {
+      "img": "images/labels/vanilla_label.png",
+      "codes": "shuffledungeonoff",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/shuffled_label.png",
+      "codes": "shuffledungeonon",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Portal Shuffle selector",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 0,
+    "codes": "portalshuffle",
+    "stages": [
+      {
+      "img": "images/labels/off.png",
+      "codes": "portalshuffleoff",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/on.png",
+      "codes": "portalshuffleon",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Shuffle Old Men",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx":0,
+    "codes": "shuffle_old_men",
+    "stages": [
+      {
+      "img": "images/labels/vanilla_label.png",
+      "codes": "old_men_vanilla",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/shuffled_label.png",
+      "codes": "old_men_shuffled",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Old Man Essences Required",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 5,
+    "codes": "oldmanessences",
+        "stages": [
+      {
+      "img": "images/labels/0essence.png",
+      "codes": "oldman0",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/1essence.png",
+      "codes": "oldman1",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/2essence.png",
+      "codes": "oldman2",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/3essence.png",
+      "codes": "oldman3",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/4essence.png",
+      "codes": "oldman4",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/5essence.png",
+      "codes": "oldman5",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/6essence.png",
+      "codes": "oldman6",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/7essence.png",
+      "codes": "oldman7",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/8essence.png",
+      "codes": "oldman8",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Golden Beasts Required",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 4,
+    "codes": "goldenbeastsrequired",
+        "stages": [
+      {
+      "img": "images/labels/0golden.png",
+      "codes": "golden0",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/1golden.png",
+      "codes": "golden1",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/2golden.png",
+      "codes": "golden2",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/3golden.png",
+      "codes": "golden3",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/4golden.png",
+      "codes": "golden4",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Lost Woods Sequence",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx":0,
+    "codes": "lost_woods_item_sequence",
+    "stages": [
+      {
+      "img": "images/labels/vanilla_label.png",
+      "codes": "lost_woods_vanilla",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/shuffled_label.png",
+      "codes": "lost_woods_shuffled",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Tree Warp selector",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx": 2,
+    "codes": "treewarp",
+    "stages": [
+      {
+      "img": "images/labels/off.png",
+      "codes": "notreewarp",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/on.png",
+      "codes": "treewarp",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Horon Village Advance Shop",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx":0,
+    "codes": "advance_shop",
+    "stages": [
+      {
+      "img": "images/labels/off.png",
+      "codes": "advanceshopoff",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/on.png",
+      "codes": "advanceshopon",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Horon Village Season",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 5,
+	  "loop": true,
+    "stages": [
       {
       "img": "images/labels/selector_spring.png",
       "codes": "horonvillage_spring",
@@ -29,20 +415,21 @@
       "img": "images/labels/selector_winter.png",
       "codes": "horonvillage_winter",
       "inherit_codes": false
-      }
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_horonvillage",
+      "inherit_codes": false
+      },
 	  ]
   },
   {
     "name": "North Horon season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_northhoron",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "north_spring",
@@ -62,6 +449,11 @@
       "img": "images/labels/selector_winter.png",
       "codes": "north_winter",
       "inherit_codes": false
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_northhoron",
+      "inherit_codes": false
       }
     ]
   },
@@ -69,13 +461,9 @@
     "name": "Eastern Suburbs season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_eastsuburbs",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "suburbs_spring",
@@ -95,6 +483,11 @@
       "img": "images/labels/selector_winter.png",
       "codes": "suburbs_winter",
       "inherit_codes": false
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_eastsuburbs",
+      "inherit_codes": false
       }
     ]
   },
@@ -102,13 +495,9 @@
     "name": "Woods of Winter season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_woodsofwinter",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "wow_spring",
@@ -128,20 +517,21 @@
       "img": "images/labels/selector_winter.png",
       "codes": "wow_winter",
       "inherit_codes": false
-      }
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_woodsofwinter",
+      "inherit_codes": false
+      },
     ]
   },
   {
     "name": "Holodrum Plain season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_holodrumplain",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "plain_spring",
@@ -161,20 +551,21 @@
       "img": "images/labels/selector_winter.png",
       "codes": "plain_winter",
       "inherit_codes": false
-      }
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_holodrumplain",
+      "inherit_codes": false
+      },
     ]
   },
   {
     "name": "Spool Swamp season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_spoolswamp",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "swamp_spring",
@@ -194,20 +585,21 @@
       "img": "images/labels/selector_winter.png",
       "codes": "swamp_winter",
       "inherit_codes": false
-      }
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_spoolswamp",
+      "inherit_codes": false
+      },
     ]
   },
   {
     "name": "Sunken City season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_sunkencity",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "sunken_spring",
@@ -227,20 +619,21 @@
       "img": "images/labels/selector_winter.png",
       "codes": "sunken_winter",
       "inherit_codes": false
-      }
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_sunkencity",
+      "inherit_codes": false
+      },
     ]
   },
   {
     "name": "Western Coast season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_coast",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "coast_spring",
@@ -260,20 +653,21 @@
       "img": "images/labels/selector_winter.png",
       "codes": "coast_winter",
       "inherit_codes": false
-      }
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_coast",
+      "inherit_codes": false
+      },
     ]
   },
   {
     "name": "Temple Remains season",
     "type": "progressive",
     "allow_disabled": false,
+    "initial_stage_idx": 5,
 	  "loop": true,
     "stages": [
-      {
-      "img": "images/labels/selector_neutral.png",
-      "codes": "season_templeremains",
-      "inherit_codes": false
-      },
       {
       "img": "images/labels/selector_spring.png",
       "codes": "temple_spring",
@@ -293,7 +687,12 @@
       "img": "images/labels/selector_winter.png",
       "codes": "temple_winter",
       "inherit_codes": false
-      }
+      },
+      {
+      "img": "images/labels/selector_neutral.png",
+      "codes": "season_templeremains",
+      "inherit_codes": false
+      },
     ]
   },
   {
@@ -628,260 +1027,6 @@
       {
       "img": "images/labels/d8_label_sub.png",
       "codes": "d8_d8sub",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Natzu animal",
-    "type": "progressive",
-    "allow_disabled": false,
-	  "loop": true,
-    "stages": [
-      {
-      "img": "images/items/ricky.png",
-      "codes": "natzu_ricky",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/items/moosh.png",
-      "codes": "natzu_moosh",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/items/dimitri.png",
-      "codes": "natzu_dimitri",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Tree Warp selector",
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 2,
-    "codes": "treewarp",
-    "stages": [
-      {
-      "img": "images/labels/off.png",
-      "codes": "notreewarp",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/on.png",
-      "codes": "treewarp",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Portal Shuffle selector",
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx": 0,
-    "codes": "portalshuffle",
-    "stages": [
-      {
-      "img": "images/labels/off.png",
-      "codes": "portalshuffleoff",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/on.png",
-      "codes": "portalshuffleon",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Logic Level",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 1,
-    "loop": true,
-    "codes": "logiclevel",
-    "stages": [
-      {
-      "img": "images/labels/casual.png",
-      "codes": "normal",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/medium.png",
-      "codes": "normal",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/hard.png",
-      "codes": "normal",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Dungeon Shuffle",
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "codes": "dungeonshuffle",
-    "stages": [
-      {
-      "img": "images/labels/vanilla_label.png",
-      "codes": "shuffledungeonoff",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/shuffled_label.png",
-      "codes": "shuffledungeonon",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Default Seasons",
-    "type": "progressive",
-    "allow_disabled": false,
-    "loop": true,
-    "initial_stage_idx":1,
-    "codes": "defaultseasons",
-    "stages": [
-      {
-      "img": "images/labels/vanilla_label.png",
-      "codes": "defaultseasonsoff",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/shuffled_label.png",
-      "codes": "defaultseasonson",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Onox Essences Required",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 9,
-    "codes": "onox_essences",
-        "stages": [
-      {
-      "img": "images/labels/1essence.png",
-      "codes": "onox1",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/2essence.png",
-      "codes": "onox2",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/3essence.png",
-      "codes": "onox3",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/4essence.png",
-      "codes": "onox4",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/5essence.png",
-      "codes": "onox5",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/6essence.png",
-      "codes": "onox6",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/7essence.png",
-      "codes": "onox7",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/8essence.png",
-      "codes": "onox8",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Old Man Essences Required",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 4,
-    "codes": "oldmanessences",
-        "stages": [
-      {
-      "img": "images/labels/1essence.png",
-      "codes": "oldman1",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/2essence.png",
-      "codes": "oldman2",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/3essence.png",
-      "codes": "oldman3",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/4essence.png",
-      "codes": "oldman4",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/5essence.png",
-      "codes": "oldman5",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/6essence.png",
-      "codes": "oldman6",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/7essence.png",
-      "codes": "oldman7",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/8essence.png",
-      "codes": "oldman8",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
-    "name": "Golden Beasts Required",
-    "type": "progressive",
-    "allow_disabled": false,
-    "initial_stage_idx": 4,
-    "codes": "goldenbeastsrequired",
-        "stages": [
-      {
-      "img": "images/labels/1golden.png",
-      "codes": "golden1",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/2golden.png",
-      "codes": "golden2",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/3golden.png",
-      "codes": "golden3",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/labels/4golden.png",
-      "codes": "golden4",
       "inherit_codes": false
       }
     ]
@@ -1310,5 +1455,4 @@
       }
     ]
   }
-  
 ]

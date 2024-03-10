@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d6"],
 		"children": [	
 			{
-				"name": "D6 1F East",
+				"name": "Ancient Ruins (1F): Crumbling Ground Room Chest",
 				"sections": 
                 [
 					{
-                        "name": "D6 1F East"
+                        "name": "Ancient Ruins (1F): Crumbling Ground Room Chest"
 					}
                 ],
 				"map_locations": [
@@ -30,11 +30,11 @@
 				]
 			},
 			{
-				"name": "D6 Magnet Ball Drop",
+				"name": "Ancient Ruins (1F): Magnet Ball Puzzle Drop",
 				"sections": 
                 [
 					{
-                        "name": "D6 Magnet Ball Drop",
+                        "name": "Ancient Ruins (1F): Magnet Ball Puzzle Drop",
 						"access_rules": ["$max_jump:3",
 							"$max_jump:1, magnet"]
                     }
@@ -48,11 +48,11 @@
 				]
 			},
 			{
-				"name": "D6 Beamos Room",
+				"name": "Ancient Ruins (1F): Chest in Beamos Room",
 				"sections": 
                 [
 					{
-                        "name": "D6 Beamos Room",
+                        "name": "Ancient Ruins (1F): Chest in Beamos Room",
 						"access_rules": ["d6sk:3",
 							"d6sk:1, [d6sk:3]"]
                     }
@@ -66,11 +66,11 @@
 				]
 			},
 			{
-				"name": "D6 2F Gibdo Chest",
+				"name": "Ancient Ruins (2F): Chest in Gibdo Room",
 				"sections": 
                 [
 					{
-                        "name": "D6 2F Gibdo Chest",
+                        "name": "Ancient Ruins (2F): Chest in Gibdo Room",
 						"access_rules": ["d6sk:3",
 							"d6sk:1, [d6sk:3]"]
                     }
@@ -84,11 +84,11 @@
 				]
 			},
 			{
-				"name": "D6 2F Armos Chest",
+				"name": "Ancient Ruins (2F): Chest Between 4 Armos",
 				"sections": 
                 [
 					{
-                        "name": "D6 2F Armos Chest",
+                        "name": "Ancient Ruins (2F): Chest Between 4 Armos",
 						"access_rules": ["d6sk:3, bombs",
 							"d6sk:1, [d6sk:3], bombs"]
                     }
@@ -102,11 +102,11 @@
 				]
 			},
 			{
-				"name": "D6 Armos Hall",
+				"name": "Ancient Ruins (3F): Armos Hall Chest",
 				"sections": 
                 [
 					{
-                        "name": "D6 Armos Hall",
+                        "name": "Ancient Ruins (3F): Armos Hall Chest",
 						"access_rules": ["d6sk:3, bombs, $max_jump:1",
 							"d6sk:1, [d6sk:3], bombs, $max_jump:1"]
                     }
@@ -120,11 +120,11 @@
 				]
 			},
 			{
-				"name": "D6 Spinner North",
+				"name": "Ancient Ruins (2F): Chest North of Main Spinner",
 				"sections": 
                 [
 					{
-                        "name": "D6 Spinner North",
+                        "name": "Ancient Ruins (2F): Chest North of Main Spinner",
 						"access_rules": ["d6sk:3, $kill_normal, magnet, $destroy_crystal, [$max_jump:1]",
 							"d6sk:2, [d6sk:3], $kill_normal, magnet, $destroy_crystal, [$max_jump:1]",
 							"d6sk:2, bombs, magnet, $destroy_crystal, $max_jump:1",
@@ -140,11 +140,11 @@
 				]
 			},
 			{
-				"name": "D6 1F Terrace",
+				"name": "Ancient Ruins (1F): Chest on Terrace Left of Entrance",
 				"sections": 
                 [
 					{
-                        "name": "D6 1F Terrace"
+                        "name": "Ancient Ruins (1F): Chest on Terrace Left of Entrance"
                     }
                 ],
 				"map_locations": [
@@ -156,11 +156,11 @@
 				]
 			},
 			{
-				"name": "D6 Crystal Trap Room",
+				"name": "Ancient Ruins (1F): Crystal Maze Room Chest",
 				"sections": 
                 [
 					{
-                        "name": "D6 Crystal Trap Room"
+                        "name": "Ancient Ruins (1F): Crystal Maze Room Chest"
                     }
                 ],
 				"map_locations": [
@@ -172,11 +172,11 @@
 				]
 			},
 			{
-				"name": "D6 Escape Room",
+				"name": "Ancient Ruins (2F): Chest After Time Trial",
 				"sections": 
                 [
 					{
-                        "name": "D6 Escape Room",
+                        "name": "Ancient Ruins (2F): Chest After Time Trial",
 						"access_rules": ["$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds",
 							"$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, mysteryseeds, [emberseeds]"]
                     }
@@ -190,11 +190,11 @@
 				]
 			},
 			{
-				"name": "D6 Vire Chest",
+				"name": "Ancient Ruins (2F): Chest on Red Terrace Before Vire",
 				"sections": 
                 [
 					{
-                        "name": "D6 Vire Chest",
+                        "name": "Ancient Ruins (2F): Chest on Red Terrace Before Vire",
 						"access_rules": ["$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds, $kill_stalfos",
 							"$destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, mysteryseeds, [emberseeds], $kill_stalfos"]
                     }
@@ -208,11 +208,11 @@
 				]
 			},
 			{
-				"name": "D6 Boss",
+				"name": "Ancient Ruins (5F): Boss Reward",
 				"sections": 
                 [
 					{
-                        "name": "D6 Boss",
+                        "name": "Ancient Ruins (5F): Boss Reward",
 						"access_rules": ["d6bk, d6sk:3, $destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds, $kill_stalfos, $kill_vire, $kill_hardhat_magnet, $kill_manhandla",
 							"d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, emberseeds, $kill_stalfos, $kill_vire, $kill_hardhat_magnet, $kill_manhandla",
 							"d6bk, d6sk:3, $destroy_crystal, $max_jump:1, magicboomerang, $use_seeds, mysteryseeds, [emberseeds], $kill_stalfos, $kill_vire, $kill_hardhat_magnet, $kill_manhandla",

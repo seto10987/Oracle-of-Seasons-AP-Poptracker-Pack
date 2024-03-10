@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d7"],
 		"children": [		
 			{
-				"name": "D7 Bombed Wall Chest",
+				"name": "Explorer's Crypt (1F): Chest Behind Cracked Wall",
 				"sections": 
 				[
 					{
-						"name": "D7 Bombed Wall Chest",
+						"name": "Explorer's Crypt (1F): Chest Behind Cracked Wall",
 							"access_rules": ["bombs"]
 					}
 				],
@@ -31,11 +31,11 @@
 				]
 			},
 			{
-				"name": "D7 Wizzrobe Chest",
+				"name": "Explorer's Crypt (1F): Chest in Wizzrobe Room",
 				"sections": 
 				[
 					{
-						"name": "D7 Wizzrobe Chest",
+						"name": "Explorer's Crypt (1F): Chest in Wizzrobe Room",
 							"access_rules": ["$kill_normal"]
 					}
 				],
@@ -48,11 +48,11 @@
 				]
 			},
 			{
-				"name": "D7 Right of Entrance",
+				"name": "Explorer's Crypt (1F): Chest Right of Entrance",
 				"sections": 
 				[
 					{
-						"name": "D7 Right of Entrance",
+						"name": "Explorer's Crypt (1F): Chest Right of Entrance",
 						"access_rules": ["d7sk:1, $kill_normal"]
 					}
 				],
@@ -65,11 +65,11 @@
 				]
 			},
 			{
-				"name": "D7 Zol Button",
+				"name": "Explorer's Crypt (B1F): Zol Button Drop",
 				"sections": 
 				[
 					{
-						"name": "D7 Zol Button",
+						"name": "Explorer's Crypt (B1F): Zol Button Drop",
 						"access_rules": ["d7sk:1, bracelet, [$shoot_seeds], [emberseeds], $kill_poe, $max_jump:1",
 							"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:1, [emberseeds]",
 							"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:1, [$shoot_seeds], [emberseeds]"]
@@ -84,11 +84,11 @@
 				]
 			},
 			{
-				"name": "D7 Armos Puzzle",
+				"name": "Explorer's Crypt (B2F): Armos Puzzle Drop",
 				"sections": 
 				[
 					{
-						"name": "D7 Armos Puzzle",
+						"name": "Explorer's Crypt (B2F): Armos Puzzle Drop",
 						"access_rules": ["d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:2",
 							"d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, magnet",
 							"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:2, [emberseeds]",
@@ -106,11 +106,11 @@
 				]
 			},
 			{
-				"name": "D7 Magunesu Chest",
+				"name": "Explorer's Crypt (B1F): Chest Connected to Magnet Ball Button",
 				"sections": 
 				[
 					{
-						"name": "D7 Magunesu Chest",
+						"name": "Explorer's Crypt (B1F): Chest Connected to Magnet Ball Button",
 						"access_rules": ["d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:2, $kill_magunesu, magnet",
 							"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:2, $kill_magunesu, magnet, [emberseeds]",
 							"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:2, $kill_magunesu, magnet, [$shoot_seeds], [emberseeds]"]
@@ -125,11 +125,11 @@
 				]
 			},
 			{
-				"name": "D7 Quicksand Chest",
+				"name": "Explorer's Crypt (1F): Chest Above Trampoline Near 2nd Poe",
 				"sections": 
 				[
 					{
-						"name": "D7 Quicksand Chest",
+						"name": "Explorer's Crypt (1F): Chest Above Trampoline Near 2nd Poe",
 						"access_rules": ["d7sk:2, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:1",
 							"d7sk:1, [d7sk:2], bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:1",
 							"d7sk:2, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:1, [emberseeds]",
@@ -147,11 +147,11 @@
 				]
 			},
 			{
-				"name": "D7 Spike Chest",
+				"name": "Explorer's Crypt (B1F): Chest in Fast Moving Platform Room",
 				"sections": 
 				[
 					{
-						"name": "D7 Spike Chest",
+						"name": "Explorer's Crypt (B1F): Chest in Fast Moving Platform Room",
 						"access_rules": ["d7sk:3, bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 							"d7sk:2, [d7sk:3], bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 							"d7sk:3, bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $kill_darknut_across, $max_jump:1",
@@ -175,11 +175,11 @@
 				]
 			},
 			{
-				"name": "D7 Maze Chest",
+				"name": "Explorer's Crypt (B2F): Stair Maze Chest",
 				"sections": 
 				[
 					{
-						"name": "D7 Maze Chest",
+						"name": "Explorer's Crypt (B2F): Stair Maze Chest",
 						"access_rules": ["d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 							"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
 							"d7sk:3, [d7sk:4], bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
@@ -199,11 +199,11 @@
 				]
 			},
 			{
-				"name": "D7 B2F Drop",
+				"name": "Explorer's Crypt (B2F): Drop in Room North of Stair Maze",
 				"sections": 
 				[
 					{
-						"name": "D7 B2F Drop",
+						"name": "Explorer's Crypt (B2F): Drop in Room North of Stair Maze",
 						"access_rules": ["d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, $max_jump:3, magnet",
 							"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs, magnet",
 							"d7sk:3, [d7sk:4], bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, $max_jump:3, magnet",
@@ -227,11 +227,11 @@
 				]
 			},
 			{
-				"name": "D7 Stalfos Chest",
+				"name": "Explorer's Crypt (B1F): Chest in Jumping Stalfos Room",
 				"sections": 
 				[
 					{
-						"name": "D7 Stalfos Chest",
+						"name": "Explorer's Crypt (B1F): Chest in Jumping Stalfos Room",
 						"access_rules": ["d7sk:5, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 							"d7sk:5, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
 							"d7sk:4, [d7sk:5], bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
@@ -249,11 +249,11 @@
 				]
 			},
 			{
-				"name": "D7 Boss",
+				"name": "Explorer's Crypt (B1F): Boss Reward",
 				"sections": 
 				[
 					{
-						"name": "D7 Boss",
+						"name": "Explorer's Crypt (B1F): Boss Reward",
 						"access_rules": ["d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
 							"d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
 							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",

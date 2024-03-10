@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d8"],
 		"children": [	
 			{
-				"name": "D8 Eye Drop",
+				"name": "Sword & Shield Dungeon (1F): Eye Drop Near Entrance",
 				"sections": 
                 [
 					{
-                        "name": "D8 Eye Drop",
+                        "name": "Sword & Shield Dungeon (1F): Eye Drop Near Entrance",
                         	"access_rules": ["$destroy_pot, $shoot_seeds",
 								"$destroy_pot, $max_jump:1, emberseeds, $shoot_seeds",
 								"$destroy_pot, $max_jump:1 scentseeds, $shoot_seeds",
@@ -34,11 +34,11 @@
 				]
 			},
 			{
-				"name": "D8 Three Eyes Chest",
+				"name": "Sword & Shield Dungeon (1F): Three Eyes Chest",
 				"sections": 
                 [
 					{
-                        "name": "D8 Three Eyes Chest",
+                        "name": "Sword & Shield Dungeon (1F): Three Eyes Chest",
                         	"access_rules": ["$max_jump:1, emberseeds, slingshot2",
 								"$max_jump:1, mysteryseeds, slingshot2",
 								"$max_jump:1, scentseeds, slingshot2"]
@@ -53,11 +53,11 @@
 				]
 			},
 			{
-				"name": "D8 Hardhat Drop",
+				"name": "Sword & Shield Dungeon (1F): Drop in Hardhat & Magnet Ball Room",
 				"sections": 
                 [
 					{
-                        "name": "D8 Hardhat Drop",
+                        "name": "Sword & Shield Dungeon (1F): Drop in Hardhat & Magnet Ball Room",
                         "access_rules": ["$kill_magunesu, $kill_hardhat_magnet"]
                     }
                 ],
@@ -70,11 +70,11 @@
 				]
 			},
 			{
-				"name": "D8 Spike Room",
+				"name": "Sword & Shield Dungeon (1F): U-shaped Spiky Freezer Chest",
 				"sections": 
                 [
 					{
-                        "name": "D8 Spike Room",
+                        "name": "Sword & Shield Dungeon (1F): U-shaped Spiky Freezer Chest",
                         "access_rules": ["d8sk:1, $kill_magunesu, $max_jump:3",
 							"d8sk:1, $kill_magunesu, $max_jump:2, [$max_jump:3]"]
                     }
@@ -93,11 +93,11 @@
 				]
 			},
 			{
-				"name": "D8 Magnet Ball Room",
+				"name": "Sword & Shield Dungeon (1F): Bottom Chest in Lava Bridge Room",
 				"sections": 
                 [
 					{
-                        "name": "D8 Magnet Ball Room",
+                        "name": "Sword & Shield Dungeon (1F): Bottom Chest in Lava Bridge Room",
                         "access_rules": ["d8sk:2, $kill_magunesu, $max_jump:3",
 							"d8sk:2, $kill_magunesu, $max_jump:2, [$max_jump:3]"]
                     }
@@ -111,11 +111,11 @@
 				]
 			},
 			{
-				"name": "D8 Armos Chest",
+				"name": "Sword & Shield Dungeon (1F): Top Chest in Lava Bridge Room",
 				"sections": 
                 [
 					{
-                        "name": "D8 Armos Chest",
+                        "name": "Sword & Shield Dungeon (1F): Top Chest in Lava Bridge Room",
                         "access_rules": ["d8sk:2, $kill_magunesu, $max_jump:3, magnet",
 							"d8sk:2, $kill_magunesu, $max_jump:2, magnet, [$max_jump:3]"]
                     }
@@ -129,11 +129,11 @@
 				]
 			},
 			{
-				"name": "D8 Spinner Chest",
+				"name": "Sword & Shield Dungeon (B1F): Chest Right of Spinner",
 				"sections": 
                 [
 					{
-                        "name": "D8 Spinner Chest",
+                        "name": "Sword & Shield Dungeon (B1F): Chest Right of Spinner",
                         "access_rules": ["d8sk:2, $kill_magunesu, $max_jump:3, magnet",
 							"d8sk:2, $kill_magunesu, $max_jump:2, magnet, [$max_jump:3]"]
                     }
@@ -147,11 +147,11 @@
 				]
 			},
 			{
-				"name": "D8 Darknut Chest",
+				"name": "Sword & Shield Dungeon (1F): Chest in Bombable Blocks Room",
 				"sections": 
                 [
 					{
-                        "name": "D8 Darknut Chest",
+                        "name": "Sword & Shield Dungeon (1F): Chest in Bombable Blocks Room",
                         "access_rules": ["d8sk:2, $kill_magunesu, $max_jump:3, magnet, bombs, slingshot2",
 						"d8sk:2, $kill_magunesu, $max_jump:3, magnet, bombs, emberseeds, slingshot2",
 						"d8sk:2, $kill_magunesu, $max_jump:3, magnet, bombs, scentseeds, slingshot2",
@@ -170,11 +170,11 @@
 				]
 			},
 			{
-				"name": "D8 Pols Voice Chest",
+				"name": "Sword & Shield Dungeon (1F): Chest on Terrace After Pols Voice Room",
 				"sections": 
                 [
 					{
-                        "name": "D8 Pols Voice Chest",
+                        "name": "Sword & Shield Dungeon (1F): Chest on Terrace After Pols Voice Room",
                         "access_rules": ["[d8sk:3], $kill_magunesu, $max_jump:3, magnet, [slingshot2], [emberseeds], [magicboomerang], $kill_keese, $kill_polsvoice_pit",
 							"[d8sk:3], $kill_magunesu, $max_jump:2, [$max_jump:3], [slingshot2], [emberseeds], [magicboomerang], $kill_keese, $kill_polsvoice_pit",
 							"[d8sk:3], $kill_magunesu, $max_jump:4, magnet, [slingshot2], [emberseeds], $kill_keese, $kill_polsvoice_pit"]
@@ -189,11 +189,11 @@
 				]
 			},
 			{
-				"name": "D8 Ghost Armos Drop",
+				"name": "Sword & Shield Dungeon (1F): Ghost Armos Puzzle Drop",
 				"sections": 
                 [
 					{
-                        "name": "D8 Ghost Armos Drop",
+                        "name": "Sword & Shield Dungeon (1F): Ghost Armos Puzzle Drop",
                         "access_rules": ["d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, bombs",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, bombs, [slingshot2], [emberseeds]",
 							"d8sk:4, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, bombs"]
@@ -208,11 +208,11 @@
 				]
 			},
 			{
-				"name": "D8 SE Lava Chest",
+				"name": "Sword & Shield Dungeon (B1F): Southeast Lava Chest",
 				"sections": 
                 [
 					{
-                        "name": "D8 SE Lava Chest",
+                        "name": "Sword & Shield Dungeon (B1F): Southeast Lava Chest",
                         "access_rules": ["d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, bracelet",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, bracelet, [slingshot2], [emberseeds]",
 							"d8sk:4, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, bracelet"]
@@ -227,11 +227,11 @@
 				]
 			},
 			{
-				"name": "D8 Spark Chest",
+				"name": "Sword & Shield Dungeon (1F): Chest in Sparks & Pots Room",
 				"sections": 
                 [
 					{
-                        "name": "D8 Spark Chest",
+                        "name": "Sword & Shield Dungeon (1F): Chest in Sparks & Pots Room",
                         "access_rules": ["d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, bracelet",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, bracelet, [slingshot2], [emberseeds]",
 							"d8sk:4, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, bracelet"]
@@ -246,11 +246,11 @@
 				]
 			},
 			{
-				"name": "D8 SW Lava Chest",
+				"name": "Sword & Shield Dungeon (B1F): Southwest Lava Chest",
 				"sections": 
                 [
 					{
-                        "name": "D8 SW Lava Chest",
+                        "name": "Sword & Shield Dungeon (B1F): Southwest Lava Chest",
                         "access_rules": ["d8sk:4, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds",
 							"d8sk:1, [d8sk:4], $kill_magunesu, $max_jump:4, [slingshot2], [emberseeds]",
 							"d8sk:4, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds"]
@@ -265,11 +265,11 @@
 				]
 			},
 			{
-				"name": "D8 Boss",
+				"name": "Sword & Shield Dungeon (B1F): Boss Reward",
 				"sections": 
                 [
 					{
-                        "name": "D8 Boss",
+                        "name": "Sword & Shield Dungeon (B1F): Boss Reward",
                         "access_rules": ["d8bk, d8sk:7, $kill_magunesu, $max_jump:3, magnet, slingshot2, emberseeds, magicboomerang, $hit_lever, bracelet, $kill_medusahead",
 							"d8bk, d8sk:7, $kill_magunesu, $max_jump:2, [$max_jump:3], magnet, slingshot2, emberseeds, magicboomerang, $hit_lever, bracelet, $kill_medusahead",
 							"d8bk, d8sk:7, $kill_magunesu, $max_jump:4, magnet, slingshot2, emberseeds, $hit_lever, bracelet, $kill_medusahead",

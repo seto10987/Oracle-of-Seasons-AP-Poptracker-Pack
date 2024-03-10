@@ -14,11 +14,11 @@
 			"$enter_d8, shuffledungeonon, d8_d3"],
 		"children": [	
 			{
-				"name": "D3 Roller Chest",
+				"name": "Poison Moth's Lair (B1F): Chest in Roller Room",
 				"sections": 
                 [
 					{
-                        "name": "D3 Roller Chest",
+                        "name": "Poison Moth's Lair (B1F): Chest in Roller Room",
 						"access_rules": ["$kill_beetle, bracelet",
 							"bracelet, shovel",
 							"bracelet, shield1"]
@@ -33,11 +33,11 @@
 				]
 			},
 			{
-				"name": "D3 Moldorm Chest",
+				"name": "Poison Moth's Lair (1F): Chest in Moldorm Room",
 				"sections": 
                 [
 					{
-                        "name": "D3 Moldorm Chest",
+                        "name": "Poison Moth's Lair (1F): Chest in Moldorm Room",
 						"access_rules": ["$kill_beetle, $kill_moldorm",
 							"bracelet, shovel, $kill_moldorm",
 							"bracelet, shield1, $kill_moldorm"]
@@ -52,11 +52,11 @@
 				]
 			},
 			{
-				"name": "D3 Bombed Wall Chest",
+				"name": "Poison Moth's Lair (1F): Chest in Room Behind Hidden Cracked Wall",
 				"sections": 
                 [
 					{
-                        "name": "D3 Bombed Wall Chest",
+                        "name": "Poison Moth's Lair (1F): Chest in Room Behind Hidden Cracked Wall",
 						"access_rules": ["$kill_beetle, bombs",
 							"bracelet, shovel, bombs",
 							"bracelet, shield1, bombs"]
@@ -71,11 +71,11 @@
 				]
 			},
 			{
-				"name": "D3 Mimic Chest",
+				"name": "Poison Moth's Lair (1F): Chest in Mimics Room",
 				"sections": 
                 [
 					{
-                        "name": "D3 Mimic Chest",
+                        "name": "Poison Moth's Lair (1F): Chest in Mimics Room",
 						"access_rules": ["d3sk:2, $kill_beetle, $kill_mimic",
 							"d3sk:1, [d3sk:2], $kill_beetle, $kill_mimic",
 							"d3sk:2, shovel, bracelet, $kill_mimic",
@@ -93,11 +93,11 @@
 				]
 			},
 			{
-				"name": "D3 Water Room",
+				"name": "Poison Moth's Lair (B1F): Chest in Watery Room",
 				"sections": 
                 [
 					{
-                        "name": "D3 Water Room",
+                        "name": "Poison Moth's Lair (B1F): Chest in Watery Room",
 						"access_rules": ["$kill_beetle, bracelet",
 							"shovel, bracelet",
 							"shield1, bracelet",
@@ -113,11 +113,11 @@
 				]
 			},
 			{
-				"name": "D3 Zol Chest",
+				"name": "Poison Moth's Lair (1F): Chest Above West Trampoline & Owl",
 				"sections": 
                 [
 					{
-                        "name": "D3 Zol Chest",
+                        "name": "Poison Moth's Lair (1F): Chest Above West Trampoline & Owl",
 						"access_rules": ["$kill_beetle, $max_jump:1",
 							"bracelet, shovel, $max_jump:1",
 							"bracelet, shield1, $max_jump:1"]
@@ -132,11 +132,11 @@
 				]
 			},
 			{
-				"name": "D3 Trampoline Chest",
+				"name": "Poison Moth's Lair (1F): Chest Above East Trampoline",
 				"sections": 
                 [
 					{
-                        "name": "D3 Trampoline Chest",
+                        "name": "Poison Moth's Lair (1F): Chest Above East Trampoline",
 						"access_rules": ["$kill_beetle, $max_jump:1",
 							"bracelet, shovel, $max_jump:1",
 							"bracelet, shield1, $max_jump:1"]
@@ -151,11 +151,11 @@
 				]
 			},
 			{
-				"name": "D3 Quicksand Terrace",
+				"name": "Poison Moth's Lair (B1F): Chest on Quicksand Terrace",
 				"sections": 
                 [
 					{
-                        "name": "D3 Quicksand Terrace",
+                        "name": "Poison Moth's Lair (B1F): Chest on Quicksand Terrace",
 						"access_rules": ["$kill_beetle, $max_jump:1",
 							"bracelet, shovel, $max_jump:1",
 							"bracelet, shield1, $max_jump:1"]
@@ -170,11 +170,11 @@
 				]
 			},
 			{
-				"name": "D3 Giant Blade Room",
+				"name": "Poison Moth's Lair (B1F): Chest in Moving Blade Room",
 				"sections": 
                 [
 					{
-                        "name": "D3 Giant Blade Room",
+                        "name": "Poison Moth's Lair (B1F): Chest in Moving Blade Room",
 						"access_rules": ["d3sk:2, $kill_beetle, $kill_omuai, $max_jump:1",
 							"d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1",
 							"d3sk:2, shovel, $kill_omuai, $max_jump:1",
@@ -192,11 +192,11 @@
 				]
 			},
 			{
-				"name": "D3 Boss",
+				"name": "Poison Moth's Lair (1F): Boss Reward",
 				"sections": 
                 [
 					{
-                        "name": "D3 Boss",
+                        "name": "Poison Moth's Lair (1F): Boss Reward",
 						"access_rules": ["d3bk, d3sk:2, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
 							"d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
 							"d3bk, d3sk:2, shovel, $kill_omuai, $max_jump:1, $kill_mothula",
