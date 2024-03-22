@@ -216,7 +216,7 @@
       },
       {
       "img": "images/labels/on.png",
-      "codes": "portalshuffleon",
+      "codes": "portalshuffleoff",
       "inherit_codes": false
       }
     ]
