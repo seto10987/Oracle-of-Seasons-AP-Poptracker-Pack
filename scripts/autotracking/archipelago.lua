@@ -97,9 +97,7 @@ function onClear(slot_data)
     if slot_data["advance_shop"] then
         Tracker:FindObjectForCode("advance_shop").CurrentStage = tonumber(slot_data["advance_shop"])
     end
-    if slot_data["default_seasons_option"] then
-        Tracker:FindObjectForCode("defaultseasons").CurrentStage = tonumber(slot_data["default_seasons_option"])
-    end
+    
     if slot_data["animal_companion"] == "Ricky" then
         Tracker:FindObjectForCode("natzu_animal").CurrentStage = 0
     elseif slot_data["animal_companion"] == "Dimitri" then
