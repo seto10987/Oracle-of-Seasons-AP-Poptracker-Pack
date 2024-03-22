@@ -1,0 +1,98 @@
+﻿[
+  {
+    "name": "holodrum",
+    "location_size": 18,
+    "location_border_thickness": 2,
+    "img": "images/maps/map_holodrum.png"
+  },
+  {
+    "name": "subrosia",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/map_subrosia.png"
+  },
+  {
+    "name": "gnarled_root_dungeon",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/Gnarled_root_dungeon.png"
+  },
+  {
+    "name": "snakes_remains1",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/snakes_remains_front.png"
+  },
+  {
+    "name": "snakes_remains2",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/snakes_remains_back.png"
+  },
+  {
+    "name": "poison_moths_lair1",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/Poison_moths_lair_b1f.png"
+  },
+  {
+    "name": "poison_moths_lair2",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/Poison_moths_lair_1f.png"
+  },
+  {
+    "name": "dancing_dragon_dungeon1",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/Dancing_dragon_dungeon_2f.png"
+  },
+  {
+    "name": "dancing_dragon_dungeon2",
+    "location_size": 16,
+    "location_border_thickness": 1,
+    "img": "images/maps/Dancing_dragon_dungeon_1f.png"
+  },
+  {
+    "name": "unicorns_cave",
+    "location_size": 30,
+    "location_border_thickness": 1,
+    "img": "images/maps/Unicorns_cave.png"
+  },
+  {
+    "name": "ancient_ruins1",
+    "location_size": 22,
+    "location_border_thickness": 1,
+    "img": "images/maps/Ancient_ruins_1f_2f.png"
+  },
+  {
+    "name": "ancient_ruins2",
+    "location_size": 18,
+    "location_border_thickness": 1,
+    "img": "images/maps/Ancient_ruins_3f_4f_5f.png"
+  },
+  {
+    "name": "explorers_crypt1",
+    "location_size": 22,
+    "location_border_thickness": 1,
+    "img": "images/maps/Explorers_crypt_1f_b1f.png"
+  },
+  {
+    "name": "explorers_crypt2",
+    "location_size": 22,
+    "location_border_thickness": 1,
+    "img": "images/maps/Explorers_crypt_b2f.png"
+  },
+  {
+    "name": "sword_and_shield_maze1",
+    "location_size": 22,
+    "location_border_thickness": 1,
+    "img": "images/maps/Sword_and_shield_dungeon_1f.png"
+  },
+  {
+    "name": "sword_and_shield_maze2",
+    "location_size": 20,
+    "location_border_thickness": 1,
+    "img": "images/maps/Sword_and_shield_dungeon_b1f.png"
+  }
+]

@@ -143,9 +143,23 @@
   },
   {
     "name": "Seed Satchel",
-    "type": "toggle",
-    "img": "images/items/satchel.png",
-    "codes": "satchel, seedsatchel"
+    "type": "progressive",
+    "codes": "satchel",
+    "stages": [
+      {
+      "img": "images/items/satchel1.png",
+      "codes": "satchel1",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/items/satchel2.png",
+      "codes": "satchel2"
+      },
+      {
+      "img": "images/items/satchel3.png",
+      "codes": "satchel3"
+      }
+    ]
   },
   {
     "name": "Season's Rod",
@@ -226,16 +240,19 @@
     "codes": "bombflower"
   },
   {
-    "name": "Rusty Bell",
-    "type": "toggle",
-    "img": "images/items/bell1.png",
-    "codes": "rustybell"
-  },
-  {
-    "name": "Polished Bell",
-    "type": "toggle",    
-    "img": "images/items/bell2.png",
-    "codes": "polishedbell"
+    "name": "Pirate's Bell",
+    "type": "progressive",
+    "stages": [
+      {
+      "img": "images/items/bell1.png",
+      "codes": "rustybell",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/items/bell2.png",
+      "codes": "polishedbell"
+      }
+    ]
   },
   {
     "name": "Member's Card",
@@ -440,6 +457,18 @@
     "type": "toggle",
     "img": "images/items/golden_lynel.png",
     "codes": "golden_lynel, beasts"
+  },
+  {
+    "name": "Onox",
+    "type": "toggle",
+    "img": "images/items/onox.png",
+    "codes": "onox"
+  },
+  {
+    "name": "Ganon",
+    "type": "toggle",
+    "img": "images/items/ganon.png",
+    "codes": "ganon"
   },
   {
     "name": "D0 Small Key",

@@ -9,26 +9,26 @@
 				"content": [
 					{
 						"type": "dock",
-						"dock": "left",
+						"dock": "bottom",
 						"content": [
 							{
 								"type": "dock",
-								"dock": "top",
+								"dock": "left",
 								"v_alignment": "stretch",
 								"content": [
 									{
 										"type": "group",
 										"header": "Items",
-										"dock": "top",
+										"dock": "left",
 										"content": {
 											"type": "layout",
-											"key": "item_grid"
+											"key": "item_grid_2"
 										}
 									},
 									{
 										"type": "group",
 										"header": "Dungeon Entrances",
-										"dock": "top",
+										"dock": "left",
 										"content": {
 											"type": "layout",
 											"key": "dungeon_grid"
@@ -37,7 +37,7 @@
 									{
 										"type": "group",
 										"header": "Default Seasons and Subrosian Portals",
-										"dock": "top",
+										"dock": "left",
 										"content": {
 											"type": "layout",
 											"key": "season_grid"
@@ -49,12 +49,12 @@
 					},
 					{
 						"type": "array",
-						"v_alignment": "stretch",
+						"v_alignment": "left",
 						"margin": "0, 0",
 						"content": [
 							{
 							"type": "tabbed",
-							"dock": "top",
+							"dock": "left",
 							"content": [     
 									{
 										"title": "Holodrum",

@@ -24,9 +24,9 @@
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 339,
-						"y": 44
+						"map": "explorers_crypt1",
+						"x": 147,
+						"y": 466
 					}
 				]
 			},
@@ -41,9 +41,9 @@
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 659,
-						"y": 56
+						"map": "explorers_crypt1",
+						"x": 466,
+						"y": 479
 					}
 				]
 			},
@@ -58,9 +58,9 @@
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 722,
-						"y": 312
+						"map": "explorers_crypt1",
+						"x": 531,
+						"y": 735
 					}
 				]
 			},
@@ -70,16 +70,16 @@
 				[
 					{
 						"name": "Explorer's Crypt (B1F): Zol Button Drop",
-						"access_rules": ["d7sk:1, bracelet, [$shoot_seeds], [emberseeds], $kill_poe, $max_jump:1",
-							"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:1, [emberseeds]",
-							"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:1, [$shoot_seeds], [emberseeds]"]
+						"access_rules": [
+							"d7sk:1, bracelet, $torches_long, $kill_poe, $max_jump:1",
+							"hard, bracelet, satchel1, pegasusseeds, $max_jump:1"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 249,
-						"y": 621
+						"map": "explorers_crypt1",
+						"x": 56,
+						"y": 31
 					}
 				]
 			},
@@ -89,19 +89,17 @@
 				[
 					{
 						"name": "Explorer's Crypt (B2F): Armos Puzzle Drop",
-						"access_rules": ["d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:2",
-							"d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, magnet",
-							"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:2, [emberseeds]",
-							"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, magnet, [emberseeds]",
-							"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:2, [$shoot_seeds], [emberseeds]",
-							"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], magnet, [$shoot_seeds], [emberseeds]"]
+						"access_rules": ["d7sk:1, bracelet, $torches_long, $kill_poe, $jump2",
+							"d7sk:1, bracelet, $torches_long, $kill_poe, magnet",
+							"hard, bracelet, satchel1, pegasusseeds, $max_jump:2",
+							"hard, bracelet, satchel1, pegasusseeds, magnet"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 1070,
-						"y": 236
+						"map": "explorers_crypt2",
+						"x": 285,
+						"y": 320
 					}
 				]
 			},
@@ -111,16 +109,15 @@
 				[
 					{
 						"name": "Explorer's Crypt (B1F): Chest Connected to Magnet Ball Button",
-						"access_rules": ["d7sk:1, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:2, $kill_magunesu, magnet",
-							"d7sk:1, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:2, $kill_magunesu, magnet, [emberseeds]",
-							"[d7sk:1], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:2, $kill_magunesu, magnet, [$shoot_seeds], [emberseeds]"]
+						"access_rules": ["d7sk:1, bracelet, $torches_long, $kill_poe, $jump3, $kill_magunesu, magnet",
+							"hard, bracelet, satchel1, pegasusseeds, $jump2, $kill_magunesu, magnet"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 594,
-						"y": 672
+						"map": "explorers_crypt1",
+						"x": 402,
+						"y": 83
 					}
 				]
 			},
@@ -130,19 +127,15 @@
 				[
 					{
 						"name": "Explorer's Crypt (1F): Chest Above Trampoline Near 2nd Poe",
-						"access_rules": ["d7sk:2, bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:1",
-							"d7sk:1, [d7sk:2], bracelet, $shoot_seeds, emberseeds, $kill_poe, $max_jump:1",
-							"d7sk:2, bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:1, [emberseeds]",
-							"d7sk:1, [d7sk:2], bracelet, $shoot_seeds, mysteryseeds, $kill_poe, $max_jump:1, [emberseeds]",
-							"d7sk:2, bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:1, [$shoot_seeds], [emberseeds]",
-							"d7sk:1, [d7sk:2], bracelet, satchel, pegasusseeds, [$kill_poe], $max_jump:1, [$shoot_seeds], [emberseeds]"]
+						"access_rules": ["d7sk:2, bracelet, $torches_long, $kill_poe, $max_jump:1",
+							"hard, d7sk:1, [d7sk:2], bracelet, satchel1, pegasusseeds, $max_jump:1"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 287,
-						"y": 352
+						"map": "explorers_crypt1",
+						"x": 95,
+						"y": 774
 					}
 				]
 			},
@@ -152,25 +145,17 @@
 				[
 					{
 						"name": "Explorer's Crypt (B1F): Chest in Fast Moving Platform Room",
-						"access_rules": ["d7sk:3, bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7sk:2, [d7sk:3], bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7sk:3, bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $kill_darknut_across, $max_jump:1",
-							"d7sk:2, [d7sk:3], bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $kill_darknut_across, $max_jump:1",
-							"d7sk:3, bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, magnet, $max_jump:1",
-							"d7sk:2, [d7sk:3], bracelet, [$shoot_seeds], emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, magnet, $max_jump:1",
-							"d7sk:3, bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7sk:2, [d7sk:3], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7sk:3, bracelet, slingshot2, emberseeds, $kill_poe, flippers, $kill_darknut_across, $max_jump:1",
-							"d7sk:2, [d7sk:3], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $kill_darknut_across, $max_jump:1",
-							"d7sk:3, bracelet, slingshot2, emberseeds, $kill_poe, flippers, $kill_stalfos_pit, magnet",
-							"d7sk:2, [d7sk:3], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $kill_stalfos_pit, magnet"]
+						"access_rules": ["d7sk:3, $kill_2nd_poe, flippers, $jump4, $kill_stalfos_pit",
+							"d7sk:3, $kill_2nd_poe, flippers, magnet, $jump2, $kill_stalfos_pit",
+							"d7sk:2, [d7sk:3], $kill_2nd_poe_alt, flippers, $jump4, $kill_stalfos_pit",
+							"d7sk:2, [d7sk:3], $kill_2nd_poe_alt, flippers, magnet, $jump2, $kill_stalfos_pit"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 95,
-						"y": 646
+						"map": "explorers_crypt2",
+						"x": 94,
+						"y": 56
 					}
 				]
 			},
@@ -180,21 +165,15 @@
 				[
 					{
 						"name": "Explorer's Crypt (B2F): Stair Maze Chest",
-						"access_rules": ["d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7sk:3, [d7sk:4], bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7sk:3, [d7sk:4], bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7sk:4, bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7sk:4, bracelet, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7sk:3, [d7sk:4], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7sk:3, [d7sk:4], bracelet, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs"]
+						"access_rules": ["d7sk:4, $kill_2nd_poe, flippers, $jump3",
+							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump3"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 1454,
-						"y": 835
+						"map": "explorers_crypt2",
+						"x": 669,
+						"y": 809
 					}
 				]
 			},
@@ -204,25 +183,17 @@
 				[
 					{
 						"name": "Explorer's Crypt (B2F): Drop in Room North of Stair Maze",
-						"access_rules": ["d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, $max_jump:3, magnet",
-							"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs, magnet",
-							"d7sk:3, [d7sk:4], bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, $max_jump:3, magnet",
-							"d7sk:3, [d7sk:4], bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs, magnet",
-							"d7sk:4, bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, $max_jump:4, [magnet]",
-							"d7sk:3, [d7sk:4], bracelet, $shoot_seeds, emberseeds, $kill_poe, flippers, $max_jump:4, [magnet]",
-							"d7sk:4, bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3, magnet",
-							"d7sk:4, bracelet, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs, magnet",
-							"d7sk:3, [d7sk:4], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3, magnet",
-							"d7sk:3, [d7sk:4], bracelet, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs, magnet",
-							"d7sk:4, bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:4, [magnet]",
-							"d7sk:3, [d7sk:4], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:4, [magnet]"]
+						"access_rules": ["d7sk:4, $kill_2nd_poe, flippers, $jump3, magnet",
+							"d7sk:4, $kill_2nd_poe, flippers, $jump4",
+							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump3, magnet",
+							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump4"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 1454,
-						"y": 530
+						"map": "explorers_crypt2",
+						"x": 669,
+						"y": 504
 					}
 				]
 			},
@@ -232,19 +203,15 @@
 				[
 					{
 						"name": "Explorer's Crypt (B1F): Chest in Jumping Stalfos Room",
-						"access_rules": ["d7sk:5, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7sk:5, bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7sk:4, [d7sk:5], bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7sk:4, [d7sk:5], bracelet, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",	
-							"d7sk:5, bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:4, [satchel], [pegasusseeds]",
-							"d7sk:4, [d7sk:5], bracelet, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:4, [satchel], [pegasusseeds]"]
+						"access_rules": ["d7sk:5, $kill_2nd_poe, flippers, $jump3",
+							"d7sk:4, [d7sk:5], $kill_2nd_poe_alt, flippers, $jump3"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 864,
-						"y": 659
+						"map": "explorers_crypt2",
+						"x": 861,
+						"y": 81
 					}
 				]
 			},
@@ -254,21 +221,15 @@
 				[
 					{
 						"name": "Explorer's Crypt (B1F): Boss Reward",
-						"access_rules": ["d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7bk, d7sk:4, bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7bk, d7sk:4, bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs"]
+						"access_rules": ["d7bk, d7sk:4, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
+							"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3"]
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 1262,
-						"y": 82
+						"map": "explorers_crypt2",
+						"x": 477,
+						"y": 927
 					}
 				]
 			},
@@ -278,22 +239,16 @@
 				[
 					{
 						"name": "Seeds of Life",
-						"access_rules": ["d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7bk, d7sk:4, bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, $max_jump:3",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, $shoot_seeds, emberseeds, $kill_poe, [satchel], [pegasusseeds], flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7bk, d7sk:4, bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7bk, d7sk:4, bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, $max_jump:3",
-							"d7bk, d7sk:3, [d7sk:4], bracelet, $kill_gleeok, slingshot2, emberseeds, $kill_poe, flippers, [$max_jump:3], $max_jump:2, bombs"],
+						"access_rules": ["d7bk, d7sk:4, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
+							"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3"],
 				"hosted_item": "d7"
 					}
 				],
 				"map_locations": [
 					{
-						"map": "explorers_crypt",
-						"x": 1084,
-						"y": 82
+						"map": "explorers_crypt2",
+						"x": 298,
+						"y": 924
 					}
 				]
 			}

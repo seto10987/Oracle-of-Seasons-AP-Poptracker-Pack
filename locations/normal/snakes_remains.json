@@ -4,6 +4,7 @@
 		"chest_unopened_img": "images/labels/chest.png",
 		"chest_opened_img": "images/labels/chestopen.png",
 		"access_rules": ["$enter_d2, shuffledungeonoff",
+			"$enter_d2, shuffledungeonoff",
 			"$enter_d1, shuffledungeonon, d1_d2",
 			"$enter_d2, shuffledungeonon, d2_d2",
 			"$enter_d3, shuffledungeonon, d3_d2",
@@ -23,9 +24,9 @@
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
+						"map": "snakes_remains1",
 						"x": 186,
-						"y": 869
+						"y": 401
 					}
 				]
 			},
@@ -35,15 +36,14 @@
                 [
 					{
                         "name": "Snake's Remains: Drop in Left Rope Room",
-						"access_rules": ["$d2_A, $kill_normal",
-							"$d2_B, $kill_normal, bracelet"]
+						"access_rules": ["$kill_normal"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
+						"map": "snakes_remains1",
 						"x": 239,
-						"y": 763
+						"y": 295
 					}
 				]
 			},
@@ -53,16 +53,15 @@
                 [
 					{
                         "name": "Snake's Remains: Chest in Right Rope Room",
-						"access_rules": ["$d2_A, $kill_normal, $use_seeds, emberseeds",
-							"$d2_A, $kill_normal, $use_seeds, mysteryseeds, [emberseeds]",
-							"$d2_B, $kill_normal, bracelet"]
+						"access_rules": ["$kill_normal, $torches",
+							"$d2_B, bracelet, $kill_normal"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
+						"map": "snakes_remains1",
 						"x": 560,
-						"y": 762
+						"y": 294
 					}
 				]
 			},
@@ -72,19 +71,15 @@
                 [
 					{
                         "name": "Snake's Remains: Chest Behind Pots in Hardhat Room",
-						"access_rules": ["d2sk:3, $d2_A, $kill_normal, $use_seeds, emberseeds, $destroy_pot",
-							"d2sk:1, [d2sk:3], $d2_A, $kill_normal, $use_seeds, emberseeds, $destroy_pot",
-							"d2sk:3, $d2_A, $kill_normal, $use_seeds, mysteryseeds, [emberseeds], $destroy_pot",
-							"d2sk:1, [d2sk:3], $d2_A, $kill_normal, $use_seeds, mysteryseeds, [emberseeds], $destroy_pot",
-							"d2sk:3, $d2_B, bracelet, $destroy_pot",
+						"access_rules": ["d2sk:1, [d2sk:3], $kill_normal, $torches, $destroy_pot",
 							"d2sk:1, [d2sk:3], $d2_B, bracelet, $destroy_pot"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
+						"map": "snakes_remains1",
 						"x": 399,
-						"y": 496
+						"y": 28
 					}
 				]
 			},
@@ -94,23 +89,16 @@
                 [
 					{
                         "name": "Snake's Remains: Chest in Distant Moblins Room",
-						"access_rules": ["d2sk:3, $d2_A, $kill_rope, $use_seeds, emberseeds, $kill_hardhat_pit, $kill_moblin_pit",
-							"d2sk:1, [d2sk:3], $d2_A, $kill_rope, $use_seeds, emberseeds, $kill_hardhat_pit, $kill_moblin_pit",
-							"d2sk:3, $d2_A, $kill_rope, $use_seeds, emberseeds, bracelet, [$kill_hardhat_pit], [$kill_moblin_pit]",
-							"d2sk:1, [d2sk:3], $d2_A, $kill_rope, $use_seeds, emberseeds, bracelet, [$kill_hardhat_pit], [$kill_moblin_pit]",
-							"d2sk:3, $d2_A, $kill_rope, $use_seeds, mysteryseeds, [emberseeds], $kill_hardhat_pit, $kill_moblin_pit",
-							"d2sk:1, [d2sk:3], $d2_A, $kill_rope, $use_seeds, mysteryseeds, [emberseeds], $kill_hardhat_pit, $kill_moblin_pit",
-							"d2sk:3, $d2_A, $kill_rope, $use_seeds, mysteryseeds, [emberseeds], bracelet, [$kill_hardhat_pit], [$kill_moblin_pit]",
-							"d2sk:1, [d2sk:3], $d2_A, $kill_rope, $use_seeds, mysteryseeds, [emberseeds], bracelet, [$kill_hardhat_pit], [$kill_moblin_pit]",
-							"d2sk:3, $d2_B, bracelet, $destroy_pot, [$kill_hardhat_pit], [$kill_moblin_pit]",
-							"d2sk:1, [d2sk:3], $d2_B, bracelet, $destroy_pot, [$kill_hardhat_pit], [$kill_moblin_pit]"]
+						"access_rules": ["d2sk:1, [d2sk:3], $torches, $kill_hardhat_pit, $kill_moblin_pit",
+							"d2sk:1, [d2sk:3], $d2_A, $torches, bracelet, $kill_moblin_pit",
+							"d2sk:1, [d2sk:3], $d2_B, bracelet, $kill_moblin_pit"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
+						"map": "snakes_remains1",
 						"x": 282,
-						"y": 528
+						"y": 60
 					}
 				]
 			},
@@ -120,16 +108,15 @@
                 [
 					{
                         "name": "Snake's Remains: Chest in Moving Blades Room",
-						"access_rules": ["$d2_A, $use_seeds, emberseeds, $kill_normal",
-							"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal",
+						"access_rules": ["$d2_A, $torches, $kill_normal",
 							"$d2_B, bracelet"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
+						"map": "snakes_remains1",
 						"x": 688,
-						"y": 634
+						"y": 166
 					}
 				]
 			},
@@ -139,16 +126,15 @@
                 [
 					{
                         "name": "Snake's Remains: Chest in Bomb Spiral Maze Room",
-						"access_rules": ["$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
-							"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
-							"$d2_B, bracelet, bombs"]
+						"access_rules": ["$torches, $kill_normal, bracelet, bombs",
+							"$d2_B, bombs"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
+						"map": "snakes_remains1",
 						"x": 80,
-						"y": 644
+						"y": 176
 					}
 				]
 			},
@@ -158,17 +144,14 @@
                 [
 					{
                         "name": "Snake's Remains: Chest in Rollers Section",
-						"access_rules": ["$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
-							"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
-							"$d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
-							"$d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
+						"access_rules": ["$torches, $kill_normal, bracelet, bombs",
 							"$$d2_B, bracelet, bombs"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
-						"x": 282,
+						"map": "snakes_remains2",
+						"x": 144,
 						"y": 80
 					}
 				]
@@ -179,15 +162,14 @@
                 [
 					{
                         "name": "Snake's Remains: Chest on Terrace",
-						"access_rules": ["d2sk:2, [d2sk:3], $d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
-							"d2sk:2, [d2sk:3], $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
+						"access_rules": ["d2sk:2, [d2sk:3], $torches, $kill_normal, bracelet, bombs",
 							"$d2_B, bracelet, bombs"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
-						"x": 943,
+						"map": "snakes_remains2",
+						"x": 805,
 						"y": 186
 					}
 				]
@@ -198,15 +180,14 @@
                 [
 					{
                         "name": "Snake's Remains: Boss Reward",
-						"access_rules": ["d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
-							"d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
-							"d2bk, d2sk:1, [d2sk:3], $d2_B, bracelet, bombs"]
+						"access_rules": ["d2bk, d2sk:1, [d2sk:2], $torches, $kill_normal, bracelet, bombs",
+							"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
-						"x": 879,
+						"map": "snakes_remains2",
+						"x": 741,
 						"y": 410
 					}
 				]
@@ -217,17 +198,15 @@
                 [
 					{
                         "name": "Gift of Time",
-						"access_rules": ["d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, emberseeds, $kill_normal, bracelet, bombs",
-							"d2bk, d2sk:2, $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
-							"d2bk, d2sk:1, [d2sk:3], $d2_A, $use_seeds, mysteryseeds, [emberseeds], $kill_normal, bracelet, bombs",
-							"d2bk, d2sk:1, [d2sk:3], $d2_B, bracelet, bombs"],
+						"access_rules": ["d2bk, d2sk:1, [d2sk:2], $torches, $kill_normal, bracelet, bombs",
+							"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs"],
 						"hosted_item": "d2"
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "snakes_remains",
-						"x": 869,
+						"map": "snakes_remains2",
+						"x": 731,
 						"y": 511
 					}
 				]

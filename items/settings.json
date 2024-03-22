@@ -13,8 +13,8 @@
       "inherit_codes": false
       },
       {
-      "img": "images/items/onox.png",
-      "codes": "onox_goal",
+      "img": "images/items/ganon.png",
+      "codes": "ganon_goal",
       "inherit_codes": false
       }
     ]
@@ -29,17 +29,17 @@
     "stages": [
       {
       "img": "images/labels/casual.png",
-      "codes": "normal",
+      "codes": "casual",
       "inherit_codes": false
       },
       {
       "img": "images/labels/medium.png",
-      "codes": "normal",
+      "codes": "medium",
       "inherit_codes": false
       },
       {
       "img": "images/labels/hard.png",
-      "codes": "normal",
+      "codes": "hard",
       "inherit_codes": false
       }
     ]
@@ -238,6 +238,41 @@
       "img": "images/labels/shuffled_label.png",
       "codes": "old_men_shuffled",
       "inherit_codes": false
+      },
+      {
+      "img": "images/labels/random_label.png",
+      "codes": "old_men_random",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/random_positive_label.png",
+      "codes": "old_men_random_positive",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/locations_label.png",
+      "codes": "old_men_locations",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Shuffle Gold Ore Spots",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx":0,
+    "codes": "shuffle_gold_ores",
+    "stages": [
+      {
+      "img": "images/labels/vanilla_label.png",
+      "codes": "gold_ores_vanilla",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/shuffled_label.png",
+      "codes": "gold_ores_shuffled",
+      "inherit_codes": false
       }
     ]
   },
@@ -325,6 +360,40 @@
       {
       "img": "images/labels/4golden.png",
       "codes": "golden4",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
+    "name": "Tarm Ruins Jewel Requirement",
+    "type": "progressive",
+    "allow_disabled": false,
+    "initial_stage_idx": 4,
+    "codes": "jewelreq",
+        "stages": [
+      {
+      "img": "images/labels/0jewels.png",
+      "codes": "jewelreq0",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/1jewels.png",
+      "codes": "jewelreq1",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/2jewels.png",
+      "codes": "jewelreq2",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/3jewels.png",
+      "codes": "jewelreq3",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/4jewels.png",
+      "codes": "jewelreq4",
       "inherit_codes": false
       }
     ]
@@ -420,7 +489,7 @@
       "img": "images/labels/selector_neutral.png",
       "codes": "season_horonvillage",
       "inherit_codes": false
-      },
+      }
 	  ]
   },
   {
@@ -522,7 +591,7 @@
       "img": "images/labels/selector_neutral.png",
       "codes": "season_woodsofwinter",
       "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -556,7 +625,7 @@
       "img": "images/labels/selector_neutral.png",
       "codes": "season_holodrumplain",
       "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -590,7 +659,7 @@
       "img": "images/labels/selector_neutral.png",
       "codes": "season_spoolswamp",
       "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -624,7 +693,7 @@
       "img": "images/labels/selector_neutral.png",
       "codes": "season_sunkencity",
       "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -658,7 +727,7 @@
       "img": "images/labels/selector_neutral.png",
       "codes": "season_coast",
       "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -692,7 +761,7 @@
       "img": "images/labels/selector_neutral.png",
       "codes": "season_templeremains",
       "inherit_codes": false
-      },
+      }
     ]
   },
   {
@@ -895,42 +964,42 @@
     "stages": [
       {
       "img": "images/labels/DX_unknown3.png",
-      "codes": "village_sub",
+      "codes": "horon_sub",
       "inherit_codes": false
       },
       {
       "img": "images/labels/mountain_label_sub.png",
-      "codes": "village_mountainsub",
+      "codes": "horon_mountainsub",
       "inherit_codes": false
       },
       {
       "img": "images/labels/market_label_sub.png",
-      "codes": "village_marketsub",
+      "codes": "horon_marketsub",
       "inherit_codes": false
       },
       {
       "img": "images/labels/furnace_label_sub.png",
-      "codes": "village_furnacesub",
+      "codes": "horon_furnacesub",
       "inherit_codes": false
       },
       {
       "img": "images/labels/village_label_sub.png",
-      "codes": "village_villagesub",
+      "codes": "horon_villagesub",
       "inherit_codes": false
       },
       {
       "img": "images/labels/pirates_label_sub.png",
-      "codes": "village_piratessub",
+      "codes": "horon_piratessub",
       "inherit_codes": false
       },
       {
       "img": "images/labels/volcano_label_sub.png",
-      "codes": "village_volcanosub",
+      "codes": "horon_volcanosub",
       "inherit_codes": false
       },
       {
       "img": "images/labels/d8_label_sub.png",
-      "codes": "village_d8sub",
+      "codes": "horon_d8sub",
       "inherit_codes": false
       }
     ]

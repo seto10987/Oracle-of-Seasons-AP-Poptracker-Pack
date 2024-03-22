@@ -1,11 +1,12 @@
 {
-    "item_grid": {
+    "item_grid_2": {
         "type": "array",
         "orientation": "horizontal",
         "content": [
             {
                 "type": "itemgrid",
                 "h_alignment": "center",
+                "item_size": 24,
                 "item_margin": "3,2",
                 "rows": [
                     ["sword1", "biggoron_sword", "bestweapon", "shield", "bombs", "feather", "ring_swimmer", "d1_icon"],
@@ -22,44 +23,7 @@
             {
                 "type": "itemgrid",
                 "h_alignment": "center",
-                "item_margin": "-6,2",
-                "rows": [
-                    ["d1sk", "d1bk", "", "d1"],
-                    ["d2sk", "d2bk", "", "d2"],
-                    ["d3sk", "d3bk", "", "d3"],
-                    ["d4sk", "d4bk", "", "d4"],
-                    ["d5sk", "d5bk", "", "d5"],
-                    ["d6sk", "d6bk", "", "d6"],
-                    ["d7sk", "d7bk", "", "d7"],
-                    ["d8sk", "d8bk", "", "d8"],
-                    ["d0sk", "", "", ""]
-                ]
-            }
-        ]
-    },
-    "item_grid2": {
-        "type": "array",
-        "orientation": "horizontal",
-        "content": [
-            {
-                "type": "itemgrid",
-                "h_alignment": "center",
-                "item_margin": "3,2",
-                "rows": [
-                    ["sword1", "biggoron_sword", "bestweapon", "shield", "bombs", "feather", "ring_swimmer", "d1_icon"],
-                    ["strength", "boomerang1", "slingshot1", "glove", "shovel", "flute_generic", "ring_energy", "d2_icon"],
-                    ["satchel1", "emberseeds", "mysteryseeds", "scentseeds", "pegasusseeds", "galeseeds", "ring_expert", "d3_icon"],
-                    ["flippers", "rustybell", "spring", "summer", "fall", "winter", "ring_fist", "d4_icon"],
-                    ["gnarledkey", "floodkey", "dragonkey", "memberscard", "plaque", "banana", "roundjewel", "d5_icon"],
-                    ["starore", "ribbon", "bombflower", "blueore", "redore", "hardore", "squarejewel", "d6_icon"],
-                    ["cuccodex", "lonlonegg", "ghastlydoll", "ironpot", "lavasoup", "goronvase", "pyramidjewel", "d7_icon"],
-                    ["fish", "megaphone", "mushroom", "woodenbird", "enginegrease", "phonograph", "xjewel", "d8_icon"],
-                    ["", "natzu_animal", "", "golden_darknut", "golden_moblin", "golden_octorok", "golden_lynel", ""]
-                ]
-            },
-            {
-                "type": "itemgrid",
-                "h_alignment": "center",
+                "item_size": 24,
                 "item_margin": "-6,2",
                 "rows": [
                     ["d1sk", "d1bk", "", "d1"],

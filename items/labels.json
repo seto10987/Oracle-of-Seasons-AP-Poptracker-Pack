@@ -95,6 +95,18 @@
     "codes": "advance_shop_label"
   },
   {
+    "name": "Tarm Jewels Label",
+    "type": "static",
+    "img": "images/labels/tarm_jewels_label.png",
+    "codes": "tarm_jewels_label"
+  },
+  {
+    "name": "Gold Ore Label",
+    "type": "static",
+    "img": "images/labels/gold_ore_label.png",
+    "codes": "gold_ore_label"
+  },
+  {
     "name": "Shuffle Old Men Label",
     "type": "static",
     "img": "images/labels/shuffle_old_men_label.png",

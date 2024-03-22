@@ -19,16 +19,16 @@
                 [
 					{
                         "name": "Poison Moth's Lair (B1F): Chest in Roller Room",
-						"access_rules": ["$kill_beetle, bracelet",
-							"bracelet, shovel",
-							"bracelet, shield1"]
+						"access_rules": ["$kill_beetle",
+							"shovel, bracelet",
+							"shield1, bracelet"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
+						"map": "poison_moths_lair1",
 						"x": 684,
-						"y": 633
+						"y": 537
 					}
 				]
 			},
@@ -39,15 +39,15 @@
 					{
                         "name": "Poison Moth's Lair (1F): Chest in Moldorm Room",
 						"access_rules": ["$kill_beetle, $kill_moldorm",
-							"bracelet, shovel, $kill_moldorm",
-							"bracelet, shield1, $kill_moldorm"]
+							"shovel, bracelet, $kill_moldorm",
+							"shield1, bracelet, $kill_moldorm"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
-						"x": 1797,
-						"y": 480
+						"map": "poison_moths_lair2",
+						"x": 838,
+						"y": 352
 					}
 				]
 			},
@@ -58,15 +58,15 @@
 					{
                         "name": "Poison Moth's Lair (1F): Chest in Room Behind Hidden Cracked Wall",
 						"access_rules": ["$kill_beetle, bombs",
-							"bracelet, shovel, bombs",
-							"bracelet, shield1, bombs"]
+							"shovel, bracelet, bombs",
+							"shield1, bracelet, bombs"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
-						"x": 1784,
-						"y": 339
+						"map": "poison_moths_lair2",
+						"x": 825,
+						"y": 211
 					}
 				]
 			},
@@ -76,19 +76,16 @@
                 [
 					{
                         "name": "Poison Moth's Lair (1F): Chest in Mimics Room",
-						"access_rules": ["d3sk:2, $kill_beetle, $kill_mimic",
-							"d3sk:1, [d3sk:2], $kill_beetle, $kill_mimic",
-							"d3sk:2, shovel, bracelet, $kill_mimic",
-							"d3sk:1, [d3sk:2], shovel, bracelet, $kill_mimic",
-							"d3sk:2, shield1, bracelet, $kill_mimic",
-							"d3sk:1, [d3sk:2], shield1, bracelet, $kill_mimic"]
+						"access_rules": ["d3sk:1, [d3sk:2], $kill_beetle, $kill_normal",
+							"d3sk:1, [d3sk:2], shovel, bracelet, $kill_normal",
+							"d3sk:1, [d3sk:2], shield1, bracelet, $kill_normal"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
-						"x": 1054,
-						"y": 339
+						"map": "poison_moths_lair2",
+						"x": 96,
+						"y": 211
 					}
 				]
 			},
@@ -98,17 +95,16 @@
                 [
 					{
                         "name": "Poison Moth's Lair (B1F): Chest in Watery Room",
-						"access_rules": ["$kill_beetle, bracelet",
+						"access_rules": ["$kill_beetle",
 							"shovel, bracelet",
-							"shield1, bracelet",
-							"$kill_beetle, $max_jump:1"]
+							"shield1, bracelet"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
+						"map": "poison_moths_lair1",
 						"x": 108,
-						"y": 288
+						"y": 192
 					}
 				]
 			},
@@ -125,9 +121,9 @@
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
-						"x": 1246,
-						"y": 198
+						"map": "poison_moths_lair2",
+						"x": 287,
+						"y": 70
 					}
 				]
 			},
@@ -144,9 +140,9 @@
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
-						"x": 1656,
-						"y": 159
+						"map": "poison_moths_lair2",
+						"x": 697,
+						"y": 32
 					}
 				]
 			},
@@ -163,9 +159,9 @@
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
+						"map": "poison_moths_lair1",
 						"x": 659,
-						"y": 378
+						"y": 282
 					}
 				]
 			},
@@ -175,19 +171,16 @@
                 [
 					{
                         "name": "Poison Moth's Lair (B1F): Chest in Moving Blade Room",
-						"access_rules": ["d3sk:2, $kill_beetle, $kill_omuai, $max_jump:1",
-							"d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1",
-							"d3sk:2, shovel, $kill_omuai, $max_jump:1",
+						"access_rules": ["d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1",
 							"d3sk:1, [d3sk:2], shovel, $kill_omuai, $max_jump:1",
-							"d3sk:2, shield1, $kill_omuai, $max_jump:1",
 							"d3sk:1, [d3sk:2], shield1, $kill_omuai, $max_jump:1"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
+						"map": "poison_moths_lair1",
 						"x": 108,
-						"y": 442
+						"y": 346
 					}
 				]
 			},
@@ -197,19 +190,16 @@
                 [
 					{
                         "name": "Poison Moth's Lair (1F): Boss Reward",
-						"access_rules": ["d3bk, d3sk:2, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:2, shovel, $kill_omuai, $max_jump:1, $kill_mothula",
+						"access_rules": ["d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
 							"d3bk, d3sk:1, [d3sk:2], shovel, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:2, shield1, $kill_omuai, $max_jump:1, $kill_mothula",
 							"d3bk, d3sk:1, [d3sk:2], shield1, $kill_omuai, $max_jump:1, $kill_mothula"]
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
-						"x": 1438,
-						"y": 505
+						"map": "poison_moths_lair2",
+						"x": 479,
+						"y": 307
 					}
 				]
 			},
@@ -219,20 +209,17 @@
                 [
 					{
                         "name": "Bright Sun",
-						"access_rules": ["d3bk, d3sk:2, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:2, shovel, $kill_omuai, $max_jump:1, $kill_mothula",
+						"access_rules": ["d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
 							"d3bk, d3sk:1, [d3sk:2], shovel, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:2, shield1, $kill_omuai, $max_jump:1, $kill_mothula",
 							"d3bk, d3sk:1, [d3sk:2], shield1, $kill_omuai, $max_jump:1, $kill_mothula"],
 						"hosted_item": "d3"
                     }
                 ],
 				"map_locations": [
 					{
-						"map": "poison_moths_lair",
+						"map": "poison_moths_lair1",
 						"x": 479,
-						"y": 192
+						"y": 127
 					}
 				]
 			}

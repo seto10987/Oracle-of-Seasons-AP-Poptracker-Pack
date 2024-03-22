@@ -64,6 +64,9 @@ function onClear(slot_data)
     if slot_data["golden_beasts_requirement"] then
         Tracker:FindObjectForCode("goldenbeastsrequired").CurrentStage = tonumber(slot_data["golden_beasts_requirement"])
     end
+    if slot_data["tarm_gate_required_jewels"] then
+        Tracker:FindObjectForCode("jewelreq").CurrentStage = tonumber(slot_data["tarm_gate_required_jewels"])
+    end
     if slot_data["logic_difficulty"] then
         Tracker:FindObjectForCode("logiclevel").CurrentStage = tonumber(slot_data["logic_difficulty"])
     end
@@ -85,13 +88,15 @@ function onClear(slot_data)
     if slot_data["shuffle_old_men"] then
         Tracker:FindObjectForCode("shuffle_old_men").CurrentStage = tonumber(slot_data["shuffle_old_men"])
     end
+    if slot_data["shuffle_golden_ore_spots"] then
+        Tracker:FindObjectForCode("shuffle_gold_ores").CurrentStage = tonumber(slot_data["shuffle_golden_ore_spots"])
+    end
     if slot_data["lost_woods_item_sequence"] then
         Tracker:FindObjectForCode("lost_woods_item_sequence").CurrentStage = tonumber(slot_data["lost_woods_item_sequence"])
     end
     if slot_data["advance_shop"] then
         Tracker:FindObjectForCode("advance_shop").CurrentStage = tonumber(slot_data["advance_shop"])
     end
-
     if slot_data["animal_companion"] == "Ricky" then
         Tracker:FindObjectForCode("natzu_animal").CurrentStage = 0
     elseif slot_data["animal_companion"] == "Dimitri" then

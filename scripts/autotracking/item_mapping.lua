@@ -1,6 +1,6 @@
 ITEM_MAPPING = {
     [27022001000] = {"shield", "progressive"},
-    [27022001001] = {"bombs", "toggle"},
+    [27022001001] = {"bombs", "consumable"},
     [27022001002] = {"sword1", "progressive"},
     [27022001003] = {"boomerang", "progressive"},
     [27022001004] = {"spring", "toggle"},
@@ -16,7 +16,7 @@ ITEM_MAPPING = {
     [27022001014] = {"shovel", "toggle"},
     [27022001015] = {"bracelet", "toggle"},
     [27022001016] = {"feather", "progressive"},
-    [27022001017] = {"satchel", "toggle"},
+    [27022001017] = {"satchel", "progressive"},
     [27022001018] = {"ore", "toggle"},
     [27022001019] = {"emberseeds", "toggle"},
     [27022001020] = {"scentseeds", "toggle"},
