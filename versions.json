@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "1.3.0.0",
+			"download_url": "https://github.com/seto10987/Oracle-of-Seasons-AP-Poptracker-Pack/archive/refs/tags/v.1.3.0.zip",
+			"sha256": "f303df38c7247aae1710881de24362a6ce87d06cb71fc9b49059462f84e5cb47",
+			"changelog": ["The Slot Data Update Flute hotfix"]
+		},
+		{
 			"package_version": "1.2.1.0",
 			"download_url": "https://github.com/seto10987/Oracle-of-Seasons-AP-Poptracker-Pack/archive/refs/tags/v.1.2.1.zip",
 			"sha256": "2270f4bdf0c1c039eeae0850ff7c15b61749f3cf06b5ece5002396b6860101cb",
