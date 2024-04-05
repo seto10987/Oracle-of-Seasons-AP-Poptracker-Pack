@@ -14,15 +14,15 @@
 					},
 					{
 					"name": "Horon Village: Item Inside Maku Tree (3+ Essences)",
-					"access_rules": ["$has|essences|3"]
+					"access_rules": ["essences:3"]
 					},
 					{
 					"name": "Horon Village: Item Inside Maku Tree (5+ Essences)",
-					"access_rules": ["$has|essences|5"]
+					"access_rules": ["essences:5"]
 					},
 					{
 					"name": "Horon Village: Item Inside Maku Tree (7+ Essences)",
-					"access_rules": ["$has|essences|7"]
+					"access_rules": ["essences:7"]
 					}
 				],
 				"map_locations": [
@@ -389,10 +389,10 @@
 					{
 					"name": "North Horon: Golden Beasts Old Man",
 					"access_rules": ["golden0",
-						"$has|beasts|1, golden1", "$has|beasts|2, golden1", "$has|beasts|3, golden1", "$has|beasts|4, golden1",
-						"$has|beasts|2, golden2", "$has|beasts|3, golden2", "$has|beasts|4, golden2",
-						"$has|beasts|3, golden3", "$has|beasts|4, golden3",
-						"$has|beasts|4, golden4"]
+						"beasts:1, golden1",
+						"beasts:2, golden2",
+						"beasts:3, golden3",
+						"beasts:4, golden4"]
 					}
 				],
 				"map_locations": [
@@ -677,14 +677,14 @@
 					{
 					"name": "Holodrum Plain: Old Man in Treehouse",
 					"access_rules": ["oldman0",
-						"$has|essences|1, oldman1", "$has|essences|2, oldman1", "$has|essences|3, oldman1", "$has|essences|4, oldman1", "$has|essences|5, oldman1", "$has|essences|6, oldman1", "$has|essences|7, oldman1", "$has|essences|8, oldman1",
-						"$has|essences|2, oldman2", "$has|essences|3, oldman2", "$has|essences|4, oldman2", "$has|essences|5, oldman2", "$has|essences|6, oldman2", "$has|essences|7, oldman2", "$has|essences|8, oldman2",
-						"$has|essences|3, oldman3", "$has|essences|4, oldman3", "$has|essences|5, oldman3", "$has|essences|6, oldman3", "$has|essences|7, oldman3", "$has|essences|8, oldman3",
-						"$has|essences|4, oldman4", "$has|essences|5, oldman4", "$has|essences|6, oldman4", "$has|essences|7, oldman4", "$has|essences|8, oldman4",
-						"$has|essences|5, oldman5", "$has|essences|6, oldman5", "$has|essences|7, oldman5", "$has|essences|8, oldman5",
-						"$has|essences|6, oldman6", "$has|essences|7, oldman6", "$has|essences|8, oldman6",
-						"$has|essences|7, oldman7", "$has|essences|8, oldman7",
-						"$has|essences|8, oldman8"]
+						"essences:1, oldman1",
+						"essences:2, oldman2",
+						"essences:3, oldman3",
+						"essences:4, oldman4",
+						"essences:5, oldman5",
+						"essences:6, oldman6",
+						"essences:7, oldman7",
+						"essences:8, oldman8"]
 					}
 				],
 				"map_locations": [
@@ -1237,28 +1237,28 @@
 					{
 					"name": "Onox",
 					"access_rules": ["onox0",
-						"$has|essences|1, onox1", "$has|essences|2, onox1", "$has|essences|3, onox1", "$has|essences|4, onox1", "$has|essences|5, onox1", "$has|essences|6, onox1", "$has|essences|7, onox1", "$has|essences|8, onox1",
-						"$has|essences|2, onox2", "$has|essences|3, onox2", "$has|essences|4, onox2", "$has|essences|5, onox2", "$has|essences|6, onox2", "$has|essences|7, onox2", "$has|essences|8, onox2",
-						"$has|essences|3, onox3", "$has|essences|4, onox3", "$has|essences|5, onox3", "$has|essences|6, onox3", "$has|essences|7, onox3", "$has|essences|8, onox3",
-						"$has|essences|4, onox4", "$has|essences|5, onox4", "$has|essences|6, onox4", "$has|essences|7, onox4", "$has|essences|8, onox4",
-						"$has|essences|5, onox5", "$has|essences|6, onox5", "$has|essences|7, onox5", "$has|essences|8, onox5",
-						"$has|essences|6, onox6", "$has|essences|7, onox6", "$has|essences|8, onox6",
-						"$has|essences|7, onox7", "$has|essences|8, onox7",
-						"$has|essences|8, onox8"],
+						"essences:1, onox1",
+						"essences:2, onox2",
+						"essences:3, onox3",
+						"essences:4, onox4",
+						"essences:5, onox5",
+						"essences:6, onox6",
+						"essences:7, onox7",
+						"essences:8, onox8"],
 					"hosted_item": "onox"
 					},
 					{
 					"name": "Ganon",
 					"visibility_rules": ["ganon_goal"],
 					"access_rules": ["onox0",
-						"$has|essences|1, onox1", "$has|essences|2, onox1", "$has|essences|3, onox1", "$has|essences|4, onox1", "$has|essences|5, onox1", "$has|essences|6, onox1", "$has|essences|7, onox1", "$has|essences|8, onox1",
-						"$has|essences|2, onox2", "$has|essences|3, onox2", "$has|essences|4, onox2", "$has|essences|5, onox2", "$has|essences|6, onox2", "$has|essences|7, onox2", "$has|essences|8, onox2",
-						"$has|essences|3, onox3", "$has|essences|4, onox3", "$has|essences|5, onox3", "$has|essences|6, onox3", "$has|essences|7, onox3", "$has|essences|8, onox3",
-						"$has|essences|4, onox4", "$has|essences|5, onox4", "$has|essences|6, onox4", "$has|essences|7, onox4", "$has|essences|8, onox4",
-						"$has|essences|5, onox5", "$has|essences|6, onox5", "$has|essences|7, onox5", "$has|essences|8, onox5",
-						"$has|essences|6, onox6", "$has|essences|7, onox6", "$has|essences|8, onox6",
-						"$has|essences|7, onox7", "$has|essences|8, onox7",
-						"$has|essences|8, onox8"],
+						"essences:1, onox1",
+						"essences:2, onox2",
+						"essences:3, onox3",
+						"essences:4, onox4",
+						"essences:5, onox5",
+						"essences:6, onox6",
+						"essences:7, onox7",
+						"essences:8, onox8"],
 					"hosted_item": "ganon"
 					}
 					
