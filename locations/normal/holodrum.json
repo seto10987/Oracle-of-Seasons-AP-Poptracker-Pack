@@ -1409,7 +1409,7 @@
 				"sections": [
 				  	{
 					"name": "Holodrum Plain: Old Man Near Blaino's Gym",
-					"access_rules": ["$use_seeds, emberseeds"]
+							"access_rules": [ "$use_seeds, emberseeds, summer", "$use_seeds, emberseeds, plain_summer" ]
 				  	}
 				],
 				"map_locations": [

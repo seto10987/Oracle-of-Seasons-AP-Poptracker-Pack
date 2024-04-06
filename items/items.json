@@ -175,7 +175,9 @@
   },
   {
     "name": "Bombs",
-    "type": "toggle",
+    "type": "consumable",
+    "max_quantity": 99,
+    "increment": 10,
     "img": "images/items/bomb.png",
     "codes": "bombs"
   },

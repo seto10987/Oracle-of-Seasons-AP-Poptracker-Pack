@@ -224,5 +224,5 @@ LOCATION_MAPPING = {
     [27022001222] = {"@Subrosia/Temple of Seasons Digging Spot/Subrosia: Temple of Seasons Digging Spot"},
     [27022001223] = {"@Subrosia/Northern Volcanoes Digging Spot/Subrosia: Northern Volcanoes Digging Spot"},
     [27022001224] = {"@Subrosia/D8 Portal Digging Spot/Subrosia: D8 Portal Digging Spot"},
-    [27022001225] = {"@Subrosia/Western Volcanoes Digging Spot/Subrosia: Western Volcanoes Digging Spot"}
+    [27022001225] = {"@Subrosia/Western Volcanos Digging Spot/Subrosia: Western Volcanoes Digging Spot"}
 }
