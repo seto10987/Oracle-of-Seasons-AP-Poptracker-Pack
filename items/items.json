@@ -102,34 +102,6 @@
     "codes": "shovel"
   },
   {
-    "name": "Flute",
-    "type": "toggle",
-    "allow_disabled": false,
-    "stages": [
-      {
-      "img": "images/items/flute1.png",
-      "codes": "flute",
-      "img_mods": "@disabled",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/items/flute2.png",
-      "codes": "moosh, mooshflute",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/items/flute3.png",
-      "codes": "ricky, rickyflute",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/items/flute4.png",
-      "codes": "dimitri, dimitriflute",
-      "inherit_codes": false
-      }
-    ]
-  },
-  {
     "name": "Normal flute",
     "type": "toggle",
     "img": "images/items/flute1.png",
@@ -342,13 +314,13 @@
   },
   {
   "name": "Summer season",
-  "type": "progressive",
+  "type": "toggle",
   "img": "images/items/seasonsummer1.png",
 	"codes": "summer"
   },
   {
   "name": "Fall season",
-  "type": "progressive",
+  "type": "toggle",
 	"img": "images/items/seasonfall1.png",
 		"codes": "fall"
   },
@@ -360,7 +332,7 @@
   },
   {
   "name": "Winter season",
-  "type": "progressive",
+  "type": "toggle",
   "img": "images/items/seasonwinter1.png",
 		"codes": "winter"
   },
