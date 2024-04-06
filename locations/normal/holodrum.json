@@ -72,7 +72,7 @@
 				"sections": [
 					{
 					"name": "Horon Village: Item Behind Small Tree",
-					"access_rules": ["$use_seeds, emberseeds"]
+					"access_rules": ["{}", "$use_seeds, emberseeds"]
 					}
 				],
 				"map_locations": [
@@ -140,16 +140,16 @@
 						"name": "Horon Village: Shop #3"
 					},
 					{
-					"name": "Horon Village: Member's Shop #1",
-					"access_rules": ["$member_shop"]
+						"name": "Horon Village: Member's Shop #1",
+						"access_rules": ["$member_shop"]
 					},
 					{
-					"name": "Horon Village: Member's Shop #2",
-					"access_rules": ["$member_shop"]
+						"name": "Horon Village: Member's Shop #2",
+						"access_rules": ["$member_shop"]
 					},
 					{
-					"name": "Horon Village: Member's Shop #3",
-					"access_rules": ["$member_shop"]
+						"name": "Horon Village: Member's Shop #3",
+						"access_rules": ["$member_shop"]
 					}
 					
 				],
@@ -1039,7 +1039,7 @@
 			},
 			{
 				"name": "Mt. Cucco Heart Piece",
-				"access_rules": ["$mount_cucco_spring"],
+				"access_rules": ["{$mount_cucco_stump}", "$mount_cucco_spring"],
 				"sections": [
 					{
 					"name": "Mt. Cucco: Item on Ledge"
@@ -1058,8 +1058,9 @@
 				"sections": [
 					{
 					"name": "Goron Mountain: Item Across Pits",
-					"access_rules": ["$mount_cucco_stump, banana",
-					"$mount_cucco_stump, $jump4"]
+					"access_rules": ["{$mount_cucco_stump}",
+						"$mount_cucco_stump, banana",
+						"$mount_cucco_stump, $jump4"]
 					}
 				],
 				"map_locations": [
@@ -1276,7 +1277,7 @@
 				"sections": [
 				  	{
 						"name": "Horon Village: Seed Tree",
-						"access_rules": ["$harvest_seeds",
+						"access_rules": ["{}", "$harvest_seeds",
 							"$harvest_seeds_dimitri"],
 						"hosted_item": "tree_village"
 				  	}
@@ -1295,7 +1296,7 @@
 				"sections": [
 				  	{
 						"name": "Holodrum Plain: Seed Tree",
-						"access_rules": ["$harvest_seeds",
+						"access_rules": ["{}", "$harvest_seeds",
 							"$harvest_seeds_dimitri"],
 						"hosted_item": "tree_plain"
 				  	}
@@ -1314,7 +1315,7 @@
 				"sections": [
 				  	{
 						"name": "Woods of Winter: Seed Tree",
-						"access_rules": ["$harvest_seeds", 
+						"access_rules": ["{}", "$harvest_seeds", 
 							"$harvest_seeds_dimitri"],
 						"hosted_item": "tree_wow"
 				  	}
@@ -1333,7 +1334,7 @@
 				"sections": [
 					{
 						"name": "Spool Swamp: Seed Tree",
-						"access_rules": ["$harvest_seeds",
+						"access_rules": ["{}", "$harvest_seeds",
 							"$harvest_seeds_dimitri"],
 						"hosted_item": "tree_swamp"
 					}
@@ -1352,7 +1353,7 @@
 				"sections": [
 				  {
 						"name": "Sunken City: Seed Tree",
-						"access_rules": ["$harvest_seeds_dimitri",
+						"access_rules": ["{}", "$harvest_seeds_dimitri",
 							"$harvest_seeds, bombs"],
 						"hosted_item": "tree_sunken"
 				  	}
@@ -1371,7 +1372,7 @@
 				"sections": [
 				  	{
 					"name": "Tarm Ruins: Seed Tree",
-					"access_rules": ["$harvest_seeds"],
+					"access_rules": ["{}", "$harvest_seeds"],
 					"hosted_item": "tree_tarm"
 				  	}
 				],
