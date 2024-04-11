@@ -261,7 +261,7 @@
 				]
 			},
 			{
-				"name": "Golden Darknut",
+				"name": "Golden Darknut - Spring",
 				"chest_unopened_img":"images/items/golden_darknut.png",
 				"chest_opened_img":"images/items/golden_darknut_defeated.png",
 				"access_rules": ["coast_spring",
@@ -522,7 +522,7 @@
 				]
 			},
 			{
-				"name": "Golden Moblin",
+				"name": "Golden Moblin - Autumn",
 				"access_rules": ["$mystery_tree"],
 				"sections": [
 					{
@@ -804,7 +804,7 @@
 				]
 			},
 			{
-				"name": "Golden Octorok",
+				"name": "Golden Octorok - Summer",
 				"access_rules": ["$south_swamp, swamp_summer",
 					"$south_swamp, $swamp_stump, summer"],
 				"sections": [
@@ -1125,7 +1125,7 @@
 				]
 			},
 			{
-				"name": "Golden Lynel",
+				"name": "Golden Lynel - Winter",
 				"chest_unopened_img": "images/items/golden_lynel.png",
 				"chest_opened_img": "images/items/golden_lynel_defeated.png",
 				"access_rules": ["$tarm_ruins"],
