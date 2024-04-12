@@ -12,3 +12,4 @@ Tracker:AddLayouts("layouts/item_grids.json")
 Tracker:AddLayouts("layouts/tracker_layouts.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 
+ScriptHost:AddWatchForCode("accessibilityUpdated","*", tracker_on_accessibility_updated)

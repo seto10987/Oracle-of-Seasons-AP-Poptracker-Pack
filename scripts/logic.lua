@@ -1669,3 +1669,57 @@ end
 -- 	  return count == amount
 -- 	end
 -- end
+
+
+-- DUNGEON CHECK RULES --
+
+function entrance_not_assigned(prefix)
+	return not(has(prefix .. "_d1") or has(prefix .. "_d2") or has(prefix .. "_d3") or has(prefix .. "_d4") or has(prefix .. "_d5") or has(prefix .. "_d6") or has(prefix .. "_d7") or has(prefix .. "_d8"))
+end
+
+function dungeon_not_assigned(suffix)
+	return not(has("d1_" .. suffix) or has("d2_" .. suffix) or has("d3_" .. suffix) or has("d4_" .. suffix) or has("d5_" .. suffix) or has("d6_" .. suffix) or has("d7_" .. suffix) or has("d8_" .. suffix))
+end
+
+local dungeon_index = {
+	["d1"] = 1,
+	["d2"] = 2,
+	["d3"] = 3,
+	["d4"] = 4,
+	["d5"] = 5,
+	["d6"] = 6,
+	["d7"] = 7,
+	["d8"] = 8
+}
+
+
+function update_dungeon_check(dungeon, entrance)
+	-- Tracker progessive dungeon entrance item
+	local entrance_item = Tracker:FindObjectForCode(entrance .. "_ent")
+	-- dummy item for blue checks
+	local dummy_item = Tracker:FindObjectForCode(dungeon .. "_from_" .. entrance)
+	-- disable the dummy items, so it won't trigger next time
+	dummy_item.Active = false
+	-- Set the entrance to the right dungeon
+	entrance_item.CurrentStage = dungeon_index[dungeon]
+end
+
+function tracker_on_accessibility_updated()
+	for dungeon,_ in pairs(dungeon_index) do
+		for entrance,_ in pairs(dungeon_index) do
+			if has(dungeon .. "_from_" .. entrance) then
+				update_dungeon_check(dungeon, entrance)
+			end
+		end
+	end
+	-- for portal,_ in pairs(portal_holodrum_index) do
+	-- 	for access,_ in pairs(portal_subrosia_index) do
+	-- 		if has(portal .. "_" .. access) then
+	-- 			update_portal_check(portal, access)
+	-- 		end
+	-- 		if has(access .. "_" .. portal) then
+	-- 			update_portal_check(portal, access)
+	-- 		end
+	-- 	end
+	-- end
+end

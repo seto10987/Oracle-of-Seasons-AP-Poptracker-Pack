@@ -668,5 +668,392 @@
     "type": "toggle",
     "img": "images/items/tree_gale.png",
     "codes": "tree_tarm"
+  },
+  
+ /// DUNGEON ENTRANCES DUMMY ITEMS ///
+ 
+  {
+      "name": "D1 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d1"
+  },
+  {
+      "name": "D1 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d2"
+  },
+  {
+      "name": "D1 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d3"
+  },
+  {
+      "name": "D1 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d4"
+  },
+  {
+      "name": "D1 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d5"
+  },
+  {
+      "name": "D1 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d6"
+  },
+  {
+      "name": "D1 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d7"
+  },
+  {
+      "name": "D1 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D1_entrance.png",
+      "codes": "d1_from_d8"
+  },
+  {
+      "name": "D2 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d1"
+  },
+  {
+      "name": "D2 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d2"
+  },
+  {
+      "name": "D2 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d3"
+  },
+  {
+      "name": "D2 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d4"
+  },
+  {
+      "name": "D2 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d5"
+  },
+  {
+      "name": "D2 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d6"
+  },
+  {
+      "name": "D2 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d7"
+  },
+  {
+      "name": "D2 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D2_entrance.png",
+      "codes": "d2_from_d8"
+  },
+  {
+      "name": "D3 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d1"
+  },
+  {
+      "name": "D3 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d2"
+  },
+  {
+      "name": "D3 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d3"
+  },
+  {
+      "name": "D3 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d4"
+  },
+  {
+      "name": "D3 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d5"
+  },
+  {
+      "name": "D3 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d6"
+  },
+  {
+      "name": "D3 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d7"
+  },
+  {
+      "name": "D3 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D3_entrance.png",
+      "codes": "d3_from_d8"
+  },
+  {
+      "name": "D4 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d1"
+  },
+  {
+      "name": "D4 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d2"
+  },
+  {
+      "name": "D4 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d3"
+  },
+  {
+      "name": "D4 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d4"
+  },
+  {
+      "name": "D4 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d5"
+  },
+  {
+      "name": "D4 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d6"
+  },
+  {
+      "name": "D4 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d7"
+  },
+  {
+      "name": "D4 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D4_entrance.png",
+      "codes": "d4_from_d8"
+  },
+  {
+      "name": "D5 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d1"
+  },
+  {
+      "name": "D5 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d2"
+  },
+  {
+      "name": "D5 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d3"
+  },
+  {
+      "name": "D5 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d4"
+  },
+  {
+      "name": "D5 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d5"
+  },
+  {
+      "name": "D5 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d6"
+  },
+  {
+      "name": "D5 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d7"
+  },
+  {
+      "name": "D5 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D5_entrance.png",
+      "codes": "d5_from_d8"
+  },
+  {
+      "name": "d6 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d1"
+  },
+  {
+      "name": "d6 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d2"
+  },
+  {
+      "name": "d6 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d3"
+  },
+  {
+      "name": "d6 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d4"
+  },
+  {
+      "name": "d6 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d5"
+  },
+  {
+      "name": "d6 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d6"
+  },
+  {
+      "name": "d6 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d7"
+  },
+  {
+      "name": "d6 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D6_entrance.png",
+      "codes": "d6_from_d8"
+  },
+  {
+      "name": "D7 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d1"
+  },
+  {
+      "name": "D7 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d2"
+  },
+  {
+      "name": "D7 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d3"
+  },
+  {
+      "name": "D7 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d4"
+  },
+  {
+      "name": "D7 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d5"
+  },
+  {
+      "name": "D7 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d6"
+  },
+  {
+      "name": "D7 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d7"
+  },
+  {
+      "name": "D7 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D7_entrance.png",
+      "codes": "d7_from_d8"
+  },
+  {
+      "name": "D8 from D1 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d1"
+  },
+  {
+      "name": "D8 from D2 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d2"
+  },
+  {
+      "name": "D8 from D3 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d3"
+  },
+  {
+      "name": "D8 from D4 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d4"
+  },
+  {
+      "name": "D8 from D5 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d5"
+  },
+  {
+      "name": "D8 from d6 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d6"
+  },
+  {
+      "name": "D8 from D7 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d7"
+  },
+  {
+      "name": "D8 from D8 Entrance",
+      "type": "toggle",
+      "img": "images/labels/D8_entrance.png",
+      "codes": "d8_from_d8"
   }
 ]
