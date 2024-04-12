@@ -103,6 +103,10 @@ function contact_seeds()
 	has("mysteryseeds")
 end
 
+function burn_tree()
+	return use_seeds() and has("emberseeds")
+end
+
 function torches()
 	return use_seeds() and has("emberseeds") or
 	
@@ -613,13 +617,13 @@ end
 -- SUBURBS + WOODS OF WINTER
 
 function suburbs_stump_south()
-	return torches() or
+	return burn_tree() or
 	scent_tree() and cross_natzu() and cross_water_suburbs() or
 	suburbs_exit() and destroy_bush()
 end
 
 function suburbs_stump_north()
-    return ((torches() or (suburbs_exit() and destroy_bush())) and cross_water_suburbs()) or
+    return ((burn_tree() or (suburbs_exit() and destroy_bush())) and cross_water_suburbs()) or
 	scent_tree() and cross_natzu()
 end
 
@@ -628,8 +632,12 @@ function cross_water_suburbs()
 end
 
 function mystery_tree()
-	return suburbs_stump_north() and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or
-	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or moosh())))
+	return suburbs_stump_north() and 
+	((max_jump() >= 1 or ricky()) or --feather gives access no matter the season
+	((has("suburbs_winter") or has("winter")) and (has("shovel") or any_flute())) or
+	(has("suburbs_spring") or has("spring")) or
+	(has("suburbs_summer") or has("summer")) or
+	(has("suburbs_fall") or has("fall")))
 end
 
 function wow_stump()
@@ -738,8 +746,8 @@ function mount_cucco_stump()
 	return (((scent_tree() and cross_natzu()) or (torches() and cross_water_suburbs() and (has("spring") or has("suburbs_spring"))) and 
 	(has("flippers") or has("sunken_winter") or max_jump() >= 1)) and has("flippers") and (has("sunken_summer") or has("summer"))) or
 	scent_tree() and (has("flippers") or jump_liquid4()) and has("bracelet") and (has("shovel") or moosh()) or
-	mt_cucco_exit() or
-	reenter_village()
+	mt_cucco_exit() --or
+	--reenter_village()
 end
 
 function mount_cucco_spring()
@@ -810,13 +818,13 @@ function temple_remains()
 end
 
 function destroyed_remains()
-	return (portal_remains_enter() or reenter_volcano()) and
+	return (portal_remains_enter() --[[or reenter_volcano()]]) and
 		volcano() and has("bombs")
 end
 
 function enter_d8()
 	return destroyed_remains() and portal_d8_enter() and has("portalshuffleoff") or
-		(d8() or reenter_d8()) and has("portalshuffleon")
+		(d8() --[[or reenter_d8()]]) and has("portalshuffleon")
 
 end
 

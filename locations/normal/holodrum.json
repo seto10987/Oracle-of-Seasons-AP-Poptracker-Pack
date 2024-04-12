@@ -488,7 +488,7 @@
 				"sections": [
 					{
 					"name": "Woods of Winter: Chest on D2 Roof",
-					"access_rules": ["$kill_normal, bracelet"]
+					"access_rules": ["bracelet"]
 					}
 				],
 				"map_locations": [
@@ -507,10 +507,8 @@
 					"name": "Woods of Winter: Chest in Autumn Cave Near D2",
 					"access_rules": ["wow_fall, magnet",
 						"wow_fall, $jump3",
-						"fall, wow_summer, magnet",
-						"fall, wow_summer, $jump3",
-						"fall, $ricky, magnet",
-						"fall, $ricky, $jump3"]
+						"fall, magnet",
+						"fall, $jump3"]
 					}
 				],
 				"map_locations": [
