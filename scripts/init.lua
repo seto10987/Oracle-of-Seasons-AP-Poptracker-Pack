@@ -13,3 +13,4 @@ Tracker:AddLayouts("layouts/tracker_layouts.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 
 ScriptHost:AddWatchForCode("accessibilityUpdated","*", tracker_on_accessibility_updated)
+ScriptHost:AddWatchForCode("accessibilityUpdated","bombs", tracker_on_bomb_updated)

@@ -25,6 +25,7 @@ end
 function bombs()
 	return ricky() or has("bombs")
 end
+
 -- Can farm Ore Chunks in Subrosia
 function ore_chunks()
 	return has("shovel") or 
@@ -1730,4 +1731,22 @@ function tracker_on_accessibility_updated()
 	-- 		end
 	-- 	end
 	-- end
+end
+
+PreviousBombCount = 0
+
+function tracker_on_bomb_updated()
+	local bombs = Tracker:FindObjectForCode("bombs")
+	if bombs then
+		if bombs.AcquiredCount == 10 then
+			if PreviousBombCount == 0 then
+				bombs.AcquiredCount = 20
+			elseif PreviousBombCount == 20 then
+				bombs.AcquiredCount = 0
+			end
+		elseif bombs.AcquiredCount == 89 then
+			bombs.AcquiredCount = 90
+		end
+		PreviousBombCount = bombs.AcquiredCount
+	end
 end
