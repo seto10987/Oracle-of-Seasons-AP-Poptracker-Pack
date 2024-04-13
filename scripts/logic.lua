@@ -1743,12 +1743,12 @@ function tracker_on_portal_entrance_updated()
 	-- 	end
 	-- end
 end
-
-function tracker_on_bomb_updated()
-	local bombs = Tracker:FindObjectForCode("bombs")
-	if bombs then
 		if bombs.AcquiredCount == 89 then
+	if bombs then
+function tracker_on_bomb_updated()
+
+	local bombs = Tracker:FindObjectForCode("bombs")
 			bombs.AcquiredCount = 90
-		end
 	end
+		end
 end
