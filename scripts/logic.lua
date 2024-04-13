@@ -1744,14 +1744,11 @@ function tracker_on_portal_entrance_updated()
 	-- end
 end
 
-PreviousBombCount = 0
-
 function tracker_on_bomb_updated()
 	local bombs = Tracker:FindObjectForCode("bombs")
 	if bombs then
 		if bombs.AcquiredCount == 89 then
 			bombs.AcquiredCount = 90
 		end
-		PreviousBombCount = bombs.AcquiredCount
 	end
 end
