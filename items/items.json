@@ -148,6 +148,7 @@
   {
     "name": "Bombs",
     "type": "consumable",
+    "initial_quantity": 0,
     "max_quantity": 99,
     "increment": 10,
     "img": "images/items/bomb.png",
@@ -668,6 +669,12 @@
     "type": "toggle",
     "img": "images/items/tree_gale.png",
     "codes": "tree_tarm"
+  },
+  {
+    "name": "Maple traded",
+    "type": "toggle",
+    "img": "images/items/maple.png",
+    "codes": "maple_traded"
   },
   
  /// DUNGEON ENTRANCES DUMMY ITEMS ///

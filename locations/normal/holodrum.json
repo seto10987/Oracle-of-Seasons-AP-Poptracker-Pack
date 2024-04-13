@@ -233,6 +233,7 @@
 				"sections": [
 					{
 					"name": "Maple trade",
+					"hosted_item": "maple_traded",
 					"access_rules": ["$farm_maple, lonlonegg"]
 					}
 				],
@@ -874,27 +875,23 @@
 			},
 			{
 				"name": "Syrup's House",
-				"access_rules": ["$gale_tree, mushroom"],
+				"access_rules": ["$gale_tree, winter, bombs", "$gale_tree, winter, flippers", "$gale_tree, sunken_winter"],
 				"sections": [
 					{
 					"name": "Sunken City: Syrup Trade",
-					"access_rules": ["winter, flippers",
-						"sunken_winter"]
+					"access_rules": ["mushroom"]
 					},
 					{
 					"name": "Sunken City: Syrup Shop #1",
-					"access_rules": ["winter, flippers, $farm_rupees",
-						"sunken_winter, $farm_rupees"]
+					"access_rules": ["$farm_rupees, maple_traded"]
 					},
 					{
 					"name": "Sunken City: Syrup Shop #2",
-					"access_rules": ["winter, flippers, $farm_rupees",
-						"sunken_winter, $farm_rupees"]
+					"access_rules": ["$farm_rupees, maple_traded"]
 					},
 					{
 					"name": "Sunken City: Syrup Shop #3",
-					"access_rules": ["winter, flippers, $farm_rupees",
-						"sunken_winter, $farm_rupees"]
+					"access_rules": ["$farm_rupees, maple_traded"]
 					}
 				],
 				"map_locations": [

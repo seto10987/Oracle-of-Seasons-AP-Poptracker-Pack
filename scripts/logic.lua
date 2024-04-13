@@ -25,6 +25,7 @@ end
 function bombs()
 	return ricky() or has("bombs")
 end
+
 -- Can farm Ore Chunks in Subrosia
 function ore_chunks()
 	return has("shovel") or 
@@ -1712,7 +1713,15 @@ function update_dungeon_check(dungeon, entrance)
 	entrance_item.CurrentStage = dungeon_index[dungeon]
 end
 
-function tracker_on_accessibility_updated()
+function tracker_on_accessibility_updated(item_code)
+	if (item_code == "bombs") then
+		tracker_on_bomb_updated()
+	else
+		tracker_on_dungeon_entrance_updated()
+	end
+end
+
+function tracker_on_dungeon_entrance_updated()
 	for dungeon,_ in pairs(dungeon_index) do
 		for entrance,_ in pairs(dungeon_index) do
 			if has(dungeon .. "_from_" .. entrance) then
@@ -1720,6 +1729,9 @@ function tracker_on_accessibility_updated()
 			end
 		end
 	end
+end
+
+function tracker_on_portal_entrance_updated()
 	-- for portal,_ in pairs(portal_holodrum_index) do
 	-- 	for access,_ in pairs(portal_subrosia_index) do
 	-- 		if has(portal .. "_" .. access) then
@@ -1730,4 +1742,16 @@ function tracker_on_accessibility_updated()
 	-- 		end
 	-- 	end
 	-- end
+end
+
+PreviousBombCount = 0
+
+function tracker_on_bomb_updated()
+	local bombs = Tracker:FindObjectForCode("bombs")
+	if bombs then
+		if bombs.AcquiredCount == 89 then
+			bombs.AcquiredCount = 90
+		end
+		PreviousBombCount = bombs.AcquiredCount
+	end
 end
