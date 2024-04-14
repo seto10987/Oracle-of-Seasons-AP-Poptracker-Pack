@@ -2,6 +2,16 @@ function has(item)
   return Tracker:ProviderCountForCode(item) == 1
 end
 
+function checkRequirements(reference, check_count)
+    local reqCount = Tracker:ProviderCountForCode(reference)
+    local count = Tracker:ProviderCountForCode(check_count)
+
+    if count >= reqCount then
+        return true
+    else
+        return false
+    end
+end
 -- WEIRD LOGIC CHECKS
 
 -- Deprecated
@@ -17,8 +27,7 @@ function get_bombs()
 end
 
 function destroy_signs()
-	return has("bracelet") or
-	has("sword2") or 
+	return has("sword2") or 
 	has("biggoron_sword")
 end
 
@@ -89,7 +98,12 @@ end
 
 function use_seeds()
 	return has("satchel1") or
-	shoot_seeds()
+	has("slingshot1")
+end
+
+function use_seeds_combat()
+	return has("satchel2") or
+	has("slingshot")
 end
 
 function shoot_seeds_combat()
@@ -130,14 +144,23 @@ function destroy_bush()
 		has("bracelet") or
 		has("biggoron_sword") or
 
-	(has (("medium") or has("hard")) and
-		((use_seeds() and has("emberseeds")) or
-		(shoot_seeds() and has("galeseeds")) or
-		has("bombs")))
+	(has(("medium") or has("hard")) and 
+		((has("satchel1") or has("slingshot1")) and has("emberseeds")) or
+		(has("slingshot1") and has("galeseeds")) or
+		has("bombs"))
 end
 
 function destroy_bush_flute()
-	return destroy_bush() or any_flute()
+	return has("sword1") or
+	has("magicboomerang") or
+	has("bracelet") or
+	has("biggoron_sword") or
+	any_flute() or
+
+(has(("medium") or has("hard")) and 
+	((has("satchel1") or has("slingshot1")) and has("emberseeds")) or
+	(has("slingshot1") and has("galeseeds")) or
+	has("bombs"))
 end
 
 function destroy_pot()
@@ -235,6 +258,16 @@ function jump4()
 	has("hard") and (max_jump() >= 3 or (max_jump() >= 2 and has("bombs")))
 end
 
+function jump5()
+	return (has("casual") or has("medium")) and max_jump() >= 4 or
+	has("hard") and (max_jump() >= 4 or (max_jump() >= 3 and has("bombs")))
+end
+
+function jump6()
+	return has("medium") and max_jump() >= 4 or
+	has("hard") and (max_jump() >= 4 or (max_jump() >= 3 and has("bombs")))
+end
+
 function jump_liquid2()
 	return (has("casual") or has("medium")) and max_jump() >= 2 or
 	has("hard") and (max_jump() >= 2 or (max_jump() >= 1 and has("bombs")))
@@ -287,12 +320,8 @@ function kill_normal()
 		return 
 		sword_kill_punch() or
 		gale_kill() or
-		
-	(has ("casual") and 
-		has("satchel2") and (has("emberseeds") or has("scentseeds"))) or
-	
-	((has ("medium") or has("hard")) and
-		has("satchel2") and contact_seeds())
+	(has ("medium") or has("hard")) and
+		use_seeds() and has("emberseeds")
 end
 
 function kill_keese()
@@ -352,14 +381,13 @@ function kill_dodongo()
 end
 
 function kill_beetle()
-	return (has("shield1") or has("shovel")) and (has("satchel2") and (has("emberseeds") or has("scentseeds"))) or
+	return ((has("shield1") or has("shovel")) and (use_seeds_combat() and (has("emberseeds") or has("scentseeds"))) or
+		sword_kill_punch()) or
 		gale_kill() or
-		sword_kill_punch() or
 	
 	(has("medium") or has("hard")) and
-		((has("shield1") or has("shovel")) and has("satchel2") and contact_seeds())
+		((has("shield1") or has("shovel")) and (use_seeds_combat() and contact_seeds()) or sword_kill_punch())
 end
-
 
 function kill_moldorm()
 	return shoot_seeds() and has("scentseeds") or
@@ -571,9 +599,9 @@ end
 
 function d5_stump()
 	return (north_stump() and (max_jump() >= 1 or ricky() or moosh())) and
-	(has("winter") or has("north_winter"))  or
+	((has("winter") or has("north_winter"))  or
 	wet_lake() and (has("flippers") or (dimitri() and has("bracelet"))) or
-	furnace_exit() and has("flippers") and wet_lake()
+	furnace_exit() and has("flippers") and wet_lake())
 end
 
 function enter_d5()
@@ -597,7 +625,7 @@ end
 
 function graveyard()
 	return pirate_ship() and
-	(jump2() or
+	(jump3() or
 	has("coast_summer") or
 	has("bombs") and max_jump() >= 1 and has("summer"))
 end
@@ -613,14 +641,16 @@ end
 -- SUBURBS + WOODS OF WINTER
 
 function suburbs_stump_south()
-	return torches() or
+	return use_seeds() and has("emberseeds") or
 	scent_tree() and cross_natzu() and cross_water_suburbs() or
-	suburbs_exit() and destroy_bush()
+	suburbs_exit() and destroy_bush() or
+	exit_d2_b() and destroy_bush_flute() and cross_water_suburbs()
 end
 
 function suburbs_stump_north()
-    return ((torches() or (suburbs_exit() and destroy_bush())) and cross_water_suburbs()) or
-	scent_tree() and cross_natzu()
+    return (((use_seeds() and has("emberseeds")) or (suburbs_exit() and destroy_bush())) and cross_water_suburbs()) or
+	scent_tree() and cross_natzu() or
+	exit_d2_b() and destroy_bush_flute()
 end
 
 function cross_water_suburbs()
@@ -629,7 +659,8 @@ end
 
 function mystery_tree()
 	return suburbs_stump_north() and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or
-	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or moosh())))
+	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or moosh()))) or
+	exit_d2_b() and destroy_bush_flute()
 end
 
 function wow_stump()
@@ -652,13 +683,39 @@ function d2_A()
 end
 
 function d2_B()
-	return has("bracelet") and has("shuffledungeonoff")
+	return (((((use_seeds() and has("emberseeds")) or (suburbs_exit() and destroy_bush())) and cross_water_suburbs()) or
+	scent_tree() and cross_natzu()) and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or
+	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or moosh())))) and has("bracelet") and has("d2_alt_entrance_vanilla")
+end
+
+function exit_d2_b()
+	return (has("shuffledungeonon") and
+		(has("d0_d2") or
+
+		has("d1_d2") and has("d1key") and destroy_bush_flute() or
+
+		has("d3_d2") and swamp_stump() and (has("summer") or has("swamp_summer")) or
+
+		has("d4_d2") and ((destroy_bush_flute() and (has("flippers") or jump_liquid4()) and has("shovel")) or mt_cucco_exit()) and has("winter") and max_jump() >= 1 and has("bracelet") and has("d4key") and has("summer") or
+
+		has("d5_d2") and d5_stump() and
+		(destroy_mushroom() or dimitri()) and (has("fall") or (has("north_fall") and (has("flippers") or (dimitri() and has("bracelet")) or (has("winter") and dimitri())) or 
+		(has("winter") and has("fall") and (max_jump() >= 1 or ricky() or moosh())))) or
+
+		has("d6_d2") and tarm_ruins() and destroy_mushroom() and
+		has("winter") and has("spring") and has("summer") and has("fall") and destroy_flower() and (has("shovel") or ((has("satchel1") or
+		has("slingshot1")) and has("emberseeds"))) or
+
+		has("d7_d2") and graveyard()) or
+
+		has("d8_d2") and enter_d8()) and 
+			torches() and kill_normal() and has("bracelet")
 end
 -- HOLODRUM PLAIN
 
 function scent_tree()
 	return north_stump() and (has("bracelet") or (has("flippers") and destroy_bush_flute()) or dimitri()) or
-	torches() and cross_water_suburbs() and (has("spring") or has("suburbs_spring")) and cross_natzu()
+	use_seeds() and has("emberseeds") and cross_water_suburbs() and (has("spring") or has("suburbs_spring")) and cross_natzu()
 end
 
 function plain_stump()
@@ -669,7 +726,7 @@ end
 -- SPOOL SWAMP
 
 function pegasus_tree()
-	return plain_stump() and (has("plain_summer") or has("summer") or jump3() or ricky() or moosh())
+	return plain_stump() and (has("plain_summer") or has("summer") or jump4() or ricky() or moosh())
 end
 
 function swamp_stump()
@@ -703,21 +760,21 @@ end
 function cross_natzu()
 	return ricky() or
 	has("natzu_dimitri") and max_jump() >= 1 and (dimitri() or has("flippers")) or
-	has("natzu_moosh") and (moosh() or (destroy_bush() and jump2()))
+	has("natzu_moosh") and (moosh() or (destroy_bush() and jump3()))
 end
 
 function natzu_to_moblin()
-	return (has("flippers") or jump_liquid4()) and
+	return ((has("flippers") or jump_liquid4()) and
 	(ricky() or
 	(has("natzu_dimitri") and (dimitri() or (has("flippers") and has("ring_swimmer")))) or
-	(has("natzu_moosh") and (moosh() or jump4())))
+	(has("natzu_moosh") and (moosh() or jump4()))))
 end
 
 function sunken_to_moblin()
-	return has("natzu_ricky") or
-	(has("natzu_dimitri") and (dimitri() or (has("flippers") and has("ring_swimmer")))) or
-	(has("natzu_moosh") and (moosh() or jump2())) and
-	(has("flippers") or jump_liquid4())
+	return (has("flippers") or jump_liquid4()) and
+	(has("natzu_ricky") or
+	(has("natzu_dimitri") and max_jump() >= 1 and ((dimitri() and has("bracelet")) or (has("flippers") and has("ring_swimmer")))) or
+	(has("natzu_moosh") and (moosh() or jump4())))
 end
 
 -- SUNKEN CITY
@@ -735,12 +792,14 @@ end
 -- MOUNT CUCCO
 
 function mount_cucco_stump()
-	return (((scent_tree() and cross_natzu()) or (torches() and cross_water_suburbs() and (has("spring") or has("suburbs_spring"))) and 
-	(has("flippers") or has("sunken_winter") or max_jump() >= 1)) and has("flippers") and (has("sunken_summer") or has("summer"))) or
-	scent_tree() and (has("flippers") or jump_liquid4()) and has("bracelet") and (has("shovel") or moosh()) or
-	mt_cucco_exit() or
-	reenter_village()
+	return 
+		(((suburbs_exit() and cross_water_suburbs()) or suburbs_stump_north()) and (has("spring") or has("suburbs_spring")) and has("flippers") and (has("sunken_summer") or has("summer")))
+	
+	or
+	(scent_tree() and (has("bracelet") and has("shovel") and (has("flippers") or jump_liquid4())) or (cross_natzu() and has("flippers") and (has("sunken_summer") or has("summer")))) or
+	mt_cucco_exit()
 end
+
 
 function mount_cucco_spring()
 	return mount_cucco_stump() and (has("sunken_spring") or has("spring"))
@@ -756,14 +815,15 @@ end
 -- GORON MOUNTAIN
 
 function goron_mountain()
-	return scent_tree() and (has("flippers") or jump_liquid4()) or
-	mt_cucco_exit() and has("bracelet") and (has("shovel") or has("banana") or moosh())
+	return (scent_tree() and (has("flippers") or jump_liquid4())) or
+	(mount_cucco_stump() and has("bracelet") and (has("shovel") or has("banana")))
 end
 
 -- TARM RUINS
 
 function jewel_check()
 	return
+		has("jewelreq0") or
 
 		has("jewelreq1") and (has("squarejewel") or has("roundjewel") or has("pyramidjewel") or has("xjewel")) or
 
@@ -780,13 +840,18 @@ function tarm_ruins()
 	return pegasus_tree() and jewel_check()
 end
 
+function tarm_lynel()
+	return tarm_ruins() and (has("winter") and (has("spring") or has("summer") or has("fall")) and ((has("summer") or has("temple_summer")) or ((has("fall") or has("temple_fall")) and max_jump() >= 1 and has("boomerang2"))))
+end
 function tarm_tree()
-	return tarm_ruins() and destroy_mushroom() and
+	return tarm_ruins() and (has("boomerang2") or has("bracelet")) and
 	has("winter") and has("spring") and has("summer") and has("fall")
 end
 
 function enter_d6()
-	return tarm_tree() and destroy_flower() and (has("shovel") or (use_seeds() and has("emberseeds")))
+	return tarm_ruins() and (has("boomerang2") or has("bracelet")) and
+	has("winter") and has("spring") and has("summer") and has("fall") and destroy_flower() and (has("shovel") or ((has("satchel1") or
+	has("slingshot1")) and has("emberseeds")))
 end
 
 
@@ -794,7 +859,7 @@ end
 
 function desert()
 	return suburbs_stump_south() and 
-	pirate_ship() 
+	pirates_exit() 
 end
 
 
@@ -805,60 +870,292 @@ end
 -- TEMPLE REMAINS
 
 function temple_remains()
-	return scent_tree() and jump2() or
-		goron_mountain() and jump2() and (jump_liquid4() or has("flippers"))
+	return scent_tree() and jump3() or
+		mount_cucco_stump() and has("bracelet") and (has("shovel") or has("banana")) and jump3() and (jump_liquid4() or has("flippers"))
 end
 
 function destroyed_remains()
-	return (portal_remains_enter() or reenter_volcano()) and
-		volcano() and has("bombs")
+	return (volcano() or reenter_volcano()) and has("bombs")
 end
 
 function enter_d8()
 	return destroyed_remains() and portal_d8_enter() and has("portalshuffleoff") or
 		(d8() or reenter_d8()) and has("portalshuffleon")
-
 end
 
--- FULL CLEAR CHECKS --
+-- DUNGEON CHECKS --
+
+function enter_d0()
+	return true
+end
+
+function d0()
+	return has("shuffledungeonoff") and enter_d0() or
+	has("shuffledungeonon") and
+		(has("d0_d0") and enter_d0() or
+		has("d1_d0") and enter_d1() or
+		has("d2_d0") and enter_d2() or
+		has("d3_d0") and enter_d3() or
+		has("d4_d0") and enter_d4() or
+		has("d5_d0") and enter_d5() or
+		has("d6_d0") and enter_d6() or
+		has("d7_d0") and enter_d7() or
+		has("d8_d0") and enter_d8())
+end
+
+function d1()
+	return has("shuffledungeonoff") and enter_d1() or
+	has("shuffledungeonon") and
+		(has("d0_d1") and enter_d0() or
+		has("d1_d1") and enter_d1() or
+		has("d2_d1") and enter_d2() or
+		has("d3_d1") and enter_d3() or
+		has("d4_d1") and enter_d4() or
+		has("d5_d1") and enter_d5() or
+		has("d6_d1") and enter_d6() or
+		has("d7_d1") and enter_d7() or
+		has("d8_d1") and enter_d8())
+end
+
+function d2()
+	return has("shuffledungeonoff") and enter_d2() or
+	has("shuffledungeonon") and
+		(has("d0_d2") and enter_d0() or
+		has("d1_d2") and enter_d1() or
+		has("d2_d2") and enter_d2() or
+		has("d3_d2") and enter_d3() or
+		has("d4_d2") and enter_d4() or
+		has("d5_d2") and enter_d5() or
+		has("d6_d2") and enter_d6() or
+		has("d7_d2") and enter_d7() or
+		has("d8_d2") and enter_d8())
+end
+
+function d3()
+	return has("shuffledungeonoff") and enter_d3() or
+	has("shuffledungeonon") and
+		(has("d0_d3") and enter_d0() or
+		has("d1_d3") and enter_d1() or
+		has("d2_d3") and enter_d2() or
+		has("d3_d3") and enter_d3() or
+		has("d4_d3") and enter_d4() or
+		has("d5_d3") and enter_d5() or
+		has("d6_d3") and enter_d6() or
+		has("d7_d3") and enter_d7() or
+		has("d8_d3") and enter_d8())
+end
+
+function d4()
+	return has("shuffledungeonoff") and enter_d4() or
+	has("shuffledungeonon") and
+		(has("d0_d4") and enter_d0() or
+		has("d1_d4") and enter_d1() or
+		has("d2_d4") and enter_d2() or
+		has("d3_d4") and enter_d3() or
+		has("d4_d4") and enter_d4() or
+		has("d5_d4") and enter_d5() or
+		has("d6_d4") and enter_d6() or
+		has("d7_d4") and enter_d7() or
+		has("d8_d4") and enter_d8())
+end
+
+function d5()
+	return has("shuffledungeonoff") and enter_d5() or
+	has("shuffledungeonon") and
+		(has("d0_d5") and enter_d0() or
+		has("d1_d5") and enter_d1() or
+		has("d2_d5") and enter_d2() or
+		has("d3_d5") and enter_d3() or
+		has("d4_d5") and enter_d4() or
+		has("d5_d5") and enter_d5() or
+		has("d6_d5") and enter_d6() or
+		has("d7_d5") and enter_d7() or
+		has("d8_d5") and enter_d8())
+end
+
+function d6()
+	return has("shuffledungeonoff") and enter_d6() or
+	has("shuffledungeonon") and
+		(has("d0_d6") and enter_d0() or
+		has("d1_d6") and enter_d1() or
+		has("d2_d6") and enter_d2() or
+		has("d3_d6") and enter_d3() or
+		has("d4_d6") and enter_d4() or
+		has("d5_d6") and enter_d5() or
+		has("d6_d6") and enter_d6() or
+		has("d7_d6") and enter_d7() or
+		has("d8_d6") and enter_d8())
+end
+
+function d7()
+	return has("shuffledungeonoff") and enter_d7() or
+	has("shuffledungeonon") and
+		(has("d0_d7") and enter_d0() or
+		has("d1_d7") and enter_d1() or
+		has("d2_d7") and enter_d2() or
+		has("d3_d7") and enter_d3() or
+		has("d4_d7") and enter_d4() or
+		has("d5_d7") and enter_d5() or
+		has("d6_d7") and enter_d6() or
+		has("d7_d7") and enter_d7() or
+		has("d8_d7") and enter_d8())
+end
+
+function d8()
+	return has("shuffledungeonoff") and enter_d8() or
+	has("shuffledungeonon") and
+		(has("d0_d8") and enter_d0() or
+		has("d1_d8") and enter_d1() or
+		has("d2_d8") and enter_d2() or
+		has("d3_d8") and enter_d3() or
+		has("d4_d8") and enter_d4() or
+		has("d5_d8") and enter_d5() or
+		has("d6_d8") and enter_d6() or
+		has("d7_d8") and enter_d7() or
+		has("d8_d8") and enter_d8())
+end
+
+function d1keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d1sk") >= 2 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+
+function d2keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d2sk") >= 3 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+
+function d3keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d3sk") >= 2 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+
+function d4keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d4sk") >= 5 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+
+function d5keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d5sk") >= 5 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+
+function d6keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d6sk") >= 3 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+
+function d7keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d7sk") >= 5 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
+
+function d8keys()
+    if Tracker:FindObjectForCode("small_keysanity").CurrentStage == 1 then
+		if Tracker:ProviderCountForCode("d8sk") >= 7 then  
+            return true
+        else
+            return false
+        end
+    else
+        return true
+    end
+end
 
 function d1clear()
-	return use_seeds() and has("emberseeds") and 
+	return (has("small_keysanity_off") or (has("small_keysanity_on") and (d1keys() or has("d1_master_key")))) and 
+	(has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d1bk") or (has("d1_master_key") and has("master_keys_both")))))
+	and use_seeds() and has("emberseeds") and 
 	has("bombs") and kill_goriyabros() and kill_aquamentus()
 end
 
 function d2clear()
-	return use_seeds() and has("emberseeds") and 
+	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d2keys() or has("d2_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d2bk") or (has("d2_master_key") and has("master_keys_both"))))))  
+	and use_seeds() and has("emberseeds") and 
 	has("bracelet") and has("bombs")
 end
 
 function d3clear()
-	return kill_beetle() and max_jump() >= 1 and 
+	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d3keys() or has("d3_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d3bk") or (has("d3_master_key") and has("master_keys_both"))))))  
+	and kill_beetle() and max_jump() >= 1 and 
 	has("bombs") and has("bracelet") and 
 	kill_omuai() and kill_mothula()
 end
 
 function d4clear()
-	return has("flippers") and destroy_pot() and 
+	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d4keys() or has("d4_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d4bk") or (has("d4_master_key") and has("master_keys_both"))))))  
+	and has("flippers") and has("bracelet") and 
 	has("bombs") and max_jump() >= 1 and 
 	shoot_seeds() and has("emberseeds") and 
 	kill_agunima() and kill_gohma()
 end
 
 function d5clear()
-	return has("magnet") and kill_syger() and 
+	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d5keys() or has("d5_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d5bk") or (has("d5_master_key") and has("master_keys_both"))))))  
+	and has("magnet") and kill_syger() and 
 	max_jump() >= 1 and (max_jump() >= 4 or has("flippers"))
 end
 
 function d6clear()
-	return has("magnet") and max_jump() >= 1 and
+	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d6keys() or has("d6_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d6bk") or (has("d6_master_key") and has("master_keys_both"))))))  
+	and has("magnet") and max_jump() >= 1 and
 	has("bombs") and has("magicboomerang") and
 	shoot_seeds() and has("emberseeds") and destroy_crystal() and
 	sword_kill_punch() and kill_manhandla()
 end
 
 function d7clear()
-	return jump3() and has("bombs") and has("bracelet") and
+	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d7keys() or has("d7_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d7bk") or (has("d7_master_key") and has("master_keys_both"))))))  
+	and jump3() and has("bombs") and has("bracelet") and
 	has("satchel1") and has("pegasusseeds") and
 	shoot_seeds() and has("emberseeds") and has("magnet") and
 	has("flippers") and kill_magunesu() and
@@ -866,806 +1163,168 @@ function d7clear()
 end
 
 function d8clear()
-	return has("slingshot2") and max_jump() >= 3 and
+	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d8keys() or has("d8_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d8bk") or (has("d8_master_key") and has("master_keys_both"))))))  
+	and has("slingshot2") and max_jump() >= 3 and
 	has("magnet") and has("bombs") and
 	has("emberseeds") and has("bracelet") and kill_magunesu() and
 	(has("magicboomerang") or max_jump() >= 4) and kill_polsvoice_pit() and 
 	torches_d8() and kill_medusahead() 
 end
 
--- SUBROSIA NAVIGATION
-
-function portal_suburbs_enter()
-	return torches() or
-	destroy_bush_flute() and (has("flippers") or (has("bracelet") or max_jump() >= 1)) and 
-	cross_natzu() and cross_water_suburbs()
+function has(item, amount)
+	local count = Tracker:ProviderCountForCode(item)
+	amount = tonumber(amount)
+	if not amount then
+	  return count > 0
+	else
+	  return count == amount
+	end
 end
 
-function portal_swamp_enter()
-	return ((((scent_tree() and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
-	north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute()) and (has("plain_summer") or has("summer") or jump3() or ricky() or moosh())) and hit_lever() and has("bracelet") and has("d3key") and 
-	((has("satchel1") and has("pegasusseeds")) or has("flippers") or max_jump() >= 1)) and ((has("swamp_summer") or has("swamp_winter") or has("swamp_fall") or
-	((((scent_tree() and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
-	north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute()) and (has("plain_summer") or has("summer") or jump3() or ricky() or moosh())) and hit_lever() and has("bracelet") and has("d3key") and 
-	((has("satchel1") and has("pegasusseeds")) or has("flippers") or max_jump() >= 1)) and (has("summer") or has("winter") or has("fall")))) and (ricky() or dimitri() or jump2() or has("flippers"))) or
-	(has("swamp_spring") or has("spring")) and has("flippers")or 
-	(scent_tree() and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
-	north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute()) and (dimitri() or has("flippers"))) and has("bracelet") and
-		(any_flute() or has("swamp_summer") or has("swamp_fall") or
-		((((scent_tree() and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
-		north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute()) and (has("plain_summer") or has("summer") or jump3() or ricky() or moosh())) and hit_lever() and has("bracelet") and has("d3key") and 
-		((has("satchel1") and has("pegasusseeds")) or has("flippers") or max_jump() >= 1)) and (has("summer") or has("fall"))) or
-		(has("shovel") and (has("swamp_winter") or ((((scent_tree() and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
-		north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute()) and (has("plain_summer") or has("summer") or jump3() or ricky() or moosh())) and hit_lever() and has("bracelet") and has("d3key") and 
-		((has("satchel1") and has("pegasusseeds")) or has("flippers") or max_jump() >= 1)) and has("winter")))) or
-		(destroy_flower() and (has("swamp_spring") or ((((scent_tree() and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
-		north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute()) and (has("plain_summer") or has("summer") or jump3() or ricky() or moosh())) and hit_lever() and has("bracelet") and has("d3key") and 
-		((has("satchel1") and has("pegasusseeds")) or has("flippers") or max_jump() >= 1)) and has("spring")))))
+function dungeon_settings()
+    local dungeon_list = {"d0","d1","d2","d3","d4","d5","d6","d7","d8"}
+	if Tracker:FindObjectForCode("dungeonshuffle").CurrentStage == 0 then
+        for index, dungeon in pairs(dungeon_list) do
+            Tracker:FindObjectForCode(dungeon.."_ent_selector").CurrentStage = index
+        end
+	else
+        for index, dungeon in pairs(dungeon_list) do
+            Tracker:FindObjectForCode(dungeon.."_ent_selector").CurrentStage = 0
+        end
+	end
 end
 
-function portal_lake_enter()
-	return north_stump() and
-		(((has("north_winter") or has("north_spring") or has("north_fall") or
-		has("winter") or has("spring") or has("fall")) and (max_jump() >= 1 or ricky() or moosh()) and
-		(has("flippers") or (dimitri() and has("bracelet")))) or
-		(jump_liquid4() and (has("north_winter") or has("winter"))))
+function display_dungeons()
+	if Tracker:FindObjectForCode("dungeonshuffle").CurrentStage == 1 then
+		if Tracker:FindObjectForCode("fill_dungeons").CurrentStage == 1 then
+			Tracker:FindObjectForCode("d0_ent_selector").CurrentStage = Tracker:FindObjectForCode("d0_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d1_ent_selector").CurrentStage = Tracker:FindObjectForCode("d1_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d2_ent_selector").CurrentStage = Tracker:FindObjectForCode("d2_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d3_ent_selector").CurrentStage = Tracker:FindObjectForCode("d3_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d4_ent_selector").CurrentStage = Tracker:FindObjectForCode("d4_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d5_ent_selector").CurrentStage = Tracker:FindObjectForCode("d5_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d6_ent_selector").CurrentStage = Tracker:FindObjectForCode("d6_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d7_ent_selector").CurrentStage = Tracker:FindObjectForCode("d7_ent_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d8_ent_selector").CurrentStage = Tracker:FindObjectForCode("d8_ent_selector_hidden").CurrentStage
+		end
+	end
 end
 
-function portal_mtcucco_enter()
-	return max_jump() >= 1 and (((scent_tree() and cross_natzu()) or (torches() and cross_water_suburbs() and (has("spring") or has("suburbs_spring"))) and 
-	(has("flippers") or has("sunken_winter") or max_jump() >= 1)) and has("flippers") and (has("sunken_summer") or has("summer")) or
-	scent_tree() and (has("flippers") or jump_liquid4()) and has("bracelet") and (has("shovel") or moosh()))
-end
-	
-function portal_village_enter()
-	return has("magicboomerang") or
-		jump4()
-end
-
-function portal_remains_enter()
-	return scent_tree() and jump2() and
-	
-	((has("temple_winter") or has("winter")) and
-		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
-		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or --what to do in spring
-		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or --what to do in summer
-		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) --what to do in autumn
-end
-
-function portal_d8_enter()
-	return scent_tree() and jump2() and
-	
-	((has("temple_winter") or has("winter")) and
-		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
-		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or --what to do in spring
-		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or --what to do in summer
-		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and --what to do in autumn(has("temple_summer") or has("summer")) and
-		(jump_liquid4() or 
-		(jump_liquid2() and has("glove")))
-end
-
-function mountain()
-	return portal_suburbs_enter() and (has("suburbs_mountainsub") or has("portalshuffleoff")) or
-		portal_swamp_enter() and has("swamp_mountainsub") or
-		portal_lake_enter() and has("lake_mountainsub") or
-		portal_mtcucco_enter() and has("mtcucco_mountainsub") or
-		portal_village_enter() and has("village_mountainsub") or
-		portal_remains_enter() and has("remains_mountainsub") or
-		portal_d8_enter() and has("d8_mountainsub")
-end
-
-function market()
-	return portal_suburbs_enter() and has("suburbs_marketsub") or
-		portal_swamp_enter() and (has("swamp_marketsub") or has("portalshuffleoff")) or
-		portal_lake_enter() and has("lake_marketsub") or
-		portal_mtcucco_enter() and has("mtcucco_marketsub") or
-		portal_village_enter() and has("village_marketsub") or
-		portal_remains_enter() and has("remains_marketsub") or
-		portal_d8_enter() and has("d8_marketsub")
-end
-
-function furnace()
-	return portal_suburbs_enter() and has("suburbs_furnacesub") or
-		portal_swamp_enter() and has("swamp_furnacesub") or
-		portal_lake_enter() and (has("lake_furnacesub") or has("portalshuffleoff")) or
-		portal_mtcucco_enter() and has("mtcucco_furnacesub") or
-		portal_village_enter() and has("village_furnacesub") or
-		portal_remains_enter() and has("remains_furnacesub") or
-		portal_d8_enter() and has("d8_furnacesub")
+function seasons_settings()
+    local region_list = {"north_horon","suburbs","wow","plain","swamp","sunken", "coast", "remains"}
+	if Tracker:FindObjectForCode("default_seasons").CurrentStage == 0 then
+		Tracker:FindObjectForCode("north_horon_season").CurrentStage = 3
+		Tracker:FindObjectForCode("suburbs_season").CurrentStage = 2
+		Tracker:FindObjectForCode("wow_season").CurrentStage = 1
+		Tracker:FindObjectForCode("plain_season").CurrentStage = 0
+		Tracker:FindObjectForCode("swamp_season").CurrentStage = 2
+		Tracker:FindObjectForCode("sunken_season").CurrentStage = 1
+		Tracker:FindObjectForCode("coast_season").CurrentStage = 3
+		Tracker:FindObjectForCode("remains_season").CurrentStage = 3
+		Tracker:FindObjectForCode("horon_village_season").CurrentStage = 4
+	end
+	if Tracker:FindObjectForCode("default_seasons").CurrentStage == 1 then
+        for index, region in pairs(region_list) do
+            Tracker:FindObjectForCode(region.."_season").CurrentStage = 4
+            Tracker:FindObjectForCode("horon_village_season").CurrentStage = 4
+		end
+	elseif Tracker:FindObjectForCode("default_seasons").CurrentStage == 2 then
+			for index, region in pairs(region_list) do
+				Tracker:FindObjectForCode(region.."_season").CurrentStage = 4
+				Tracker:FindObjectForCode("horon_village_season").CurrentStage = 4
+			end
+	elseif Tracker:FindObjectForCode("default_seasons").CurrentStage == 3 then
+        for index, region in pairs(region_list) do
+            Tracker:FindObjectForCode(region.."_season").CurrentStage = 0
+				if Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage == 1 then
+					Tracker:FindObjectForCode("horon_village_season").CurrentStage = 0
+				end
+			end
+	elseif Tracker:FindObjectForCode("default_seasons").CurrentStage == 4 then
+        for index, region in pairs(region_list) do
+            Tracker:FindObjectForCode(region.."_season").CurrentStage = 1
+			if Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage == 1 then
+				Tracker:FindObjectForCode("horon_village_season").CurrentStage = 1
+			end
+        end
+	elseif Tracker:FindObjectForCode("default_seasons").CurrentStage == 5 then
+        for index, region in pairs(region_list) do
+            Tracker:FindObjectForCode(region.."_season").CurrentStage = 2
+			if Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage == 1 then
+				Tracker:FindObjectForCode("horon_village_season").CurrentStage = 2
+			end
+        end
+	elseif Tracker:FindObjectForCode("default_seasons").CurrentStage == 6 then
+        for index, region in pairs(region_list) do
+            Tracker:FindObjectForCode(region.."_season").CurrentStage = 3
+			if Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage == 1 then
+				Tracker:FindObjectForCode("horon_village_season").CurrentStage = 3
+			end
+        end
+	end
 end
 
-function village()
-	return portal_suburbs_enter() and has("suburbs_mtcuccosub") or
-		portal_swamp_enter() and has("swamp_mtcuccosub") or
-		portal_lake_enter() and has("lake_mtcuccosub") or
-		portal_mtcucco_enter() and (has("mtcucco_mtcuccosub") or has("portalshuffleoff")) or
-		portal_village_enter() and has("village_mtcuccosub") or
-		portal_remains_enter() and has("remains_mtcuccosub") or
-		portal_d8_enter() and has("d8_mtcuccosub")
+function display_seasons()
+	if Tracker:FindObjectForCode("default_seasons").CurrentStage == 1 then
+		if Tracker:FindObjectForCode("fill_seasons").CurrentStage == 1 then
+		
+			Tracker:FindObjectForCode("north_horon_season").CurrentStage = Tracker:FindObjectForCode("north_horon_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("horon_village_season").CurrentStage = Tracker:FindObjectForCode("horon_village_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("suburbs_season").CurrentStage = Tracker:FindObjectForCode("suburbs_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("wow_season").CurrentStage = Tracker:FindObjectForCode("wow_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("plain_season").CurrentStage = Tracker:FindObjectForCode("plain_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("swamp_season").CurrentStage = Tracker:FindObjectForCode("swamp_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("sunken_season").CurrentStage = Tracker:FindObjectForCode("sunken_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("coast_season").CurrentStage = Tracker:FindObjectForCode("coast_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("remains_season").CurrentStage = Tracker:FindObjectForCode("remains_season_hidden").CurrentStage
+    	end
+	end
+	if Tracker:FindObjectForCode("default_seasons").CurrentStage == 2 then
+		if Tracker:FindObjectForCode("fill_seasons").CurrentStage == 1 then
+		
+			Tracker:FindObjectForCode("north_horon_season").CurrentStage = Tracker:FindObjectForCode("north_horon_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("horon_village_season").CurrentStage = Tracker:FindObjectForCode("horon_village_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("suburbs_season").CurrentStage = Tracker:FindObjectForCode("suburbs_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("wow_season").CurrentStage = Tracker:FindObjectForCode("wow_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("plain_season").CurrentStage = Tracker:FindObjectForCode("plain_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("swamp_season").CurrentStage = Tracker:FindObjectForCode("swamp_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("sunken_season").CurrentStage = Tracker:FindObjectForCode("sunken_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("coast_season").CurrentStage = Tracker:FindObjectForCode("coast_season_hidden").CurrentStage
+			Tracker:FindObjectForCode("remains_season").CurrentStage = Tracker:FindObjectForCode("remains_season_hidden").CurrentStage
+		end
+	end
 end
 
-function pirates()
-	return portal_suburbs_enter() and has("suburbs_piratessub") or
-		portal_swamp_enter() and has("swamp_piratessub") or
-		portal_lake_enter() and has("lake_piratessub") or
-		portal_mtcucco_enter() and has("mtcucco_piratessub") or
-		portal_village_enter() and (has("village_piratessub") or has("portalshuffleoff")) or
-		portal_remains_enter() and has("remains_piratessub") or
-		portal_d8_enter() and has("d8_piratessub")
+function vanilla_portals()
+    local portal_list = {"suburbs","swamp","lake","mtcucco","horon","remains","d8"}
+	if Tracker:FindObjectForCode("portalshuffle").CurrentStage == 0 then
+        for index, portal in pairs(portal_list) do
+            Tracker:FindObjectForCode(portal.."_portal_selector").CurrentStage = index
+        end
+	else
+        for index, portal in pairs(portal_list) do
+            Tracker:FindObjectForCode(portal.."_portal_selector").CurrentStage = 0
+        end
+	end
 end
 
-function volcano()
-	return portal_suburbs_enter() and has("suburbs_volcanosub") or
-		portal_swamp_enter() and has("swamp_volcanosub") or
-		portal_lake_enter() and has("lake_volcanosub") or
-		portal_mtcucco_enter() and has("mtcucco_volcanosub") or
-		portal_village_enter() and has("village_volcanosub") or
-		portal_remains_enter() and (has("remains_volcanosub") or has("portalshuffleoff")) or
-		portal_d8_enter() and has("d8_volcanosub")
+function display_portals()
+	if Tracker:FindObjectForCode("fill_portals").CurrentStage == 1 then
+		if Tracker:FindObjectForCode("portalshuffle").CurrentStage == 1 then
+			Tracker:FindObjectForCode("suburbs_portal_selector").CurrentStage = Tracker:FindObjectForCode("suburbs_portal_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("swamp_portal_selector").CurrentStage = Tracker:FindObjectForCode("swamp_portal_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("lake_portal_selector").CurrentStage = Tracker:FindObjectForCode("lake_portal_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("mtcucco_portal_selector").CurrentStage = Tracker:FindObjectForCode("mtcucco_portal_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("horon_portal_selector").CurrentStage = Tracker:FindObjectForCode("horon_portal_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("remains_portal_selector").CurrentStage = Tracker:FindObjectForCode("remains_portal_selector_hidden").CurrentStage
+			Tracker:FindObjectForCode("d8_portal_selector").CurrentStage = Tracker:FindObjectForCode("d8_portal_selector_hidden").CurrentStage
+        end
+	end
 end
 
-function d8()
-	return portal_suburbs_enter() and has("suburbs_d8sub") or
-		portal_swamp_enter() and has("swamp_d8sub") or
-		portal_lake_enter() and has("lake_d8sub") or
-		portal_mtcucco_enter() and has("mtcucco_d8sub") or
-		portal_village_enter() and has("village_d8sub") or
-		portal_remains_enter() and has("remains_d8sub") or
-		portal_d8_enter() and (has("d8_d8sub") or has("portalshuffleoff"))
-end
-
-function mountain_to_market()
-	return max_jump() >= 1
-end
-
-function mountain_to_furnace()
-	return jump4() or
-	(max_jump() >= 1 and has("magnet"))
-end
-
-function mountain_to_village()
-	return jump_liquid4()
-end
-
-function mountain_to_pirates()
-	return jump_liquid4()
-end
-
-function market_to_mountain()
-	return max_jump() >= 1 or
-		has("ribbon")
-end
-
-function market_to_furnace()
-	return jump4() or
-	(max_jump() >= 1 and has("magnet"))
-end
-
-function market_to_village()
-	return jump_liquid4()
-end
-
-function market_to_pirates()
-	return jump_liquid4()
-end
-
-function furnace_to_mountain()
-	return max_jump() >= 1 and
-	 (jump4() or
-	 (jump2() and has("bracelet") or
-	 has("magnet")))
-end
-
-function furnace_to_market()
-	return max_jump() >= 1 and
-	 (jump4() or
-	 ((jump2() and has("bracelet")) or
-	 has("magnet")))
-end
-
-function furnace_to_village()
-	return jump_liquid4()
-end
-
-function furnace_to_pirates()
-	return jump_liquid4()
-end
-
-function village_to_mountain()
-	return jump_liquid4() or
-		(has("bracelet") and (jump_liquid2() or has("magnet")))
-end
-
-function village_to_market()
-	return jump_liquid4() or
-		(has("bracelet") and (jump_liquid2() or has("magnet")))
-end
-
-function village_to_furnace()
-	return jump_liquid4() or
-		(has("bracelet") and (jump_liquid2() or has("magnet")))
-end
-
-function village_to_pirates()
-	return max_jump() >= 1
-end
-
-function pirates_to_mountain()
-	return jump_liquid4() or
-		(has("bracelet") and (jump_liquid2() or has("magnet")))
-end
-
-function pirates_to_market()
-	return jump_liquid4() or
-		(has("bracelet") and (jump_liquid2() or has("magnet")))
-end
-
-function pirates_to_furnace()
-	return jump_liquid4() or
-		(has("bracelet") and (jump_liquid2() or has("magnet")))
-end
-
-function pirates_to_village()
-	return max_jump() >= 1
-end
-
-function volcano_to_mountain()
-	return jump_liquid3() and has("bracelet")
-end
-
-function volcano_to_market()
-	return jump_liquid3() and has("bracelet")
-end
-
-function volcano_to_furnace()
-	return jump_liquid3() and has("bracelet")
-end
-
-function volcano_to_village()
-	return jump_liquid4() and has("bracelet")
-end
-
-function volcano_to_pirates()
-	return jump_liquid4() and has("bracelet")
-end
-
-function mountain_exit()
-	return market() and market_to_mountain() or
-	furnace() and furnace_to_mountain() or
-	village() and village_to_mountain() or
-	pirates() and pirates_to_mountain() or
-	volcano() and volcano_to_mountain()
-end
-
-function market_exit()
-	return mountain() and mountain_to_market() or
-	furnace() and furnace_to_market() or
-	village() and village_to_market() or
-	pirates() and pirates_to_market() or
-	volcano() and volcano_to_market()
-end
-
-function furnace_exit()
-	return mountain() and mountain_to_furnace() or
-	market() and market_to_furnace() or
-	village() and village_to_furnace() or
-	pirates() and pirates_to_furnace() or
-	volcano() and volcano_to_furnace()
-end
-
-function village_exit()
-	return mountain() and mountain_to_village() or
-	market() and market_to_village() or
-	furnace() and furnace_to_village() or
-	pirates() and pirates_to_village() or
-	volcano() and volcano_to_village()
-end
-
-function pirates_exit()
-	return mountain() and mountain_to_pirates() or
-	market() and market_to_pirates() or
-	furnace() and furnace_to_pirates() or
-	village() and village_to_pirates() or
-	volcano() and volcano_to_pirates()
-end
-
-function suburbs_exit()
-	return
-		(mountain_exit() and (has("suburbs_mountainsub") or has("portalshuffleoff"))) or
-		(market_exit() and (has("suburbs_marketsub") and has("portalshuffleon"))) or
-		(furnace_exit() and (has("suburbs_furnacesub") and has("portalshuffleon"))) or
-		(village_exit() and (has("suburbs_villagesub") and has("portalshuffleon"))) or
-		(pirates_exit() and (has("suburbs_piratessub") and has("portalshuffleon")))
-end
-
-function swamp_exit()
-	return
-		(mountain_exit() and (has("swamp_mountainsub") and has("portalshuffleon"))) or
-		(market_exit() and (has("swamp_marketsub") or has("portalshuffleoff"))) or
-		(furnace_exit() and (has("swamp_furnacesub") and has("portalshuffleon"))) or
-		(village_exit() and (has("swamp_villagesub") and has("portalshuffleon"))) or
-		(pirates_exit() and (has("swamp_piratessub") and has("portalshuffleon")))
-end
-
-function lake_exit()
-	return
-		(mountain_exit() and (has("lake_mountainsub") and has("portalshuffleon"))) or
-		(market_exit() and (has("lake_marketsub") and has("portalshuffleon"))) or
-		(furnace_exit() and (has("lake_furnacesub") or has("portalshuffleoff"))) or
-		(village_exit() and (has("lake_villagesub") and has("portalshuffleon"))) or
-		(pirates_exit() and (has("lake_piratessub") and has("portalshuffleon")))
-end
-
-function mt_cucco_exit()
-	return
-		(mountain_exit() and (has("mt_cucco_mountainsub") and has("portalshuffleon"))) or
-		(market_exit() and (has("mt_cucco_marketsub") and has("portalshuffleon"))) or
-		(furnace_exit() and (has("mt_cucco_furnacesub") and has("portalshuffleon"))) or
-		(village_exit() and (has("mt_cucco_villagesub") or has("portalshuffleoff"))) or
-		(pirates_exit() and (has("mt_cucco_piratessub") and has("portalshuffleon")))
-end
-
-function horon_exit()
-	return
-		(mountain_exit() and (has("horon_mountainsub") and has("portalshuffleon"))) or
-		(market_exit() and (has("horon_marketsub") and has("portalshuffleon"))) or
-		(furnace_exit() and (has("horon_furnacesub") and has("portalshuffleon"))) or
-		(village_exit() and (has("horon_villagesub") and has("portalshuffleon"))) or
-		(pirates_exit() and (has("horon_piratessub") or has("portalshuffleoff")))
-end
-
-function remains_exit()
-	return
-		(mountain_exit() and (has("remains_mountainsub") and has("portalshuffleon"))) or
-		(market_exit() and (has("remains_marketsub") and has("portalshuffleon"))) or
-		(furnace_exit() and (has("remains_furnacesub") and has("portalshuffleon"))) or
-		(village_exit() and (has("remains_villagesub") and has("portalshuffleon"))) or
-		(pirates_exit() and (has("remains_piratessub") and has("portalshuffleon")))
-end
-
-function d8_exit()
-	return
-		(mountain_exit() and (has("d8_mountainsub") and has("portalshuffleon"))) or
-		(market_exit() and (has("d8_marketsub") and has("portalshuffleon"))) or
-		(furnace_exit() and (has("d8_furnacesub") and has("portalshuffleon"))) or
-		(village_exit() and (has("d8_villagesub") and has("portalshuffleon"))) or
-		(pirates_exit() and (has("d8_piratessub") and has("portalshuffleon")))
-end
-
-
--- function remains_reenter_mt_cucco_mountain()
--- 	return mt_cucco_exit() and has("mt_cucco_mountainsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or moosh())
--- end
-
--- function remains_reenter_mt_cucco_market()
--- 	return mt_cucco_exit() and has("mt_cucco_marketsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or moosh())
--- end
-
--- function remains_reenter_mt_cucco_furnace()
--- 	return mt_cucco_exit() and has("mt_cucco_furnacesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or moosh())
--- end
-
--- function remains_reenter_mt_cucco_village()
--- 	return mt_cucco_exit() and has("mt_cucco_villagesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or moosh())
--- end
-
--- function remains_reenter_mt_cucco_pirates()
--- 	return mt_cucco_exit() and has("mt_cucco_piratessub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or moosh())
--- end
-
--- function remains_reenter_mt_cucco_volcano()
--- 	return mt_cucco_exit() and has("mt_cucco_volcanosub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or moosh())
--- end
-
--- function remains_reenter_mt_cucco_d8()
--- 	return mt_cucco_exit() and has("mt_cucco_d8sub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or moosh())
--- end
-
-
--- function mt_cucco_reenter_remains_mountain()
--- 	return remains_exit() and has("remains_mountainsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))))
--- end
-
--- function mt_cucco_reenter_remains_market()
--- 	return remains_exit() and has("remains_marketsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))))
--- end
-
--- function mt_cucco_reenter_remains_furnace()
--- 	return remains_exit() and has("remains_furnacesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))))
--- end
-
--- function mt_cucco_reenter_remains_village()
--- 	return remains_exit() and has("remains_villagesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))))
--- end
-
--- function mt_cucco_reenter_remains_pirates()
--- 	return remains_exit() and has("remains_piratessub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))))
--- end
-
--- function mt_cucco_reenter_remains_volcano()
--- 	return remains_exit() and has("remains_volcanosub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))))
--- end
-
--- function mt_cucco_reenter_remains_d8()
--- 	return remains_exit() and has("remains_d8sub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter"))))
--- end
-
--- function mt_cucco_reenter_d8_mountain()
--- 	return mt_cucco_exit() and has("d8_mountainsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and
--- 		(has("temple_summer") or has("summer")) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function mt_cucco_reenter_d8_market()
--- 	return mt_cucco_exit() and has("d8_marketsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and
--- 		(has("temple_summer") or has("summer")) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function mt_cucco_reenter_d8_furnace()
--- 	return mt_cucco_exit() and has("d8_furnacesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and
--- 		(has("temple_summer") or has("summer")) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function mt_cucco_reenter_d8_village()
--- 	return mt_cucco_exit() and has("d8_villagesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and
--- 		(has("temple_summer") or has("summer")) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function mt_cucco_reenter_d8_pirates()
--- 	return mt_cucco_exit() and has("d8_piratessub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and
--- 		(has("temple_summer") or has("summer")) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function mt_cucco_reenter_d8_volcano()
--- 	return mt_cucco_exit() and has("d8_volcanosub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and
--- 		(has("temple_summer") or has("summer")) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function mt_cucco_reenter_d8_d8()
--- 	return mt_cucco_exit() and has("d8_d8sub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 	((has("temple_winter") or has("winter")) and
--- 		((has("shovel") and destroy_bush() and jump4()) or --what to do in winter
--- 		((has("temple_spring") or has("spring")) and destroy_flower() and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_summer") or has("summer")) and destroy_bush() and jump4() and has("winter")) or
--- 		((has("temple_fall") or has("fall")) and destroy_bush() and max_jump() >= 1 and has("winter")))) and
--- 		(has("temple_summer") or has("summer")) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_mt_cucco_mountain()
--- 	return d8_exit() and has("mt_cucco_mountainsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_mt_cucco_market()
--- 	return d8_exit() and has("mt_cucco_marketsub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_mt_cucco_furnace()
--- 	return d8_exit() and has("mt_cucco_furnacesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_mt_cucco_village()
--- 	return d8_exit() and has("mt_cucco_villagesub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_mt_cucco_pirates()
--- 	return d8_exit() and has("mt_cucco_piratessub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_mt_cucco_volcano()
--- 	return d8_exit() and has("mt_cucco_volcanosub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_mt_cucco_d8()
--- 	return d8_exit() and has("mt_cucco_d8sub") and has("bracelet") and jump2() and (jump_liquid4() or has("flippers")) and (has("shovel") or has("banana") or moosh()) and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
-
--- function remains_reenter_d8_mountain()
--- 	return d8_exit() and has("d8_mountainsub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function remains_reenter_d8_market()
--- 	return d8_exit() and has("d8_marketsub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function remains_reenter_d8_furnace()
--- 	return d8_exit() and has("d8_furnacesub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function remains_reenter_d8_village()
--- 	return d8_exit() and has("d8_villagesub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function remains_reenter_d8_pirates()
--- 	return d8_exit() and has("d8_piratessub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function remains_reenter_d8_volcano()
--- 	return d8_exit() and has("d8_volcanosub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function remains_reenter_d8_d8()
--- 	return d8_exit() and has("d8_d8sub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
-
--- function d8_reenter_remains_mountain()
--- 	return d8_exit() and has("remains_mountainsub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_remains_market()
--- 	return d8_exit() and has("remains_marketsub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_remains_furnace()
--- 	return d8_exit() and has("remains_furnacesub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_remains_village()
--- 	return d8_exit() and has("remains_villagesub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_remains_pirates()
--- 	return d8_exit() and has("remains_piratessub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_remains_volcano()
--- 	return d8_exit() and has("remains_volcanosub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function d8_reenter_remains_d8()
--- 	return d8_exit() and has("remains_d8sub") and
--- 		(jump_liquid4() or 
--- 		(jump_liquid2() and has("glove")))
--- end
-
--- function reenter_mountain()
--- 	return 
--- 	mt_cucco_reenter_remains_mountain() or
--- 	mt_cucco_reenter_d8_mountain() or
--- 	remains_reenter_mt_cucco_mountain() or
--- 	remains_reenter_d8_mountain() or
--- 	d8_reenter_mt_cucco_mountain() or
--- 	d8_reenter_remains_mountain()
--- end
-
--- function reenter_market()
--- 	return 
--- 	mt_cucco_reenter_remains_market() or
--- 	mt_cucco_reenter_d8_market() or
--- 	remains_reenter_mt_cucco_market() or
--- 	remains_reenter_d8_market() or
--- 	d8_reenter_mt_cucco_market() or
--- 	d8_reenter_remains_market()
--- end
-
--- function reenter_furnace()
--- 	return 
--- 	mt_cucco_reenter_remains_furnace() or
--- 	mt_cucco_reenter_d8_furnace() or
--- 	remains_reenter_mt_cucco_furnace() or
--- 	remains_reenter_d8_furnace() or
--- 	d8_reenter_mt_cucco_furnace() or
--- 	d8_reenter_remains_furnace()
--- end
-
--- function reenter_village()
--- 	return 
--- 	mt_cucco_reenter_remains_village() or
--- 	mt_cucco_reenter_d8_village() or
--- 	remains_reenter_mt_cucco_village() or
--- 	remains_reenter_d8_village() or
--- 	d8_reenter_mt_cucco_village() or
--- 	d8_reenter_remains_village()
--- end
-
--- function reenter_pirates()
--- 	return 
--- 	mt_cucco_reenter_remains_pirates() or
--- 	mt_cucco_reenter_d8_pirates() or
--- 	remains_reenter_mt_cucco_pirates() or
--- 	remains_reenter_d8_pirates() or
--- 	d8_reenter_mt_cucco_pirates() or
--- 	d8_reenter_remains_pirates()
--- end
-
--- function reenter_volcano()
--- 	return 
--- 	mt_cucco_reenter_remains_volcano() or
--- 	mt_cucco_reenter_d8_volcano() or
--- 	remains_reenter_mt_cucco_volcano() or
--- 	remains_reenter_d8_volcano() or
--- 	d8_reenter_mt_cucco_volcano() or
--- 	d8_reenter_remains_volcano()
--- end
-
--- function reenter_d8()
--- 	return 
--- 	mt_cucco_reenter_remains_d8() or
--- 	mt_cucco_reenter_d8_d8() or
--- 	remains_reenter_mt_cucco_d8() or
--- 	remains_reenter_d8_d8() or
--- 	d8_reenter_mt_cucco_d8() or
--- 	d8_reenter_remains_d8()
--- end
-
--- function mountain_sub()
--- 	return mountain() or
--- 	market() and market_to_mountain() or
--- 	furnace() and furnace_to_mountain() or
--- 	village() and village_to_mountain() or
--- 	pirates() and pirates_to_mountain() or
--- 	volcano() and volcano_to_mountain()
--- end
-
--- function market_sub()
--- 	return mountain() and mountain_to_market() or
--- 	market() or
--- 	furnace() and furnace_to_market() or
--- 	village() and village_to_market() or
--- 	pirates() and pirates_to_market() or
--- 	volcano() and volcano_to_market()
--- end
-
--- function furnace_sub()
--- 	return mountain() and mountain_to_furnace() or
--- 	market() and market_to_furnace() or
--- 	furnace() or
--- 	village() and village_to_furnace() or
--- 	pirates() and pirates_to_furnace() or
--- 	volcano() and volcano_to_furnace()
--- end
-
--- function village_sub()
--- 	return mountain() and mountain_to_village() or
--- 	market() and market_to_village() or
--- 	furnace() and furnace_to_village() or
--- 	village() or
--- 	pirates() and pirates_to_village() or
--- 	volcano() and volcano_to_village()
--- end
-
--- function pirates_sub()
--- 	return mountain() and mountain_to_pirates() or
--- 	market() and market_to_pirates() or
--- 	furnace() and furnace_to_pirates() or
--- 	village() and village_to_pirates() or
--- 	pirates() or
--- 	volcano() and volcano_to_pirates()
--- end
-
--- -- SPECIAL LOCATIONS THAT CAN BE SEQUENCE BROKEN INTO --
-
--- function moblin_road_chest()
--- 	return destroy_bush() and (ricky() or has("bombs")) and --open the cave and the chest
--- 	(has("wow_spring") or has("wow_summr") or has("wow_fall") or --the cave isn't blocked by winter blocks
--- 	has("spring") or has("summer") or has("fall")) --alternatively, the player can change to a season that isn't winter
--- end
-
--- function has(item, amount)
--- 	local count = Tracker:ProviderCountForCode(item)
--- 	amount = tonumber(amount)
--- 	if not amount then
--- 	  return count > 0
--- 	else
--- 	  return count == amount
--- 	end
--- end
+ScriptHost:AddWatchForCode("dungeon settings handler", "dungeonshuffle", dungeon_settings)
+ScriptHost:AddWatchForCode("dungeons handler", "fill_dungeons", display_dungeons)
+ScriptHost:AddWatchForCode("seasons settings handler", "default_seasons", seasons_settings)
+ScriptHost:AddWatchForCode("seasons handler", "fill_seasons", display_seasons)
+ScriptHost:AddWatchForCode("portal settings handler", "portalshuffle", vanilla_portals)
+ScriptHost:AddWatchForCode("portal handler", "fill_portals", display_portals)

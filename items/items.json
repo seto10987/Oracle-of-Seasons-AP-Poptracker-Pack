@@ -147,9 +147,9 @@
     "codes": "satchel",
     "stages": [
       {
+      "disabled_img": "images/items/satchel.png",
       "img": "images/items/satchel1.png",
-      "codes": "satchel1",
-      "inherit_codes": false
+      "codes": "satchel1"
       },
       {
       "img": "images/items/satchel2.png",
@@ -158,6 +158,54 @@
       {
       "img": "images/items/satchel3.png",
       "codes": "satchel3"
+      }
+    ]
+  },
+  {
+    "name": "Bombs",
+    "type": "progressive",
+    "codes": "bombs",
+    "stages": [
+      {
+      "disabled_img": "images/items/bomb.png",
+      "img": "images/items/bomb10.png",
+      "codes": "bombs"
+      },
+      {
+      "img": "images/items/bomb20.png",
+      "codes": "bombs20"
+      },
+      {
+      "img": "images/items/bomb30.png",
+      "codes": "bombs30"
+      },
+      {
+      "img": "images/items/bomb40.png",
+      "codes": "bombs40"
+      },
+      {
+      "img": "images/items/bomb50.png",
+      "codes": "bombs50"
+      },
+      {
+      "img": "images/items/bomb60.png",
+      "codes": "bombs60"
+      },
+      {
+      "img": "images/items/bomb70.png",
+      "codes": "bombs70"
+      },
+      {
+      "img": "images/items/bomb80.png",
+      "codes": "bombs80"
+      },
+      {
+      "img": "images/items/bomb90.png",
+      "codes": "bombs90"
+      },
+      {
+      "img": "images/items/bomb99.png",
+      "codes": "bombs99"
       }
     ]
   },
@@ -172,12 +220,6 @@
     "type": "toggle",
     "img": "images/items/rod.png",
     "codes": "season"
-  },
-  {
-    "name": "Bombs",
-    "type": "toggle",
-    "img": "images/items/bomb.png",
-    "codes": "bombs"
   },
   {
     "name": "Gnarled Key",
@@ -240,19 +282,16 @@
     "codes": "bombflower"
   },
   {
+    "name": "Rusty Bell",
+    "type": "toggle",
+    "img": "images/items/bell1.png",
+    "codes": "rustybell"
+  },
+  {
     "name": "Pirate's Bell",
-    "type": "progressive",
-    "stages": [
-      {
-      "img": "images/items/bell1.png",
-      "codes": "rustybell",
-      "inherit_codes": false
-      },
-      {
-      "img": "images/items/bell2.png",
-      "codes": "polishedbell"
-      }
-    ]
+    "type": "toggle",
+    "img": "images/items/bell2.png",
+    "codes": "polishedbell"
   },
   {
     "name": "Member's Card",
@@ -648,16 +687,28 @@
     "codes": "ring_energy"
   },
   {
-    "name": "Toss Ring",
-    "type": "toggle",
-    "img": "images/items/ring_toss.png",
-    "codes": "ring_toss"
-  },
-  {
     "name": "Swimmer's Ring",
     "type": "toggle",
     "img": "images/items/ring_swimmer.png",
     "codes": "ring_swimmer"
+  },
+  {
+    "name": "Red Ring",
+    "type": "toggle",
+    "img": "images/items/ring_red.png",
+    "codes": "ring_red"
+  },
+  {
+    "name": "Blue Ring",
+    "type": "toggle",
+    "img": "images/items/ring_blue.png",
+    "codes": "ring_blue"
+  },
+  {
+    "name": "Pegasus Ring",
+    "type": "toggle",
+    "img": "images/items/ring_pegasus.png",
+    "codes": "ring_pegasus"
   },
   {
     "name": "Horon Village tree",
@@ -694,5 +745,167 @@
     "type": "toggle",
     "img": "images/items/tree_gale.png",
     "codes": "tree_tarm"
+  },
+  {
+    "name": "D0 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d0_master_key"
+  },
+  {
+    "name": "D1 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d1_master_key"
+  },
+  {
+    "name": "D2 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d2_master_key"
+  },
+  {
+    "name": "D3 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d3_master_key"
+  },
+  {
+    "name": "D4 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d4_master_key"
+  },
+  {
+    "name": "D5 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d5_master_key"
+  },
+  {
+    "name": "D6 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d6_master_key"
+  },
+  {
+    "name": "D7 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d7_master_key"
+  },
+  {
+    "name": "D8 Master Key",
+    "type": "toggle",
+    "img": "images/items/master_key.png",
+    "codes": "d8_master_key"
+  },
+  {
+    "name": "D0 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d0_map"
+  },
+  {
+    "name": "D1 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d1_map"
+  },
+  {
+    "name": "D2 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d2_map"
+  },
+  {
+    "name": "D3 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d3_map"
+  },
+  {
+    "name": "D4 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d4_map"
+  },
+  {
+    "name": "D5 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d5_map"
+  },
+  {
+    "name": "D6 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d6_map"
+  },
+  {
+    "name": "D7 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d7_map"
+  },
+  {
+    "name": "D8 Map",
+    "type": "toggle",
+    "img": "images/items/map.png",
+    "codes": "d8_map"
+  },
+  {
+    "name": "D0 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d0_compass"
+  },
+  {
+    "name": "D1 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d1_compass"
+  },
+  {
+    "name": "D2 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d2_compass"
+  },
+  {
+    "name": "D3 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d3_compass"
+  },
+  {
+    "name": "D4 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d4_compass"
+  },
+  {
+    "name": "D5 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d5_compass"
+  },
+  {
+    "name": "D6 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d6_compass"
+  },
+  {
+    "name": "D7 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d7_compass"
+  },
+  {
+    "name": "D8 Compass",
+    "type": "toggle",
+    "img": "images/items/compass.png",
+    "codes": "d8_compass"
   }
 ]

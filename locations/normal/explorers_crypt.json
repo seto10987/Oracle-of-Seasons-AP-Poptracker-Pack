@@ -3,15 +3,7 @@
 		"name": "Explorer's Crypt",
 		"chest_unopened_img": "images/labels/chest.png",
 		"chest_opened_img": "images/labels/chestopen.png",
-		"access_rules": ["$enter_d7, shuffledungeonoff",
-			"$enter_d1, shuffledungeonon, d1_d7",
-			"$enter_d2, shuffledungeonon, d2_d7",
-			"$enter_d3, shuffledungeonon, d3_d7",
-			"$enter_d4, shuffledungeonon, d4_d7",
-			"$enter_d5, shuffledungeonon, d5_d7",
-			"$enter_d6, shuffledungeonon, d6_d7",
-			"$enter_d7, shuffledungeonon, d7_d7",
-			"$enter_d8, shuffledungeonon, d8_d7"],
+		"access_rules": ["$d7"],
 		"children": [		
 			{
 				"name": "Explorer's Crypt (1F): Chest Behind Cracked Wall",
@@ -53,7 +45,8 @@
 				[
 					{
 						"name": "Explorer's Crypt (1F): Chest Right of Entrance",
-						"access_rules": ["d7sk:1, $kill_normal"]
+						"access_rules": ["d7sk:1, $kill_normal",
+						"d7_master_key, $kill_normal"]
 					}
 				],
 				"map_locations": [
@@ -72,6 +65,7 @@
 						"name": "Explorer's Crypt (B1F): Zol Button Drop",
 						"access_rules": [
 							"d7sk:1, bracelet, $torches_long, $kill_poe, $max_jump:1",
+							"d7_master_key, bracelet, $torches_long, $kill_poe, $max_jump:1",
 							"hard, bracelet, satchel1, pegasusseeds, $max_jump:1"]
 					}
 				],
@@ -91,6 +85,8 @@
 						"name": "Explorer's Crypt (B2F): Armos Puzzle Drop",
 						"access_rules": ["d7sk:1, bracelet, $torches_long, $kill_poe, $jump2",
 							"d7sk:1, bracelet, $torches_long, $kill_poe, magnet",
+							"d7_master_key, bracelet, $torches_long, $kill_poe, $jump2",
+							"d7_master_key, bracelet, $torches_long, $kill_poe, magnet",
 							"hard, bracelet, satchel1, pegasusseeds, $max_jump:2",
 							"hard, bracelet, satchel1, pegasusseeds, magnet"]
 					}
@@ -110,6 +106,7 @@
 					{
 						"name": "Explorer's Crypt (B1F): Chest Connected to Magnet Ball Button",
 						"access_rules": ["d7sk:1, bracelet, $torches_long, $kill_poe, $jump3, $kill_magunesu, magnet",
+							"d7_master_key, bracelet, $torches_long, $kill_poe, $jump3, $kill_magunesu, magnet",
 							"hard, bracelet, satchel1, pegasusseeds, $jump2, $kill_magunesu, magnet"]
 					}
 				],
@@ -128,7 +125,9 @@
 					{
 						"name": "Explorer's Crypt (1F): Chest Above Trampoline Near 2nd Poe",
 						"access_rules": ["d7sk:2, bracelet, $torches_long, $kill_poe, $max_jump:1",
-							"hard, d7sk:1, [d7sk:2], bracelet, satchel1, pegasusseeds, $max_jump:1"]
+							"hard, d7sk:1, [d7sk:2], bracelet, satchel1, pegasusseeds, $max_jump:1",
+							"d7_master_key, bracelet, $torches_long, $kill_poe, $max_jump:1",
+							"hard, d7_master_key, bracelet, satchel1, pegasusseeds, $max_jump:1"]
 					}
 				],
 				"map_locations": [
@@ -148,7 +147,11 @@
 						"access_rules": ["d7sk:3, $kill_2nd_poe, flippers, $jump4, $kill_stalfos_pit",
 							"d7sk:3, $kill_2nd_poe, flippers, magnet, $jump2, $kill_stalfos_pit",
 							"d7sk:2, [d7sk:3], $kill_2nd_poe_alt, flippers, $jump4, $kill_stalfos_pit",
-							"d7sk:2, [d7sk:3], $kill_2nd_poe_alt, flippers, magnet, $jump2, $kill_stalfos_pit"]
+							"d7sk:2, [d7sk:3], $kill_2nd_poe_alt, flippers, magnet, $jump2, $kill_stalfos_pit",
+							"d7_master_key, $kill_2nd_poe, flippers, $jump4, $kill_stalfos_pit",
+							"d7_master_key, $kill_2nd_poe, flippers, magnet, $jump2, $kill_stalfos_pit",
+							"d7_master_key, $kill_2nd_poe_alt, flippers, $jump4, $kill_stalfos_pit",
+							"d7_master_key, $kill_2nd_poe_alt, flippers, magnet, $jump2, $kill_stalfos_pit"]
 					}
 				],
 				"map_locations": [
@@ -166,7 +169,9 @@
 					{
 						"name": "Explorer's Crypt (B2F): Stair Maze Chest",
 						"access_rules": ["d7sk:4, $kill_2nd_poe, flippers, $jump3",
-							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump3"]
+							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump3",
+							"d7_master_key, $kill_2nd_poe, flippers, $jump3",
+							"d7_master_key, $kill_2nd_poe_alt, flippers, $jump3"]
 					}
 				],
 				"map_locations": [
@@ -184,9 +189,13 @@
 					{
 						"name": "Explorer's Crypt (B2F): Drop in Room North of Stair Maze",
 						"access_rules": ["d7sk:4, $kill_2nd_poe, flippers, $jump3, magnet",
-							"d7sk:4, $kill_2nd_poe, flippers, $jump4",
+							"d7sk:4, $kill_2nd_poe, flippers, $jump6",
 							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump3, magnet",
-							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump4"]
+							"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump6",
+							"d7_master_key, $kill_2nd_poe, flippers, $jump3, magnet",
+							"d7_master_key, $kill_2nd_poe, flippers, $jump6",
+							"d7_master_key, $kill_2nd_poe_alt, flippers, $jump3, magnet",
+							"d7_master_key, $kill_2nd_poe_alt, flippers, $jump6"]
 					}
 				],
 				"map_locations": [
@@ -204,7 +213,10 @@
 					{
 						"name": "Explorer's Crypt (B1F): Chest in Jumping Stalfos Room",
 						"access_rules": ["d7sk:5, $kill_2nd_poe, flippers, $jump3",
-							"d7sk:4, [d7sk:5], $kill_2nd_poe_alt, flippers, $jump3"]
+							"d7sk:4, [d7sk:5], $kill_2nd_poe_alt, flippers, $jump3",
+							"d7_master_key, $kill_2nd_poe, flippers, $jump3",
+							"d7_master_key, $kill_2nd_poe_alt, flippers, $jump3"
+						]
 					}
 				],
 				"map_locations": [
@@ -222,7 +234,11 @@
 					{
 						"name": "Explorer's Crypt (B1F): Boss Reward",
 						"access_rules": ["d7bk, d7sk:4, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
-							"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3"]
+							"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3",
+							"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
+							"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3",
+							"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
+							"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3"]
 					}
 				],
 				"map_locations": [
@@ -240,7 +256,11 @@
 					{
 						"name": "Seeds of Life",
 						"access_rules": ["d7bk, d7sk:4, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
-							"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3"],
+							"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3",
+							"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
+							"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3",
+							"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump3",
+							"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump3"],
 				"hosted_item": "d7"
 					}
 				],

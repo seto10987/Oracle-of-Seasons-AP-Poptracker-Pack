@@ -3,15 +3,7 @@
 		"name": "Unicorn's Cave",
 		"chest_unopened_img": "images/labels/chest.png",
 		"chest_opened_img": "images/labels/chestopen.png",
-		"access_rules": ["$enter_d5, shuffledungeonoff",
-			"$enter_d1, shuffledungeonon, d1_d5",
-			"$enter_d2, shuffledungeonon, d2_d5",
-			"$enter_d3, shuffledungeonon, d3_d5",
-			"$enter_d4, shuffledungeonon, d4_d5",
-			"$enter_d5, shuffledungeonon, d5_d5",
-			"$enter_d6, shuffledungeonon, d6_d5",
-			"$enter_d7, shuffledungeonon, d7_d5",
-			"$enter_d8, shuffledungeonon, d8_d5"],
+		"access_rules": ["$d5"],
 		"children": [	
 			{
 				"name": "Unicorn's Cave: Right Cart Chest",
@@ -19,10 +11,8 @@
                 [
 					{
                         "name": "Unicorn's Cave: Right Cart Chest",
-						"access_rules": ["casual, $hit_lever, max:jump:3",
-							"medium, $hit_lever, $max_jump:2",
-							"hard, $hit_lever, $max_jump:2",
-							"hard, $hit_lever, $max_jump:1, bombs",
+						"access_rules": [
+							"$hit_lever, $jump_liquid2",
 							"$hit_lever, flippers"]
                     }
                 ],
@@ -40,10 +30,7 @@
                 [
 					{
                         "name": "Unicorn's Cave: Gibdo Room Chest",
-						"access_rules": ["casual, $kill_normal, $kill_gibdo, max:jump:3",
-							"medium, $kill_normal, $kill_gibdo, $max_jump:2",
-							"hard, $kill_normal, $kill_gibdo, $max_jump:2",
-							"hard, $kill_normal, $kill_gibdo, $max_jump:1, bombs",
+						"access_rules": ["$kill_normal, $kill_gibdo, $jump_liquid2",
 							"$kill_normal, $kill_gibdo, flippers, $max_jump:1",
 							"$kill_normal, $kill_gibdo, magnet, bombs, $max_jump:1"]
                     }
@@ -63,9 +50,9 @@
 					{
                         "name": "Unicorn's Cave: Magnet Gloves Chest",
 						"access_rules": ["d5sk:1, [d5sk:5], flippers, $max_jump:1",
-							"d5sk:1, [d5sk:5], $max_jump:4",
-							"d5sk:1, [d5sk:5], magnet, bombs, $max_jump:1, flippers",
-							"hard, d5sk:1, [d5sk:5], $max_jump:3, bombs"]
+							"d5sk:1, [d5sk:5], $jump_liquid4",
+							"d5_master_key, flippers, $max_jump:1",
+							"d5_master_key, $jump_liquid4"]
                     }
                 ],
 				"map_locations": [
@@ -83,10 +70,7 @@
 					{
                         "name": "Unicorn's Cave: Chest Left from Entrance",
 						"access_rules": ["magnet",
-							"casual, max:jump:4",
-							"medium, $max_jump:3",
-							"hard, $max_jump:3",
-							"hard, $max_jump:2, bombs"]
+							"$jump3"]
                     }
                 ],
 				"map_locations": [
@@ -121,10 +105,8 @@
 					{
                         "name": "Unicorn's Cave: Terrace Chest",
 						"access_rules": ["magnet",
-							"casual, $max_jump:3, bombs",
-							"medium, $max_jump:2, bombs",
-							"hard, $max_jump:2, bombs",
-							"hard, flippers, $max_jump:1, bombs"]
+							"$jump_liquid2, bombs",
+							"flippers, $max_jump:1, bombs"]
                     }
                 ],
 				"map_locations": [
@@ -143,10 +125,7 @@
                         "name": "Unicorn's Cave: Armos Puzzle Room Chest",
 						"access_rules": ["magnet, $kill_moldorm, $kill_ironmask",
 							"flippers, $max_jump:1, bombs, $kill_moldorm, $kill_ironmask",
-							"casual, $max_jump:3, bombs, $kill_moldorm, $kill_ironmask",
-							"medium, $max_jump:2, bombs, $kill_moldorm, $kill_ironmask",
-							"hard, $max_jump:2, bombs, $kill_moldorm, $kill_ironmask",
-							"hard, $max_jump:1, bombs, $kill_moldorm, $kill_ironmask"]
+							"$jump_liquid2, bombs, $kill_moldorm, $kill_ironmask"]
                     }
                 ],
 				"map_locations": [
@@ -164,12 +143,9 @@
 					{
                         "name": "Unicorn's Cave: Magnet Spinner Chest",
 						"access_rules": [
-							"medium, $max_jump:2, magnet",
-							"hard, $max_jump:1, bombs, magnet",
-							"hard, $max_jump:2, magnet",
-							"hard, $max_jump:3, bombs",
+							"$jump_liquid2, magnet",
 							"flippers, magnet",
-							"$max_jump:4"]
+							"$jump5"]
                     }
                 ],
 				"map_locations": [
@@ -186,13 +162,8 @@
                 [
 					{
                         "name": "Unicorn's Cave: Chest in Right Half of Minecart Bay Room",
-						"access_rules": ["$max_jump:4",
-							"medium, $max_jump:3",
-							"medium, $max_jump:2, magnet",
-							"hard, $max_jump:3",
-							"hard, $max_jump:2, bombs",
-							"hard, $max_jump:2, magnet",
-							"hard, $max_jump:1, bombs, magnet",
+						"access_rules": ["$jump4",
+							"$jump_liquid2, magnet",
 							"flippers, magnet"]
                     }
                 ],
@@ -210,11 +181,10 @@
                 [
 					{
                         "name": "Unicorn's Cave: Treadmills Basement Item",
-						"access_rules": ["casual, d5sk:3, [d5sk:5], $max_jump:4, $hit_lever, $kill_syger, $sword_kill_punch",
-							"medium, d5sk:3, [d5sk:5], $max_jump:2, $hit_lever, magnet, $kill_syger, $sword_kill_punch",
-							"hard, d5sk:3, [d5sk:5], $max_jump:2, $hit_lever, magnet, $kill_syger, $sword_kill_punch",
-							"hard, d5sk:3, [d5sk:5], $max_jump:1, bombs, $hit_lever, magnet, $kill_syger, $sword_kill_punch",
-							"d5sk:3, [d5sk:5], flippers, magnet, $hit_lever, $kill_syger, $sword_kill_punch"]
+						"access_rules": ["d5sk:3, [d5sk:5], $jump_liquid2, magnet, $kill_syger, $sword_kill_punch",
+							"d5sk:3, [d5sk:5], flippers, magnet, $kill_syger, $sword_kill_punch",
+							"d5_master_key, $jump_liquid2, magnet, $kill_syger, $sword_kill_punch",
+							"d5_master_key, flippers, magnet, $kill_syger, $sword_kill_punch"]
                     }
                 ],
 				"map_locations": [
@@ -236,11 +206,12 @@
                 [
 					{
                         "name": "Unicorn's Cave: Boss Reward",
-						"access_rules": ["casual, d5bk, d5sk:2, [d5sk:5], $max_jump:3, $hit_lever, magnet, $kill_syger",
-							"medium, d5bk, d5sk:2, [d5sk:5], $max_jump:2, $hit_lever, magnet, $kill_syger",
-							"hard, d5bk, d5sk:2, [d5sk:5], $max_jump:2, $hit_lever, magnet, $kill_syger",
-							"hard, d5bk, d5sk:2, [d5sk:5], $max_jump:1, bombs, $hit_lever, magnet, $kill_syger",
-							"d5bk, d5sk:2, [d5sk:5], flippers, $hit_lever, magnet, $kill_syger"]
+						"access_rules": ["d5bk, d5sk:2, [d5sk:5], $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5sk:2, [d5sk:5], flippers, magnet, $kill_syger",
+							"d5bk, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5_master_key, flippers, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, flippers, magnet, $kill_syger"]
                     }
                 ],
 				"map_locations": [
@@ -257,10 +228,12 @@
                 [
 					{
                         "name": "Nurturing Warmth",
-						"access_rules": ["casual, d5bk, d5sk:2, [d5sk:5], $max_jump:3, $hit_lever, magnet, $kill_syger",
-						"medium, d5bk, d5sk:2, [d5sk:5], $max_jump:2, $hit_lever, magnet, $kill_syger",
-						"hard, d5bk, d5sk:2, [d5sk:5], $max_jump:1, bombs, $hit_lever, magnet, $kill_syger",
-						"d5bk, d5sk:2, [d5sk:5], flippers, $hit_lever, magnet, $kill_syger"],
+						"access_rules": ["d5bk, d5sk:2, [d5sk:5], $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5sk:2, [d5sk:5], flippers, magnet, $kill_syger",
+							"d5bk, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5_master_key, flippers, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, flippers, magnet, $kill_syger"],
 						"hosted_item": "d5"
                     }
                 ],

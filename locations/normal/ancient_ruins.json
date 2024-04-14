@@ -3,15 +3,7 @@
 		"name": "Ancient Ruins",
 		"chest_unopened_img": "images/labels/chest.png",
 		"chest_opened_img": "images/labels/chestopen.png",
-		"access_rules": ["$enter_d6, shuffledungeonoff",
-			"$enter_d1, shuffledungeonon, d1_d6",
-			"$enter_d2, shuffledungeonon, d2_d6",
-			"$enter_d3, shuffledungeonon, d3_d6",
-			"$enter_d4, shuffledungeonon, d4_d6",
-			"$enter_d5, shuffledungeonon, d5_d6",
-			"$enter_d6, shuffledungeonon, d6_d6",
-			"$enter_d7, shuffledungeonon, d7_d6",
-			"$enter_d8, shuffledungeonon, d8_d6"],
+		"access_rules": ["$d6"],
 		"children": [	
 			{
 				"name": "Ancient Ruins (1F): Crumbling Ground Room Chest",
@@ -53,7 +45,8 @@
                 [
 					{
                         "name": "Ancient Ruins (1F): Chest in Beamos Room",
-						"access_rules": ["d6sk:1, [d6sk:3]"]
+						"access_rules": ["d6sk:1, [d6sk:3]",
+							"d6_master_key"]
                     }
                 ],
 				"map_locations": [
@@ -70,7 +63,8 @@
                 [
 					{
                         "name": "Ancient Ruins (2F): Chest in Gibdo Room",
-						"access_rules": ["d6sk:1, [d6sk:3], $kill_gibdo"]
+						"access_rules": ["d6sk:1, [d6sk:3], $kill_gibdo",
+							"d6_master_key, $kill_gibdo"]
                     }
                 ],
 				"map_locations": [
@@ -87,7 +81,8 @@
                 [
 					{
                         "name": "Ancient Ruins (2F): Chest Between 4 Armos",
-						"access_rules": ["d6sk:1, [d6sk:3], bombs"]
+						"access_rules": ["d6sk:1, [d6sk:3], bombs",
+							"d6_master_key, bombs"]
                     }
                 ],
 				"map_locations": [
@@ -104,7 +99,8 @@
                 [
 					{
                         "name": "Ancient Ruins (3F): Armos Hall Chest",
-						"access_rules": ["d6sk:1, [d6sk:3], bombs, $max_jump:1"]
+						"access_rules": ["d6sk:1, [d6sk:3], bombs, $max_jump:1",
+							"d6_master_key, bombs, $max_jump:1"]
                     }
                 ],
 				"map_locations": [
@@ -121,8 +117,8 @@
                 [
 					{
                         "name": "Ancient Ruins (2F): Chest North of Main Spinner",
-						"access_rules": [
-							"d6sk:1, [d6sk:3], $kill_normal, magnet, $destroy_crystal, [$max_jump:1]"]
+						"access_rules": ["d6sk:1, [d6sk:3], $kill_normal, magnet, $destroy_crystal, [$max_jump:1]",
+							"d6_master_key, $kill_normal, magnet, $destroy_crystal, [$max_jump:1]"]
                     }
                 ],
 				"map_locations": [
@@ -205,7 +201,9 @@
                 [
 					{
                         "name": "Ancient Ruins (5F): Boss Reward",
-						"access_rules": ["d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla"]
+						"access_rules": ["d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+							"d6bk, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+							"master_keys_both, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla"]
                     }
                 ],
 				"map_locations": [

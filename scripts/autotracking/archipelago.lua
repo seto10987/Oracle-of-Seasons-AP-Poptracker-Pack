@@ -7,10 +7,18 @@ LOCAL_ITEMS = {}
 GLOBAL_ITEMS = {}
 
 function onClear(slot_data)
-    if AUTOTRACKER_ENABLE_DEBUG_LOGGING_AP then
-        print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
-    end
-    print("test")
+
+        -- print(string.format("called onClear, slot_data:\n%s", dump_table(slot_data)))
+        -- function dump_table(tbl)
+        --     for key, value in pairs(tbl) do
+        --         print(key, value)
+        --     end
+        -- end
+        -- print("test")
+        
+        -- print("Called onClear, slot_data:")
+        -- dump_table(slot_data)
+
     SLOT_DATA = slot_data
     CUR_INDEX = -1
     -- reset locations
@@ -97,6 +105,21 @@ function onClear(slot_data)
     if slot_data["advance_shop"] then
         Tracker:FindObjectForCode("advance_shop").CurrentStage = tonumber(slot_data["advance_shop"])
     end
+    if slot_data["master_keys"] then
+        Tracker:FindObjectForCode("master_keys").CurrentStage = tonumber(slot_data["master_keys"])
+    end
+    if slot_data["remove_d0_alt_entrance"] then
+        Tracker:FindObjectForCode("d0_alt_entrance").CurrentStage = tonumber(slot_data["remove_d0_alt_entrance"])
+    end
+    if slot_data["remove_d2_alt_entrance"] then
+        Tracker:FindObjectForCode("d2_alt_entrance").CurrentStage = tonumber(slot_data["remove_d2_alt_entrance"])
+    end
+    if slot_data["keysanity_small_keys"] then
+        Tracker:FindObjectForCode("small_keysanity").CurrentStage = tonumber(slot_data["keysanity_small_keys"])
+    end
+    if slot_data["keysanity_boss_keys"] then
+        Tracker:FindObjectForCode("boss_keysanity").CurrentStage = tonumber(slot_data["keysanity_boss_keys"])
+    end
     
     if slot_data["animal_companion"] == "Ricky" then
         Tracker:FindObjectForCode("natzu_animal").CurrentStage = 0
@@ -104,6 +127,22 @@ function onClear(slot_data)
         Tracker:FindObjectForCode("natzu_animal").CurrentStage = 1
     elseif slot_data["animal_companion"] == "Moosh" then
         Tracker:FindObjectForCode("natzu_animal").CurrentStage = 2
+    end
+
+    if slot_data["default_seasons_option"] == "vanilla" then
+        Tracker:FindObjectForCode("default_seasons").CurrentStage = 0
+    elseif slot_data["default_seasons_option"] == "randomized" then
+        Tracker:FindObjectForCode("default_seasons").CurrentStage = 1
+    elseif slot_data["default_seasons_option"] == "random_singularity" then
+        Tracker:FindObjectForCode("default_seasons").CurrentStage = 2
+    elseif slot_data["default_seasons_option"] == "spring_singularity" then
+        Tracker:FindObjectForCode("default_seasons").CurrentStage = 3
+    elseif slot_data["default_seasons_option"] == "summer_singularity" then
+        Tracker:FindObjectForCode("default_seasons").CurrentStage = 4
+    elseif slot_data["default_seasons_option"] == "autumn_singularity" then
+        Tracker:FindObjectForCode("default_seasons").CurrentStage = 5
+    elseif slot_data["default_seasons_option"] == "winter_singularity" then
+        Tracker:FindObjectForCode("default_seasons").CurrentStage = 6
     end
 
     season_dictionary = {
@@ -114,49 +153,152 @@ function onClear(slot_data)
       }
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "north horon" then
-        Tracker:FindObjectForCode("season_northhoron").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("north_horon_season_hidden").CurrentStage = season_dictionary[season_name]
         end
     end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "eastern suburbs" then
-        Tracker:FindObjectForCode("season_eastsuburbs").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("suburbs_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "woods of winter" then
-        Tracker:FindObjectForCode("season_woodsofwinter").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("wow_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "holodrum plain" then
-        Tracker:FindObjectForCode("season_holodrumplain").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("plain_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "spool swamp" then
-        Tracker:FindObjectForCode("season_spoolswamp").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("swamp_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "sunken city" then
-        Tracker:FindObjectForCode("season_sunkencity").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("sunken_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "western coast" then
-        Tracker:FindObjectForCode("season_coast").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("coast_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "temple remains" then
-        Tracker:FindObjectForCode("season_templeremains").CurrentStage = season_dictionary[season_name]
+        Tracker:FindObjectForCode("remains_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "horon village" then
-        Tracker:FindObjectForCode("season_horonvillage").CurrentStage = season_dictionary[season_name]
+            Tracker:FindObjectForCode("horon_village_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
     end
-end
+
+    portal_dictionary = {
+        ['subrosia portal 1'] = 1,
+        ['subrosia portal 2'] = 2,
+        ['subrosia portal 3'] = 4,
+        ['subrosia portal 4'] = 5,
+        ['subrosia portal 5'] = 3,
+        ['subrosia portal 6'] = 6,
+        ['subrosia portal 7'] = 7
+    }
+    for region_name, portal_name in pairs(slot_data["portal_connections"]) do
+        if  region_name == "eastern suburbs portal" then
+        Tracker:FindObjectForCode("suburbs_portal_selector_hidden").CurrentStage = portal_dictionary[portal_name]
+        end
+    end
+    for region_name, portal_name in pairs(slot_data["portal_connections"]) do
+        if  region_name == "spool swamp portal" then
+        Tracker:FindObjectForCode("swamp_portal_selector_hidden").CurrentStage = portal_dictionary[portal_name]
+        end
+    end
+    for region_name, portal_name in pairs(slot_data["portal_connections"]) do
+        if  region_name == "eyeglass lake portal" then
+        Tracker:FindObjectForCode("lake_portal_selector_hidden").CurrentStage = portal_dictionary[portal_name]
+    end
+        end
+    for region_name, portal_name in pairs(slot_data["portal_connections"]) do
+        if  region_name == "mt. cucco portal" then
+        Tracker:FindObjectForCode("mtcucco_portal_selector_hidden").CurrentStage = portal_dictionary[portal_name]
+        end
+    end
+    for region_name, portal_name in pairs(slot_data["portal_connections"]) do
+        if  region_name == "horon village portal" then
+        Tracker:FindObjectForCode("horon_portal_selector_hidden").CurrentStage = portal_dictionary[portal_name]
+        end
+    end
+    for region_name, portal_name in pairs(slot_data["portal_connections"]) do
+        if  region_name == "temple remains lower portal" then
+        Tracker:FindObjectForCode("remains_portal_selector_hidden").CurrentStage = portal_dictionary[portal_name]
+        end
+    end
+    for region_name, portal_name in pairs(slot_data["portal_connections"]) do
+        if  region_name == "temple remains upper portal" then
+        Tracker:FindObjectForCode("d8_portal_selector_hidden").CurrentStage = portal_dictionary[portal_name]
+        end
+    end
+
+
+    dungeon_dictionary = {
+        ['enter d0'] = 1,
+        ['enter d1'] = 2,
+        ['enter d2'] = 3,
+        ['enter d3'] = 4,
+        ['enter d4'] = 5,
+        ['enter d5'] = 6,
+        ['enter d6'] = 7,
+        ['enter d7'] = 8,
+        ['enter d8'] = 9
+    }
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d0 entrance" then
+        Tracker:FindObjectForCode("d0_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d1 entrance" then
+        Tracker:FindObjectForCode("d1_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d2 entrance" then
+        Tracker:FindObjectForCode("d2_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+    end
+        end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d3 entrance" then
+        Tracker:FindObjectForCode("d3_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d4 entrance" then
+        Tracker:FindObjectForCode("d4_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d5 entrance" then
+        Tracker:FindObjectForCode("d5_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d6 entrance" then
+        Tracker:FindObjectForCode("d6_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d7 entrance" then
+        Tracker:FindObjectForCode("d7_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
+    for region_name, dungeon_entrance in pairs(slot_data["dungeon_entrances"]) do
+        if  region_name == "d8 entrance" then
+        Tracker:FindObjectForCode("d8_ent_selector_hidden").CurrentStage = dungeon_dictionary[dungeon_entrance]
+        end
+    end
 end
 
 -- called when an item gets collected

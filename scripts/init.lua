@@ -1,4 +1,6 @@
 ScriptHost:LoadScript("scripts/logic.lua")
+ScriptHost:LoadScript("scripts/utils.lua")
+ScriptHost:LoadScript("scripts/portal_logic.lua")
 ScriptHost:LoadScript("scripts/autotracking.lua")
 ScriptHost:LoadScript("scripts/locations.lua")
 

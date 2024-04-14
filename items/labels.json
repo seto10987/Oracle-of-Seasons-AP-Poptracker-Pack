@@ -77,6 +77,48 @@
     "codes": "golden_beasts_label"
   },
   {
+    "name": "Small Keysanity Label",
+    "type": "toggle",
+    "allow_disabled": false,
+    "img": "images/labels/small_keysanity_label.png",
+    "codes": "small_keysanity_label"
+  },
+  {
+    "name": "Boss Keysanity Label",
+    "type": "toggle",
+    "allow_disabled": false,
+    "img": "images/labels/boss_keysanity_label.png",
+    "codes": "boss_keysanity_label"
+  },
+  {
+    "name": "Map/Compass Shuffle Label",
+    "type": "toggle",
+    "allow_disabled": false,
+    "img": "images/labels/map_compass_label.png",
+    "codes": "map_compass_label"
+  },
+  {
+    "name": "Master Keys Label",
+    "type": "toggle",
+    "allow_disabled": false,
+    "img": "images/labels/master_keys_label.png",
+    "codes": "master_keys_label"
+  },
+  {
+    "name": "D0 Alt Entrance Label",
+    "type": "toggle",
+    "allow_disabled": false,
+    "img": "images/labels/d0_alt_entrance_label.png",
+    "codes": "d0_alt_entrance_label"
+  },
+  {
+    "name": "D2 Alt Entrance Label",
+    "type": "toggle",
+    "allow_disabled": false,
+    "img": "images/labels/d2_alt_entrance_label.png",
+    "codes": "d2_alt_entrance_label"
+  },
+  {
     "name": "Goal Label",
     "type": "static",
     "img": "images/labels/goal_label.png",
@@ -237,6 +279,13 @@
     "codes": "d8_label_sub"
   },
   {
+    "name": "D0 Label",
+    "type": "toggle",
+    "allow_disabled":false,
+    "img": "images/labels/D0_label.png",
+    "codes": "d0_label"
+  },
+  {
     "name": "D1 Label",
     "type": "toggle",
     "allow_disabled":false,
@@ -291,6 +340,20 @@
     "allow_disabled":false,
     "img": "images/labels/D8_label.png",
     "codes": "d8_label"
+  },
+  {
+    "name": "D0 Icon",
+    "type": "toggle",
+    "allow_disabled":false,
+    "img": "images/labels/D0_entrance.png",
+    "codes": "d0_icon"
+  },
+  {
+    "name": "D0 Icon",
+    "type": "toggle",
+    "allow_disabled":false,
+    "img": "images/labels/D0_entrance.png",
+    "codes": "d0_icon"
   },
   {
     "name": "D1 Icon",

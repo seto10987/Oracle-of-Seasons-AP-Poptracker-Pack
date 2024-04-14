@@ -3,15 +3,7 @@
 		"name": "Poison Moth's Lair",
 		"chest_unopened_img": "images/labels/chest.png",
 		"chest_opened_img": "images/labels/chestopen.png",
-		"access_rules": ["$enter_d3, shuffledungeonoff",
-			"$enter_d1, shuffledungeonon, d1_d3",
-			"$enter_d2, shuffledungeonon, d2_d3",
-			"$enter_d3, shuffledungeonon, d3_d3",
-			"$enter_d4, shuffledungeonon, d4_d3",
-			"$enter_d5, shuffledungeonon, d5_d3",
-			"$enter_d6, shuffledungeonon, d6_d3",
-			"$enter_d7, shuffledungeonon, d7_d3",
-			"$enter_d8, shuffledungeonon, d8_d3"],
+		"access_rules": ["$d3"],
 		"children": [	
 			{
 				"name": "Poison Moth's Lair (B1F): Chest in Roller Room",
@@ -19,9 +11,7 @@
                 [
 					{
                         "name": "Poison Moth's Lair (B1F): Chest in Roller Room",
-						"access_rules": ["$kill_beetle",
-							"shovel, bracelet",
-							"shield1, bracelet"]
+						"access_rules": ["$kill_beetle, bracelet"]
                     }
                 ],
 				"map_locations": [
@@ -38,9 +28,8 @@
                 [
 					{
                         "name": "Poison Moth's Lair (1F): Chest in Moldorm Room",
-						"access_rules": ["$kill_beetle, $kill_moldorm",
-							"shovel, bracelet, $kill_moldorm",
-							"shield1, bracelet, $kill_moldorm"]
+						"access_rules": ["$kill_beetle, $kill_moldorm, bracelet",
+							"$kill_beetle, $kill_moldorm, $max_jump:1"]
                     }
                 ],
 				"map_locations": [
@@ -57,7 +46,8 @@
                 [
 					{
                         "name": "Poison Moth's Lair (1F): Chest in Room Behind Hidden Cracked Wall",
-						"access_rules": ["$kill_beetle, bombs",
+						"access_rules": ["$kill_beetle, bombs, bracelet",
+							"$kill_beetle, bombs, $max_jump:1",
 							"shovel, bracelet, bombs",
 							"shield1, bracelet, bombs"]
                     }
@@ -77,8 +67,7 @@
 					{
                         "name": "Poison Moth's Lair (1F): Chest in Mimics Room",
 						"access_rules": ["d3sk:1, [d3sk:2], $kill_beetle, $kill_normal",
-							"d3sk:1, [d3sk:2], shovel, bracelet, $kill_normal",
-							"d3sk:1, [d3sk:2], shield1, bracelet, $kill_normal"]
+							"d3_master_key, $kill_beetle, $kill_normal"]
                     }
                 ],
 				"map_locations": [
@@ -95,7 +84,8 @@
                 [
 					{
                         "name": "Poison Moth's Lair (B1F): Chest in Watery Room",
-						"access_rules": ["$kill_beetle",
+						"access_rules": ["$kill_beetle, $max_jump:1",
+							"$kill_beetle, bracelet",
 							"shovel, bracelet",
 							"shield1, bracelet"]
                     }
@@ -115,8 +105,8 @@
 					{
                         "name": "Poison Moth's Lair (1F): Chest Above West Trampoline & Owl",
 						"access_rules": ["$kill_beetle, $max_jump:1",
-							"bracelet, shovel, $max_jump:1",
-							"bracelet, shield1, $max_jump:1"]
+							"shield1, bracelet, $max_jump:1",
+							"shovel, bracelet, $max_jump:1"]
                     }
                 ],
 				"map_locations": [
@@ -172,8 +162,7 @@
 					{
                         "name": "Poison Moth's Lair (B1F): Chest in Moving Blade Room",
 						"access_rules": ["d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1",
-							"d3sk:1, [d3sk:2], shovel, $kill_omuai, $max_jump:1",
-							"d3sk:1, [d3sk:2], shield1, $kill_omuai, $max_jump:1"]
+							"d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1"]
                     }
                 ],
 				"map_locations": [
@@ -191,8 +180,8 @@
 					{
                         "name": "Poison Moth's Lair (1F): Boss Reward",
 						"access_rules": ["d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:1, [d3sk:2], shovel, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:1, [d3sk:2], shield1, $kill_omuai, $max_jump:1, $kill_mothula"]
+							"d3bk, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
+							"master_keys_both, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula"]
                     }
                 ],
 				"map_locations": [
@@ -210,8 +199,8 @@
 					{
                         "name": "Bright Sun",
 						"access_rules": ["d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:1, [d3sk:2], shovel, $kill_omuai, $max_jump:1, $kill_mothula",
-							"d3bk, d3sk:1, [d3sk:2], shield1, $kill_omuai, $max_jump:1, $kill_mothula"],
+							"d3bk, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
+							"master_keys_both, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula"],
 						"hosted_item": "d3"
                     }
                 ],

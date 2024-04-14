@@ -3,16 +3,7 @@
 		"name": "Snake's Remains",
 		"chest_unopened_img": "images/labels/chest.png",
 		"chest_opened_img": "images/labels/chestopen.png",
-		"access_rules": ["$enter_d2, shuffledungeonoff",
-			"$enter_d2, shuffledungeonoff",
-			"$enter_d1, shuffledungeonon, d1_d2",
-			"$enter_d2, shuffledungeonon, d2_d2",
-			"$enter_d3, shuffledungeonon, d3_d2",
-			"$enter_d4, shuffledungeonon, d4_d2",
-			"$enter_d5, shuffledungeonon, d5_d2",
-			"$enter_d6, shuffledungeonon, d6_d2",
-			"$enter_d7, shuffledungeonon, d7_d2",
-			"$enter_d8, shuffledungeonon, d8_d2"],
+		"access_rules": ["$d2"],
 		"children": [	
 			{
 				"name": "Snake's Remains: Chest Left from Entrance",
@@ -72,7 +63,9 @@
 					{
                         "name": "Snake's Remains: Chest Behind Pots in Hardhat Room",
 						"access_rules": ["d2sk:1, [d2sk:3], $kill_normal, $torches, $destroy_pot",
-							"d2sk:1, [d2sk:3], $d2_B, bracelet, $destroy_pot"]
+							"d2sk:1, [d2sk:3], $d2_B, bracelet, $destroy_pot",
+							"d2_master_key, $kill_normal, $torches, $destroy_pot",
+							"d2_master_key, $d2_B, bracelet, $destroy_pot"]
                     }
                 ],
 				"map_locations": [
@@ -91,7 +84,10 @@
                         "name": "Snake's Remains: Chest in Distant Moblins Room",
 						"access_rules": ["d2sk:1, [d2sk:3], $torches, $kill_hardhat_pit, $kill_moblin_pit",
 							"d2sk:1, [d2sk:3], $d2_A, $torches, bracelet, $kill_moblin_pit",
-							"d2sk:1, [d2sk:3], $d2_B, bracelet, $kill_moblin_pit"]
+							"d2sk:1, [d2sk:3], $d2_B, bracelet, $kill_moblin_pit",
+							"d2_master_key, $torches, $kill_hardhat_pit, $kill_moblin_pit",
+							"d2_master_key, $d2_A, $torches, bracelet, $kill_moblin_pit",
+							"d2_master_key, $d2_B, bracelet, $kill_moblin_pit"]
                     }
                 ],
 				"map_locations": [
@@ -145,7 +141,7 @@
 					{
                         "name": "Snake's Remains: Chest in Rollers Section",
 						"access_rules": ["$torches, $kill_normal, bracelet, bombs",
-							"$$d2_B, bracelet, bombs"]
+							"$d2_B, bracelet, bombs"]
                     }
                 ],
 				"map_locations": [
@@ -163,7 +159,9 @@
 					{
                         "name": "Snake's Remains: Chest on Terrace",
 						"access_rules": ["d2sk:2, [d2sk:3], $torches, $kill_normal, bracelet, bombs",
-							"$d2_B, bracelet, bombs"]
+							"d2sk:2, [d2sk:3], $d2_B, bracelet, bombs",
+							"d2_master_key, $torches, $kill_normal, bracelet, bombs",
+							"d2_master_key, bracelet, bombs"]
                     }
                 ],
 				"map_locations": [
@@ -181,7 +179,11 @@
 					{
                         "name": "Snake's Remains: Boss Reward",
 						"access_rules": ["d2bk, d2sk:1, [d2sk:2], $torches, $kill_normal, bracelet, bombs",
-							"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs"]
+							"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs",
+							"d2bk, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+							"d2bk, d2_master_key, $d2_B, bracelet, bombs",
+							"master_keys_both, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+							"master_keys_both, d2_master_key, $d2_B, bracelet, bombs"]
                     }
                 ],
 				"map_locations": [
@@ -199,7 +201,11 @@
 					{
                         "name": "Gift of Time",
 						"access_rules": ["d2bk, d2sk:1, [d2sk:2], $torches, $kill_normal, bracelet, bombs",
-							"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs"],
+							"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs",
+							"d2bk, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+							"d2bk, d2_master_key, $d2_B, bracelet, bombs",
+							"master_keys_both, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+							"master_keys_both, d2_master_key, $d2_B, bracelet, bombs"],
 						"hosted_item": "d2"
                     }
                 ],

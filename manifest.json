@@ -1,18 +1,18 @@
 ﻿{
-    "name": "Oracle of Seasons AP Tracker",
+    "name": "Oracle of Seasons Tracker",
     "game_name": "The Legend of Zelda: Oracle of Seasons",
-    "package_version": "1.3.1.0",
+    "package_version": "1.4.0.0",
     "package_uid": "seasons_ap",
     "platform": "gba",
     "author": "Seto10987",
     "variants": {
         "standard": {
-            "display_name": "Seasons AP Vertical",
+            "display_name": "AP Autotracker v.1.4.0 - Vertical",
             "flags": ["ap"]
         },
 
     "var_horizontal": {
-            "display_name": "Seasons AP Horizontal",
+            "display_name": "AP Autotracker v.1.4.0 - Horizontal",
             "flags": ["ap"]
         }
     },

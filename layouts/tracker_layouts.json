@@ -27,20 +27,11 @@
 									},
 									{
 										"type": "group",
-										"header": "Dungeon Entrances",
+										"header": "Dungeon Entrances, Seasons and Portal Shuffles",
 										"dock": "top",
 										"content": {
 											"type": "layout",
 											"key": "dungeon_grid"
-										}
-									},
-									{
-										"type": "group",
-										"header": "Default Seasons and Subrosian Portals",
-										"dock": "top",
-										"content": {
-											"type": "layout",
-											"key": "season_grid"
 										}
 									}
 								]
