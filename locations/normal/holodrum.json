@@ -7,7 +7,7 @@
 		"children": [
 			{
 				"name": "Maku Tree",
-				"access_rules": ["$d1clear"],
+				"access_rules": ["sword"],
 				"sections": [
 					{
 					"name": "Horon Village: Maku Tree Gift"
