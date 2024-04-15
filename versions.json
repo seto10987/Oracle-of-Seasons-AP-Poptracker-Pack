@@ -1,6 +1,12 @@
 {
 	"versions": [
 		{
+			"package_version": "1.4.1.0",
+			"download_url": "https://github.com/seto10987/Oracle-of-Seasons-AP-Poptracker-Pack/archive/refs/tags/v.1.4.1.zip",
+			"sha256": "ec8817bef38868c731ebd8c67aa94c75bfa864e44851a708e8400c346bda574f",
+			"changelog": ["Couple typo fixes, Full Slot Data and new Apworld options Update, with multiple Portal Shuffle logic fixes"]
+		},
+		{
 			"package_version": "1.4.0.0",
 			"download_url": "https://github.com/seto10987/Oracle-of-Seasons-AP-Poptracker-Pack/archive/refs/tags/v.1.4.0.zip",
 			"sha256": "5d0d694a9588862ec9f2f1c7e3cf1c45bda6b3a0dc946e5b5517881679119590",
