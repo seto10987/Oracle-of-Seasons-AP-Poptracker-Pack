@@ -13,15 +13,7 @@
                     ["strength", "boomerang1", "slingshot1", "glove", "shovel", "flute_generic"],
                     ["satchel1", "emberseeds", "mysteryseeds", "scentseeds", "pegasusseeds", "galeseeds"],
                     ["flippers", "rustybell", "spring", "summer", "fall", "winter"],
-                    ["natzu_animal", "polishedbell", "golden_darknut", "golden_octorok", "golden_moblin", "golden_lynel"]
-                ]
-            },         
-            {
-                "type": "itemgrid",
-                "h_alignment": "left",
-                "item_margin": "3,2",
-                "item_size": 35,
-                "rows": [
+                    ["natzu_animal", "polishedbell", "golden_darknut", "golden_octorok", "golden_moblin", "golden_lynel"],
                     ["gnarledkey", "floodkey", "dragonkey", "memberscard", "plaque", "banana", "roundjewel"],
                     ["starore", "ribbon", "bombflower", "blueore", "redore", "hardore", "squarejewel"],
                     ["cuccodex", "lonlonegg", "ghastlydoll", "ironpot", "lavasoup", "goronvase", "pyramidjewel"],
@@ -36,25 +28,6 @@
         "orientation": "horizontal",
         "v_alignment": "center",
         "content": [
-            {
-                "type": "itemgrid",
-                "h_alignment": "center",
-                "item_size": 50,
-                "item_margin": "0,-10",
-                "rows": [
-                    [""],
-                    ["", "horon_village_label", "season_horonvillage", ""],
-                    ["north_label", "north_winter", "swamp_label", "swamp_fall"],
-                    ["suburbs_label", "suburbs_fall", "sunken_label", "sunken_summer"],
-                    ["wow_label", "wow_summer", "coast_label", "season_coast"],
-                    ["plain_label", "plain_spring", "temple_label", "temple_winter"],
-                    ["entrance_label2", "", "entrance_label2", ""],
-                    ["suburbs_label_sub", "suburbs_sub", "village_label_sub", "horon_sub"],
-                    ["swamp_label_sub", "swamp_sub", "remains_label_sub", "remains_sub"],
-                    ["lake_label_sub", "lake_sub", "d8_label_sub", "d8_sub"],
-                    ["mtcucco_label_sub", "mtcucco_sub", "", ""]
-                ]
-            },
             {
                 "type": "itemgrid",
                 "h_alignment": "left",
@@ -143,6 +116,32 @@
                 ]
             }
         ]
+    },
+    "season_grid": {
+        "type": "array",
+        "orientation": "horizontal",
+        "v_alignment": "center",
+        "content": [
+            {
+                "type": "itemgrid",
+                "h_alignment": "center",
+                "item_size": 50,
+                "item_margin": "0,-10",
+                "rows": [
+                    [""],
+                    ["", "horon_village_label", "season_horonvillage", ""],
+                    ["north_label", "north_winter", "swamp_label", "swamp_fall"],
+                    ["suburbs_label", "suburbs_fall", "sunken_label", "sunken_summer"],
+                    ["wow_label", "wow_summer", "coast_label", "season_coast"],
+                    ["plain_label", "plain_spring", "temple_label", "temple_winter"],
+                    ["entrance_label2", "", "entrance_label2", ""],
+                    ["suburbs_label_sub", "suburbs_sub", "village_label_sub", "horon_sub"],
+                    ["swamp_label_sub", "swamp_sub", "remains_label_sub", "remains_sub"],
+                    ["lake_label_sub", "lake_sub", "d8_label_sub", "d8_sub"],
+                    ["mtcucco_label_sub", "mtcucco_sub", "", ""]
+                ]
+            },
+        ],
     },
     "settings": {
         "type": "array",
