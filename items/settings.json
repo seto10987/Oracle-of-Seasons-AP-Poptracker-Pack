@@ -407,6 +407,26 @@
     ]
   },
   {
+    "name": "Horon Shop Potion",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": true,
+    "initial_stage_idx":0,
+    "codes": "horon_shop_potion",
+    "stages": [
+      {
+      "img": "images/labels/off.png",
+      "codes": "horon_potion_off",
+      "inherit_codes": false
+      },
+      {
+      "img": "images/labels/on.png",
+      "codes": "horon_potion_on",
+      "inherit_codes": false
+      }
+    ]
+  },
+  {
     "name": "Old Man Essences Required",
     "type": "progressive",
     "allow_disabled": false,
@@ -2175,7 +2195,7 @@
       },
       {
         "img": "images/labels/D1_entrance_toggle.png",
-        "codes": "d1_d1_hidden",
+        "codes": "d1_hidden",
 		    "inherit_codes": false
       },
       {
@@ -2545,7 +2565,7 @@
       },
 	    {
         "img": "images/labels/D3_entrance_toggle.png",
-        "codes": "d3_d4_hidden",
+        "codes": "3_d4_hidden",
 		    "inherit_codes": false
       },
 	    {

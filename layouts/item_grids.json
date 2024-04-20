@@ -90,23 +90,6 @@
             {
                 "type": "itemgrid",
                 "h_alignment": "left",
-                "item_size": 27,
-                "item_margin": "6,4",
-                "rows": [
-                    ["d0_ent"],
-                    ["d1_ent"],
-                    ["d2_ent"],
-                    ["d3_ent"],
-                    ["d4_ent"],
-                    ["d5_ent"],
-                    ["d6_ent"],
-                    ["d7_ent"],
-                    ["d8_ent"]
-                ]
-            },
-            {
-                "type": "itemgrid",
-                "h_alignment": "left",
                 "v_alignment": "left",
                 "item_size": 130,
                 "item_margin": "-3,-48",
@@ -120,6 +103,23 @@
                     ["d6_label"],
                     ["d7_label"],
                     ["d8_label"]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "h_alignment": "left",
+                "item_size": 27,
+                "item_margin": "14,4",
+                "rows": [
+                    ["d0_ent"],
+                    ["d1_ent"],
+                    ["d2_ent"],
+                    ["d3_ent"],
+                    ["d4_ent"],
+                    ["d5_ent"],
+                    ["d6_ent"],
+                    ["d7_ent"],
+                    ["d8_ent"]
                 ]
             },
             {
@@ -143,7 +143,7 @@
                 "type": "itemgrid",
                 "h_alignment": "left",
                 "item_size": 31,
-                "item_margin": "0,2",
+                "item_margin": "-4,2",
                 "rows": [
                     ["d0_master_key", "d0sk", ""],
                     ["d1_master_key", "d1sk", "d1bk"],
@@ -187,8 +187,8 @@
                 "rows": [
                     ["logic_label", "logiclevel", "goal_label", "goal", "dungeon_shuffle_label", "shuffledungeonoff", "portal_shuffle_label", "portalshuffleoff"],
                     ["onox_essences_label", "onox_essences", "old_man_essences_label", "oldmanessences", "golden_beasts_label", "goldenbeastsrequired", "tarm_jewels_label", "jewelreq"],
-                    ["small_keysanity_label", "small_keysanity", "boss_keysanity_label", "boss_keysanity", "map_compass_label", "map_compass", "master_keys_label", "master_keys"],
-                    ["advance_shop_label", "advance_shop", "shuffle_old_men_label", "shuffle_old_men", "gold_ore_label", "shuffle_gold_ores", "treewarp_label", "notreewarp"],
+                    ["small_keysanity_label", "small_keysanity", "boss_keysanity_label", "boss_keysanity", "master_keys_label", "master_keys", "treewarp_label", "notreewarp"],
+                    ["horon_shop_potion_label", "horon_shop_potion", "advance_shop_label", "advance_shop", "shuffle_old_men_label", "shuffle_old_men", "gold_ore_label", "shuffle_gold_ores"],
                     ["default_seasons_label", "defaultseasonsoff", "horon_village_season_label", "horon_village_season_shuffle", "d0_alt_entrance_label", "d0_alt_entrance", "d2_alt_entrance_label", "d2_alt_entrance"]
                 ]
             }

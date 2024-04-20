@@ -120,6 +120,9 @@ function onClear(slot_data)
     if slot_data["keysanity_boss_keys"] then
         Tracker:FindObjectForCode("boss_keysanity").CurrentStage = tonumber(slot_data["keysanity_boss_keys"])
     end
+    if slot_data["enforce_potion_in_shop"] then
+        Tracker:FindObjectForCode("horon_shop_potion").CurrentStage = tonumber(slot_data["enforce_potion_in_shop"])
+    end
     
     if slot_data["animal_companion"] == "Ricky" then
         Tracker:FindObjectForCode("natzu_animal").CurrentStage = 0
@@ -191,9 +194,11 @@ function onClear(slot_data)
         Tracker:FindObjectForCode("remains_season_hidden").CurrentStage = season_dictionary[season_name]
         end
     end
+    if Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage == 1 then
     for region_name, season_name in pairs(slot_data["default_seasons"]) do
         if  region_name == "horon village" then
             Tracker:FindObjectForCode("horon_village_season_hidden").CurrentStage = season_dictionary[season_name]
+        end
         end
     end
 

@@ -1,0 +1,237 @@
+﻿[
+	{
+		"name": "Ancient Ruins",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"access_rules": ["$d6"],
+		"children": [	
+			{
+				"name": "Ancient Ruins (1F): Crumbling Ground Room Chest",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (1F): Crumbling Ground Room Chest"
+					}
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 927,
+						"y": 663
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (1F): Magnet Ball Puzzle Drop",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (1F): Magnet Ball Puzzle Drop",
+						"access_rules": ["$jump4",
+							"$max_jump:1, magnet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 313,
+						"y": 535
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (1F): Chest in Beamos Room",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (1F): Chest in Beamos Room",
+						"access_rules": ["d6sk:1, [d6sk:3]",
+							"d6_master_key"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 595,
+						"y": 471
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (2F): Chest in Gibdo Room",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (2F): Chest in Gibdo Room",
+						"access_rules": ["d6sk:1, [d6sk:3], $kill_gibdo",
+							"d6_master_key, $kill_gibdo"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 699,
+						"y": 70
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (2F): Chest Between 4 Armos",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (2F): Chest Between 4 Armos",
+						"access_rules": ["d6sk:1, [d6sk:3], bombs",
+							"d6_master_key, bombs"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 750,
+						"y": 211
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (3F): Armos Hall Chest",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (3F): Armos Hall Chest",
+						"access_rules": ["d6sk:1, [d6sk:3], bombs, $max_jump:1",
+							"d6_master_key, bombs, $max_jump:1"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins2",
+						"x": 558,
+						"y": 740
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (2F): Chest North of Main Spinner",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (2F): Chest North of Main Spinner",
+						"access_rules": ["d6sk:1, [d6sk:3], $kill_normal, magnet, $destroy_crystal, [$max_jump:1]",
+							"d6_master_key, $kill_normal, magnet, $destroy_crystal, [$max_jump:1]"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 481,
+						"y": 172
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (1F): Chest on Terrace Left of Entrance",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (1F): Chest on Terrace Left of Entrance"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 210,
+						"y": 688
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (1F): Crystal Maze Room Chest",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (1F): Crystal Maze Room Chest"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 172,
+						"y": 612
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (2F): Chest After Time Trial",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (2F): Chest After Time Trial",
+						"access_rules": ["$destroy_crystal, $max_jump:1, magicboomerang, $torches"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 161,
+						"y": 364
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (2F): Chest on Red Terrace Before Vire",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (2F): Chest on Red Terrace Before Vire",
+						"access_rules": ["$destroy_crystal, $max_jump:1, magicboomerang, $torches, $kill_stalfos"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins1",
+						"x": 340,
+						"y": 236
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins (5F): Boss Reward",
+				"sections": 
+                [
+					{
+                        "name": "Ancient Ruins (5F): Boss Reward",
+						"access_rules": ["d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+							"d6bk, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+							"master_keys_both, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins2",
+						"x": 91,
+						"y": 206
+					}
+				]
+			},
+			{
+				"name": "Blowing Wind",
+				"sections": 
+                [
+					{
+                        "name": "Blowing Wind",
+						"access_rules": ["d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla"],
+						"hosted_item": "d6"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "ancient_ruins2",
+						"x": 128,
+						"y": 57
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,538 @@
+﻿[
+	{
+		"name": "Subrosia",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"children": [
+			{
+				"name": "Temple of Seasons",
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Temple of Seasons"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1520,
+					"y": 67
+					}
+				]
+			},
+			{
+				"name": "Temple of Seasons-Summer",
+				"access_rules": ["$market_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Tower of Summer",
+					"access_rules": ["ribbon, bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1320,
+					"y": 27
+					}
+				]
+			},
+			{
+				"name": "Temple of Seasons-Autumn",
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Tower of Autumn",
+					"access_rules": ["bombflower, $max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1720,
+					"y": 27
+					}
+				]
+			},
+			{
+				"name": "Temple of Seasons-Winter",
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Tower of Winter",
+					"access_rules": ["$hit_far_switch",
+					"$max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1720,
+					"y": 268
+					}
+				]
+			},
+			{
+				"name": "Temple of Seasons-Spring",
+				"access_rules": ["$village_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Tower of Spring",
+					"access_rules": ["$max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1320,
+					"y": 268
+					}
+				]
+			},
+			{
+				"name": "Subrosian Smithy",
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+						"name": "Subrosia: Smithy Hard Ore Reforge",
+						"access_rules": ["hardore"]
+					},
+					{
+						"name": "Subrosia: Smithy Rusty Bell Reforge",
+						"access_rules": ["rustybell"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 584,
+					"y": 435
+					}
+				]
+			},
+			{
+				"name": "Subrosian Dance Hall",
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Dance Hall Reward"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 712,
+					"y": 297
+					}
+				]
+			},
+			{
+				"name": "Cave in the Mountain",
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Northwest Open Cave",
+					"access_rules": ["$max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 184,
+					"y": 184
+					}
+				]
+			},
+			{
+				"name": "Subrosian Seaside",
+				"access_rules": ["$market_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Seaside Digging Spot",
+					"access_rules": ["shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1065,
+					"y": 855
+					},
+					{
+					"map": "subrosia",
+					"x": 1031,
+					"y": 937
+					},
+					{
+					"map": "subrosia",
+					"x": 919,
+					"y": 937
+					},
+					{
+					"map": "subrosia",
+					"x": 919,
+					"y": 857
+					}
+				]
+			},
+			{
+				"name": "Subrosian Market",
+				"access_rules": ["$market_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Market #1",
+					"access_rules": ["starore"]
+					},
+					{
+					"name": "Subrosia: Market #2",
+					"access_rules": ["$ore_chunks"]
+					},
+					{
+					"name": "Subrosia: Market #3",
+					"access_rules": ["$ore_chunks"]
+					},
+					{
+					"name": "Subrosia: Market #4",
+					"access_rules": ["$ore_chunks"]
+					},
+					{
+					"name": "Subrosia: Market #5",
+					"access_rules": ["$ore_chunks"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 849,
+					"y": 584
+					}
+				]
+			},
+			{
+				"name": "Subrosian Chef's Kitchen",
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Subrosian Chef Trade",
+					"access_rules": ["$max_jump:1, ironpot"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 360,
+					"y": 315
+					}
+				]
+			},
+			{
+				"name": "Rosa's World Tour",
+				"access_rules": ["$market_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Northwest Locked Cave",
+					"access_rules": ["$max_jump:1, ribbon"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 456,
+					"y": 215
+					}
+				]
+			},
+			{
+				"name": "Furnace Area",
+				"access_rules": ["$market_sub, magnet",
+					"$market_sub, $jump3",
+					"$furnace_sub, magnet, $max_jump:1",
+					"$furnace_sub, $jump3"],
+				"sections": [
+					{
+					"name": "Subrosia: Chest Above Magnet Cave",
+					"access_rules": []
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1321,
+					"y": 681
+					}
+				]
+			},
+			{
+				"name": "Great Furnace",
+				"access_rules": ["$market_sub, magnet, $max_jump:1",
+				"$market_sub, $jump4","$furnace_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Item Smelted in Great Furnace",
+					"access_rules": ["bombflower, blueore, redore, $mountain_exit, $max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1529,
+					"y": 617
+					}
+				]
+			},
+			{
+				"name": "Bomb Flower",
+				"access_rules": ["$market_sub, magnet, $max_jump:1",
+				"$market_sub, $jump3","$furnace_sub",
+				"$furnace_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Buried Bomb Flower",
+					"access_rules": ["$max_jump:1, bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1569,
+					"y": 812
+					}
+				]
+			},
+			{
+				"name": "Sign-Loving Guy",
+				"access_rules": ["$market_sub, magnet, $max_jump:1",
+				"$market_sub, $jump3","$furnace_sub",
+				"$furnace_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Sign-Loving Guy Reward",
+					"access_rules": ["$destroy_signs"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1674,
+					"y": 672
+					}
+				]
+			},
+			{
+				"name": "Subrosian Village",
+				"access_rules": ["$village_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Item in House Above Strange Brothers Portal",
+					"access_rules": ["$max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 697,
+					"y": 584
+					}
+				]
+			},
+			{
+				"name": "Subrosian Village Stairs",
+				"access_rules": ["$village_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Item in Basement to Tower of Spring",
+					"access_rules": ["$max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 712,
+					"y": 745
+					}
+				]
+			},
+			{
+				"name": "Subrosian Wilds Digging Spot",
+				"access_rules": ["$village_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Wilds Digging Spot",
+					"access_rules": ["$jump4, shovel",
+					"magnet, shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 25,
+					"y": 617
+					}
+				]
+			},
+			{
+				"name": "Subrosian Wilds",
+				"access_rules": ["$village_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Wilds Chest",
+					"access_rules": ["$jump4",
+					"magnet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 184,
+					"y": 537
+					}
+				]
+			},
+			{
+				"name": "Market Portal Digging Spot",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$market_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Market Portal Digging Spot",
+					"access_rules": ["shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1256,
+					"y": 693
+					}
+				]
+			},
+			{
+				"name": "Northern Volcanoes Digging Spot",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Northern Volcanoes Digging Spot",
+					"access_rules": ["shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1174,
+					"y": 26
+					}
+				]
+			},
+			{
+				"name": "Temple of Seasons Digging Spot",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Temple of Seasons Digging Spot",
+					"access_rules": ["shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1706,
+					"y": 458
+					}
+				]
+			},
+			{
+				"name": "Hard-Working Subrosian Digging Spot",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$market_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Hard-Working Subrosian Digging Spot",
+					"access_rules": ["shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1176,
+					"y": 569
+					}
+				]
+			},
+			{
+				"name": "D8 Portal Digging Spot",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: D8 Portal Digging Spot",
+					"access_rules": ["shovel, $max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 134,
+					"y": 357
+					}
+				]
+			},
+			{
+				"name": "Western Volcanoes Digging Spot",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Western Volcanoes Digging Spot",
+					"access_rules": ["shovel, $max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 392,
+					"y": 535
+					}
+				]
+			},
+			{
+				"name": "Hot Bath Digging Spot",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$mountain_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Hot Bath Digging Spot",
+					"access_rules": ["shovel, $jump_liquid3"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 1097,
+					"y": 24
+					}
+				]
+			},
+			{
+				"name": "Strange Brothers' Backyard Treasure",
+				"visibility_rules": ["gold_ores_shuffled"],
+				"access_rules": ["$village_sub",
+					"$pirates_sub"],
+				"sections": [
+					{
+					"name": "Subrosia: Strange Brothers' Backyard Treasure",
+					"access_rules": ["shovel, $max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 40,
+					"y": 841
+					}
+				]
+			}
+		]
+	}
+]

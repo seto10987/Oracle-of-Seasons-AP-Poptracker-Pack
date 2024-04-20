@@ -98,6 +98,13 @@
     "codes": "map_compass_label"
   },
   {
+    "name": "Horon Shop Potion Label",
+    "type": "toggle",
+    "allow_disabled": false,
+    "img": "images/labels/horon_shop_potion_label.png",
+    "codes": "horon_shop_potion_label"
+  },
+  {
     "name": "Master Keys Label",
     "type": "toggle",
     "allow_disabled": false,

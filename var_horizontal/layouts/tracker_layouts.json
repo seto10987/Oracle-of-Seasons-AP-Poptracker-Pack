@@ -27,20 +27,19 @@
 									},
 									{
 										"type": "group",
+										"dock": "left",
+										"content": {
+											"type": "layout",
+											"key": "item_grid_3"
+										}
+									},
+									{
+										"type": "group",
 										"header": "Dungeon Entrances",
 										"dock": "left",
 										"content": {
 											"type": "layout",
 											"key": "dungeon_grid"
-										}
-									},
-									{
-										"type": "group",
-										"header": "Default Seasons and Subrosian Portals",
-										"dock": "left",
-										"content": {
-											"type": "layout",
-											"key": "season_grid"
 										}
 									}
 								]
@@ -49,7 +48,7 @@
 					},
 					{
 						"type": "array",
-						"v_alignment": "left",
+						"h_alignment": "left",
 						"margin": "0, 0",
 						"content": [
 							{
@@ -59,11 +58,13 @@
 									{
 										"title": "Holodrum",
 										"icon": "images/items/sword1.png",
+										"h_alignment": "left",
 										"type": "tabbed",
 										"tabs": [
 											{
 											"title": "Holodrum",
 											"icon": "images/items/sword1.png",
+											"h_alignment": "left",
 											"content": {
 											"type": "map",
 											"maps": ["holodrum"]

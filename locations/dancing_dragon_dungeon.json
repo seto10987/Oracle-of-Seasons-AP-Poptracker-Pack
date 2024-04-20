@@ -1,0 +1,239 @@
+﻿[
+	{
+		"name": "Dancing Dragon Dungeon",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"access_rules": ["$d4"],
+		"children": [	
+			{
+				"name": "Dancing Dragon Dungeon (2F): Chest North of Entrance",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (2F): Chest North of Entrance",
+						"access_rules": ["flippers",
+							"$jump_liquid3"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon1",
+						"x": 410,
+						"y": 560
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (2F): Pots on Buttons Puzzle Drop",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (2F): Pots on Buttons Puzzle Drop",
+						"access_rules": ["flippers, bombs, bracelet",
+							"$jump_liquid3, bombs, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon1",
+						"x": 400,
+						"y": 411
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (1F): Chest in Southwest Quadrant of Beamos Room",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (1F): Chest in Southwest Quadrant of Beamos Room",
+						"access_rules": ["flippers, $hit_lever",
+							"$jump_liquid3, $hit_lever"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon2",
+						"x": 208,
+						"y": 290
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (1F): Dark Room Chest",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (1F): Dark Room Chest",
+						"access_rules": ["flippers, $hit_lever, $max_jump:1",
+							"$jump_liquid3, $hit_lever"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon2",
+						"x": 901,
+						"y": 289
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (2F): Chest in Water Donut Room",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (2F): Chest in Water Donut Room",
+						"access_rules": ["d4sk:1, $jump_liquid3, bombs, $kill_normal",
+							"d4sk:1, flippers, $max_jump:1, bombs, $kill_normal",
+							"d4_master_key, $jump_liquid3, bombs, $kill_normal",
+							"d4_master_key, flippers, $max_jump:1, bombs, $kill_normal"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon1",
+						"x": 719,
+						"y": 645
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (2F): Pool Drop",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (2F): Pool Drop",
+						"access_rules": ["d4sk:1, flippers, $max_jump:1, $kill_stalfos",
+							"d4sk:1, flippers, $max_jump:1, bracelet",
+							"d4_master_key, flippers, $max_jump:1, $kill_stalfos",
+							"d4_master_key, flippers, $max_jump:1, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon1",
+						"x": 389,
+						"y": 293
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (1F): Chest on Small Terrace",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (1F): Chest on Small Terrace",
+						"access_rules": ["d4sk:2, flippers, $jump2, $kill_stalfos",
+							"d4sk:2, flippers, $jump2, bracelet",
+							"d4_master_key, flippers, $jump2, $kill_stalfos",
+							"d4_master_key, flippers, $jump2, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon2",
+						"x": 346,
+						"y": 27
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (1F): Chest Revealed by Minecart Torches",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (1F): Chest Revealed by Minecart Torches",
+						"access_rules": ["d4sk:2, flippers, $jump2, $kill_stalfos, $shoot_seeds, emberseeds",
+							"d4sk:2, flippers, $jump2, bracelet, $shoot_seeds, emberseeds",
+							"d4_master_key, flippers, $jump2, $kill_stalfos, $shoot_seeds, emberseeds",
+							"d4_master_key, flippers, $jump2, bracelet, $shoot_seeds, emberseeds"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon2",
+						"x": 538,
+						"y": 101
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (1F): Crumbling Room Chest",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (1F): Crumbling Room Chest",
+						"access_rules": ["d4sk:3, [d4sk:5], flippers, $jump2, $kill_stalfos, $kill_agunima",
+							"d4sk:3, [d4sk:5], flippers, $jump2, bracelet, $kill_agunima",
+							"d4_master_key, flippers, $jump2, $kill_stalfos, $kill_agunima",
+							"d4_master_key, flippers, $jump2, bracelet, $kill_agunima"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon2",
+						"x": 453,
+						"y": 609
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (1F): Eye Diving Spot Item",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (1F): Eye Diving Spot Item",
+						"access_rules": ["d4sk:3, [d4sk:5], flippers, $jump2, $hit_far_lever, $kill_stalfos, $kill_agunima",
+							"d4sk:3, [d4sk:5], flippers, $jump2, $hit_far_lever, bracelet, $kill_agunima",
+							"d4_master_key, flippers, $jump2, $hit_far_lever, $kill_stalfos, $kill_agunima",
+							"d4_master_key, flippers, $jump2, $hit_far_lever, bracelet, $kill_agunima"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon2",
+						"x": 730,
+						"y": 290
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon (B1F): Boss Reward",
+				"sections": 
+                [
+					{
+                        "name": "Dancing Dragon Dungeon (B1F): Boss Reward",
+						"access_rules": ["d4bk, d4sk:3, [d4sk:5], $kill_agunima, $kill_wizzrobe_cart, $kill_gohma",
+							"d4bk, d4_master_key, $kill_agunima, $kill_wizzrobe_cart, $kill_gohma",
+							"master_keys_both, d4_master_key, $kill_agunima, $kill_wizzrobe_cart, $kill_gohma"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon1",
+						"x": 400,
+						"y": 68
+					}
+				]
+			},
+			{
+				"name": "Soothing Rain",
+				"sections": 
+                [
+					{
+                        "name": "Soothing Rain",
+						"access_rules": ["d4bk, d4sk:3, [d4sk:5], $kill_agunima, $kill_wizzrobe_cart, $kill_gohma"],
+						"hosted_item": "d4"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "dancing_dragon_dungeon1",
+						"x": 559,
+						"y": 68
+					}
+				]
+			}
+		]
+	}
+]

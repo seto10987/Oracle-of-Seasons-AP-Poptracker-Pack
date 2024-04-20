@@ -1,0 +1,925 @@
+﻿[
+	{
+		"name": "Holodrum Dungeons",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"color": "#00ff08",
+		"children": [
+			{
+				"name": "Enter D1",
+				"access_rules": ["$enter_d1"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D1"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 261,
+					"y": 407
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon",
+				"access_rules": ["$d1"],
+				"sections": [	
+					{
+						"name": "Gnarled Root Dungeon: Drop in Right Stalfos Room",
+						"access_rules": ["$d1clear",
+							"$kill_stalfos",
+							"bracelet"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Chest in Left Stalfos Room",
+						"access_rules": ["$d1clear",
+							"d1sk:1, $kill_stalfos",
+							"d1_master_key, $kill_stalfos"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Chest in Goriya Room",
+						"access_rules": ["$d1clear",
+							"d1sk:1, $kill_normal, $torches",
+							"d1_master_key, $kill_normal, $torches"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Chest in Block-pushing Room",
+						"access_rules": ["$d1clear",
+							"d1sk:1, $kill_normal",
+							"d1_master_key, $kill_normal"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Chest Near Railway Lever",
+						"access_rules": ["$d1clear",
+							"d1sk:1, $kill_stalfos",
+							"d1_master_key, $kill_stalfos"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Chest Near Railway",
+						"access_rules": ["$d1clear",
+							"d1sk:1, $kill_stalfos, $hit_lever",
+							"d1_master_key, $kill_stalfos, $hit_lever"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Hidden Chest Revealed by Button",
+						"access_rules": ["$d1clear",
+							"d1sk:1, $kill_stalfos, $hit_lever",
+							"d1_master_key, $kill_stalfos, $hit_lever"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Item in Basement",
+						"access_rules": ["$d1clear",
+							"d1sk:2, $kill_goriyabros, bombs",
+							"d1_master_key, $kill_goriyabros, bombs"]
+					},
+					{
+						"name": "Gnarled Root Dungeon: Chest in Floormaster Room",
+						"access_rules": ["$d1clear",
+							"$torches"]
+					},
+					
+					{
+						"name": "Gnarled Root Dungeon: Boss Reward",
+						"access_rules": ["$d1clear",
+							"d1bk, $torches, $kill_aquamentus",
+							"d1_master_key, master_keys_both, $torches, $kill_aquamentus"]
+					},
+					{
+						"name": "Fertile Soil",
+						"access_rules": ["$d1clear",
+							"d1bk, $torches, $kill_aquamentus",
+							"d1_master_key, master_keys_both, $torches, $kill_aquamentus"],
+						"hosted_item": "d1"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 281,
+					"y": 407
+					}
+				]
+			},
+			{
+				"name": "Enter D2",
+				"access_rules": ["$enter_d2"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D2"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 558,
+					"y": 364
+					}
+				]
+			},
+			{
+				"name": "Snake's Remains",
+				"access_rules": ["$d2",
+					"$d2_B, d2_alt_entrance_vanilla"],
+				"sections": [
+					{
+					"name": "Snake's Remains: Chest Left from Entrance"
+					},
+					{
+					"name": "Snake's Remains: Drop in Left Rope Room",
+					"access_rules": ["$d2clear",
+						"$kill_normal"]
+					},
+					{
+					"name": "Snake's Remains: Chest in Right Rope Room",
+					"access_rules": ["$d2clear",
+						"$kill_normal, $torches",
+						"$d2_B, bracelet, $kill_normal"]
+					},
+					{
+					"name": "Snake's Remains: Chest Behind Pots in Hardhat Room",
+					"access_rules": ["$d2clear",
+						"d2sk:1, [d2sk:3], $kill_normal, $torches, $destroy_pot",
+						"d2sk:1, [d2sk:3], $d2_B, bracelet, $destroy_pot",
+						"d2_master_key, $kill_normal, $torches, $destroy_pot",
+						"d2_master_key, $d2_B, bracelet, $destroy_pot"]
+					},
+					{
+					"name": "Snake's Remains: Chest in Distant Moblins Room",
+					"access_rules": ["$d2clear",
+						"d2sk:1, [d2sk:3], $torches, $kill_hardhat_pit, $kill_moblin_pit",
+						"d2sk:1, [d2sk:3], $d2_A, $torches, bracelet, $kill_moblin_pit",
+						"d2sk:1, [d2sk:3], $d2_B, bracelet, $kill_moblin_pit",
+						"d2_master_key, $torches, $kill_hardhat_pit, $kill_moblin_pit",
+						"d2_master_key, $d2_A, $torches, bracelet, $kill_moblin_pit",
+						"d2_master_key, $d2_B, bracelet, $kill_moblin_pit"]
+					},
+					{
+					"name": "Snake's Remains: Chest in Moving Blades Room",
+					"access_rules": ["$d2clear",
+						"$d2_A, $torches, $kill_normal",
+						"$d2_B, bracelet"]
+					},
+					{
+					"name": "Snake's Remains: Chest in Bomb Spiral Maze Room",
+					"access_rules": ["$d2clear",
+						"$d2_A, $torches, $kill_normal, bracelet, bombs",
+						"$d2_B, bombsa"]
+					},
+					{
+					"name": "Snake's Remains: Chest in Rollers Section",
+					"access_rules": ["$d2clear",
+						"$torches, $kill_normal, bracelet, bombs",
+						"$d2_B, bracelet, bombs"]
+					},
+					{
+					"name": "Snake's Remains: Chest on Terrace",
+					"access_rules": ["$d2clear",
+						"d2sk:2, [d2sk:3], $torches, $kill_normal, bracelet, bombs",
+						"d2sk:2, [d2sk:3], $d2_B, bracelet, bombs",
+						"d2_master_key, $torches, $kill_normal, bracelet, bombs",
+						"d2_master_key, bracelet, bombs"]
+					},
+					{
+					"name": "Snake's Remains: Boss Reward",
+					"access_rules": ["$d2clear",
+						"d2bk, d2sk:1, [d2sk:2], $torches, $kill_normal, bracelet, bombs",
+						"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs",
+						"d2bk, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+						"d2bk, d2_master_key, $d2_B, bracelet, bombs",
+						"master_keys_both, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+						"master_keys_both, d2_master_key, $d2_B, bracelet, bombs"]
+					},
+					{
+					"name": "Gift of Time",
+					"access_rules": ["$d2clear",
+						"d2bk, d2sk:1, [d2sk:2], $torches, $kill_normal, bracelet, bombs",
+						"d2bk, d2sk:1, [d2sk:2], $d2_B, bracelet, bombs",
+						"d2bk, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+						"d2bk, d2_master_key, $d2_B, bracelet, bombs",
+						"master_keys_both, d2_master_key, $torches, $kill_normal, bracelet, bombs",
+						"master_keys_both, d2_master_key, $d2_B, bracelet, bombs"],
+					"hosted_item": "d2"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 578,
+					"y": 352
+					}
+				]
+			},
+			{
+				"name": "Enter D3",
+				"access_rules": ["$enter_d3"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D3"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 45,
+					"y": 279
+					}
+				]
+			},
+			{
+				"name": "Poison Moth's Lair",
+				"access_rules": ["$d3"],
+				"sections": [
+					{
+					"name": "Poison Moth's Lair (B1F): Chest in Roller Room",
+					"access_rules": ["$d3clear",
+						"bracelet, $kill_beetle"]
+					},
+					{
+					"name": "Poison Moth's Lair (1F): Chest in Moldorm Room",
+					"access_rules": ["$d3clear",
+						"$kill_beetle, $kill_moldorm, bracelet",
+						"$kill_beetle, $kill_moldorm, $max_jump:1"]
+					},
+					{
+					"name": "Poison Moth's Lair (1F): Chest in Room Behind Hidden Cracked Wall",
+					"access_rules": ["$d3clear",
+						"$kill_beetle, bombs, bracelet",
+						"$kill_beetle, bombs, $max_jump:1",
+						"shovel, bracelet, bombs",
+						"shield1, bracelet, bombs"]
+					},
+					{
+					"name": "Poison Moth's Lair (1F): Chest in Mimics Room",
+					"access_rules": ["$d3clear",
+						"d3sk:1, [d3sk:2], $kill_beetle, $kill_normal",
+						"d3_master_key, $kill_beetle, $kill_normal"]
+					},
+					{
+					"name": "Poison Moth's Lair (B1F): Chest in Watery Room",
+					"access_rules": ["$d3clear",
+						"$kill_beetle, bracelet",
+						"$kill_beetle, $max_jump:1",
+						"shovel, bracelet",
+						"shield1, bracelet"]
+					},
+					{
+					"name": "Poison Moth's Lair (1F): Chest Above West Trampoline & Owl",
+					"access_rules": ["$d3clear",
+						"$kill_beetle, $max_jump:1",
+						"shield1, bracelet, $max_jump:1",
+						"shovel, bracelet, $max_jump:1"]
+					},
+					{
+					"name": "Poison Moth's Lair (1F): Chest Above East Trampoline",
+					"access_rules": ["$d3clear",
+						"$kill_beetle, $max_jump:1",
+						"bracelet, shovel, $max_jump:1",
+						"bracelet, shield1, $max_jump:1"]
+					},
+					{
+					"name": "Poison Moth's Lair (B1F): Chest on Quicksand Terrace",
+					"access_rules": ["$d3clear",
+						"$kill_beetle, $max_jump:1",
+						"bracelet, shovel, $max_jump:1",
+						"bracelet, shield1, $max_jump:1"]
+					},
+					{
+					"name": "Poison Moth's Lair (B1F): Chest in Moving Blade Room",
+					"access_rules": ["$d3clear",
+						"d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1",
+						"d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1"]
+					},
+					{
+					"name": "Poison Moth's Lair (1F): Boss Reward",
+					"access_rules": ["$d3clear",
+						"d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
+						"d3bk, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
+						"master_keys_both, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula"]
+					},
+					{
+					"name": "Bright Sun",
+					"access_rules": ["$d3clear",
+						"d3bk, d3sk:1, [d3sk:2], $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
+						"d3bk, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula",
+						"master_keys_both, d3_master_key, $kill_beetle, $kill_omuai, $max_jump:1, $kill_mothula"],
+					"hosted_item": "d3"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 25,
+					"y": 279
+					}
+				]
+			},
+			{
+				"name": "Enter D4",
+				"access_rules": ["$enter_d4"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D4"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 558,
+					"y": 68
+					}
+				]
+			},
+			{
+				"name": "Dancing Dragon Dungeon",
+				"access_rules": ["$d4"],
+				"sections": [
+					{
+					"name": "Dancing Dragon Dungeon (2F): Chest North of Entrance",
+					"access_rules": ["$d4clear",
+						"flippers",
+						"$jump_liquid3"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (2F): Pots on Buttons Puzzle Drop",
+					"access_rules": ["$d4clear",
+						"flippers, bombs, bracelet",
+						"$jump_liquid3, bombs, bracelet"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (1F): Chest in Southwest Quadrant of Beamos Room",
+					"access_rules": ["$d4clear",
+						"flippers, $hit_lever",
+						"$jump_liquid3, $hit_lever"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (1F): Dark Room Chest",
+					"access_rules": ["$d4clear",
+						"flippers, $hit_lever, $max_jump:1",
+						"$jump_liquid3, $hit_lever"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (2F): Chest in Water Donut Room",
+					"access_rules": ["$d4clear",
+						"d4sk:1, $jump_liquid3, bombs, $kill_normal",
+						"d4sk:1, flippers, $max_jump:1, bombs, $kill_normal",
+						"d4_master_key, $jump_liquid3, bombs, $kill_normal",
+						"d4_master_key, flippers, $max_jump:1, bombs, $kill_normal"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (2F): Pool Drop",
+					"access_rules": ["$d4clear",
+						"d4sk:1, flippers, $max_jump:1, $kill_stalfos",
+						"d4sk:1, flippers, $max_jump:1, bracelet",
+						"d4_master_key, flippers, $max_jump:1, $kill_stalfos",
+						"d4_master_key, flippers, $max_jump:1, bracelet"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (1F): Chest on Small Terrace",
+					"access_rules": ["$d4clear",
+						"d4sk:2, flippers, $jump2, $kill_stalfos",
+						"d4sk:2, flippers, $jump2, bracelet",
+						"d4_master_key, flippers, $jump2, $kill_stalfos",
+						"d4_master_key, flippers, $jump2, bracelet"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (1F): Chest Revealed by Minecart Torches",
+					"access_rules": ["$d4clear",
+						"d4sk:2, flippers, $jump2, $kill_stalfos, $shoot_seeds, emberseeds",
+						"d4sk:2, flippers, $jump2, bracelet, $shoot_seeds, emberseeds",
+						"d4_master_key, flippers, $jump2, $kill_stalfos, $shoot_seeds, emberseeds",
+						"d4_master_key, flippers, $jump2, bracelet, $shoot_seeds, emberseeds"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (1F): Crumbling Room Chest",
+					"access_rules": ["$d4clear",
+						"d4sk:3, [d4sk:5], flippers, $jump2, $kill_stalfos, $kill_agunima",
+						"d4sk:3, [d4sk:5], flippers, $jump2, bracelet, $kill_agunima",
+						"d4_master_key, flippers, $jump2, $kill_stalfos, $kill_agunima",
+						"d4_master_key, flippers, $jump2, bracelet, $kill_agunima"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (1F): Eye Diving Spot Item",
+					"access_rules": ["$d4clear",
+						"d4sk:3, [d4sk:5], flippers, $jump2, $hit_far_lever, $kill_stalfos, $kill_agunima",
+						"d4sk:3, [d4sk:5], flippers, $jump2, $hit_far_lever, bracelet, $kill_agunima",
+						"d4_master_key, flippers, $jump2, $hit_far_lever, $kill_stalfos, $kill_agunima",
+						"d4_master_key, flippers, $jump2, $hit_far_lever, bracelet, $kill_agunima"]
+					},
+					{
+					"name": "Dancing Dragon Dungeon (B1F): Boss Reward",
+					"access_rules": ["$d4clear",
+						"d4bk, d4sk:3, [d4sk:5], $kill_agunima, $kill_wizzrobe_cart, $kill_gohma",
+						"d4bk, d4_master_key, $kill_agunima, $kill_wizzrobe_cart, $kill_gohma",
+						"master_keys_both, d4_master_key, $kill_agunima, $kill_wizzrobe_cart, $kill_gohma"]
+					},
+					{
+					"name": "Soothing Rain",
+					"access_rules": ["$d4clear",
+						"d4bk, d4sk:3, [d4sk:5], $kill_agunima, $kill_wizzrobe_cart, $kill_gohma",
+						"d4bk, d4_master_key, $kill_agunima, $kill_wizzrobe_cart, $kill_gohma",
+						"master_keys_both, d4_master_key, $kill_agunima, $kill_wizzrobe_cart, $kill_gohma"],
+					"hosted_item": "d4"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 578,
+					"y": 68
+					}
+				]
+			},
+			{
+				"name": "Enter D5",
+				"access_rules": ["$enter_d5"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D5"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 429,
+					"y": 364
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave",
+				"access_rules": ["$d5"],
+				"sections": [
+					{
+					"name": "Unicorn's Cave: Right Cart Chest",
+					"access_rules": ["$d5clear",
+						"$hit_lever, $jump_liquid2",
+						"$hit_lever, flippers"]
+					},
+					{
+					"name": "Unicorn's Cave: Gibdo Room Chest",
+					"access_rules": ["$d5clear",
+						"$kill_normal, $kill_gibdo, $jump_liquid2",
+						"$kill_normal, $kill_gibdo, flippers, $max_jump:1",
+						"$kill_normal, $kill_gibdo, magnet, bombs, $max_jump:1"]
+					},
+					{
+					"name": "Unicorn's Cave: Magnet Gloves Chest",
+					"access_rules": ["$d5clear",
+						"d5sk:1, [d5sk:5], flippers, $max_jump:1",
+						"d5sk:1, [d5sk:5], $jump_liquid4",
+						"d5_master_key, flippers, $max_jump:1",
+						"d5_master_key, $jump_liquid4"]
+					},
+					{
+					"name": "Unicorn's Cave: Chest Left from Entrance",
+					"access_rules": ["$d5clear",
+						"$max_jump:4",
+						"magnet"]
+					},
+					{
+					"name": "Unicorn's Cave: Quicksand Spiral Chest",
+					"access_rules": ["$d5clear",
+					"$kill_moldorm, $kill_ironmask"]
+					},
+					{
+					"name": "Unicorn's Cave: Terrace Chest",
+					"access_rules": ["$d5clear",
+						"magnet",
+						"$jump_liquid2, bombs",
+						"flippers, $max_jump:1, bombs"]
+					},
+					{
+					"name": "Unicorn's Cave: Armos Puzzle Room Chest",
+					"access_rules": ["$d5clear",
+						"magnet, $kill_moldorm, $kill_ironmask",
+						"flippers, $max_jump:1, bombs, $kill_moldorm, $kill_ironmask",
+						"$jump_liquid2, bombs, $kill_moldorm, $kill_ironmask"]
+					},
+					{
+					"name": "Unicorn's Cave: Magnet Spinner Chest",
+					"access_rules": ["$d5clear",
+						"$jump_liquid2, magnet",
+						"flippers, magnet",
+						"$jump5"]
+					},
+					{
+					"name": "Unicorn's Cave: Chest in Right Half of Minecart Bay Room",
+					"access_rules": ["$d5clear",
+						"$jump4",
+						"$jump_liquid2, magnet",
+						"flippers, magnet"]
+					},
+					{
+					"name": "Unicorn's Cave: Treadmills Basement Item",
+					"access_rules": ["$d5clear",
+						"d5sk:3, [d5sk:5], $jump_liquid2, magnet, $kill_syger, $sword_kill_punch",
+						"d5sk:3, [d5sk:5], flippers, magnet, $kill_syger, $sword_kill_punch",
+						"d5_master_key, $jump_liquid2, magnet, $kill_syger, $sword_kill_punch",
+						"d5_master_key, flippers, magnet, $kill_syger, $sword_kill_punch"]
+					},
+					{
+					"name": "Unicorn's Cave: Boss Reward",
+					"access_rules": ["$d5clear",
+						"d5bk, d5sk:2, [d5sk:5], $jump_liquid2, magnet, $kill_syger",
+						"d5bk, d5sk:2, [d5sk:5], flippers, magnet, $kill_syger",
+						"d5bk, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+						"d5bk, d5_master_key, flippers, magnet, $kill_syger",
+						"master_keys_both, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+						"master_keys_both, d5_master_key, flippers, magnet, $kill_syger"]
+					},
+					{
+					"name": "Nurturing Warmth",
+					"access_rules": ["$d5clear",
+						"d5bk, d5sk:2, [d5sk:5], $jump_liquid2, magnet, $kill_syger",
+						"d5bk, d5sk:2, [d5sk:5], flippers, magnet, $kill_syger",
+						"d5bk, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+						"d5bk, d5_master_key, flippers, magnet, $kill_syger",
+						"master_keys_both, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+						"master_keys_both, d5_master_key, flippers, magnet, $kill_syger"],
+					"hosted_item": "d5"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 449,
+					"y": 364
+					}
+				]
+			},
+			{
+				"name": "Enter D6",
+				"access_rules": ["$enter_d6"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D6"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 45,
+					"y": 25
+					}
+				]
+			},
+			{
+				"name": "Ancient Ruins",
+				"access_rules": ["$d6"],
+				"sections": [
+					{
+					"name": "Ancient Ruins (1F): Crumbling Ground Room Chest"
+					},
+					{
+					"name": "Ancient Ruins (1F): Magnet Ball Puzzle Drop",
+					"access_rules": ["$d6clear",
+						"$jump4",
+						"$max_jump:1, magnet"]
+					},
+					{
+					"name": "Ancient Ruins (1F): Chest in Beamos Room",
+					"access_rules": ["$d6clear",
+						"d6sk:1, [d6sk:3]",
+						"d6_master_key"]
+					},
+					{
+					"name": "Ancient Ruins (2F): Chest in Gibdo Room",
+					"access_rules": ["$d6clear",
+						"d6sk:1, [d6sk:3], $kill_gibdo",
+						"d6_master_key, $kill_gibdo"]
+					},
+					{
+					"name": "Ancient Ruins (2F): Chest Between 4 Armos",
+					"access_rules": ["$d6clear",
+						"d6sk:1, [d6sk:3], bombs",
+						"d6_master_key, bombs"]
+					},
+					{
+					"name": "Ancient Ruins (3F): Armos Hall Chest",
+					"access_rules": ["$d6clear",
+						"d6sk:1, [d6sk:3], bombs, $max_jump:1",
+						"d6_master_key, bombs, $max_jump:1"]
+					},
+					{
+					"name": "Ancient Ruins (2F): Chest North of Main Spinner",
+					"access_rules": ["$d6clear",
+						"d6sk:1, $kill_normal, magnet, $destroy_crystal, [$max_jump:1]",
+						"d6_master_key, $kill_normal, magnet, $destroy_crystal, [$max_jump:1]"]
+					},
+					{
+					"name": "Ancient Ruins (1F): Chest on Terrace Left of Entrance"
+					},
+					{
+					"name": "Ancient Ruins (1F): Crystal Maze Room Chest"
+					},
+					{
+					"name": "Ancient Ruins (2F): Chest After Time Trial",
+					"access_rules": ["$d6clear",
+						"$destroy_crystal, $max_jump:1, magicboomerang, $torches"]
+					},
+					{
+					"name": "Ancient Ruins (2F): Chest on Red Terrace Before Vire",
+					"access_rules": ["$d6clear",
+						"$destroy_crystal, $max_jump:1, magicboomerang, $torches, $kill_stalfos"]
+					},
+					{
+					"name": "Ancient Ruins (5F): Boss Reward",
+					"access_rules": ["$d6clear",
+						"d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+						"d6bk, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+						"master_keys_both, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla"]
+					},
+					{
+					"name": "Blowing Wind",
+					"access_rules": ["$d6clear",
+						"d6bk, d6sk:1, [d6sk:3], $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+						"d6bk, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla",
+						"master_keys_both, d6_master_key, $destroy_crystal, $max_jump:1, $torches, $kill_stalfos, $sword_kill_punch, $kill_hardhat_magnet, $kill_manhandla"],
+					"hosted_item": "d6"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 25,
+					"y": 25
+					}
+				]
+			},
+			{
+				"name": "Enter D7",
+				"access_rules": ["$enter_d7"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D7"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 25,
+					"y": 598
+					}
+				]
+			},
+			{
+				"name": "Explorer's Crypt",
+				"access_rules": ["$d7"],
+				"sections": [
+					{
+					"name": "Explorer's Crypt (1F): Chest Behind Cracked Wall",
+					"access_rules": ["$d7clear",
+						"bombs"]
+					},
+					{
+					"name": "Explorer's Crypt (1F): Chest in Wizzrobe Room",
+					"access_rules": ["$d7clear",
+						"$kill_normal"]
+					},
+					{
+					"name": "Explorer's Crypt (1F): Chest Right of Entrance",
+					"access_rules": ["$d7clear",
+						"d7sk:1, $kill_normal",
+						"d7_master_key, $kill_normal"]
+					},
+					{
+					"name": "Explorer's Crypt (B1F): Zol Button Drop",
+					"access_rules": ["$d7clear",
+						"d7sk:1, bracelet, $torches_long, $kill_poe, $max_jump:1",
+						"d7_master_key, bracelet, $torches_long, $kill_poe, $max_jump:1",
+						"hard, bracelet, satchel1, pegasusseeds, $max_jump:1"]
+					},
+					{
+					"name": "Explorer's Crypt (B2F): Armos Puzzle Drop",
+					"access_rules": ["$d7clear",
+						"d7sk:1, bracelet, $torches_long, $kill_poe, $jump2",
+						"d7sk:1, bracelet, $torches_long, $kill_poe, magnet",
+						"d7_master_key, bracelet, $torches_long, $kill_poe, $jump2",
+						"d7_master_key, bracelet, $torches_long, $kill_poe, magnet",
+						"hard, bracelet, satchel1, pegasusseeds, $max_jump:2",
+						"hard, bracelet, satchel1, pegasusseeds, magnet"]
+					},
+					{
+					"name": "Explorer's Crypt (B1F): Chest Connected to Magnet Ball Button",
+					"access_rules": ["$d7clear",
+						"d7sk:1, bracelet, $torches_long, $kill_poe, $jump3, $kill_magunesu, magnet",
+						"d7_master_key, bracelet, $torches_long, $kill_poe, $jump3, $kill_magunesu, magnet",
+						"hard, bracelet, satchel1, pegasusseeds, $jump2, $kill_magunesu, magnet"]
+					},
+					{
+					"name": "Explorer's Crypt (1F): Chest Above Trampoline Near 2nd Poe",
+					"access_rules": ["$d7clear",
+						"d7sk:2, bracelet, $torches_long, $kill_poe, $max_jump:1",
+						"hard, d7sk:1, [d7sk:2], bracelet, satchel1, pegasusseeds, $max_jump:1",
+						"d7_master_key, bracelet, $torches_long, $kill_poe, $max_jump:1",
+						"hard, d7_master_key, bracelet, satchel1, pegasusseeds, $max_jump:1"]
+					},
+					{
+					"name": "Explorer's Crypt (B1F): Chest in Fast Moving Platform Room",
+					"access_rules": ["$d7clear",
+						"d7sk:3, $kill_2nd_poe, flippers, $jump4, $kill_stalfos_pit",
+						"d7sk:3, $kill_2nd_poe, flippers, magnet, $jump2, $kill_stalfos_pit",
+						"d7sk:2, [d7sk:3], $kill_2nd_poe_alt, flippers, $jump4, $kill_stalfos_pit",
+						"d7sk:2, [d7sk:3], $kill_2nd_poe_alt, flippers, magnet, $jump2, $kill_stalfos_pit",
+						"d7_master_key, $kill_2nd_poe, flippers, $jump4, $kill_stalfos_pit",
+						"d7_master_key, $kill_2nd_poe, flippers, magnet, $jump2, $kill_stalfos_pit",
+						"d7_master_key, $kill_2nd_poe_alt, flippers, $jump4, $kill_stalfos_pit",
+						"d7_master_key, $kill_2nd_poe_alt, flippers, magnet, $jump2, $kill_stalfos_pit"]
+					},
+					{
+					"name": "Explorer's Crypt (B2F): Stair Maze Chest",
+					"access_rules": ["$d7clear",
+						"d7sk:4, $kill_2nd_poe, flippers, $jump4",
+						"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump4",
+						"d7_master_key, $kill_2nd_poe, flippers, $jump4",
+						"d7_master_key, $kill_2nd_poe_alt, flippers, $jump4"]
+					},
+					{
+					"name": "Explorer's Crypt (B2F): Drop in Room North of Stair Maze",
+					"access_rules": ["$d7clear",
+						"d7sk:4, $kill_2nd_poe, flippers, $jump4, magnet",
+						"d7sk:4, $kill_2nd_poe, flippers, $jump6",
+						"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump4, magnet",
+						"d7sk:3, [d7sk:4], $kill_2nd_poe_alt, flippers, $jump6",
+						"d7_master_key, $kill_2nd_poe, flippers, $jump4, magnet",
+						"d7_master_key, $kill_2nd_poe, flippers, $jump6",
+						"d7_master_key, $kill_2nd_poe_alt, flippers, $jump4, magnet",
+						"d7_master_key, $kill_2nd_poe_alt, flippers, $jump6"]
+					},
+					{
+					"name": "Explorer's Crypt (B1F): Chest in Jumping Stalfos Room",
+					"access_rules": ["$d7clear",
+						"d7sk:5, $kill_2nd_poe, flippers, $jump4",
+						"d7sk:4, [d7sk:5], $kill_2nd_poe_alt, flippers, $jump4",
+						"d7_master_key, $kill_2nd_poe, flippers, $jump4",
+						"d7_master_key, $kill_2nd_poe_alt, flippers, $jump4"]
+					},
+					{
+					"name": "Explorer's Crypt (B1F): Boss Reward",
+					"access_rules": ["$d7clear",
+						"d7bk, d7sk:4, $sword_kill_punch, $kill_2nd_poe, flippers, $jump4",
+						"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump4",
+						"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump4",
+						"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump4",
+						"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump4",
+						"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump4"]
+					},
+					{
+					"name": "Seeds of Life",
+					"access_rules": ["$d7clear",
+						"d7bk, d7sk:4, $sword_kill_punch, $kill_2nd_poe, flippers, $jump4",
+						"d7bk, d7sk:3, [d7sk:4], $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump4",
+						"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump4",
+						"d7bk, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump4",
+						"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe, flippers, $jump4",
+						"master_keys_both, d7_master_key, $sword_kill_punch, $kill_2nd_poe_alt, flippers, $jump4"],
+					"hosted_item": "d7"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 25,
+					"y": 578
+					}
+				]
+			},
+			{
+				"name": "Enter D8",
+				"access_rules": ["$enter_d8"],
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D8"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "subrosia",
+					"x": 6,
+					"y": 12
+					}
+				]
+			},
+			{
+				"name": "Sword and Shield Maze",
+				"color": "#ff3c00",
+				"access_rules": ["$d8_dungeon"],
+				"sections": [
+					{
+						"name": "Sword & Shield Dungeon (1F): Eye Drop Near Entrance",
+						"access_rules": ["$d8clear",
+							"$destroy_pot, $contact_seeds, $shoot_seeds",
+							"$destroy_pot, $contact_seeds, $use_seeds, $max_jump:1",
+							"$destroy_pot, galeseeds, $shoot_seeds"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Three Eyes Chest",
+						"access_rules": ["$d8clear",
+							"$max_jump:1, $contact_seeds, slingshot2",
+							"$max_jump:1, galeseeds, slingshot2"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Drop in Hardhat & Magnet Ball Room",
+						"access_rules": ["$d8clear",
+							"$kill_magunesu, $kill_hardhat_magnet_d8"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): U-shaped Spiky Freezer Chest",
+						"access_rules": ["$d8clear",
+							"d8sk:1, $kill_magunesu, $jump3",
+							"d8_master_key, $kill_magunesu, $jump3"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Bottom Chest in Lava Bridge Room",
+						"access_rules": ["$d8clear",
+							"d8sk:2, $kill_magunesu, $jump3",
+							"d8_master_key, $kill_magunesu, $jump3"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Top Chest in Lava Bridge Room",
+						"access_rules": ["$d8clear",
+							"d8sk:2, $kill_magunesu, $jump3, magnet",
+							"d8_master_key, $kill_magunesu, $jump3, magnet"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (B1F): Chest Right of Spinner",
+						"access_rules": ["$d8clear",
+							"d8sk:2, $kill_magunesu, $jump3, magnet",
+							"d8_master_key, $kill_magunesu, $jump3, magnet"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Chest in Bombable Blocks Room",
+						"access_rules": ["$d8clear",
+							"d8sk:2, $kill_magunesu, $jump3, magnet, $contact_seeds, slingshot2, bombs",
+							"d8sk:2, $kill_magunesu, $jump3, magnet, galeseeds, slingshot2, bombs",
+							"d8_master_key, $kill_magunesu, $jump3, magnet, $contact_seeds, slingshot2, bombs",
+							"d8_master_key, $kill_magunesu, $jump3, magnet, galeseeds, slingshot2, bombs"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Chest on Terrace After Pols Voice Room",
+						"access_rules": ["$d8clear",
+							"d8sk:3, $torches_d8, magicboomerang, $kill_polsvoice_pit",
+							"d8sk:3, $torches_d8, $jump4, $kill_polsvoice_pit",
+							"d8_master_key, $torches_d8, magicboomerang, $kill_polsvoice_pit",
+							"d8_master_key, $torches_d8, $jump4, $kill_polsvoice_pit"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Ghost Armos Puzzle Drop",
+						"access_rules": ["$d8clear",
+							"d8sk:4, $torches_d8, bombs",
+							"d8_master_key, $torches_d8, bombs"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (B1F): Southeast Lava Chest",
+						"access_rules": ["$d8clear",
+							"d8sk:4, $torches_d8, bracelet",
+							"d8_master_key, $torches_d8, bracelet"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (1F): Chest in Sparks & Pots Room",
+						"access_rules": ["$d8clear",
+							"d8sk:4, $torches_d8, bracelet",
+							"d8_master_key, $torches_d8, bracelet"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (B1F): Southwest Lava Chest",
+						"access_rules": ["$d8clear",
+							"d8sk:4, $torches_d8",
+							"d8_master_key, $torches_d8"]
+					},
+					{
+						"name": "Sword & Shield Dungeon (B1F): Boss Reward",
+						"access_rules": ["$d8clear",
+							"d8bk, d8sk:7, $torches_d8, bracelet, $kill_medusahead",
+							"d8bk, d8_master_key, $torches_d8, bracelet, $kill_medusahead",
+							"master_keys_both, d8_master_key, $torches_d8, bracelet, $kill_medusahead"]
+					},
+					{
+						"name": "Changing Seasons",
+						"access_rules": ["$d8clear",
+							"d8bk, d8sk:7, $torches_d8, bracelet, $kill_medusahead",
+							"d8bk, d8_master_key, $torches_d8, bracelet, $kill_medusahead",
+							"master_keys_both, d8_master_key, $torches_d8, bracelet, $kill_medusahead"],
+						"hosted_item": "d8"
+					}
+					],
+					"map_locations": [
+					{
+						"map": "subrosia",
+						"x": 56,
+						"y": 41
+					}
+				]
+			}
+		]
+	}
+]

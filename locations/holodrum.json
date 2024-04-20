@@ -1,0 +1,1661 @@
+[
+	{
+		"name": "Holodrum",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"color": "#00ff08",
+		"children": [
+			{
+				"name": "Maku Tree",
+				"access_rules": ["sword"],
+				"sections": [
+					{
+					"name": "Horon Village: Maku Tree Gift"
+					},
+					{
+					"name": "Horon Village: Item Inside Maku Tree (3+ Essences)",
+					"access_rules": ["$has|essences|3",
+						"$has|essences|4",
+						"$has|essences|5",
+						"$has|essences|6",
+						"$has|essences|7",
+						"$has|essences|8"]
+					},
+					{
+					"name": "Horon Village: Item Inside Maku Tree (5+ Essences)",
+					"access_rules": ["$has|essences|5",
+						"$has|essences|6",
+						"$has|essences|7",
+						"$has|essences|8"]
+					},
+					{
+					"name": "Horon Village: Item Inside Maku Tree (7+ Essences)",
+					"access_rules": ["$has|essences|7",
+						"$has|essences|8"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 407,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Mayor's House",
+				"sections": [
+					{
+						"name": "Horon Village: Mayor's Gift"
+					},
+					{
+						"name": "Horon Village: Item Behind Cracked Wall in Mayor's House",
+						"access_rules": ["bombs"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 367,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Vasu",
+				"sections": [
+					{
+					"name": "Horon Village: Vasu's Gift"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 367,
+					"y": 614
+					}
+				]
+			},
+			{
+				"name": "Horon Heart Piece",
+				"sections": [
+					{
+					"name": "Horon Village: Item Behind Small Tree",
+					"access_rules": ["$use_seeds, emberseeds"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 375,
+					"y": 564
+					}
+				]
+			},
+			{
+				"name": "Mushroom Chest",
+				"access_rules": ["horon_seasons_chaotic",
+					"horonvillage_fall",
+					"fall"],
+				"sections": [
+					{
+					"name": "Horon Village: Chest Behind Mushrooms",
+					"access_rules": ["$destroy_mushroom"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 237,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Dr. Left's House",
+				"sections": [
+					{
+						"name": "Horon Village: Dr. Left Reward",
+						"access_rules": ["$torches"]
+					},
+					{
+						"name": "Horon Village: Chest in Dr. Left's Backyard",
+						"access_rules": ["bombs, horon_seasons_chaotic",
+							"bombs, horonvillage_winter",
+							"bombs, winter",
+							"bombs, flippers",
+							"bombs, $jump_liquid3"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 407,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Horon Shop",
+				"access_rules": ["$farm_rupees"],
+				"sections": [
+					{
+						"name": "Horon Village: Shop #1"
+					},
+					{
+						"name": "Horon Village: Shop #2"
+					},
+					{
+						"name": "Horon Village: Shop #3",
+						"visibility_rules": ["horon_potion_off"]
+					},
+					{
+					"name": "Horon Village: Member's Shop #1",
+					"access_rules": ["$member_shop"]
+					},
+					{
+					"name": "Horon Village: Member's Shop #2",
+					"access_rules": ["$member_shop"]
+					},
+					{
+					"name": "Horon Village: Member's Shop #3",
+					"access_rules": ["$member_shop"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 281,
+					"y": 620
+					}
+				]
+			},
+			{
+				"name": "Advance Shop",
+				"visibility_rules": ["advanceshopon"],
+				"access_rules": ["$farm_rupees"],
+				"sections": [
+					{
+						"name": "Horon Village: Advance Shop #1"
+					},
+					{
+						"name": "Horon Village: Advance Shop #2"
+					},
+					{
+						"name": "Horon Village: Advance Shop #3"
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 234,
+					"y": 523
+					}
+				]
+			},
+			{
+				"name": "Clock Shop",
+				"sections": [
+					{
+					"name": "Horon Village: Tick Tock Trade",
+					"access_rules": ["woodenbird"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 315,
+					"y": 575
+					}
+				]
+			},
+			{
+				"name": "Enter D0",
+				"visibility_rules": ["shuffledungeonon"],
+				"sections": [
+					{
+					"name": "Enter D0"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 172,
+					"y": 578
+					}
+				]
+			},
+			{
+				"name": "Hero's Cave",
+				"sections": [
+					{
+					"name": "Hero's Cave: Topmost Chest",
+					"access_rules": ["$d0",
+						"$destroy_bush_flute, d0_alt_entrance_vanilla"]
+					},
+					{
+					"name": "Hero's Cave: Item in Basement Under Keese Room",
+					"access_rules": ["$kill_keese, $d0",
+						"$destroy_bush_flute, d0_alt_entrance_vanilla, $kill_keese"]
+					},
+					{
+					"name": "Hero's Cave: Final Chest",
+					"access_rules": ["d0sk:1, $d0",
+						"d0_master_key, $d0",
+						"$destroy_bush_flute, d0_alt_entrance_vanilla, d0sk:1",
+						"$destroy_bush_flute, d0_alt_entrance_vanilla, d0_master_key"]
+					},
+					{
+					"name": "Hero's Cave: Alternative Entrance Chest",
+					"access_rules": ["$destroy_bush_flute, d0_alt_entrance_vanilla",
+						"d0_alt_entrance_removed, $d0"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 194,
+					"y": 578
+					}
+				]
+			},
+			{
+				"name": "Maple",
+				"sections": [
+					{
+					"name": "Maple trade",
+					"access_rules": ["$farm_maple, lonlonegg"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 194,
+					"y": 537
+					}
+				]
+			},
+			{
+				"name": "The Black Beast",
+				"sections": [
+					{
+					"name": "Western Coast: Black Beast's Chest",
+					"access_rules": ["$kill_moldorm, $torches_long, mysteryseeds"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 194,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Golden Darknut",
+				"chest_unopened_img":"images/items/golden_darknut.png",
+				"chest_opened_img":"images/items/golden_darknut_defeated.png",
+				"access_rules": ["coast_spring",
+					"$western_coast_stump, spring"],
+				"sections": [
+					{
+					"name": "Golden Darknut",
+					"access_rules": "$sword_kill_punch",
+					"hosted_item": "golden_darknut"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 234,
+					"y": 578
+					}
+				]
+			},
+			{
+				"name": "Western Coast",
+				"access_rules": ["$pirate_ship",
+					"$exit_front_d2_b, d2_d7",
+					"$exit_front_d0, d0_d7"],
+				"sections": [
+					{
+					"name": "Western Coast: Chest on Beach"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 138,
+					"y": 610
+					}
+				]
+			},
+			{
+				"name": "Western Coast House",
+				"access_rules": ["$pirate_ship",
+					"$exit_front_d2_b, d2_d7",
+					"$exit_front_d0, d0_d7"],
+				"sections": [
+					{
+					"name": "Western Coast: Chest in House"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 100,
+					"y": 568
+					}
+				]
+			},
+			{
+				"name": "Graveyard",
+				"access_rules": ["$graveyard, fall, $jump3, bombs",
+					"$graveyard, coast_fall"],
+				"sections": [
+					{
+					"name": "Western Coast: Item in Graveyard",
+					"access_rules": ["bracelet",
+						"boomerang2"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 50,
+					"y": 568
+					}
+				]
+			},
+			{
+				"name": "Cat in Tree",
+				"sections": [
+					{
+					"name": "North Horon: Yelling Old Man Trade",
+					"access_rules": ["fish"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 320,
+					"y": 500
+					}
+				]
+			},
+			{
+				"name": "Eyeglass Lake",
+				"sections": [
+					{
+					"name": "North Horon: Chest Across Bridge",
+					"access_rules": ["$jump4",
+						"north_fall, $max_jump:1",
+						"$north_stump, fall, $max_jump:1"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 366,
+					"y": 492
+					}
+				]
+			},
+			{
+				"name": "Malon's House",
+				"sections": [
+					{
+					"name": "North Horon: Malon Trade",
+					"access_rules": ["$north_stump, cuccodex"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 360,
+					"y": 352
+					}
+				]
+			},
+			{
+				"name": "Golden Beasts Reward",
+				"access_rules": ["north_summer, $destroy_bush_flute",
+					"$north_stump, summer, $destroy_bush_flute"],
+				"sections": [
+					{
+					"name": "North Horon: Golden Beasts Old Man",
+					"access_rules": ["golden0",
+						"$has|beasts|1, golden1", "$has|beasts|2, golden1", "$has|beasts|3, golden1", "$has|beasts|4, golden1",
+						"$has|beasts|2, golden2", "$has|beasts|3, golden2", "$has|beasts|4, golden2",
+						"$has|beasts|3, golden3", "$has|beasts|4, golden3",
+						"$has|beasts|4, golden4"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 289,
+					"y": 438
+					}
+				]
+			},
+			{
+				"name": "West Eyeglass Lake",
+				"access_rules": ["$north_stump, north_summer",
+					"$north_stump, summer"],
+				"sections": [
+					{
+					"name": "Eyeglass Lake: Chest in Dried Lake West Cave",
+					"access_rules": ["bombs, flippers, $max_jump:1",
+						"bombs, flippers, $moosh",
+						"flippers, $ricky"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 330,
+					"y": 448
+					}
+				]
+			},
+			{
+				"name": "East Eyeglass Lake",
+				"access_rules": ["$d5_stump, summer",
+					"$d5_stump, $wet_lake, north_summer, $enter_d5"],
+				"sections": [
+					{
+					"name": "Eyeglass Lake: Chest in Dried Lake East Cave",
+					"access_rules": ["bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 449,
+					"y": 448
+					}
+				]
+			},
+			{
+				"name": "Windmill",
+				"access_rules": ["$suburbs_stump_south"],
+				"sections": [
+					{
+						"name": "Eastern Suburbs: Guru-Guru Trade",
+						"access_rules": ["enginegrease"]
+					},
+					{
+						"name": "Eastern Suburbs: Item in Windmill Cave",
+						"access_rules": ["winter",
+							"suburbs_winter"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 460,
+					"y": 584
+					}
+				]
+			},
+			{
+				"name": "Spring Cave",
+				"access_rules": ["$suburbs_stump_south, bracelet, spring",
+					"$suburbs_stump_south, bracelet, suburbs_spring"],
+				"sections": [
+					{
+					"name": "Eastern Suburbs: Chest in Spring Cave",
+					"access_rules": ["$jump3",
+						"magnet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 534,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Top of D2",
+				"access_rules": ["$mystery_tree, $destroy_bush_flute",
+					"$exit_d2_b"],
+				"sections": [
+					{
+					"name": "Woods of Winter: Chest on D2 Roof",
+					"access_rules": ["bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 610,
+					"y": 355
+					}
+				]
+			},
+			{
+				"name": "Mushroom Cave Outside D2",
+				"access_rules": ["$mystery_tree, $destroy_mushroom"],
+				"sections": [
+					{
+					"name": "Woods of Winter: Chest in Autumn Cave Near D2",
+					"access_rules": ["wow_fall, magnet",
+						"wow_fall, $jump4",
+						"fall, magnet",
+						"fall, $jump4"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 631,
+					"y": 364
+					}
+				]
+			},
+			{
+				"name": "Golden Moblin",
+				"access_rules": ["$mystery_tree"],
+				"sections": [
+					{
+					"name": "Golden Moblin",
+					"access_rules": ["wow_fall, $kill_normal",
+						"fall, $kill_normal"],
+						"hosted_item": "golden_moblin"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 578,
+					"y": 372
+					}
+				]
+			},
+			{
+				"name": "Moblin Road",
+				"access_rules": ["$wow_stump, $destroy_bush, $bombs"],
+				"sections": [
+					{
+					"name": "Woods of Winter: Chest in Cave Behind Rockslide",
+					"access_rules": ["wow_spring",
+						"wow_summer",
+						"wow_fall",
+						"spring",
+						"summer",
+						"fall"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 578,
+					"y": 322
+					}
+				]
+			},
+			{
+				"name": "Woods of Winter Heart Piece",
+				"access_rules": ["$wow_stump"],
+				"sections": [
+					{
+					"name": "Woods of Winter: Item Below Lake",
+					"access_rules": ["bracelet",
+					"$max_jump:1",
+					"flippers",
+					"$dimitri"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 673,
+					"y": 462
+					}
+				]
+			},
+			{
+				"name": "Holly's House",
+				"access_rules": ["$wow_stump"],
+				"sections": [
+					{
+					"name": "Woods of Winter: Holly's Gift",
+					"access_rules": ["wow_winter",
+						"winter"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 663,
+					"y": 322
+					}
+				]
+			},
+			{
+				"name": "Waterfall Cave",
+				"access_rules": ["$wow_stump"],
+				"sections": [
+					{
+					"name": "Woods of Winter: Chest in Waterfall Cave",
+					"access_rules": ["$jump_liquid3",
+						"flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 621,
+					"y": 300
+					}
+				]
+			},
+			{
+				"name": "Blaino's Gym",
+				"access_rules": ["$scent_tree",
+					"$remains_exit, $jump3",
+					"$d8_exit, $jump3"],
+				"sections": [
+					{
+					"name": "North Horon: Blaino's Gym Prize"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 366,
+					"y": 322
+					}
+				]
+			},
+			{
+				"name": "Cave Behind Mushrooms",
+				"access_rules": ["$scent_tree",
+					"$remains_exit, $jump3",
+					"$d8_exit, $jump3"],
+				"sections": [
+					{
+					"name": "Holodrum Plain: Chest in Flooded Cave Behind Mushrooms",
+					"access_rules": ["flippers, $destroy_mushroom, plain_fall",
+						"flippers, $destroy_mushroom, $plain_stump, fall"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 313,
+					"y": 364
+					}
+				]
+			},
+			{
+				"name": "Underwater Item Below Natzu Bridge",
+				"access_rules": ["$scent_tree",
+					"$remains_exit, $jump3",
+					"$d8_exit, $jump3"],
+				"sections": [
+					{
+					"name": "Holodrum Plain: Underwater Item Below Natzu Bridge",
+					"access_rules": ["flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 272,
+					"y": 262
+					}
+				]
+			},
+			{
+				"name": "Old Man in Treehouse",
+				"access_rules": ["flippers, $destroy_bush_flute",
+					"flippers, $remains_exit, $jump3",
+					"flippers, $d8_exit, $jump3",
+					"$dimitri"],
+				"sections": [
+					{
+					"name": "Holodrum Plain: Old Man in Treehouse",
+					"access_rules": ["oldman0",
+						"$has|essences|1, oldman1", "$has|essences|2, oldman1", "$has|essences|3, oldman1", "$has|essences|4, oldman1", "$has|essences|5, oldman1", "$has|essences|6, oldman1", "$has|essences|7, oldman1", "$has|essences|8, oldman1",
+						"$has|essences|2, oldman2", "$has|essences|3, oldman2", "$has|essences|4, oldman2", "$has|essences|5, oldman2", "$has|essences|6, oldman2", "$has|essences|7, oldman2", "$has|essences|8, oldman2",
+						"$has|essences|3, oldman3", "$has|essences|4, oldman3", "$has|essences|5, oldman3", "$has|essences|6, oldman3", "$has|essences|7, oldman3", "$has|essences|8, oldman3",
+						"$has|essences|4, oldman4", "$has|essences|5, oldman4", "$has|essences|6, oldman4", "$has|essences|7, oldman4", "$has|essences|8, oldman4",
+						"$has|essences|5, oldman5", "$has|essences|6, oldman5", "$has|essences|7, oldman5", "$has|essences|8, oldman5",
+						"$has|essences|6, oldman6", "$has|essences|7, oldman6", "$has|essences|8, oldman6",
+						"$has|essences|7, oldman7", "$has|essences|8, oldman7",
+						"$has|essences|8, oldman8"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 237,
+					"y": 492
+					}
+				]
+			},
+			{
+				"name": "Flooded Cave",
+				"access_rules": ["$plain_stump",
+					"$remains_exit, $jump3",
+					"$d8_exit, $jump3"],
+				"sections": [
+					{
+					"name": "Holodrum Plain: Chest in Flooded Cave South of Mrs. Ruul",
+					"access_rules": ["flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 140,
+					"y": 482
+					}
+				]
+			},
+			{
+				"name": "Mrs. Ruul's House",
+				"access_rules": ["$plain_stump",
+					"$remains_exit, $jump3",
+					"$d8_exit, $jump3"],
+				"sections": [
+					{
+					"name": "Holodrum Plain: Mrs. Ruul Trade",
+					"access_rules": ["ghastlydoll"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 140,
+					"y": 445
+					}
+				]
+			},
+			{
+				"name": "Floodgate Keeper",
+				"access_rules": ["$pegasus_tree",
+					"$remains_exit, $jump4",
+					"$d8_exit, $jump4",
+					"$remains_exit, $jump3, plain_summer",
+					"$d8_exit, $jump3, plain_summer",
+					"$remains_exit, $jump3, summer",
+					"$d8_exit, $jump3, summer",
+					"$remains_exit, $jump3, $ricky",
+					"$d8_exit, $jump3, $ricky",
+					"$remains_exit, $jump3, $moosh",
+					"$d8_exit, $jump3, $moosh"],
+				"sections": [
+					{
+					"name": "Spool Swamp: Item in Floodgate Keeper's House",
+					"access_rules": ["$hit_lever"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 109,
+					"y": 279
+					}
+				]
+			},
+			{
+				"name": "Spool Swamp Digging Spot",
+				"access_rules": ["$pegasus_tree",
+					"$remains_exit, $jump4",
+					"$d8_exit, $jump4",
+					"$remains_exit, $jump3, $ricky",
+					"$d8_exit, $jump3, $ricky",
+					"$remains_exit, $jump3, $moosh",
+					"$d8_exit, $jump3, $moosh"],
+				"sections": [
+					{
+					"name": "Spool Swamp: Digging Spot Near Vasu's Sign",
+					"access_rules": ["swamp_summer, shovel",
+						"$swamp_stump, summer, shovel"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 119,
+					"y": 349
+					}
+				]
+			},
+			{
+				"name": "Spool Swamp Heart Piece",
+				"sections": [
+					{
+					"name": "Spool Swamp: Item Amidst Currents in Spring",
+					"access_rules": ["$swamp_heart_piece"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 74,
+					"y": 489
+					}
+				]
+			},
+			{
+				"name": "Winter Cave",
+				"access_rules": ["$south_swamp",
+					"$remains_exit, $jump4",
+					"$d8_exit, $jump4",
+					"$remains_exit, $jump3, plain_summer",
+					"$d8_exit, $jump3, plain_summer",
+					"$remains_exit, $jump3, summer",
+					"$d8_exit, $jump3, summer",
+					"$remains_exit, $jump3, $ricky",
+					"$d8_exit, $jump3, $ricky",
+					"$remains_exit, $jump3, $moosh",
+					"$d8_exit, $jump3, $moosh"],
+				"sections": [
+					{
+					"name": "Spool Swamp: Chest in Winter Cave",
+					"access_rules": ["swamp_winter, shovel, $bombs",
+						"swamp_winter, $any_flute, $bombs",
+						"$swamp_stump, winter, shovel, $bombs",
+						"$swamp_stump, winter, $any_flute, $bombs"
+						]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 109,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "Golden Octorok",
+				"access_rules": ["$south_swamp, swamp_summer",
+					"$south_swamp, $swamp_stump, summer"],
+				"sections": [
+					{
+					"name": "Golden Octorok",
+					"access_rules": ["$kill_normal"],
+					"hosted_item": "golden_octorok"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 21,
+					"y": 534
+					}
+				]
+			},
+			{
+				"name": "North Natzu",
+				"access_rules": ["$scent_tree, flippers",
+					"$scent_tree, $dimitri",
+					"$gale_tree, natzu_dimitri, $jump_liquid4",
+					"$remains_exit, $jump3, flippers",
+					"$remains_exit, $jump3, $dimitri",
+					"$d8_exit, $jump3, flippers",
+					"$d8_exit, $jump3, $dimitri"],
+				"sections": [
+					{
+					"name": "Natzu Region: Chest in Northern Cave"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 417,
+					"y": 175
+					}
+				]
+			},
+			{
+				"name": "Moblin Keep",
+				"sections": [
+					{
+					"name": "Natzu: Chest after Moblin Keep",
+					"access_rules": ["$scent_tree, $natzu_to_moblin, bracelet",
+						"$suburbs_stump_north, suburbs_spring, $sunken_to_moblin, bracelet",
+						"$suburbs_stump_north, spring, $sunken_to_moblin, bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 493,
+					"y": 237
+					}
+				]
+			},
+			{
+				"name": "Ingo's House",
+				"access_rules": ["$gale_tree",
+					"remains_portals_to_city"],
+				"sections": [
+					{
+					"name": "Sunken City: Ingo Trade",
+					"access_rules": ["goronvase"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 570,
+					"y": 187
+					}
+				]
+			},
+			{
+				"name": "Syrup's House",
+				"access_rules": ["$gale_tree",
+					"remains_portals_to_city"],
+				"sections": [
+					{
+					"name": "Sunken City: Syrup Trade",
+					"access_rules": ["winter, flippers, mushroom",
+						"sunken_winter, mushroom"]
+					},
+					{
+					"name": "Sunken City: Syrup Shop #1",
+					"access_rules": ["winter, flippers, $farm_rupees, mushroom",
+						"sunken_winter, $farm_rupees, mushroom"]
+					},
+					{
+					"name": "Sunken City: Syrup Shop #2",
+					"access_rules": ["winter, flippers, $farm_rupees, mushroom",
+						"sunken_winter, $farm_rupees, mushroom"]
+					},
+					{
+					"name": "Sunken City: Syrup Shop #3",
+					"access_rules": ["winter, flippers, $farm_rupees, mushroom",
+						"sunken_winter, $farm_rupees, mushroom"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 620,
+					"y": 237
+					}
+				]
+			},
+			{
+				"name": "Waterfall Challenge",
+				"access_rules": ["$gale_tree",
+					"remains_portals_to_city"],
+				"sections": [
+					{
+					"name": "Sunken City: Master Diver's Challenge Chest",
+					"access_rules": ["sword1, $max_jump:1, $waterfalls",
+						"sword1, flippers, $waterfalls"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 611,
+					"y": 110
+					}
+				]
+			},
+			{
+				"name": "Waterfall",
+				"access_rules": ["$gale_tree",
+					"remains_portals_to_city"],
+				"sections": [
+					{
+					"name": "Sunken City: Master's Plaque Trade",
+					"access_rules": ["plaque, $waterfalls"]
+					},
+					{
+					"name": "Sunken City: Chest in Master Diver's Cave",
+					"access_rules": ["$waterfalls"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 626,
+					"y": 110
+					}
+				]
+			},
+			{
+				"name": "Sunken City Cliffs",
+				"access_rules": ["$gale_tree",
+				"remains_portals_to_city"],
+				"sections": [
+					{
+					"name": "Sunken City: Chest in Summer Cave",
+					"access_rules": ["flippers, sunken_summer, $destroy_bush",
+						"flippers, summer, $destroy_bush"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 652,
+					"y": 185
+					}
+				]
+			},
+			{
+				"name": "Mt. Cucco Peak",
+				"access_rules": ["$mount_cucco_stump",
+					"$remains_portals_to_cucco"],
+				"sections": [
+					{
+					"name": "Mt. Cucco: Spring Banana Tree",
+					"access_rules": ["spring, bracelet, $max_jump:1, $harvest_cucco_tree, $destroy_flower",
+						"sunken_spring, bracelet, $max_jump:1, $harvest_cucco_tree, banana",
+						"spring, bracelet, $max_jump:1, $harvest_cucco_tree, $destroy_flower",
+						"sunken_spring, bracelet, $max_jump:1, $harvest_cucco_tree, banana"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 672,
+					"y": 15
+					}
+				]
+			},
+			{
+				"name": "Mt. Cucco Cave",
+				"access_rules": ["$mount_cucco_stump",
+					"$remains_portals_to_cucco"],
+				"sections": [
+					{
+					"name": "Mt. Cucco: Moving Platform Cave",
+					"access_rules": ["bracelet, sunken_spring",
+						"bracelet, spring"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 672,
+					"y": 68
+					}
+				]
+			},
+			{
+				"name": "Talon's Cave",
+				"access_rules": ["$mount_cucco_spring, megaphone",
+				"$remains_portals_to_cucco, sunken_spring, megaphone",
+				"$remains_portals_to_cucco, spring, megaphone",
+				"$mount_cucco_exit_alt, megaphone"],
+				"sections": [
+					{
+					"name": "Mt. Cucco: Talon Trade"
+					},
+					{
+					"name": "Mt. Cucco: Chest Behind Talon"
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 503,
+					"y": 58
+					}
+				]
+			},
+			{
+				"name": "Diving Spot Outside D4",
+				"access_rules": ["$mount_cucco_spring",
+				"$remains_portals_to_cucco, sunken_spring",
+				"$remains_portals_to_cucco, spring",
+				"$mount_cucco_exit_alt"],
+				"sections": [
+					{
+					"name": "Mt. Cucco: Diving Spot Outside D4",
+					"access_rules": ["flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 598,
+					"y": 50
+					}
+				]
+			},
+			{
+				"name": "Mt. Cucco Heart Piece",
+				"access_rules": ["$mount_cucco_spring",
+				"$remains_portals_to_cucco, sunken_spring",
+				"$remains_portals_to_cucco, spring",
+				"$mount_cucco_exit_alt"],
+				"sections": [
+					{
+					"name": "Mt. Cucco: Item on Ledge",
+					"access_rules": []
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 575,
+					"y": 98
+					}
+				]
+			},
+			{
+				"name": "East Goron Mountain",
+				"access_rules": ["$mount_cucco_stump",
+					"$remains_portals_to_cucco"],
+				"sections": [
+					{
+					"name": "Goron Mountain: Item Across Pits",
+					"access_rules": ["banana",
+					"$jump5"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 449,
+					"y": 68
+					}
+				]
+			},
+			{
+				"name": "Goron's Gift",
+				"sections": [
+					{
+					"name": "Goron Mountain: Lonely Goron's Gift",
+					"access_rules": ["$goron_mountain, bombs, bracelet",
+						"$mount_cucco_stump, bombs, shovel",
+						"$mount_cucco_stump, bombs, banana",
+						"$remains_portals_to_goron, bombs, bracelet"
+						]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 396,
+					"y": 58
+					}
+				]
+			},
+			{
+				"name": "Goron Caves",
+				"access_rules": ["$goron_mountain",
+					"$remains_portals_to_goron"],
+				"sections": [
+					{
+					"name": "Goron Mountain: Chest Across Lava",
+					"access_rules": ["bombs, $jump_liquid3"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 361,
+					"y": 88
+					}
+				]
+			},
+			{
+				"name": "Biggoron Trade",
+				"access_rules": ["$goron_mountain",
+					"$remains_portals_to_goron"],
+				"sections": [
+					{
+					"name": "Goron Mountain: Biggoron Trade",
+					"access_rules": ["$max_jump:1, lavasoup"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 364,
+					"y": 38
+					}
+				]
+			},
+			{
+				"name": "Golden Lynel",
+				"chest_unopened_img": "images/items/golden_lynel.png",
+				"chest_opened_img": "images/items/golden_lynel_defeated.png",
+				"access_rules": ["$tarm_lynel"],
+				"sections": [
+					{
+					"name": "Lost Woods",
+					"access_rules": ["winter, $kill_lynel"],
+					"hosted_item": "golden_lynel"
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 148,
+					"y": 192
+					}
+				]
+			},
+			{
+				"name": "Lost Woods",
+				"access_rules": ["$tarm_tree"],
+				"sections": [
+					{
+					"name": "Lost Woods: Pedestal Item",
+					"access_rules": ["phonograph"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 22,
+					"y": 192
+					}
+				]
+			},
+			{
+				"name": "Tree Behind Mushrooms",
+				"access_rules": ["$tarm_tree"],
+				"sections": [
+					{
+					"name": "Tarm Ruins: Chest in Rabbit Hole Under Tree",
+					"access_rules": ["$use_seeds, emberseeds"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 15,
+					"y": 85
+					}
+				]
+			},
+			{
+				"name": "Samasa Desert Pit",
+				"access_rules": ["$desert"],
+				"sections": [
+					{
+					"name": "Samasa Desert: Item in Quicksand Pit",
+					"access_rules": ["bracelet"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 528,
+					"y": 573
+					}
+				]
+			},
+			{
+				"name": "Samasa Desert",
+				"access_rules": ["$desert"],
+				"sections": [
+					{
+					"name": "Samasa Desert: Chest on Cliff",
+					"access_rules": ["flippers"]
+					}
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 663,
+					"y": 662
+					}
+				]
+			},
+			{
+				"name": "Temple Remains Heart Piece",
+				"sections": [
+					{
+					"name": "Temple Remains: Item in Cave Behind Rockslide",
+					"access_rules": ["$destroyed_remains, $jump_liquid2, $portal_remains_enter",
+						"$destroyed_remains, $jump_liquid2, $d8_exit",
+						"$destroyed_remains, $jump_liquid2, $remains_exit"]
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 280,
+					"y": 42
+					}
+				]
+			},
+			{
+				"name": "Onox",
+				"access_rules": ["$scent_tree, sword1"],
+				"sections": [
+					{
+					"name": "Onox",
+					"access_rules": ["onox0",
+						"$has|essences|1, onox1", "$has|essences|2, onox1", "$has|essences|3, onox1", "$has|essences|4, onox1", "$has|essences|5, onox1", "$has|essences|6, onox1", "$has|essences|7, onox1", "$has|essences|8, onox1",
+						"$has|essences|2, onox2", "$has|essences|3, onox2", "$has|essences|4, onox2", "$has|essences|5, onox2", "$has|essences|6, onox2", "$has|essences|7, onox2", "$has|essences|8, onox2",
+						"$has|essences|3, onox3", "$has|essences|4, onox3", "$has|essences|5, onox3", "$has|essences|6, onox3", "$has|essences|7, onox3", "$has|essences|8, onox3",
+						"$has|essences|4, onox4", "$has|essences|5, onox4", "$has|essences|6, onox4", "$has|essences|7, onox4", "$has|essences|8, onox4",
+						"$has|essences|5, onox5", "$has|essences|6, onox5", "$has|essences|7, onox5", "$has|essences|8, onox5",
+						"$has|essences|6, onox6", "$has|essences|7, onox6", "$has|essences|8, onox6",
+						"$has|essences|7, onox7", "$has|essences|8, onox7",
+						"$has|essences|8, onox8"],
+					"hosted_item": "onox"
+					},
+					{
+					"name": "Ganon",
+					"visibility_rules": ["ganon_goal"],
+					"access_rules": ["onox0",
+						"$has|essences|1, onox1", "$has|essences|2, onox1", "$has|essences|3, onox1", "$has|essences|4, onox1", "$has|essences|5, onox1", "$has|essences|6, onox1", "$has|essences|7, onox1", "$has|essences|8, onox1",
+						"$has|essences|2, onox2", "$has|essences|3, onox2", "$has|essences|4, onox2", "$has|essences|5, onox2", "$has|essences|6, onox2", "$has|essences|7, onox2", "$has|essences|8, onox2",
+						"$has|essences|3, onox3", "$has|essences|4, onox3", "$has|essences|5, onox3", "$has|essences|6, onox3", "$has|essences|7, onox3", "$has|essences|8, onox3",
+						"$has|essences|4, onox4", "$has|essences|5, onox4", "$has|essences|6, onox4", "$has|essences|7, onox4", "$has|essences|8, onox4",
+						"$has|essences|5, onox5", "$has|essences|6, onox5", "$has|essences|7, onox5", "$has|essences|8, onox5",
+						"$has|essences|6, onox6", "$has|essences|7, onox6", "$has|essences|8, onox6",
+						"$has|essences|7, onox7", "$has|essences|8, onox7",
+						"$has|essences|8, onox8"],
+					"hosted_item": "ganon"
+					}
+					
+				],
+				"map_locations": [
+					{
+					"map": "holodrum",
+					"x": 150,
+					"y": 15
+					}
+				]
+			},
+			{
+				"name": "Horon Village Tree",
+				"sections": [
+				  	{
+						"name": "Horon Village: Seed Tree",
+						"access_rules": ["$harvest_seeds",
+							"$harvest_seeds_dimitri"],
+						"hosted_item": "tree_village"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 364,
+						"y": 654
+				  	}
+				]
+			},
+			{
+				"name": "Holodrum Plain tree",
+				"access_rules": ["$scent_tree",
+					"$d8_exit, $jump3",
+					"$remains_exit, $jump3"],
+				"sections": [
+				  	{
+						"name": "Holodrum Plain: Seed Tree",
+						"access_rules": ["$harvest_seeds",
+							"$harvest_seeds_dimitri"],
+						"hosted_item": "tree_plain"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 323,
+						"y": 279
+				  	}
+				]
+			},		
+			{
+				"name": "Woods of Winter Tree",
+				"access_rules": ["$mystery_tree"],
+				"sections": [
+				  	{
+						"name": "Woods of Winter: Seed Tree",
+						"access_rules": ["$harvest_seeds", 
+							"$harvest_seeds_dimitri"],
+						"hosted_item": "tree_wow"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 621,
+						"y": 407
+					}
+				]
+			},
+			{
+				"name": "Spool Swamp tree",
+				"access_rules": ["$pegasus_tree",
+					"$remains_exit, $jump4",
+					"$d8_exit, $jump4",
+					"$remains_exit, $jump3, plain_summer",
+					"$d8_exit, $jump3, plain_summer",
+					"$remains_exit, $jump3, summer",
+					"$d8_exit, $jump3, summer",
+					"$remains_exit, $jump3, $ricky",
+					"$d8_exit, $jump3, $ricky",
+					"$remains_exit, $jump3, $moosh",
+					"$d8_exit, $jump3, $moosh"],
+				"sections": [
+					{
+						"name": "Spool Swamp: Seed Tree",
+						"access_rules": ["$harvest_seeds",
+							"$harvest_seeds_dimitri"],
+						"hosted_item": "tree_swamp"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "holodrum",
+						"x": 107,
+						"y": 322
+					}
+				]
+			},
+			{
+				"name": "Sunken City tree",
+				"access_rules": ["$gale_tree",
+					"$remains_portals_to_city"],
+				"sections": [
+				  {
+						"name": "Sunken City: Seed Tree",
+						"access_rules": ["$harvest_seeds_dimitri",
+							"$harvest_seeds, bombs"],
+						"hosted_item": "tree_sunken"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 661,
+						"y": 235
+				  	}
+				]
+			},
+			{
+				"name": "Tarm Ruins tree",
+				"access_rules": ["$tarm_tree"],
+				"sections": [
+				  	{
+					"name": "Tarm Ruins: Seed Tree",
+					"access_rules": ["$harvest_seeds"],
+					"hosted_item": "tree_tarm"
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 22,
+						"y": 57
+				  	}
+				]
+			},
+			{
+				"name": "Goron Mountain Old Man",
+				"visibility_rules": ["old_men_locations"],
+				"access_rules": ["$goron_mountain",
+					"$remains_portals_to_goron"],
+				"sections": [
+				  	{
+					"name": "Goron Mountain: Old Man",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 353,
+						"y": 114
+				  	}
+				]
+			},
+			{
+				"name": "Old Man Near Blaino's Gym",
+				"visibility_rules": ["old_men_locations"],
+				"access_rules": ["$scent_tree, plain_summer",
+					"$scent_tree, summer, $max_jump:1",
+					"$remains_exit, plain_summer, $jump3",
+					"$remains_exit, summer, $jump3",
+					"$d8_exit, plain_summer, $jump3",
+					"$d8_exit, summer, $jump3",
+					"$scent_tree, $ricky"],
+				"sections": [
+				  	{
+					"name": "Holodrum Plain: Old Man Near Blaino's Gym",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 280,
+						"y": 286
+				  	}
+				]
+			},
+			{
+				"name": "Old Man Near D1",
+				"visibility_rules": ["old_men_locations"],
+				"access_rules": ["$north_stump"],
+				"sections": [
+				  	{
+					"name": "North Horon: Old Man Near D1",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 315,
+						"y": 399
+				  	}
+				]
+			},
+			{
+				"name": "Western Coast Old Man",
+				"visibility_rules": ["old_men_locations"],
+				"access_rules": ["$pirate_ship",
+					"$exit_front_d2_b, d2_d7",
+					"$exit_front_d0, d0_d7"],
+				"sections": [
+				  	{
+					"name": "Western Coast: Old Man",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 96,
+						"y": 564
+				  	}
+				]
+			},
+			{
+				"name": "Horon Village Old Man",
+				"visibility_rules": ["old_men_locations"],
+				"sections": [
+				  	{
+					"name": "Horon Village: Old Man",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 396,
+						"y": 677
+				  	}
+				]
+			},
+			{
+				"name": "Old Man Near D6",
+				"visibility_rules": ["old_men_locations"],
+				"access_rules": ["$enter_d6"],
+				"sections": [
+				  	{
+					"name": "Tarm Ruins: Old Man Near D6",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 122,
+						"y": 7
+				  	}
+				]
+			},
+			{
+				"name": "Woods of Winter Old Man",
+				"visibility_rules": ["old_men_locations"],
+				"access_rules": ["$wow_stump"],
+				"sections": [
+				  	{
+					"name": "Woods of Winter: Old Man",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 653,
+						"y": 362
+				  	}
+				]
+			},
+			{
+				"name": "Old Man Near Mrs. Ruul's House",
+				"visibility_rules": ["old_men_locations"],
+				"access_rules": ["$plain_stump",
+					"$remains_exit, $jump3",
+					"$d8_exit, $jump3",
+					"$destroy_bush_flute, flippers",
+					"$dimitri"],
+				"sections": [
+				  	{
+					"name": "Holodrum Plain: Old Man Near Mrs. Ruul's House",
+					"access_rules": ["$use_seeds, emberseeds"]
+				  	}
+				],
+				"map_locations": [
+				  	{
+						"map": "holodrum",
+						"x": 199,
+						"y": 457
+				  	}
+				]
+			}
+		]
+	}
+]

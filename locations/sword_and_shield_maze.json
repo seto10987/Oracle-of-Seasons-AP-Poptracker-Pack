@@ -1,0 +1,287 @@
+﻿[
+	{
+		"name": "Sword and Shield Maze",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"access_rules": ["$d8_dungeon"],
+		"children": [	
+			{
+				"name": "Sword & Shield Dungeon (1F): Eye Drop Near Entrance",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Eye Drop Near Entrance",
+                        "access_rules": ["$destroy_pot, $contact_seeds, $shoot_seeds",
+							"$destroy_pot, $contact_seeds, $use_seeds, $max_jump:1",
+							"$destroy_pot, galeseeds, $shoot_seeds"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 228,
+						"y": 400
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Three Eyes Chest",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Three Eyes Chest",
+                        "access_rules": ["$max_jump:1, $contact_seeds, slingshot2",
+								"$max_jump:1, galeseeds, slingshot2"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 79,
+						"y": 281
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Drop in Hardhat & Magnet Ball Room",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Drop in Hardhat & Magnet Ball Room",
+                        "access_rules": ["$kill_magunesu, $kill_hardhat_magnet_d8"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 58,
+						"y": 69
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): U-shaped Spiky Freezer Chest",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): U-shaped Spiky Freezer Chest",
+                        "access_rules": ["d8sk:1, $kill_magunesu, $jump3",
+							"d8_master_key, $kill_magunesu, $jump3"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 282,
+						"y": 624
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Bottom Chest in Lava Bridge Room",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Bottom Chest in Lava Bridge Room",
+                        "access_rules": ["d8sk:2, $kill_magunesu, $jump3",
+							"d8_master_key, $kill_magunesu, $jump3"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 559,
+						"y": 794
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Top Chest in Lava Bridge Room",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Top Chest in Lava Bridge Room",
+                        "access_rules": ["d8sk:2, $kill_magunesu, $jump3, magnet",
+							"d8_master_key, $kill_magunesu, $jump3, magnet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 368,
+						"y": 741
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (B1F): Chest Right of Spinner",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (B1F): Chest Right of Spinner",
+                        "access_rules": ["d8sk:2, $kill_magunesu, $jump3, magnet",
+							"d8_master_key, $kill_magunesu, $jump3, magnet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze2",
+						"x": 527,
+						"y": 667
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Chest in Bombable Blocks Room",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Chest in Bombable Blocks Room",
+                        "access_rules": ["d8sk:2, $kill_magunesu, $jump3, magnet, $contact_seeds, slingshot2, bombs",
+							"d8sk:2, $kill_magunesu, $jump3, magnet, galeseeds, slingshot2, bombs",
+							"d8_master_key, $kill_magunesu, $jump3, magnet, $contact_seeds, slingshot2, bombs",
+							"d8_master_key, $kill_magunesu, $jump3, magnet, galeseeds, slingshot2, bombs"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 677,
+						"y": 623
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Chest on Terrace After Pols Voice Room",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Chest on Terrace After Pols Voice Room",
+                        "access_rules": ["d8sk:3, $torches_d8, magicboomerang, $kill_polsvoice_pit",
+							"d8sk:3, $torches_d8, $jump4, $kill_polsvoice_pit",
+							"d8_master_key, $torches_d8, magicboomerang, $kill_polsvoice_pit",
+							"d8_master_key, $torches_d8, $jump4, $kill_polsvoice_pit"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 837,
+						"y": 281
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Ghost Armos Puzzle Drop",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Ghost Armos Puzzle Drop",
+                        "access_rules": ["d8sk:4, $torches_d8, bombs",
+							"d8_master_key, $torches_d8, bombs"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 602,
+						"y": 293
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (B1F): Southeast Lava Chest",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (B1F): Southeast Lava Chest",
+                        "access_rules": ["d8sk:4, $torches_d8, bracelet",
+							"d8_master_key, $torches_d8, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze2",
+						"x": 613,
+						"y": 528
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (1F): Chest in Sparks & Pots Room",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (1F): Chest in Sparks & Pots Room",
+                        "access_rules": ["d8sk:4, $torches_d8, bracelet",
+							"d8_master_key, $torches_d8, bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze1",
+						"x": 837,
+						"y": 549
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (B1F): Southwest Lava Chest",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (B1F): Southwest Lava Chest",
+                        "access_rules": ["d8sk:4, $torches_d8",
+							"d8_master_key, $torches_d8"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze2",
+						"x": 378,
+						"y": 548
+					}
+				]
+			},
+			{
+				"name": "Sword & Shield Dungeon (B1F): Boss Reward",
+				"sections": 
+                [
+					{
+                        "name": "Sword & Shield Dungeon (B1F): Boss Reward",
+                        "access_rules": ["d8bk, d8sk:7, $torches_d8, bracelet, $kill_medusahead",
+							"d8bk, d8_master_key, $torches_d8, bracelet, $kill_medusahead",
+							"master_keys_both, d8_master_key, $torches_d8, bracelet, $kill_medusahead"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze2",
+						"x": 559,
+						"y": 195
+					}
+				]
+			},
+			{
+				"name": "Changing Seasons",
+				"sections": 
+                [
+					{
+                        "name": "Changing Seasons",
+                        "access_rules": ["d8bk, d8sk:7, $torches_d8, bracelet, $kill_medusahead",
+							"d8bk, d8_master_key, $torches_d8, bracelet, $kill_medusahead",
+							"master_keys_both, d8_master_key, $torches_d8, bracelet, $kill_medusahead"],
+						"hosted_item": "d8"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "sword_and_shield_maze2",
+						"x": 559,
+						"y": 59
+					}
+				]
+			}
+		]
+	}
+]

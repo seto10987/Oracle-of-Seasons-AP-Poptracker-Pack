@@ -1,0 +1,208 @@
+﻿[
+	{
+		"name": "Gnarled Root Dungeon",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"access_rules": ["$d1"],
+		"children": [	
+			{
+				"name": "Gnarled Root Dungeon: Drop in Right Stalfos Room",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Drop in Right Stalfos Room",
+                        	"access_rules": ["$kill_stalfos",
+								"bracelet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 617,
+						"y": 452
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Chest in Left Stalfos Room",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Chest in Left Stalfos Room",
+                        	"access_rules": ["d1sk:1, $kill_stalfos",
+							"d1_master_key, $kill_stalfos"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 342,
+						"y": 452
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Chest in Goriya Room",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Chest in Goriya Room",
+                        "access_rules": ["d1sk:1, $kill_normal, $torches",
+							"d1_master_key, $kill_normal, $torches"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 205,
+						"y": 351
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Chest in Block-pushing Room",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Chest in Block-pushing Room",
+                        "access_rules": ["d1sk:1, $kill_normal",
+							"d1_master_key, $kill_normal"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 13,
+						"y": 214
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Chest Near Railway Lever",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Chest Near Railway Lever",
+                        "access_rules": ["d1sk:1, $kill_stalfos",
+							"d1_master_key, $kill_stalfos"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 379,
+						"y": 233
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Chest Near Railway",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Chest Near Railway",
+                        "access_rules": ["d1sk:1, $kill_stalfos, $hit_lever",
+							"d1_master_key, $kill_stalfos, $hit_lever"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 479,
+						"y": 260
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Hidden Chest Revealed by Button",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Hidden Chest Revealed by Button",
+                        "access_rules": ["d1sk:1, $kill_stalfos, $hit_lever",
+							"d1_master_key, $kill_stalfos, $hit_lever"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 662,
+						"y": 224
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Item in Basement",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Item in Basement",
+                        "access_rules": ["d1sk:2, $kill_goriyabros, bombs",
+							"d1_master_key, $kill_goriyabros, bombs"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 203,
+						"y": 149
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Chest in Floormaster Room",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Chest in Floormaster Room",
+                        "access_rules": ["$torches"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 580,
+						"y": 324
+					}
+				]
+			},
+			{
+				"name": "Gnarled Root Dungeon: Boss Reward",
+				"sections": 
+                [
+					{
+                        "name": "Gnarled Root Dungeon: Boss Reward",
+                        "access_rules": ["d1bk, $torches, $kill_aquamentus",
+							"d1_master_key, master_keys_both, $torches, $kill_aquamentus"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 750,
+						"y": 252
+					}
+				]
+			},
+			{
+				"name": "Fertile Soil",
+				"sections": 
+                [
+					{
+                        "name": "Fertile Soil",
+                        "access_rules": ["d1bk, $torches, $kill_aquamentus",
+							"d1_master_key, master_keys_both, $torches, $kill_aquamentus"],
+						"hosted_item": "d1"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "gnarled_root_dungeon",
+						"x": 891,
+						"y": 252
+					}
+				]
+			}
+		]
+	}
+]

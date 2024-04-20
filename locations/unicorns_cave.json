@@ -1,0 +1,250 @@
+﻿[
+	{
+		"name": "Unicorn's Cave",
+		"chest_unopened_img": "images/labels/chest.png",
+		"chest_opened_img": "images/labels/chestopen.png",
+		"access_rules": ["$d5"],
+		"children": [	
+			{
+				"name": "Unicorn's Cave: Right Cart Chest",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Right Cart Chest",
+						"access_rules": [
+							"$hit_lever, $jump_liquid2",
+							"$hit_lever, flippers"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 823,
+						"y": 776
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Gibdo Room Chest",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Gibdo Room Chest",
+						"access_rules": ["$kill_normal, $kill_gibdo, $jump_liquid2",
+							"$kill_normal, $kill_gibdo, flippers, $max_jump:1",
+							"$kill_normal, $kill_gibdo, magnet, bombs, $max_jump:1"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 839,
+						"y": 439
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Magnet Gloves Chest",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Magnet Gloves Chest",
+						"access_rules": ["d5sk:1, [d5sk:5], flippers, $max_jump:1",
+							"d5sk:1, [d5sk:5], $jump_liquid4",
+							"d5_master_key, flippers, $max_jump:1",
+							"d5_master_key, $jump_liquid4"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 87,
+						"y": 216
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Chest Left from Entrance",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Chest Left from Entrance",
+						"access_rules": ["magnet",
+							"$jump4"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 311,
+						"y": 1112
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Quicksand Spiral Chest",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Quicksand Spiral Chest",
+						"access_rules": ["$kill_moldorm, $kill_ironmask"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 119,
+						"y": 968
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Terrace Chest",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Terrace Chest",
+						"access_rules": ["magnet",
+							"$jump_liquid2, bombs",
+							"flippers, $max_jump:1, bombs"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 263,
+						"y": 728
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Armos Puzzle Room Chest",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Armos Puzzle Room Chest",
+						"access_rules": ["magnet, $kill_moldorm, $kill_ironmask",
+							"flippers, $max_jump:1, bombs, $kill_moldorm, $kill_ironmask",
+							"$jump_liquid2, bombs, $kill_moldorm, $kill_ironmask"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 151,
+						"y": 615
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Magnet Spinner Chest",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Magnet Spinner Chest",
+						"access_rules": [
+							"$jump_liquid2, magnet",
+							"flippers, magnet",
+							"$jump5"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 520,
+						"y": 952
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Chest in Right Half of Minecart Bay Room",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Chest in Right Half of Minecart Bay Room",
+						"access_rules": ["$jump4",
+							"$jump_liquid2, magnet",
+							"flippers, magnet"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 903,
+						"y": 1176
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Treadmills Basement Item",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Treadmills Basement Item",
+						"access_rules": ["d5sk:3, [d5sk:5], $jump_liquid2, magnet, $kill_syger, $sword_kill_punch",
+							"d5sk:3, [d5sk:5], flippers, magnet, $kill_syger, $sword_kill_punch",
+							"d5_master_key, $jump_liquid2, magnet, $kill_syger, $sword_kill_punch",
+							"d5_master_key, flippers, magnet, $kill_syger, $sword_kill_punch"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 1434,
+						"y": 422
+					},
+					{
+						"map": "unicorns_cave",
+						"x": 1176,
+						"y": 503
+					}
+				]
+			},
+			{
+				"name": "Unicorn's Cave: Boss Reward",
+				"sections": 
+                [
+					{
+                        "name": "Unicorn's Cave: Boss Reward",
+						"access_rules": ["d5bk, d5sk:2, [d5sk:5], $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5sk:2, [d5sk:5], flippers, magnet, $kill_syger",
+							"d5bk, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5_master_key, flippers, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, flippers, magnet, $kill_syger"]
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 1079,
+						"y": 296
+					}
+				]
+			},
+			{
+				"name": "Nurturing Warmth",
+				"sections": 
+                [
+					{
+                        "name": "Nurturing Warmth",
+						"access_rules": ["d5bk, d5sk:2, [d5sk:5], $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5sk:2, [d5sk:5], flippers, magnet, $kill_syger",
+							"d5bk, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"d5bk, d5_master_key, flippers, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, $jump_liquid2, magnet, $kill_syger",
+							"master_keys_both, d5_master_key, flippers, magnet, $kill_syger"],
+						"hosted_item": "d5"
+                    }
+                ],
+				"map_locations": [
+					{
+						"map": "unicorns_cave",
+						"x": 1079,
+						"y": 62
+					}
+				]
+			}
+		]
+	}
+]

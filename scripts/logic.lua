@@ -1,20 +1,3 @@
-function has(item)
-  return Tracker:ProviderCountForCode(item) == 1
-end
-
-function checkRequirements(reference, check_count)
-    local reqCount = Tracker:ProviderCountForCode(reference)
-    local count = Tracker:ProviderCountForCode(check_count)
-
-    if count >= reqCount then
-        return true
-    else
-        return false
-    end
-end
--- WEIRD LOGIC CHECKS
-
--- Deprecated
 function get_bombs()
 	return sword_kill() or
 	
@@ -28,13 +11,14 @@ end
 
 function destroy_signs()
 	return has("sword2") or 
-	has("biggoron_sword")
+	has("biggoron_sword") or
+	use_seeds() and has("emberseeds")
 end
 
 function bombs()
 	return ricky() or has("bombs")
 end
--- Can farm Ore Chunks in Subrosia
+
 function ore_chunks()
 	return has("shovel") or 
 	has("sword1") or 
@@ -43,7 +27,6 @@ function ore_chunks()
 	has("biggoron_sword")
 end
 
--- Saves time on having to check for specific flutes in spots that simply need the flute
 function any_flute()
 	return moosh() or
 	ricky() or
@@ -60,8 +43,6 @@ function dimitri()
 	return has("flute_generic") and has("natzu_dimitri")
 end
 
-
--- If you have any season, you have a rod!
 function has_rod()
 	return has("winter") or
 	has("spring") or
@@ -69,15 +50,12 @@ function has_rod()
 	has("fall")
 end
 
--- Can the player use a punch ring?
 function punch()
 	return has("ring_fist") or has("ring_expert")
 end
 
--- Can the player harvest seeds?
--- Dimitri is not globally available for all trees so he's not here
 function harvest_seeds()
-	return use_seeds() and sword_kill_punch()
+	return use_seeds() and (sword_kill_punch() or has_rod())
 end
 
 function harvest_seeds_dimitri()
@@ -88,13 +66,13 @@ end
 function harvest_cucco_tree()
 	return has("sword1") or has("biggoron_sword") or has("foolsore")
 end
+
 -- INTERACT RULES
 
 function shoot_seeds()
 	return has("slingshot1") or
 	has("hss")
 end
-
 
 function use_seeds()
 	return has("satchel1") or
@@ -289,7 +267,7 @@ function cross_water()
 	max_jump() >= 1
 end
 
--- KILL RULES (order of appearance)
+-- KILL RULES
 
 function sword_kill()
 	return has("sword1") or
@@ -320,17 +298,19 @@ function kill_normal()
 		return 
 		sword_kill_punch() or
 		gale_kill() or
-	(has ("medium") or has("hard")) and
-		use_seeds() and has("emberseeds")
+	((has ("medium") or has("hard")) and
+		use_seeds() and has("emberseeds") or has("bombs30"))
 end
 
 function kill_keese()
 	return kill_normal() or
-	has("boomerang")
+	has("boomerang") or
+	(has("medium") or has("hard")) and has("bombs30")
 end
 
 function kill_stalfos()
-	return kill_normal() or has_rod()
+	return kill_normal() or has_rod() or
+	(has("medium") or has("hard")) and has("bombs30")
 end
 
 function kill_goriyabros()
@@ -340,7 +320,8 @@ function kill_goriyabros()
 		shoot_seeds_combat() and has("scentseeds")) or
 	
 	(has (("medium") or ("hard")) and
-		has("satchel2") and (has ("scentseeds") or has ("mysteryseeds")))
+		has("satchel2") and (has ("scentseeds") or has ("mysteryseeds"))) or
+		(has("medium") or has("hard")) and has("bombs30")
 end
 
 function kill_aquamentus()
@@ -366,15 +347,15 @@ function kill_moblin_pit()
 		shoot_seeds_combat() and has("galeseeds") or
 		max_jump() >= 1 and (kill_normal() or gale_kill()) or
 	
-	(has("medium") or has("hard")) and
-		sword_kill()
+	((has("medium") or has("hard")) and
+		sword_kill() or
+		has("bombs30"))
 end
 
 function kill_facade()
 	return has("bombs")
 end
 
--- REDUNDANT
 function kill_dodongo()
 	return get_bombs() and
 	has("bracelet")
@@ -386,7 +367,7 @@ function kill_beetle()
 		gale_kill() or
 	
 	(has("medium") or has("hard")) and
-		((has("shield1") or has("shovel")) and (use_seeds_combat() and contact_seeds()) or sword_kill_punch())
+		((has("shield1") or has("shovel")) and (use_seeds_combat() and contact_seeds()) or sword_kill_punch() or has("bombs30"))
 end
 
 function kill_moldorm()
@@ -394,7 +375,7 @@ function kill_moldorm()
 		sword_kill_punch() or
 
 	(has("medium") or has("hard")) and
-		has("satchel2") and has("scentseeds")
+		((has("satchel2") and has("scentseeds")) or has("bombs30"))
 end
 
 function kill_omuai()
@@ -416,7 +397,8 @@ function kill_mothula()
 end
 
 function kill_wizzrobe()
-	return kill_normal()
+	return kill_normal() or
+	(has("medium") or has("hard")) and has("bombs30")
 end
 
 function kill_ironmask()
@@ -425,7 +407,7 @@ function kill_ironmask()
 		sword_kill() or
 
 	(has(("medium") or has("hard")) and
-		has("satchel2") and (has("emberseeds") or has("scentseeds")))
+		(has("satchel2") and (has("emberseeds") or has("scentseeds"))) or has("bombs30"))
 end
 
 function kill_gibdo()
@@ -581,6 +563,7 @@ function farm_maple()
 	(((has"medium") or has("hard")) and
 		has("satchel2") and contact_seeds())
 end
+
 -- NORTH HORON
 
 function north_stump()
@@ -589,7 +572,9 @@ function north_stump()
 end
 
 function enter_d1()
-	return has("d1key") and north_stump()
+	return has("d1key") and north_stump() or
+	exit_front_d2_b() and has("d2_d1") or
+	exit_front_d0() and has("d0_d1")
 end
 
 function wet_lake()
@@ -601,7 +586,8 @@ function d5_stump()
 	return (north_stump() and (max_jump() >= 1 or ricky() or moosh())) and
 	((has("winter") or has("north_winter"))  or
 	wet_lake() and (has("flippers") or (dimitri() and has("bracelet"))) or
-	furnace_exit() and has("flippers") and wet_lake())
+	furnace_exit() and has("flippers") and wet_lake()) or
+	((exit_front_d2_b() and has("d2_d5")) or (exit_front_d0() and has("d0_d5") and has("bracelet"))) and (has("north_fall") or max_jump() >= 1)
 end
 
 function enter_d5()
@@ -609,10 +595,15 @@ function enter_d5()
 	(destroy_mushroom() or dimitri()) and
 	(has("fall") or 
 	(has("north_fall") and (has("flippers") or (dimitri() and has("bracelet")) or (has("winter") and dimitri())) or 
-	(has("winter") and has("fall") and (max_jump() >= 1 or ricky() or moosh()))))
+	(has("winter") and has("fall") and (max_jump() >= 1 or ricky() or moosh())))) or
+	exit_front_d2_b() and has("d2_d5")
 end
 
 -- WESTERN COAST
+
+function exit_front_d0()
+	return has("shuffledungeonon") and destroy_bush_flute() and has("d0_alt_entrance_vanilla")
+end
 
 function pirate_ship()
 	return has("polishedbell") and (pirates() or
@@ -627,7 +618,9 @@ function graveyard()
 	return pirate_ship() and
 	(jump3() or
 	has("coast_summer") or
-	has("bombs") and max_jump() >= 1 and has("summer"))
+	has("bombs") and max_jump() >= 1 and has("summer")) or
+	exit_front_d2_b() and has("d2_d7") or
+	exit_front_d0() and has("d0_d7")
 end
 
 function coast_to_D7()
@@ -643,14 +636,24 @@ end
 function suburbs_stump_south()
 	return use_seeds() and has("emberseeds") or
 	scent_tree() and cross_natzu() and cross_water_suburbs() or
+	has("bracelet") and has("shovel") and has("flippers") or
 	suburbs_exit() and destroy_bush() or
-	exit_d2_b() and destroy_bush_flute() and cross_water_suburbs()
+	scent_tree() and has("bracelet") and has("shovel") and has("flippers") and cross_water_suburbs() or
+	exit_d2_b() and destroy_bush_flute() and cross_water_suburbs() or
+	exit_front_d0() and has("d0_d2") and cross_water_suburbs() and
+	(has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or(has("suburbs_winter") and(has("shovel") or ricky() or moosh() or dimitri()))) or
+	exit_front_d0() and has("d0_d2") and 
+	((has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") and cross_water_suburbs()) or(has("suburbs_winter") and(has("shovel") or ricky() or moosh() or dimitri())))
 end
 
 function suburbs_stump_north()
     return (((use_seeds() and has("emberseeds")) or (suburbs_exit() and destroy_bush())) and cross_water_suburbs()) or
 	scent_tree() and cross_natzu() or
-	exit_d2_b() and destroy_bush_flute()
+	exit_d2_b() and destroy_bush_flute() or
+	has("bracelet") and has("shovel") and has("flippers") or
+	scent_tree() and has("bracelet") and has("shovel") and has("flippers") or
+	exit_front_d0() and has("d0_d2") and 
+	(has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or(has("suburbs_winter") and(has("shovel") or ricky() or moosh() or dimitri())))
 end
 
 function cross_water_suburbs()
@@ -659,8 +662,11 @@ end
 
 function mystery_tree()
 	return suburbs_stump_north() and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or
-	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or moosh()))) or
-	exit_d2_b() and destroy_bush_flute()
+	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or moosh() or dimitri()))) or
+	has("bracelet") and has("shovel") and has("flippers") or
+	exit_d2_b() and destroy_bush_flute() or
+	exit_front_d0() and has("d0_d2") or
+	mountain_sub() and destroy_bush_flute() and cross_water_suburbs()
 end
 
 function wow_stump()
@@ -669,7 +675,8 @@ function wow_stump()
 end
 
 function enter_d2()
-	return mystery_tree() and open_d2()
+	return mystery_tree() and open_d2() or
+	exit_front_d0() and has("d0_d2")
 end
 
 function open_d2()
@@ -683,34 +690,53 @@ function d2_A()
 end
 
 function d2_B()
-	return (((((use_seeds() and has("emberseeds")) or (suburbs_exit() and destroy_bush())) and cross_water_suburbs()) or
+	return (((((use_seeds() and has("emberseeds")) or (suburbs_exit() and destroy_bush_flute())) and cross_water_suburbs()) or
 	scent_tree() and cross_natzu()) and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or
-	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or moosh())))) and has("bracelet") and has("d2_alt_entrance_vanilla")
+	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or dimitri() or moosh())))) and has("bracelet") and has("d2_alt_entrance_vanilla")
+end
+
+function d2_C()
+	return (((((use_seeds() and has("emberseeds"))) and cross_water_suburbs()) or
+	destroy_bush_flute() and has("bracelet") and cross_natzu()) and (has("suburbs_spring") or has("suburbs_summer") or has("suburbs_fall") or
+	(has("suburbs_winter") and (has("shovel") or has("spring") or has("summer") or has("fall") or ricky() or dimitri() or moosh())))) and has("bracelet") and has("d2_alt_entrance_vanilla")
 end
 
 function exit_d2_b()
 	return (has("shuffledungeonon") and
-		(has("d0_d2") or
+		(has("d2_d0") or
 
-		has("d1_d2") and has("d1key") and destroy_bush_flute() or
+		has("d2_d1") and has("d1key") and destroy_bush_flute() or
 
-		has("d3_d2") and swamp_stump() and (has("summer") or has("swamp_summer")) or
+		(has("d2_d3")
+		 and ((((destroy_bush_flute() and (has("bracelet") or (has("flippers") and destroy_bush_flute()) or dimitri())) and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
+		 north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute() or
+		 exit_front_d2_b() and has("flippers") and has("d3_d2")) and (has("plain_summer") or has("summer") or jump4() or ricky() or moosh()) or
+		 exit_front_d2_b() and has("d3_d2") and has("flippers")) and hit_lever() and has("bracelet") and has("d3key") and 
+		 ((has("satchel1") and has("pegasusseeds")) or has("flippers") or max_jump() >= 1))
+		  and (has("summer") or has("swamp_summer"))) or
 
-		has("d4_d2") and ((destroy_bush_flute() and (has("flippers") or jump_liquid4()) and has("shovel")) or mt_cucco_exit()) and has("winter") and max_jump() >= 1 and has("bracelet") and has("d4key") and has("summer") or
+		(has("d2_d4") and ((destroy_bush_flute() and (has("flippers") or jump_liquid4()) and has("shovel")) or
+		mt_cucco_exit_no_suburbs()
+		) and has("winter") and max_jump() >= 1 and has("bracelet") and has("d4key") and has("summer")) or
 
-		has("d5_d2") and d5_stump() and
+		has("d2_d5") and d5_stump() and
 		(destroy_mushroom() or dimitri()) and (has("fall") or (has("north_fall") and (has("flippers") or (dimitri() and has("bracelet")) or (has("winter") and dimitri())) or 
 		(has("winter") and has("fall") and (max_jump() >= 1 or ricky() or moosh())))) or
 
-		has("d6_d2") and tarm_ruins() and destroy_mushroom() and
+		has("d2_d6") and jewel_check() and destroy_mushroom() and
 		has("winter") and has("spring") and has("summer") and has("fall") and destroy_flower() and (has("shovel") or ((has("satchel1") or
 		has("slingshot1")) and has("emberseeds"))) or
 
-		has("d7_d2") and graveyard()) or
+		has("d2_d7") and graveyard()) or
 
-		has("d8_d2") and enter_d8()) and 
+		has("d2_d8") and d8_no_suburbs()) and 
 			torches() and kill_normal() and has("bracelet")
 end
+
+function exit_front_d2_b()
+	return has("shuffledungeonon") and d2_C() and has("d2_alt_entrance_vanilla")
+end
+
 -- HOLODRUM PLAIN
 
 function scent_tree()
@@ -720,13 +746,17 @@ end
 
 function plain_stump()
 	return scent_tree() and (max_jump() >= 1 or has("plain_winter") or ricky() or moosh()) or
-	north_stump() and (has("flippers") or dimitri()) and destroy_bush_flute()
+	destroy_bush_flute() and has("flippers") or
+	exit_front_d2_b() and has("d2_d3") and has("flippers") or
+	exit_front_d0() and has("d0_d3") and has("flippers")
 end
 
 -- SPOOL SWAMP
 
 function pegasus_tree()
-	return plain_stump() and (has("plain_summer") or has("summer") or jump4() or ricky() or moosh())
+	return plain_stump() and (has("plain_summer") or has("summer") or jump4() or ricky() or moosh()) or
+		exit_front_d2_b() and has("d2_d3") and has("flippers") or
+		exit_front_d0() and has("d0_d3") and has("flippers")
 end
 
 function swamp_stump()
@@ -752,7 +782,17 @@ function south_swamp()
 end
 
 function enter_d3()
-	return swamp_stump() and (has("summer") or has("swamp_summer"))
+	return swamp_stump() and (has("summer") or has("swamp_summer")) or
+	exit_front_d2_b() and has("d2_d3") or
+	exit_front_d0() and has("d0_d3")
+end
+
+function swamp_heart_piece()
+	return ((pegasus_tree() or ((remains_exit() or d8_exit()) and jump3())) and 
+	((swamp_stump() and has("spring")) or has("swamp_spring")) and (has("flippers") or dimitri())) or
+	swamp_exit() and has("bracelet") and has("swamp_spring") and (jump_liquid4() or dimitri() or has("flippers")) or
+	destroy_bush_flute() and has("swamp_spring") and (has("flippers") or dimitri())
+
 end
 
 -- NATZU
@@ -778,10 +818,13 @@ function sunken_to_moblin()
 end
 
 -- SUNKEN CITY
+
 function gale_tree()
 	return (scent_tree() and cross_natzu() and (has("flippers") or max_jump() >= 1)) or
 	       (suburbs_stump_north() and (has("spring") or has("suburbs_spring")) and (has("flippers") or has("sunken_winter") or max_jump() >= 1)) or
-	       (mount_cucco_stump() and has("flippers"))
+	       (mount_cucco_stump() and has("flippers")) or
+		   exit_front_d2_b() and has("d2_d4") and has("flippers") or
+		   exit_front_d0() and has("d0_d4") and has("flippers")
 end
 
 function waterfalls()
@@ -797,19 +840,29 @@ function mount_cucco_stump()
 	
 	or
 	(scent_tree() and (has("bracelet") and has("shovel") and (has("flippers") or jump_liquid4())) or (cross_natzu() and has("flippers") and (has("sunken_summer") or has("summer")))) or
-	mt_cucco_exit()
+	mt_cucco_exit() or
+	exit_front_d2_b() and has("d2_d4") and (has("sunken_summer")or has("sunken_winter") or has("flippers")) or
+	exit_front_d0() and has("d0_d4") and (has("sunken_summer")or has("sunken_winter") or has("flippers"))
 end
 
-
 function mount_cucco_spring()
-	return mount_cucco_stump() and (has("sunken_spring") or has("spring"))
+	return mount_cucco_stump() and (has("sunken_spring") or has("spring")) or
+	exit_front_d2_b() and has("d2_d4") and (has("sunken_summer") or has("sunken_winter") or has("flippers")) or
+	exit_front_d0() and has("d0_d4") and (has("sunken_summer") or has("sunken_winter") or has("flippers"))
 	
+end
+
+function mount_cucco_exit_alt()
+	return exit_front_d2_b() and has("d2_d4") and (has("sunken_summer") or has("sunken_winter") or has("flippers")) or
+	exit_front_d0() and has("d0_d4") and (has("sunken_summer") or has("sunken_winter") or has("flippers"))
 end
 
 function enter_d4()
 	return mount_cucco_spring() and has("winter") and
 	max_jump() >= 1 and has("bracelet") and
-	has("d4key") and has("summer")
+	has("d4key") and has("summer") or
+	exit_front_d2_b() and has("d2_d4") or
+	exit_front_d0() and has("d0_d4")
 end
 
 -- GORON MOUNTAIN
@@ -837,23 +890,29 @@ function jewel_check()
 end
 
 function tarm_ruins()
-	return pegasus_tree() and jewel_check()
+	return pegasus_tree() and jewel_check() or
+	exit_front_d2_b() and has("d2_d6") and (has("temple_fall") or has("fall")) and (has("bracelet") or has("boomerang2")) and (has("flippers") or has("temple_winter")) or
+	exit_front_d0() and has("d0_d6") and (has("temple_fall") or has("fall")) and (has("bracelet") or has("boomerang2")) and (has("flippers") or has("temple_winter"))
 end
 
 function tarm_lynel()
 	return tarm_ruins() and (has("winter") and (has("spring") or has("summer") or has("fall")) and ((has("summer") or has("temple_summer")) or ((has("fall") or has("temple_fall")) and max_jump() >= 1 and has("boomerang2"))))
 end
+
 function tarm_tree()
 	return tarm_ruins() and (has("boomerang2") or has("bracelet")) and
-	has("winter") and has("spring") and has("summer") and has("fall")
+	has("winter") and has("spring") and has("summer") and has("fall") or
+	exit_front_d2_b() and has("d2_d6") or
+	exit_front_d0() and has("d0_d6")
 end
 
 function enter_d6()
 	return tarm_ruins() and (has("boomerang2") or has("bracelet")) and
 	has("winter") and has("spring") and has("summer") and has("fall") and destroy_flower() and (has("shovel") or ((has("satchel1") or
-	has("slingshot1")) and has("emberseeds")))
+	has("slingshot1")) and has("emberseeds"))) or
+	exit_front_d2_b() and has("d2_d6") or
+	exit_front_d0() and has("d0_d6")
 end
-
 
 -- SAMASA DESERT
 
@@ -861,7 +920,6 @@ function desert()
 	return suburbs_stump_south() and 
 	pirates_exit() 
 end
-
 
 function enter_d7()
 	return graveyard()
@@ -875,12 +933,14 @@ function temple_remains()
 end
 
 function destroyed_remains()
-	return (volcano() or reenter_volcano()) and has("bombs")
+	return (volcano() or reenter_volcano() or d2_suburbs_volcano()) and has("bombs")
 end
 
 function enter_d8()
 	return destroyed_remains() and portal_d8_enter() and has("portalshuffleoff") or
-		(d8() or reenter_d8()) and has("portalshuffleon")
+		has("portalshuffleon") and (d8() or reenter_d8()) or
+		exit_front_d2_b() and has("d2_d8") or
+		exit_front_d0() and has("d0_d8")
 end
 
 -- DUNGEON CHECKS --
@@ -893,14 +953,14 @@ function d0()
 	return has("shuffledungeonoff") and enter_d0() or
 	has("shuffledungeonon") and
 		(has("d0_d0") and enter_d0() or
-		has("d1_d0") and enter_d1() or
-		has("d2_d0") and enter_d2() or
-		has("d3_d0") and enter_d3() or
-		has("d4_d0") and enter_d4() or
-		has("d5_d0") and enter_d5() or
-		has("d6_d0") and enter_d6() or
-		has("d7_d0") and enter_d7() or
-		has("d8_d0") and enter_d8())
+		has("d0_d1") and enter_d1() or
+		has("d0_d2") and enter_d2() or
+		has("d0_d3") and enter_d3() or
+		has("d0_d4") and enter_d4() or
+		has("d0_d5") and enter_d5() or
+		has("d0_d6") and enter_d6() or
+		has("d0_d7") and enter_d7() or
+		has("d0_d8") and enter_d8())
 end
 
 function d1()
@@ -908,110 +968,110 @@ function d1()
 	has("shuffledungeonon") and
 		(has("d0_d1") and enter_d0() or
 		has("d1_d1") and enter_d1() or
-		has("d2_d1") and enter_d2() or
-		has("d3_d1") and enter_d3() or
-		has("d4_d1") and enter_d4() or
-		has("d5_d1") and enter_d5() or
-		has("d6_d1") and enter_d6() or
-		has("d7_d1") and enter_d7() or
-		has("d8_d1") and enter_d8())
+		has("d1_d2") and enter_d2() or
+		has("d1_d3") and enter_d3() or
+		has("d1_d4") and enter_d4() or
+		has("d1_d5") and enter_d5() or
+		has("d1_d6") and enter_d6() or
+		has("d1_d7") and enter_d7() or
+		has("d1_d8") and enter_d8())
 end
 
 function d2()
 	return has("shuffledungeonoff") and enter_d2() or
 	has("shuffledungeonon") and
 		(has("d0_d2") and enter_d0() or
-		has("d1_d2") and enter_d1() or
+		has("d2_d1") and enter_d1() or
 		has("d2_d2") and enter_d2() or
-		has("d3_d2") and enter_d3() or
-		has("d4_d2") and enter_d4() or
-		has("d5_d2") and enter_d5() or
-		has("d6_d2") and enter_d6() or
-		has("d7_d2") and enter_d7() or
-		has("d8_d2") and enter_d8())
+		has("d2_d3") and enter_d3() or
+		has("d2_d4") and enter_d4() or
+		has("d2_d5") and enter_d5() or
+		has("d2_d6") and enter_d6() or
+		has("d2_d7") and enter_d7() or
+		has("d2_d8") and enter_d8())
 end
 
 function d3()
 	return has("shuffledungeonoff") and enter_d3() or
 	has("shuffledungeonon") and
-		(has("d0_d3") and enter_d0() or
-		has("d1_d3") and enter_d1() or
-		has("d2_d3") and enter_d2() or
+		(has("d3_d0") and enter_d0() or
+		has("d3_d1") and enter_d1() or
+		has("d3_d2") and enter_d2() or
 		has("d3_d3") and enter_d3() or
-		has("d4_d3") and enter_d4() or
-		has("d5_d3") and enter_d5() or
-		has("d6_d3") and enter_d6() or
-		has("d7_d3") and enter_d7() or
-		has("d8_d3") and enter_d8())
+		has("d3_d4") and enter_d4() or
+		has("d3_d5") and enter_d5() or
+		has("d3_d6") and enter_d6() or
+		has("d3_d7") and enter_d7() or
+		has("d3_d8") and enter_d8())
 end
 
 function d4()
 	return has("shuffledungeonoff") and enter_d4() or
 	has("shuffledungeonon") and
-		(has("d0_d4") and enter_d0() or
-		has("d1_d4") and enter_d1() or
-		has("d2_d4") and enter_d2() or
-		has("d3_d4") and enter_d3() or
+		(has("d4_d0") and enter_d0() or
+		has("d4_d1") and enter_d1() or
+		has("d4_d2") and enter_d2() or
+		has("d4_d3") and enter_d3() or
 		has("d4_d4") and enter_d4() or
-		has("d5_d4") and enter_d5() or
-		has("d6_d4") and enter_d6() or
-		has("d7_d4") and enter_d7() or
-		has("d8_d4") and enter_d8())
+		has("d4_d5") and enter_d5() or
+		has("d4_d6") and enter_d6() or
+		has("d4_d7") and enter_d7() or
+		has("d4_d8") and enter_d8())
 end
 
 function d5()
 	return has("shuffledungeonoff") and enter_d5() or
 	has("shuffledungeonon") and
-		(has("d0_d5") and enter_d0() or
-		has("d1_d5") and enter_d1() or
-		has("d2_d5") and enter_d2() or
-		has("d3_d5") and enter_d3() or
-		has("d4_d5") and enter_d4() or
+		(has("d5_d0") and enter_d0() or
+		has("d5_d1") and enter_d1() or
+		has("d5_d2") and enter_d2() or
+		has("d5_d3") and enter_d3() or
+		has("d5_d4") and enter_d4() or
 		has("d5_d5") and enter_d5() or
-		has("d6_d5") and enter_d6() or
-		has("d7_d5") and enter_d7() or
-		has("d8_d5") and enter_d8())
+		has("d5_d6") and enter_d6() or
+		has("d5_d7") and enter_d7() or
+		has("d5_d8") and enter_d8())
 end
 
 function d6()
 	return has("shuffledungeonoff") and enter_d6() or
 	has("shuffledungeonon") and
-		(has("d0_d6") and enter_d0() or
-		has("d1_d6") and enter_d1() or
-		has("d2_d6") and enter_d2() or
-		has("d3_d6") and enter_d3() or
-		has("d4_d6") and enter_d4() or
-		has("d5_d6") and enter_d5() or
+		(has("d6_d0") and enter_d0() or
+		has("d6_d1") and enter_d1() or
+		has("d6_d2") and enter_d2() or
+		has("d6_d3") and enter_d3() or
+		has("d6_d4") and enter_d4() or
+		has("d6_d5") and enter_d5() or
 		has("d6_d6") and enter_d6() or
-		has("d7_d6") and enter_d7() or
-		has("d8_d6") and enter_d8())
+		has("d6_d7") and enter_d7() or
+		has("d6_d8") and enter_d8())
 end
 
 function d7()
 	return has("shuffledungeonoff") and enter_d7() or
 	has("shuffledungeonon") and
-		(has("d0_d7") and enter_d0() or
-		has("d1_d7") and enter_d1() or
-		has("d2_d7") and enter_d2() or
-		has("d3_d7") and enter_d3() or
-		has("d4_d7") and enter_d4() or
-		has("d5_d7") and enter_d5() or
-		has("d6_d7") and enter_d6() or
+		(has("d7_d0") and enter_d0() or
+		has("d7_d1") and enter_d1() or
+		has("d7_d2") and enter_d2() or
+		has("d7_d3") and enter_d3() or
+		has("d7_d4") and enter_d4() or
+		has("d7_d5") and enter_d5() or
+		has("d7_d6") and enter_d6() or
 		has("d7_d7") and enter_d7() or
-		has("d8_d7") and enter_d8())
+		has("d7_d8") and enter_d8())
 end
 
-function d8()
+function d8_dungeon()
 	return has("shuffledungeonoff") and enter_d8() or
 	has("shuffledungeonon") and
-		(has("d0_d8") and enter_d0() or
-		has("d1_d8") and enter_d1() or
-		has("d2_d8") and enter_d2() or
-		has("d3_d8") and enter_d3() or
-		has("d4_d8") and enter_d4() or
-		has("d5_d8") and enter_d5() or
-		has("d6_d8") and enter_d6() or
-		has("d7_d8") and enter_d7() or
+		(has("d8_d0") and enter_d0() or
+		has("d8_d1") and enter_d1() or
+		has("d8_d2") and enter_d2() or
+		has("d8_d3") and enter_d3() or
+		has("d8_d4") and enter_d4() or
+		has("d8_d5") and enter_d5() or
+		has("d8_d6") and enter_d6() or
+		has("d8_d7") and enter_d7() or
 		has("d8_d8") and enter_d8())
 end
 
@@ -1155,7 +1215,7 @@ end
 
 function d7clear()
 	return ((has("small_keysanity_off") or (has("small_keysanity_on") and (d7keys() or has("d7_master_key")))) and (has("boss_keysanity_off") or (has("boss_keysanity_on") and (has("d7bk") or (has("d7_master_key") and has("master_keys_both"))))))  
-	and jump3() and has("bombs") and has("bracelet") and
+	and jump4() and has("bombs") and has("bracelet") and
 	has("satchel1") and has("pegasusseeds") and
 	shoot_seeds() and has("emberseeds") and has("magnet") and
 	has("flippers") and kill_magunesu() and
@@ -1171,6 +1231,26 @@ function d8clear()
 	torches_d8() and kill_medusahead() 
 end
 
+function dump_table(o, depth)
+    if depth == nil then
+        depth = 0
+    end
+    if type(o) == 'table' then
+        local tabs = ('\t'):rep(depth)
+        local tabs2 = ('\t'):rep(depth + 1)
+        local s = '{\n'
+        for k, v in pairs(o) do
+            if type(k) ~= 'number' then
+                k = '"' .. k .. '"'
+            end
+            s = s .. tabs2 .. '[' .. k .. '] = ' .. dump_table(v, depth + 1) .. ',\n'
+        end
+        return s .. tabs .. '}'
+    else
+        return tostring(o)
+    end
+end
+
 function has(item, amount)
 	local count = Tracker:ProviderCountForCode(item)
 	amount = tonumber(amount)
@@ -1179,6 +1259,21 @@ function has(item, amount)
 	else
 	  return count == amount
 	end
+end
+
+function has(item)
+    return Tracker:ProviderCountForCode(item) == 1
+  end
+  
+function checkRequirements(reference, check_count)
+    local reqCount = Tracker:ProviderCountForCode(reference)
+    local count = Tracker:ProviderCountForCode(check_count)
+  
+    if count >= reqCount then
+        return true
+    else
+        return false
+    end
 end
 
 function dungeon_settings()
