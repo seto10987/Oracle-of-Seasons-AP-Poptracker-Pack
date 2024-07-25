@@ -90,9 +90,10 @@ function onClear(slot_data)
     if slot_data["goal"] then
         Tracker:FindObjectForCode("goal").CurrentStage = tonumber(slot_data["goal"])
     end
-    if slot_data["horon_village_season"] then
-        Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage = tonumber(slot_data["horon_village_season"])
+    if slot_data["normalize_horon_village_season"] then
+        Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage = tonumber(slot_data["normalize_horon_village_season"])
     end
+	
     if slot_data["shuffle_old_men"] then
         Tracker:FindObjectForCode("shuffle_old_men").CurrentStage = tonumber(slot_data["shuffle_old_men"])
     end
@@ -148,68 +149,60 @@ function onClear(slot_data)
         Tracker:FindObjectForCode("default_seasons").CurrentStage = 6
     end
 
-    season_dictionary = {
-        spring = 0,
-        summer = 1,
-        autumn = 2,
-        winter = 3
-      }
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "north horon" then
-        Tracker:FindObjectForCode("north_horon_season_hidden").CurrentStage = season_dictionary[season_name]
+    -- season_dictionary = {
+        -- spring = 0,
+        -- summer = 1,
+        -- autumn = 2,
+        -- winter = 3
+      -- }
+    for region_name, season_id in pairs(slot_data["default_seasons"]) do
+
+        if  region_name == "EYEGLASS_LAKE" then
+        Tracker:FindObjectForCode("north_horon_season_hidden").CurrentStage = season_id
         end
-    end
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "eastern suburbs" then
-        Tracker:FindObjectForCode("suburbs_season_hidden").CurrentStage = season_dictionary[season_name]
+        if  region_name == "EASTERN_SUBURBS" then
+        Tracker:FindObjectForCode("suburbs_season_hidden").CurrentStage = season_id
         end
-    end
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "woods of winter" then
-        Tracker:FindObjectForCode("wow_season_hidden").CurrentStage = season_dictionary[season_name]
+        if  region_name == "WOODS_OF_WINTER" then
+        Tracker:FindObjectForCode("wow_season_hidden").CurrentStage = season_id
         end
-    end
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "holodrum plain" then
-        Tracker:FindObjectForCode("plain_season_hidden").CurrentStage = season_dictionary[season_name]
+        if  region_name == "HOLODRUM_PLAIN" then
+        Tracker:FindObjectForCode("plain_season_hidden").CurrentStage = season_id
         end
-    end
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "spool swamp" then
-        Tracker:FindObjectForCode("swamp_season_hidden").CurrentStage = season_dictionary[season_name]
+        if  region_name == "SPOOL_SWAMP" then
+        Tracker:FindObjectForCode("swamp_season_hidden").CurrentStage = season_id
         end
-    end
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "sunken city" then
-        Tracker:FindObjectForCode("sunken_season_hidden").CurrentStage = season_dictionary[season_name]
+        if  region_name == "SUNKEN_CITY" then
+			Tracker:FindObjectForCode("sunken_season_hidden").CurrentStage = season_id
         end
-    end
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "western coast" then
-        Tracker:FindObjectForCode("coast_season_hidden").CurrentStage = season_dictionary[season_name]
+        if  region_name == "WESTERN_COAST" then
+			Tracker:FindObjectForCode("coast_season_hidden").CurrentStage = season_id
         end
-    end
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "temple remains" then
-        Tracker:FindObjectForCode("remains_season_hidden").CurrentStage = season_dictionary[season_name]
+        if  region_name == "TEMPLE_REMAINS" then
+			Tracker:FindObjectForCode("remains_season_hidden").CurrentStage = season_id
         end
-    end
-    if Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage == 1 then
-    for region_name, season_name in pairs(slot_data["default_seasons"]) do
-        if  region_name == "horon village" then
-            Tracker:FindObjectForCode("horon_village_season_hidden").CurrentStage = season_dictionary[season_name]
-        end
+		if Tracker:FindObjectForCode("horon_village_season_shuffle").CurrentStage == 1 then
+			if  region_name == "HORON_VILLAGE" then
+				Tracker:FindObjectForCode("horon_village_season_hidden").CurrentStage = season_id
+			end
         end
     end
 
     portal_dictionary = {
-        ['subrosia portal 1'] = 1,
-        ['subrosia portal 2'] = 2,
-        ['subrosia portal 3'] = 4,
-        ['subrosia portal 4'] = 5,
-        ['subrosia portal 5'] = 3,
-        ['subrosia portal 6'] = 6,
-        ['subrosia portal 7'] = 7
+        ['volcanoes west portal'] = 1,
+        ['subrosia market portal'] = 2,
+        ['great furnace portal'] = 3,
+        ['strange brothers portal'] = 4,
+        ['house of pirates portal'] = 5,
+        ['volcanoes east portal'] = 6,
+        ['d8 entrance portal'] = 7,
+        ['eastern suburbs portal'] = 0,
+        ['spool swamp portal'] = 0,
+        ['eyeglass lake portal'] = 0,
+        ['horon village portal'] = 0,
+        ['mt. cucco portal'] = 0,
+        ['temple remains upper portal'] = 0,
+        ['temple remains lower portal'] = 0
     }
     for region_name, portal_name in pairs(slot_data["portal_connections"]) do
         if  region_name == "eastern suburbs portal" then
